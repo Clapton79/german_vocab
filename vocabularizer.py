@@ -9,6 +9,7 @@ import pandas as pd
 import random 
 from json import loads
 from os import path
+from datetime import datetime
 config = {}
 config_loaded = False
 
@@ -107,18 +108,16 @@ def save_vocabulary_to_file(file=""):
     """
     Exports a vocabulary file.
     """
-    match len(loaded_files):
-        case 0:
-            raise ValueError("There is no file loaded.")
-        case 1: 
-            _clean_and_save(file)
-            
-        case _:
-            response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (y)") or 'y'
-            if response == 'y':
-                default = ".".join(["_".join ([language,secondary_language,"new"]), 'csv'])
-                response = input("Filename ({0}):".format(default)) or default
-                _clean_and_save(response)
+    if len(loaded_files) ==0:
+        raise ValueError("There is no file loaded.")
+    elif len(loaded_files) == 1: 
+        _clean_and_save(file)
+    else:
+        response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (y)") or 'y'
+        if response == 'y':
+            default = ".".join(["_".join ([language,secondary_language,"new"]), 'csv'])
+            response = input("Filename ({0}):".format(default)) or default
+            _clean_and_save(response)
                 
                 
 def _clean_and_save(file=""):
@@ -137,6 +136,11 @@ def _clean_and_save(file=""):
 #########################################################
 #    internal functions
 ######################################################### 
+def output_decorator(text, level):
+    print(72*"#")
+    print("#", level * " ", text)
+    print(72*"#")
+
 def left_1 (s:str):
     return s[0]
 
@@ -250,6 +254,18 @@ def add_word(word, da, translation, weight, mode):
     """
     global df
     df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
+#########################################################
+#    results
+#########################################################
+def save_result(test, result):
+    """
+    Saves the result of a test in the results file.
+    """
+    if config_loaded and len(get_config('results_file'))>0:
+        row = ','.join([datetime.today().strftime('%Y-%m-%d-%H:%M:%S'), get_config('profile'),test,str(result)])
+        row = ''.join([row, '\n'])
+        with open (get_config('results_file'), 'a') as f:
+            f.write(row)
 
 #########################################################
 #    tests
@@ -259,7 +275,7 @@ def test_1():
     Test 1 tests your writing skills and knowledge
     """
     count_of_words=3
-
+    output_decorator("Test 1", 4)
     global df
 
     if len(df) < count_of_words:
@@ -283,18 +299,33 @@ def test_1():
                 hint = ""
             case _:
                 hint = "(hint: {0})".format(words[k][0])
-
         response = input("What is {0} in {1}{2}? ".format(word, language,hint)) or ""
         responses.append(str(response))
-    
-    print("translations:", translations)
-    print("responses:", responses)
-    print("solutions:", solutions)
 
-    evaluation = [solutions[i] == responses[i] for i in range(0, len(translations))]
-    res = round(sum([int(i) for i in evaluation])/len(translations)*100, 1)
+    evaluations = [solutions[i] == responses[i] for i in range(0, len(translations))]
+    res = round(sum([int(i) for i in evaluations])/len(translations)*100, 1)
+    dres = pd.DataFrame(data=zip(translations, solutions, responses, [int(i) for i in evaluations]),
+                        columns = ['Word', 'Solution', 'Response', 'Point'])
+    output_decorator('Results', 6)
+
     print ("Your result is {0}%".format(res)) 
-
+    print (dres)
+    save_result('Test 1', res)
+#########################################################
+#    test selector
+#########################################################
+def test_selector():
+    response = input("""Press the letter of the test to start it:
+    a - Test 1 (type words) 
+    b - Test 2 (multiple choice)
+    """) or 'skip'
+    match response: 
+        case "a":
+            test_1()
+        case "b": 
+            raise NotImplementedError
+        case _:
+            print("Nothing selected.")
 #########################################################
 #    library loading
 #########################################################
@@ -302,5 +333,6 @@ if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
 
 load_file(get_config('default_vocabulary'))
-test_1()
 
+if config_loaded and get_config("autostart_test_selector")=="true":
+    test_selector()

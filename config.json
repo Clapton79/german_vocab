@@ -1,5 +1,7 @@
 {
-    "auto_load_default_vocabulary":"False",
+    "profile": "Laci",
+    "auto_load_default_vocabulary":"false",
     "default_vocabulary":"vocabularies/German_English_basic.csv",
-    "autostart_test_selector":"False"
+    "autostart_test_selector":"false",
+    "results_file":"results/laci.csv"    
 }
