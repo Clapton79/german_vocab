@@ -1,4 +1,5 @@
 {
     "auto_load_default_vocabulary":"False",
-    "default_vocabulary":"German_English_basic.csv"
+    "default_vocabulary":"vocabularies/German_English_basic.csv",
+    "autostart_test_selector":"False"
 }

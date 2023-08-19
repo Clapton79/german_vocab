@@ -1,7 +1,7 @@
 """
 This simple app helps speed testing and building vocabulary in a foreign language. 
 """
-library_version = "1.1.0"
+library_version = "1.1.1"
 
 print ("Vocabularizer {0}".format(library_version))
 
@@ -17,6 +17,9 @@ secondary_language = ""
 vocabulary_type = ""
 loaded_files = []
 
+#########################################################
+#    configuration
+#########################################################
 #load app config if exists
 if path.exists('config.json'):
     with open ('config.json', 'r') as f:
@@ -35,15 +38,16 @@ def get_config(config_item):
     else:
         return ''
 
-
-
 df = pd.DataFrame()
 res = pd.DataFrame()
 
+#########################################################
+#    file operations
+#########################################################
 # Vocabulary file handling
 def load_file(file):
     """
-    loads a vocabulary file
+    Loads a vocabulary file and extracts file information from a conventional filename
     """
     global df
     global language
@@ -57,7 +61,8 @@ def load_file(file):
         print("Loading {0}".format(file))
         if file in loaded_files:
             raise ValueError("File {0} has already been loaded.".format(file))
-        *info, ext = file.split('.')
+        
+        *info, ext = file.split('/')[-1].split('.')
         _language, _secondary_language, _vocabulary_type, *others = info[0].split('_')
         if (language != "" and language != _language) or (secondary_language != _secondary_language and secondary_language!="") :
             raise ValueError("Cannot load {0}-{1} into loaded {2}-{3} vocabulary.".format(_language,_secondary_language,language,secondary_language))
@@ -109,10 +114,10 @@ def save_vocabulary_to_file(file=""):
             _clean_and_save(file)
             
         case _:
-            response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (default: y)") or 'y'
+            response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (y)") or 'y'
             if response == 'y':
                 default = ".".join(["_".join ([language,secondary_language,"new"]), 'csv'])
-                response = input("Filename (press Enter for {0}):".format(default)) or default
+                response = input("Filename ({0}):".format(default)) or default
                 _clean_and_save(response)
                 
                 
@@ -128,8 +133,13 @@ def _clean_and_save(file=""):
         print("Saving to {0} complete.".format(file))
     except Exception as ex:
         print(str(ex))
-    
-# Vocabulary lookup commands
+
+#########################################################
+#    internal functions
+######################################################### 
+def left_1 (s:str):
+    return s[0]
+
 def decode_mode(mode:str):
     """
     converts a mode code into the mode description
@@ -230,6 +240,9 @@ def translate_list(words:list, rev:str='str',da:str='da') -> list:
     # organise retrieved lists into one single list    
     return sum([translate(x, 'first',rev,da) for x in words],[])
 
+#########################################################
+#    vocabulary operations
+#########################################################
 # Vocabulary content commands
 def add_word(word, da, translation, weight, mode):
     """
@@ -238,9 +251,12 @@ def add_word(word, da, translation, weight, mode):
     global df
     df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
 
+#########################################################
+#    tests
+#########################################################
 def test_1():
     """
-    Test 1 select random words from the dictionary. 
+    Test 1 tests your writing skills and knowledge
     """
     count_of_words=3
 
@@ -252,13 +268,39 @@ def test_1():
     
     rnd = [random.choice(range(0, len(df)-1)) for i in range(0,count_of_words)]
     translations = [df['translation'][i] for i in rnd]
+    words = [df['word'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
-    user_solutions= []
-    for word in translations:
-        response = input("What is {0} in ")
-    
+    counts = [len(df[df['translation']==i]) for i in translations]
 
-# library load events
+    responses= []
+    for k in range(0,len(translations)):
+        word = translations[k]
+        c = len(df[df['translation']==word])
+        match len(df[df['translation']==word]):
+            case 0:
+                hint = ""
+            case 1:
+                hint = ""
+            case _:
+                hint = "(hint: {0})".format(words[k][0])
+
+        response = input("What is {0} in {1}{2}? ".format(word, language,hint)) or ""
+        responses.append(str(response))
+    
+    print("translations:", translations)
+    print("responses:", responses)
+    print("solutions:", solutions)
+
+    evaluation = [solutions[i] == responses[i] for i in range(0, len(translations))]
+    res = round(sum([int(i) for i in evaluation])/len(translations)*100, 1)
+    print ("Your result is {0}%".format(res)) 
+
+#########################################################
+#    library loading
+#########################################################
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
+
+load_file(get_config('default_vocabulary'))
+test_1()
 
