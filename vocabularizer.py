@@ -18,10 +18,6 @@ secondary_language = ""
 vocabulary_type = ""
 loaded_files = []
 
-#########################################################
-#    configuration
-#########################################################
-#load app config if exists
 if path.exists('config.json'):
     with open ('config.json', 'r') as f:
         config = loads(f.read())
@@ -42,9 +38,6 @@ def get_config(config_item):
 df = pd.DataFrame()
 res = pd.DataFrame()
 
-#########################################################
-#    file operations
-#########################################################
 # Vocabulary file handling
 def load_file(file):
     """
@@ -80,7 +73,12 @@ def load_file(file):
         # transformations:
         # computed column: Full word: look up the definite article and add it to the word
         da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
-        
+        da['_weight'] = 1
+        # load weights if weight file can be found
+        if config_loaded:
+            dw = pd.read_csv(get_config('weights_file'))
+            da=da.merge(dw, on=['translation', 'translation'],how='left')
+
         df=df._append(da)
         loaded_files.append(file)
         print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
@@ -119,7 +117,6 @@ def save_vocabulary_to_file(file=""):
             response = input("Filename ({0}):".format(default)) or default
             _clean_and_save(response)
                 
-                
 def _clean_and_save(file=""):
     """used internally only: drops _ columns and exports dataframe."""
     if file =="":
@@ -133,15 +130,15 @@ def _clean_and_save(file=""):
     except Exception as ex:
         print(str(ex))
 
-#########################################################
-#    internal functions
-######################################################### 
 def output_decorator(text, level):
     print(72*"#")
     print("#", level * " ", text)
     print(72*"#")
 
 def left_1 (s:str):
+    """
+    Returns the first character of a string. 
+    Used in dataframe value references"""
     return s[0]
 
 def decode_mode(mode:str):
@@ -244,9 +241,6 @@ def translate_list(words:list, rev:str='str',da:str='da') -> list:
     # organise retrieved lists into one single list    
     return sum([translate(x, 'first',rev,da) for x in words],[])
 
-#########################################################
-#    vocabulary operations
-#########################################################
 # Vocabulary content commands
 def add_word(word, da, translation, weight, mode):
     """
@@ -254,9 +248,7 @@ def add_word(word, da, translation, weight, mode):
     """
     global df
     df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
-#########################################################
-#    results
-#########################################################
+
 def save_result(test, result):
     """
     Saves the result of a test in the results file.
@@ -267,9 +259,6 @@ def save_result(test, result):
         with open (get_config('results_file'), 'a') as f:
             f.write(row)
 
-#########################################################
-#    tests
-#########################################################
 def test_1():
     """
     Test 1 tests your writing skills and knowledge
@@ -311,9 +300,7 @@ def test_1():
     print ("Your result is {0}%".format(res)) 
     print (dres)
     save_result('Test 1', res)
-#########################################################
-#    test selector
-#########################################################
+
 def test_selector():
     response = input("""Press the letter of the test to start it:
     a - Test 1 (type words) 
@@ -326,9 +313,6 @@ def test_selector():
             raise NotImplementedError
         case _:
             print("Nothing selected.")
-#########################################################
-#    library loading
-#########################################################
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
 

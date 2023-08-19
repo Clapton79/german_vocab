@@ -3,5 +3,6 @@
     "auto_load_default_vocabulary":"false",
     "default_vocabulary":"vocabularies/German_English_basic.csv",
     "autostart_test_selector":"false",
-    "results_file":"results/laci.csv"    
+    "results_file":"results/laci.csv",
+    "weights_file":"weights/laci_weights.csv"
 }

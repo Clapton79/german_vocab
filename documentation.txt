@@ -1,4 +1,6 @@
-Vocabularizer 1.1.0
+Vocabularizer 1.1.1
+Loading vocabularies/German_English_basic.csv
+Loaded 6 words from basic vocabulary (German - English)
 Help on module vocabularizer:
 
 NAME
@@ -17,8 +19,17 @@ FUNCTIONS
     get_config(config_item)
         If configuration has been loaded, this function will retrieve the value of the config_item.
     
+    left_1(s: str)
+        Returns the first character of a string. 
+        Used in dataframe value references
+    
     load_file(file)
-        loads a vocabulary file
+        Loads a vocabulary file and extracts file information from a conventional filename
+    
+    output_decorator(text, level)
+    
+    save_result(test, result)
+        Saves the result of a test in the results file.
     
     save_vocabulary_to_file(file='')
         Exports a vocabulary file.
@@ -27,7 +38,9 @@ FUNCTIONS
         Concatenates set elements
     
     test_1()
-        Test 1 select random words from the dictionary.
+        Test 1 tests your writing skills and knowledge
+    
+    test_selector()
     
     translate(word: str, all: str = 'first', rev: str = 'str', da: str = 'da') -> list
         Translates a word, outputs a list
@@ -43,20 +56,18 @@ FUNCTIONS
         Clears the memory from all loaded vocabularies.
 
 DATA
-    config = {'auto_load_default_vocabulary': 'False', 'default_vocabulary...
+    config = {'auto_load_default_vocabulary': 'false', 'autostart_test_sel...
     config_loaded = True
-    df = Empty DataFrame
-    Columns: []
-    Index: []
+    df =   mode da         word translation  weight      ...ahn        tra...
     f = <_io.TextIOWrapper name='config.json' mode='r' encoding='UTF-8'>
-    language = ''
-    library_version = '1.1.0'
-    loaded_files = []
+    language = 'German'
+    library_version = '1.1.1'
+    loaded_files = ['vocabularies/German_English_basic.csv']
     res = Empty DataFrame
     Columns: []
     Index: []
-    secondary_language = ''
-    vocabulary_type = ''
+    secondary_language = 'English'
+    vocabulary_type = 'basic'
 
 FILE
     /Users/lpal/Documents/Deutsch/german_vocab/vocabularizer.py
