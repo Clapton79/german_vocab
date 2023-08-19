@@ -6,6 +6,7 @@ library_version = "1.1.1"
 print ("Vocabularizer {0}".format(library_version))
 
 import pandas as pd
+import numpy as np
 import random 
 from json import loads
 from os import path
@@ -13,10 +14,13 @@ from datetime import datetime
 config = {}
 config_loaded = False
 
+
 language = ""
 secondary_language = ""
 vocabulary_type = ""
 loaded_files = []
+weights_loaded = False
+weights_updated_not_saved = False
 
 if path.exists('config.json'):
     with open ('config.json', 'r') as f:
@@ -73,11 +77,15 @@ def load_file(file):
         # transformations:
         # computed column: Full word: look up the definite article and add it to the word
         da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
-        da['_weight'] = 1
+       
         # load weights if weight file can be found
-        if config_loaded:
+        if config_loaded and path.exists(get_config('weights_file')):
             dw = pd.read_csv(get_config('weights_file'))
             da=da.merge(dw, on=['translation', 'translation'],how='left')
+            
+            weights_loaded=True
+        else:
+            da['_weight']=1
 
         df=df._append(da)
         loaded_files.append(file)
@@ -129,6 +137,23 @@ def _clean_and_save(file=""):
         print("Saving to {0} complete.".format(file))
     except Exception as ex:
         print(str(ex))
+
+def update_weights(dw:pd.DataFrame):
+    """
+    Updates the weights based on the latest test result
+    """
+    global df
+    global weights_updated_not_saved
+    # aggregate dw by Solution, Word take Points Avg
+    dw_agg=dw.groupby(['Solution','Word']).agg(_PointUpdate=('Point','mean'))
+    dw_agg['_PointUpdate']=dw_agg['_PointUpdate'].apply(lambda x: 0.05 if x==0 else x)
+    dw_agg['_PointUpdate']=dw_agg['_PointUpdate'].apply(lambda x: 1-1/x)
+    df = df.merge(dw_agg, left_on = ['_expression', 'translation'], right_on = ['Solution', 'Word'], how='left')
+    df['_weight']=df['_weight']+df['_PointUpdate']
+    df.drop('_PointUpdate',axis=1, inplace=True)
+    weights_updated_not_saved=True
+    print("{0} weight(s) updated.".format(len(dw_agg)))
+    
 
 def output_decorator(text, level):
     print(72*"#")
@@ -249,22 +274,33 @@ def add_word(word, da, translation, weight, mode):
     global df
     df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
 
-def save_result(test, result):
+def save_result(test, points, rounds):
     """
     Saves the result of a test in the results file.
     """
     if config_loaded and len(get_config('results_file'))>0:
-        row = ','.join([datetime.today().strftime('%Y-%m-%d-%H:%M:%S'), get_config('profile'),test,str(result)])
+        row = ','.join([datetime.today().strftime('%Y-%m-%d-%H:%M:%S'), get_config('profile'),test,str(points),str(rounds)])
         row = ''.join([row, '\n'])
         with open (get_config('results_file'), 'a') as f:
             f.write(row)
+
+def save_weights():
+    global df
+    global weights_updated_not_saved
+    file = get_config('weights_file')
+    de = pd.DataFrame(df.filter(items=['translation','_expression','_weight']), columns = ['translation', '_expression','_weight'])
+    de.to_csv(file, index=False)
+    weights_updated_not_saved=True
+    print('Weights saved.')
 
 def test_1():
     """
     Test 1 tests your writing skills and knowledge
     """
-    count_of_words=3
+    count_of_words= int(input("How many words shall I ask from you in this test?(10)") or "10")
+    
     output_decorator("Test 1", 4)
+
     global df
 
     if len(df) < count_of_words:
@@ -298,8 +334,11 @@ def test_1():
     output_decorator('Results', 6)
 
     print ("Your result is {0}%".format(res)) 
-    print (dres)
-    save_result('Test 1', res)
+    
+    save_result('Test 1', res, len(translations))
+
+    # update weights
+    update_weights(dres)
 
 def test_selector():
     response = input("""Press the letter of the test to start it:
@@ -313,6 +352,7 @@ def test_selector():
             raise NotImplementedError
         case _:
             print("Nothing selected.")
+
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
 
@@ -320,3 +360,8 @@ load_file(get_config('default_vocabulary'))
 
 if config_loaded and get_config("autostart_test_selector")=="true":
     test_selector()
+
+test_1()
+save_weights()
+print(df)
+#print(df)
