@@ -54,48 +54,49 @@ def load_file(file):
     global vocabulary_type
     global loaded_files
 
-    try:
-        if file == "":
-            raise ValueError("Filename cannot be empty.")
-        print("Loading {0}".format(file))
-        if file in loaded_files:
-            raise ValueError("File {0} has already been loaded.".format(file))
+    #try:
+    if file == "":
+        raise ValueError("Filename cannot be empty.")
+    print("Loading {0}".format(file))
+    if file in loaded_files:
+        raise ValueError("File {0} has already been loaded.".format(file))
+    
+    *info, ext = file.split('/')[-1].split('.')
+    _language, _secondary_language, _vocabulary_type, *others = info[0].split('_')
+    if (language != "" and language != _language) or (secondary_language != _secondary_language and secondary_language!="") :
+        raise ValueError("Cannot load {0}-{1} into loaded {2}-{3} vocabulary.".format(_language,_secondary_language,language,secondary_language))
+    
+    language=_language
+    secondary_language=_secondary_language
+
+    if vocabulary_type != "" :
+        vocabulary_type= [vocabulary_type,_vocabulary_type]
+    else:
+        vocabulary_type=_vocabulary_type
+
+    da = pd.read_csv(file)
+    # transformations:
+    # computed column: Full word: look up the definite article and add it to the word
+    
+   
+    
+    # load weights if weight file can be found
+    if config_loaded and path.exists(get_config('weights_file')) and not weights_updated_not_saved:
+        dw = pd.read_csv(get_config('weights_file'))
+        da=da.merge(dw, on=['translation', 'translation'],how='left')
         
-        *info, ext = file.split('/')[-1].split('.')
-        _language, _secondary_language, _vocabulary_type, *others = info[0].split('_')
-        if (language != "" and language != _language) or (secondary_language != _secondary_language and secondary_language!="") :
-            raise ValueError("Cannot load {0}-{1} into loaded {2}-{3} vocabulary.".format(_language,_secondary_language,language,secondary_language))
-        
-        language=_language
-        secondary_language=_secondary_language
+        weights_loaded=True
+    else:
+        da['_weight']=1
+        if get_config("autosave_weights")=="true":
+            save_weights(get_config("weights_file"))
 
-        if vocabulary_type != "" :
-            vocabulary_type= [vocabulary_type,_vocabulary_type]
-        else:
-            vocabulary_type=_vocabulary_type
-
-        da = pd.read_csv(file)
-        # transformations:
-        # computed column: Full word: look up the definite article and add it to the word
-        da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
-       
-        # load weights if weight file can be found
-        if config_loaded and path.exists(get_config('weights_file')) and not weights_updated_not_saved:
-            dw = pd.read_csv(get_config('weights_file'))
-            da.drop('_weight',inplace=True)
-            da=da.merge(dw, on=['translation', 'translation'],how='left')
-            
-            weights_loaded=True
-        else:
-            da['_weight']=1
-            if get_config("autosave_weights")=="True":
-                save_weights(get_config("weights_file"))
-
-        df=df._append(da)
-        loaded_files.append(file)
-        print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
-    except Exception as ex:
-        print(str(ex))
+    df=df._append(da)
+    df['_expression']=df['da'].apply(decode_da)+ ' ' + df['word']
+    loaded_files.append(file)
+    print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
+    # except Exception as ex:
+    #     print(str(ex))
 
 def unload_vocabulary():
     """
@@ -113,6 +114,14 @@ def unload_vocabulary():
     secondary_language= ""
     vocabulary_type=""
     loaded_files=[]
+
+def show_loaded_files():
+    if len(loaded_files)==0:
+        print('No files loaded.')
+    else:
+        output_decorator("Loaded files", 8)
+        for i in loaded_files:
+            print(i)
 
 def show_vocabulary(offset_rows:int,fetch_rows:int):
 
@@ -192,10 +201,10 @@ def update_weights(dw:pd.DataFrame):
     values = {"_PointUpdate":1}
     df.fillna(value=values, inplace=True)
     df['_weight']=1/((df['_weight']+df['_PointUpdate'])/2)
-    df.drop('_PointUpdate',axis=1, inplace=True)
+   # df.drop('_PointUpdate',axis=1, inplace=True)
     weights_updated_not_saved=True
     print("{0} weight(s) updated.".format(len(dw_agg)))
-    if get_config("autosave_weights")=="True":
+    if get_config("autosave_weights")=="true":
         save_weights(get_config("weights_file"))
     
 def output_decorator(text, level):
@@ -352,10 +361,12 @@ def test_1():
 
     count_of_words= int(input("How many words shall I ask from you in this test?(10)") or "10")
 
+    if count_of_words<1:
+        return
+
     if len(df) < count_of_words:
         count_of_words = len(df) 
     # set up test words
-    
     rnd = [random.choice(range(0, len(df)-1)) for i in range(0,count_of_words)]
     translations = [df['translation'][i] for i in rnd]
     words = [df['word'][i] for i in rnd]
@@ -405,10 +416,5 @@ def test_selector():
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
 
-load_file(get_config('default_vocabulary'))
-
 if config_loaded and get_config("autostart_test_selector")=="true":
     test_selector()
-
-
-test_1()
