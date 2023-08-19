@@ -1,0 +1,264 @@
+"""
+This simple app helps speed testing and building vocabulary in a foreign language. 
+"""
+library_version = "1.1.0"
+
+print ("Vocabularizer {0}".format(library_version))
+
+import pandas as pd
+import random 
+from json import loads
+from os import path
+config = {}
+config_loaded = False
+
+language = ""
+secondary_language = ""
+vocabulary_type = ""
+loaded_files = []
+
+#load app config if exists
+if path.exists('config.json'):
+    with open ('config.json', 'r') as f:
+        config = loads(f.read())
+        config_loaded=True
+
+def get_config(config_item):
+    """
+    If configuration has been loaded, this function will retrieve the value of the config_item.
+    """
+    if config_loaded:
+        try:
+            return config[config_item]
+        except:
+            return ''
+    else:
+        return ''
+
+
+
+df = pd.DataFrame()
+res = pd.DataFrame()
+
+# Vocabulary file handling
+def load_file(file):
+    """
+    loads a vocabulary file
+    """
+    global df
+    global language
+    global secondary_language
+    global vocabulary_type
+    global loaded_files
+
+    try:
+        if file == "":
+            raise ValueError("Filename cannot be empty.")
+        print("Loading {0}".format(file))
+        if file in loaded_files:
+            raise ValueError("File {0} has already been loaded.".format(file))
+        *info, ext = file.split('.')
+        _language, _secondary_language, _vocabulary_type, *others = info[0].split('_')
+        if (language != "" and language != _language) or (secondary_language != _secondary_language and secondary_language!="") :
+            raise ValueError("Cannot load {0}-{1} into loaded {2}-{3} vocabulary.".format(_language,_secondary_language,language,secondary_language))
+        
+        language=_language
+        secondary_language=_secondary_language
+
+        if vocabulary_type != "" :
+            vocabulary_type= [vocabulary_type,_vocabulary_type]
+        else:
+            vocabulary_type=_vocabulary_type
+
+        da = pd.read_csv(file)
+        # transformations:
+        # computed column: Full word: look up the definite article and add it to the word
+        da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
+        
+        df=df._append(da)
+        loaded_files.append(file)
+        print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
+    except Exception as ex:
+        print(str(ex))
+
+def unload_vocabulary():
+    """
+    Clears the memory from all loaded vocabularies.
+    """
+    global df
+    global language
+    global secondary_language
+    global vocabulary_type
+    global loaded_files
+    
+    print("Unloading vocabulary ({0} file(s))".format(len(loaded_files)))
+    df = pd.DataFrame()
+    language = ""
+    secondary_language= ""
+    vocabulary_type=""
+    loaded_files=[]
+
+def save_vocabulary_to_file(file=""):
+    """
+    Exports a vocabulary file.
+    """
+    match len(loaded_files):
+        case 0:
+            raise ValueError("There is no file loaded.")
+        case 1: 
+            _clean_and_save(file)
+            
+        case _:
+            response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (default: y)") or 'y'
+            if response == 'y':
+                default = ".".join(["_".join ([language,secondary_language,"new"]), 'csv'])
+                response = input("Filename (press Enter for {0}):".format(default)) or default
+                _clean_and_save(response)
+                
+                
+def _clean_and_save(file=""):
+    """used internally only: drops _ columns and exports dataframe."""
+    if file =="":
+        raise ValueError("Specify a filename.")
+
+    global df
+    da = df.filter(regex=r'^(?!_)')
+    try:
+        da.to_csv(file, index = False)
+        print("Saving to {0} complete.".format(file))
+    except Exception as ex:
+        print(str(ex))
+    
+# Vocabulary lookup commands
+def decode_mode(mode:str):
+    """
+    converts a mode code into the mode description
+    """
+    match mode:
+        case 'n':
+            return 'nominative'
+        case 'd':
+            return 'dativ'
+        case 'a':
+            return 'akkusativ'
+        case 'g':
+            return 'genitiv'
+        case _: 
+            return ''
+
+def decode_da(da:str):
+    """
+    Converts definitive article code into a definitive article
+    """
+    match da:
+        case 'n':
+            return 'das'
+        case 'm': 
+            return 'der'
+        case 'f':
+            return 'die'
+        case 'm':
+            return 'dem'
+        case 'd':
+            return 'den'
+        case _:
+            return ''
+
+def set_convert(s:set):
+    """
+    Concatenates set elements
+    """
+    return ' '.join (s)
+
+def translate(word:str, all:str='first', rev:str='str', da:str='da') -> list:
+    """
+    Translates a word, outputs a list
+    options:
+    - get all translations (all:True) or the first (all:first)
+    - reverse translate (ie to first language) (rev: rev) or straight (rev: str)
+    - retrieve definitive article (da: da) or not (da: n)
+    """
+    global df
+
+    try: 
+        result = ['']
+
+        if all not in ['first', 'all']:
+            raise ValueError('Argument "all" invalid (can be first or all)')
+        if rev not in ['rev','str']:
+            raise ValueError('Argument "rev" invalid (can be rev or str)')
+        if da not in ['da', 'n']:
+            raise ValueError('Argument DA invalid (can be da or n)')
+
+        if rev=='rev':
+            _filter = df.translation==word
+            result = list(df[_filter].word)
+            if da=='da':
+                result_da = list(df[_filter].da)
+                result_da = map(decode_da, result_da)
+                merged = list(zip(result_da, result))
+                result = list(map(set_convert, merged))           
+
+        else:
+            _filter = df.word==word
+            result = list(df[_filter].translation)
+        
+        if len(result) == 0:
+            result = ['#N/A']
+
+        if all=='first':
+            a = []
+            a.append(result[0])
+            result = a
+    except ValueError as ex:
+        print(str(ex))
+
+    except Exception as ex:
+        print(str(ex))
+        result = ['#N/A']
+
+    return result
+
+def translate_list(words:list, rev:str='str',da:str='da') -> list:
+    """
+    Finds the first translation of all the input words
+    """
+    if rev not in ['rev','str']:
+        raise ValueError('Argument "rev" invalid (can be rev or str)')
+    if da not in ['da', 'n']:
+        raise ValueError('Argument DA invalid (can be da or n)')
+    # organise retrieved lists into one single list    
+    return sum([translate(x, 'first',rev,da) for x in words],[])
+
+# Vocabulary content commands
+def add_word(word, da, translation, weight, mode):
+    """
+    Adds a word to the vocabulary in the memory
+    """
+    global df
+    df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
+
+def test_1():
+    """
+    Test 1 select random words from the dictionary. 
+    """
+    count_of_words=3
+
+    global df
+
+    if len(df) < count_of_words:
+        count_of_words = len(df) 
+    # set up test words
+    
+    rnd = [random.choice(range(0, len(df)-1)) for i in range(0,count_of_words)]
+    translations = [df['translation'][i] for i in rnd]
+    solutions = [df['_expression'][i] for i in rnd]
+    user_solutions= []
+    for word in translations:
+        response = input("What is {0} in ")
+    
+
+# library load events
+if config_loaded and get_config("auto_load_default_vocabulary")=="true":
+    load_file(get_config("default_vocabulary"))
+

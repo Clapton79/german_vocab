@@ -1,0 +1,61 @@
+Vocabularizer 1.1.0
+Help on module vocabularizer:
+
+NAME
+    vocabularizer - This simple app helps speed testing and building vocabulary in a foreign language.
+
+FUNCTIONS
+    add_word(word, da, translation, weight, mode)
+        adds a word to the loaded dictionary
+    
+    decode_da(da: str)
+    
+    decode_mode(mode: str)
+        converts a mode code into the mode description
+    
+    get_config(config_item)
+    
+    load_file(file)
+        loads a vocabulary file
+    
+    save_vocabulary_to_file(file='')
+        exports a vocabulary file
+    
+    set_convert(s: set)
+        concatenates set elements
+    
+    test_1()
+        Test 1 select random words from the dictionary.
+    
+    translate(word: str, all: str = 'first', rev: str = 'str', da: str = 'da') -> list
+        Translates a word, outputs a list
+        options:
+        - get all translations (all:True) or the first (all:first)
+        - reverse translate (ie to first language) (rev: rev) or straight (rev: str)
+        - retrieve definitive article (da: da) or not (da: n)
+    
+    translate_list(words: list, rev: str = 'str', da: str = 'da') -> list
+        finds the first translation of all the input words
+    
+    unload_vocabulary()
+
+DATA
+    config = {'auto_load_default_vocabulary': 'False', 'default_vocabulary...
+    config_loaded = True
+    df = Empty DataFrame
+    Columns: []
+    Index: []
+    f = <_io.TextIOWrapper name='config.json' mode='r' encoding='UTF-8'>
+    language = ''
+    library_version = '1.1.0'
+    loaded_files = []
+    res = Empty DataFrame
+    Columns: []
+    Index: []
+    secondary_language = ''
+    vocabulary_type = ''
+
+FILE
+    /Users/lpal/Documents/Deutsch/german_vocab/vocabularizer.py
+
+

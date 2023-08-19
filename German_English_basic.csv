@@ -1,0 +1,7 @@
+mode,da,word,translation,weight
+n,n,Buch,book,1
+n,m,Vogel,bird,1
+n,m,Käse,cheese,1
+n,m,Zug,train,1
+n,f,Bahn, train,1
+n,f,Straßenbahn,tram,1
