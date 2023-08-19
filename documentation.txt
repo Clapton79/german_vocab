@@ -6,23 +6,25 @@ NAME
 
 FUNCTIONS
     add_word(word, da, translation, weight, mode)
-        adds a word to the loaded dictionary
+        Adds a word to the vocabulary in the memory
     
     decode_da(da: str)
+        Converts definitive article code into a definitive article
     
     decode_mode(mode: str)
         converts a mode code into the mode description
     
     get_config(config_item)
+        If configuration has been loaded, this function will retrieve the value of the config_item.
     
     load_file(file)
         loads a vocabulary file
     
     save_vocabulary_to_file(file='')
-        exports a vocabulary file
+        Exports a vocabulary file.
     
     set_convert(s: set)
-        concatenates set elements
+        Concatenates set elements
     
     test_1()
         Test 1 select random words from the dictionary.
@@ -35,9 +37,10 @@ FUNCTIONS
         - retrieve definitive article (da: da) or not (da: n)
     
     translate_list(words: list, rev: str = 'str', da: str = 'da') -> list
-        finds the first translation of all the input words
+        Finds the first translation of all the input words
     
     unload_vocabulary()
+        Clears the memory from all loaded vocabularies.
 
 DATA
     config = {'auto_load_default_vocabulary': 'False', 'default_vocabulary...
