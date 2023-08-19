@@ -79,8 +79,9 @@ def load_file(file):
         da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
        
         # load weights if weight file can be found
-        if config_loaded and path.exists(get_config('weights_file')):
+        if config_loaded and path.exists(get_config('weights_file')) and not weights_updated_not_saved:
             dw = pd.read_csv(get_config('weights_file'))
+            da.drop('_weight',inplace=True)
             da=da.merge(dw, on=['translation', 'translation'],how='left')
             
             weights_loaded=True
@@ -89,6 +90,7 @@ def load_file(file):
 
         df=df._append(da)
         loaded_files.append(file)
+        print(df)
         print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
     except Exception as ex:
         print(str(ex))
@@ -146,10 +148,10 @@ def update_weights(dw:pd.DataFrame):
     global weights_updated_not_saved
     # aggregate dw by Solution, Word take Points Avg
     dw_agg=dw.groupby(['Solution','Word']).agg(_PointUpdate=('Point','mean'))
-    dw_agg['_PointUpdate']=dw_agg['_PointUpdate'].apply(lambda x: 0.05 if x==0 else x)
-    dw_agg['_PointUpdate']=dw_agg['_PointUpdate'].apply(lambda x: 1-1/x)
     df = df.merge(dw_agg, left_on = ['_expression', 'translation'], right_on = ['Solution', 'Word'], how='left')
-    df['_weight']=df['_weight']+df['_PointUpdate']
+    values = {"_PointUpdate":1}
+    df.fillna(value=values, inplace=True)
+    df['_weight']=1/((df['_weight']+df['_PointUpdate'])/2)
     df.drop('_PointUpdate',axis=1, inplace=True)
     weights_updated_not_saved=True
     print("{0} weight(s) updated.".format(len(dw_agg)))
@@ -363,5 +365,4 @@ if config_loaded and get_config("autostart_test_selector")=="true":
 
 test_1()
 save_weights()
-print(df)
 #print(df)
