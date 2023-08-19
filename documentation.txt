@@ -1,7 +1,91 @@
 Vocabularizer 1.1.1
 Loading vocabularies/German_English_basic.csv
-Loaded 21 words from basic vocabulary (German - English)
-########################################################################
-#      Test 1
-########################################################################
-How many words shall I ask from you in this test?(10)
+Loaded 27 words from basic vocabulary (German - English)
+Help on module vocabularizer:
+
+NAME
+    vocabularizer - This simple app helps speed testing and building vocabulary in a foreign language.
+
+FUNCTIONS
+    add_word(word, da, translation, weight, mode)
+        Adds a word to the vocabulary in the memory
+    
+    clean_and_save_vocabulary(file='')
+        used internally only: drops _ columns and exports dataframe.
+    
+    decode_da(da: str)
+        Converts definitive article code into a definitive article
+    
+    decode_mode(mode: str)
+        converts a mode code into the mode description
+    
+    get_config(config_item)
+        If configuration has been loaded, this function will retrieve the value of the config_item.
+    
+    left_1(s: str)
+        Returns the first character of a string. 
+        Used in dataframe value references
+    
+    load_file(file)
+        Loads a vocabulary file and extracts file information from a conventional filename
+    
+    output_decorator(text, level)
+    
+    save_result(test, points, rounds)
+        Saves the result of a test in the results file.
+    
+    save_vocabulary_to_file(file='')
+        Exports a vocabulary file.
+    
+    save_weights(file)
+    
+    set_convert(s: set)
+        Concatenates set elements
+    
+    show_loaded_files()
+    
+    show_vocabulary(offset_rows: int, fetch_rows: int)
+    
+    show_vocabulary_pg(pagesize: int)
+    
+    test_1()
+        Test 1 tests your writing skills and knowledge
+    
+    test_selector()
+    
+    translate(word: str, all: str = 'first', rev: str = 'str', da: str = 'da') -> list
+        Translates a word, outputs a list
+        options:
+        - get all translations (all:True) or the first (all:first)
+        - reverse translate (ie to first language) (rev: rev) or straight (rev: str)
+        - retrieve definitive article (da: da) or not (da: n)
+    
+    translate_list(words: list, rev: str = 'str', da: str = 'da') -> list
+        Finds the first translation of all the input words
+    
+    unload_vocabulary()
+        Clears the memory from all loaded vocabularies.
+    
+    update_weights(dw: pandas.core.frame.DataFrame)
+        Updates the weights based on the latest test result
+
+DATA
+    config = {'auto_load_default_vocabulary': 'true', 'autosave_weights': ...
+    config_loaded = True
+    df =    mode da           word       translation     ...ahr           ...
+    f = <_io.TextIOWrapper name='config.json' mode='r' encoding='UTF-8'>
+    language = 'German'
+    library_version = '1.1.1'
+    loaded_files = ['vocabularies/German_English_basic.csv']
+    res = Empty DataFrame
+    Columns: []
+    Index: []
+    secondary_language = 'English'
+    vocabulary_type = 'basic'
+    weights_loaded = False
+    weights_updated_not_saved = False
+
+FILE
+    /Users/lpal/Documents/Deutsch/german_vocab/vocabularizer.py
+
+
