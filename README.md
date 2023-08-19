@@ -10,5 +10,12 @@ When set to True, it loads the configured default vocabulary upon loading the li
 ## default_vocabulary
 The default vocabulary file to be loaded upon load.
 
-# Functions
+# Libraries
+
+## autodoc
+
+Mini app to document the vocabulizer automatically. 
+
+## vocabularizer
+Main library, see documentation.txt
 
