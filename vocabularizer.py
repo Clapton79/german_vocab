@@ -1,6 +1,7 @@
 """
 This simple app helps speed testing and building vocabulary in a foreign language. 
 """
+    
 library_version = "1.1.1"
 
 print ("Vocabularizer {0}".format(library_version))
@@ -87,10 +88,11 @@ def load_file(file):
             weights_loaded=True
         else:
             da['_weight']=1
+            if get_config("autosave_weights")=="True":
+                save_weights(get_config("weights_file"))
 
         df=df._append(da)
         loaded_files.append(file)
-        print(df)
         print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
     except Exception as ex:
         print(str(ex))
@@ -112,6 +114,44 @@ def unload_vocabulary():
     vocabulary_type=""
     loaded_files=[]
 
+def show_vocabulary(offset_rows:int,fetch_rows:int):
+
+    global loaded_files
+    global df
+
+    if len(loaded_files)==0:
+        raise ValueError('No vocabulary to show.')
+            
+    max_len = len(df)
+    
+    if offset_rows>max_len:
+        raise ValueError("There are less rows than the offset value")
+    
+    range_end = offset_rows+fetch_rows+1
+    if range_end>max_len:
+        range_end = max_len
+
+    print(df.loc[offset_rows:range_end])
+
+def show_vocabulary_pg(pagesize:int):
+    global df
+    if pagesize>len(df):
+        show_vocabulary(0,len(df))
+    else:
+        offset=0
+        
+        while True:
+            range_end = offset+pagesize
+            if range_end>len(df):
+                range_end = len(df)
+
+            print(df.loc[offset:range_end])
+            offset=offset+pagesize
+            response = input("Continue?(y)") or 'y'
+
+            if offset>len(df) or response !='y':
+                break
+
 def save_vocabulary_to_file(file=""):
     """
     Exports a vocabulary file.
@@ -119,15 +159,15 @@ def save_vocabulary_to_file(file=""):
     if len(loaded_files) ==0:
         raise ValueError("There is no file loaded.")
     elif len(loaded_files) == 1: 
-        _clean_and_save(file)
+        clean_and_save_vocabulary(file)
     else:
         response = input("There are multiple files loaded. You can save all the data into a single file. Do you wish to proceed? (y)") or 'y'
         if response == 'y':
             default = ".".join(["_".join ([language,secondary_language,"new"]), 'csv'])
             response = input("Filename ({0}):".format(default)) or default
-            _clean_and_save(response)
+            clean_and_save_vocabulary(response)
                 
-def _clean_and_save(file=""):
+def clean_and_save_vocabulary(file=""):
     """used internally only: drops _ columns and exports dataframe."""
     if file =="":
         raise ValueError("Specify a filename.")
@@ -155,8 +195,9 @@ def update_weights(dw:pd.DataFrame):
     df.drop('_PointUpdate',axis=1, inplace=True)
     weights_updated_not_saved=True
     print("{0} weight(s) updated.".format(len(dw_agg)))
+    if get_config("autosave_weights")=="True":
+        save_weights(get_config("weights_file"))
     
-
 def output_decorator(text, level):
     print(72*"#")
     print("#", level * " ", text)
@@ -174,13 +215,19 @@ def decode_mode(mode:str):
     """
     match mode:
         case 'n':
-            return 'nominative'
+            return 'Nominativ-Substantiv'
         case 'd':
-            return 'dativ'
+            return 'Dativ-Substantiv'
         case 'a':
-            return 'akkusativ'
+            return 'Akkusativ Substantiv'
         case 'g':
-            return 'genitiv'
+            return 'Genitiv-Substantiv'
+        case 'v':
+            return 'Verb'
+        case 'a':
+            return 'Adjektiv'
+        case 's':
+            return 'other'
         case _: 
             return ''
 
@@ -189,15 +236,15 @@ def decode_da(da:str):
     Converts definitive article code into a definitive article
     """
     match da:
-        case 'n':
+        case 's':
             return 'das'
-        case 'm': 
+        case 'r': 
             return 'der'
-        case 'f':
+        case 'e':
             return 'die'
         case 'm':
             return 'dem'
-        case 'd':
+        case 'n':
             return 'den'
         case _:
             return ''
@@ -286,24 +333,24 @@ def save_result(test, points, rounds):
         with open (get_config('results_file'), 'a') as f:
             f.write(row)
 
-def save_weights():
+def save_weights(file):
     global df
     global weights_updated_not_saved
-    file = get_config('weights_file')
+   
     de = pd.DataFrame(df.filter(items=['translation','_expression','_weight']), columns = ['translation', '_expression','_weight'])
     de.to_csv(file, index=False)
-    weights_updated_not_saved=True
+    weights_updated_not_saved=False
     print('Weights saved.')
 
 def test_1():
     """
     Test 1 tests your writing skills and knowledge
     """
-    count_of_words= int(input("How many words shall I ask from you in this test?(10)") or "10")
+    global df
     
     output_decorator("Test 1", 4)
 
-    global df
+    count_of_words= int(input("How many words shall I ask from you in this test?(10)") or "10")
 
     if len(df) < count_of_words:
         count_of_words = len(df) 
@@ -363,6 +410,5 @@ load_file(get_config('default_vocabulary'))
 if config_loaded and get_config("autostart_test_selector")=="true":
     test_selector()
 
+
 test_1()
-save_weights()
-#print(df)
