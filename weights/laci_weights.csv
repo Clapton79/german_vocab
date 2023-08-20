@@ -1,24 +1,22 @@
 translation,_expression,_weight
-book,das Buch,
-bird,der Vogel,
-cheese,der Käse,
-train,der Zug,
-train,der Zug,
-train,die Bahn,
-train,die Bahn,
-tram,die Straßenbahn,
-nickname,der Name,
-first name,der Vorname,
-surname,der Nachname,
-still, doch,
-really, wirklich,
-to work, arbeiten,
-family status,der Familienstand,
-married, verheiratet,
-age,das Alter,
-foreign language,die Fremdsprache,
-teacher(female),die Lehrerin,
-teacher(male),der Lehrer,
-daughter,das Mädchen,
-boy,der Junge,
-year,das Jahr,
+book,das Buch,1.0
+bird,der Vogel,1.0
+cheese,der Käse,1.0
+train,der Zug,1.0
+train,die Bahn,1.0
+tram,die Straßenbahn,1.75
+nickname,der Name,1.0
+first name,der Vorname,1.0
+surname,der Nachname,1.0
+still, doch,1.0
+really, wirklich,1.0
+to work, arbeiten,1.0
+family status,der Familienstand,1.0
+married, verheiratet,1.0
+age,das Alter,1.0
+foreign language,die Fremdsprache,1.0
+teacher(female),die Lehrerin,1.0
+teacher(male),der Lehrer,1.0
+daughter,das Mädchen,1.0
+boy,der Junge,3.0
+year,das Jahr,4.0

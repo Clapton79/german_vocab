@@ -12,6 +12,8 @@ import random
 from json import loads
 from os import path
 from datetime import datetime
+import csv 
+
 config = {}
 config_loaded = False
 
@@ -79,24 +81,37 @@ def load_file(file):
     # computed column: Full word: look up the definite article and add it to the word
     
    
-    
+    print("Applying default weights.")
+    da['_weight']=1
+
+    # append loaded vocabulary to the in-memory vocabulary
+    df=df._append(da)
+
+    # refresh the expression
+    df['_expression']=df['da'].apply(decode_da)+ ' ' + df['word']
+
     # load weights if weight file can be found
     if config_loaded and path.exists(get_config('weights_file')) and not weights_updated_not_saved:
-        dw = pd.read_csv(get_config('weights_file'))
-        da=da.merge(dw, on=['translation', 'translation'],how='left')
-        
-        weights_loaded=True
-    else:
-        da['_weight']=1
-        if get_config("autosave_weights")=="true":
-            save_weights(get_config("weights_file"))
-
-    df=df._append(da)
-    df['_expression']=df['da'].apply(decode_da)+ ' ' + df['word']
+       load_weights(get_config('weights_file'))
+     
+    #df.drop_duplicates(inplace=True)
     loaded_files.append(file)
     print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
     # except Exception as ex:
     #     print(str(ex))
+
+def load_weights(file):
+    global weights_loaded
+    global df
+    dw = pd.read_csv(file)
+    dw.set_index(['translation', '_expression'], inplace=True)
+    df.set_index(['translation', '_expression'], inplace=True) 
+
+    df.update(dw)
+    df.reset_index(inplace=True)
+
+    weights_loaded=True
+    print("Loaded {0} weights".format(len(dw)))
 
 def unload_vocabulary():
     """
@@ -122,6 +137,7 @@ def show_loaded_files():
         output_decorator("Loaded files", 8)
         for i in loaded_files:
             print(i)
+        output_decorator("",0,'end')
 
 def show_vocabulary(offset_rows:int,fetch_rows:int):
 
@@ -184,8 +200,8 @@ def clean_and_save_vocabulary(file=""):
     global df
     da = df.filter(regex=r'^(?!_)')
     try:
-        da.to_csv(file, index = False)
-        print("Saving to {0} complete.".format(file))
+        da.to_csv(file, index = False) #this method puts a linebreak at the end
+        print("Saving to {0} complete({1} words).".format(file, len(da)))
     except Exception as ex:
         print(str(ex))
 
@@ -207,10 +223,13 @@ def update_weights(dw:pd.DataFrame):
     if get_config("autosave_weights")=="true":
         save_weights(get_config("weights_file"))
     
-def output_decorator(text, level):
-    print(72*"#")
-    print("#", level * " ", text)
-    print(72*"#")
+def output_decorator(text, level, motiv='start'):
+    if motiv=='start':
+        print(72*"#")
+        print("#", level * " ", text)
+        print(72*"=")
+    elif motiv =='end':
+        print(72*"-")
 
 def left_1 (s:str):
     """
@@ -349,7 +368,7 @@ def save_weights(file):
     de = pd.DataFrame(df.filter(items=['translation','_expression','_weight']), columns = ['translation', '_expression','_weight'])
     de.to_csv(file, index=False)
     weights_updated_not_saved=False
-    print('Weights saved.')
+    print('Weights saved. ({0} words)'.format(len(de)))
 
 def test_1():
     """

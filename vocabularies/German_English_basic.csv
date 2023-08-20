@@ -1,22 +1,22 @@
-mode,da,word,translation
-n,s,Buch,book
-n,r,Vogel,bird
-n,r,Käse,cheese
-n,r,Zug,train
-n,e,Bahn,train
-n,e,Straßenbahn,tram
-n,r,Name,nickname
-n,r,Vorname,first name
-n,r,Nachname,surname
-o,-,doch,still
-o,-,wirklich,really
-v,-,arbeiten,to work
-n,r,Familienstand,family status
-a,-,verheiratet,married
-n,s,Alter,age
-n,e,Fremdsprache,foreign language
-n,e,Lehrerin,teacher(female)
-n,r,Lehrer,teacher(male)
-n,s,Mädchen,daughter
-n,r,Junge,boy
-n,s,Jahr,year
+translation,mode,da,word
+book,n,s,Buch
+bird,n,r,Vogel
+cheese,n,r,Käse
+train,n,r,Zug
+train,n,e,Bahn
+tram,n,e,Straßenbahn
+nickname,n,r,Name
+first name,n,r,Vorname
+surname,n,r,Nachname
+still,o,-,doch
+really,o,-,wirklich
+to work,v,-,arbeiten
+family status,n,r,Familienstand
+married,a,-,verheiratet
+age,n,s,Alter
+foreign language,n,e,Fremdsprache
+teacher(female),n,e,Lehrerin
+teacher(male),n,r,Lehrer
+daughter,n,s,Mädchen
+boy,n,r,Junge
+year,n,s,Jahr
