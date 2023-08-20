@@ -2,20 +2,15 @@
 
 This simple app helps speed testing and building vocabulary in a foreign language. 
 
-# Configuration
+Test|Description
+:---|:---
+Test 1| You have to type in the translation (and the definitive article in case of nouns) for 5 words
 
-## auto_load_default_vocabulary
-When set to True, it loads the configured default vocabulary upon loading the library
 
-## default_vocabulary
-The default vocabulary file to be loaded upon load.
-
-# Libraries
-
-## autodoc
-
-Mini app to document the vocabulizer automatically. 
-
-## vocabularizer
-Main library, see documentation.txt
-
+# How to Run
+```sh
+python vocabularizer_test_1.py
+```
+```sh
+python3 vocabularizer_test_1.py
+```

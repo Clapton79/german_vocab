@@ -4,19 +4,19 @@ bird,der Vogel,1.0
 cheese,der Käse,1.0
 train,der Zug,1.0
 train,die Bahn,1.0
-tram,die Straßenbahn,1.75
-nickname,der Name,1.0
-first name,der Vorname,1.0
+tram,die Straßenbahn,2.0001464915279064
+nickname,der Name,0.9939460649422125
+first name,der Vorname,0.9996338337605273
 surname,der Nachname,1.0
-still, doch,1.0
-really, wirklich,1.0
+still, doch,1.013452914798206
+really, wirklich,1.0007326007326007
 to work, arbeiten,1.0
-family status,der Familienstand,1.0
-married, verheiratet,1.0
-age,das Alter,1.0
-foreign language,die Fremdsprache,1.0
-teacher(female),die Lehrerin,1.0
+family status,der Familienstand,0.9473684210526315
+married, verheiratet,1.0007326007326007
+age,das Alter,1.2318840579710144
+foreign language,die Fremdsprache,0.9826224328593998
+teacher(female),die Lehrerin,0.9994141769185706
 teacher(male),der Lehrer,1.0
-daughter,das Mädchen,1.0
-boy,der Junge,3.0
-year,das Jahr,4.0
+daughter,das Mädchen,1.011764705882353
+boy,der Junge,1.0119310649580204
+year,das Jahr,1.000091555528428

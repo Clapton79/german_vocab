@@ -43,6 +43,7 @@ def get_config(config_item):
         return ''
 
 df = pd.DataFrame()
+df.style.set_properties(**{'text-align': 'left'})
 res = pd.DataFrame()
 
 # Vocabulary file handling
@@ -156,7 +157,8 @@ def show_vocabulary(offset_rows:int,fetch_rows:int):
     if range_end>max_len:
         range_end = max_len
 
-    print(df.loc[offset_rows:range_end])
+    # display(df.style.set_properties(**{'text-align': 'left'}))
+    print(df.loc[offset_rows:range_end].style.set_properties(**{'text-align':'left'}))
 
 def show_vocabulary_pg(pagesize:int):
     global df
@@ -360,6 +362,7 @@ def save_result(test, points, rounds):
         row = ''.join([row, '\n'])
         with open (get_config('results_file'), 'a') as f:
             f.write(row)
+    print("Results saved.")
 
 def save_weights(file):
     global df
@@ -378,7 +381,7 @@ def test_1():
     
     output_decorator("Test 1", 4)
 
-    count_of_words= int(input("How many words shall I ask from you in this test?(10)") or "10")
+    count_of_words= int(input("How many words shall I ask from you in this test?(5)") or "5")
 
     if count_of_words<1:
         return
@@ -406,19 +409,24 @@ def test_1():
         response = input("What is {0} in {1}{2}? ".format(word, language,hint)) or ""
         responses.append(str(response))
 
-    evaluations = [solutions[i] == responses[i] for i in range(0, len(translations))]
+    evaluations = [solutions[i].strip() == responses[i].strip() for i in range(0, len(translations))]
     res = round(sum([int(i) for i in evaluations])/len(translations)*100, 1)
     dres = pd.DataFrame(data=zip(translations, solutions, responses, [int(i) for i in evaluations]),
                         columns = ['Word', 'Solution', 'Response', 'Point'])
     output_decorator('Results', 6)
 
-    print ("Your result is {0}%".format(res)) 
+    print ("Your result is {0}%, {1} out of {2}".format(res, sum(dres.Point),len(dres))) 
     
     save_result('Test 1', res, len(translations))
 
     # update weights
     update_weights(dres)
 
+    if dres.Point.sum() != len(dres):
+        output_decorator("Errors",6)
+        print(dres[dres['Point']==0].filter(items=['Word','Response', 'Solution']))
+
+    output_decorator("",0, 'end') 
 def test_selector():
     response = input("""Press the letter of the test to start it:
     a - Test 1 (type words) 
