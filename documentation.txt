@@ -1,6 +1,4 @@
 Vocabularizer 1.1.1
-Loading vocabularies/German_English_basic.csv
-Loaded 27 words from basic vocabulary (German - English)
 Help on module vocabularizer:
 
 NAME
@@ -29,7 +27,9 @@ FUNCTIONS
     load_file(file)
         Loads a vocabulary file and extracts file information from a conventional filename
     
-    output_decorator(text, level)
+    load_weights(file)
+    
+    output_decorator(text, level, motiv='start')
     
     save_result(test, points, rounds)
         Saves the result of a test in the results file.
@@ -67,25 +67,3 @@ FUNCTIONS
         Clears the memory from all loaded vocabularies.
     
     update_weights(dw: pandas.core.frame.DataFrame)
-        Updates the weights based on the latest test result
-
-DATA
-    config = {'auto_load_default_vocabulary': 'true', 'autosave_weights': ...
-    config_loaded = True
-    df =    mode da           word       translation     ...ahr           ...
-    f = <_io.TextIOWrapper name='config.json' mode='r' encoding='UTF-8'>
-    language = 'German'
-    library_version = '1.1.1'
-    loaded_files = ['vocabularies/German_English_basic.csv']
-    res = Empty DataFrame
-    Columns: []
-    Index: []
-    secondary_language = 'English'
-    vocabulary_type = 'basic'
-    weights_loaded = False
-    weights_updated_not_saved = False
-
-FILE
-    /Users/lpal/Documents/Deutsch/german_vocab/vocabularizer.py
-
-
