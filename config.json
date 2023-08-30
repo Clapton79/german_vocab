@@ -5,5 +5,6 @@
     "autostart_test_selector":"false",
     "results_file":"results/laci.csv",
     "weights_file":"weights/laci_weights.csv",
-    "autosave_weights":"true"
+    "autosave_weights":"true",
+    "logfile":"vocabularizer.log"
 }

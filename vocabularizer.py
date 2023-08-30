@@ -2,21 +2,21 @@
 This simple app helps speed testing and building vocabulary in a foreign language. 
 """
     
-library_version = "1.1.1"
 
-print ("Vocabularizer {0}".format(library_version))
 
 import pandas as pd
+import logging 
 import numpy as np
 import random 
 from json import loads
 from os import path
 from datetime import datetime
-import csv 
 
 config = {}
 config_loaded = False
 
+library_version = "1.1.2"
+print ("Vocabularizer {0}".format(library_version))
 
 language = ""
 secondary_language = ""
@@ -80,16 +80,9 @@ def load_file(file):
     da = pd.read_csv(file)
     # transformations:
     # computed column: Full word: look up the definite article and add it to the word
-    
-   
-    print("Applying default weights.")
-    da['_weight']=1
-
+    da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
     # append loaded vocabulary to the in-memory vocabulary
     df=df._append(da)
-
-    # refresh the expression
-    df['_expression']=df['da'].apply(decode_da)+ ' ' + df['word']
 
     # load weights if weight file can be found
     if config_loaded and path.exists(get_config('weights_file')) and not weights_updated_not_saved:
@@ -98,19 +91,21 @@ def load_file(file):
     #df.drop_duplicates(inplace=True)
     loaded_files.append(file)
     print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
-    # except Exception as ex:
-    #     print(str(ex))
 
 def load_weights(file):
     global weights_loaded
     global df
     dw = pd.read_csv(file)
-    dw.set_index(['translation', '_expression'], inplace=True)
-    df.set_index(['translation', '_expression'], inplace=True) 
 
-    df.update(dw)
-    df.reset_index(inplace=True)
+    if '_weight' in df.columns:
+        df.rename({"_weight":"_weight_df"}, axis=1,inplace=True)
 
+    df = df.merge(dw,how='left', left_on=['translation', '_expression'], right_on=['translation', '_expression'])
+
+    if '_weight_df' in df.columns:
+        df['_weight']= df['_weight'].fillna(df['_weight_df']).fillna(1)
+        df.drop(['_weight_df'],axis=1, inplace=True)
+    
     weights_loaded=True
     print("Loaded {0} weights".format(len(dw)))
 
@@ -207,6 +202,19 @@ def clean_and_save_vocabulary(file=""):
     except Exception as ex:
         print(str(ex))
 
+def new_weight(weight, points):
+    if points == 0:
+        returnvalue = weight + 0.2
+    elif points == np.nan:
+        returnvalue = weight
+    else:
+        if weight > 0.2:
+            returnvalue = weight - 0.2
+        else:
+            returnvalue = 0.2
+    returnvalue = round(returnvalue, 2)
+    return returnvalue
+
 def update_weights(dw:pd.DataFrame):
     """
     Updates the weights based on the latest test result
@@ -216,10 +224,10 @@ def update_weights(dw:pd.DataFrame):
     # aggregate dw by Solution, Word take Points Avg
     dw_agg=dw.groupby(['Solution','Word']).agg(_PointUpdate=('Point','mean'))
     df = df.merge(dw_agg, left_on = ['_expression', 'translation'], right_on = ['Solution', 'Word'], how='left')
-    values = {"_PointUpdate":1}
-    df.fillna(value=values, inplace=True)
-    df['_weight']=1/((df['_weight']+df['_PointUpdate'])/2)
-   # df.drop('_PointUpdate',axis=1, inplace=True)
+    #df.apply(lambda x: f(x.col_1, x.col_2), axis=1)
+    df['_weight']=df.apply(lambda x: new_weight(df._weight, df._PointUpdate))
+    
+    df.drop('_PointUpdate', axis = 1, inplace = True)
     weights_updated_not_saved=True
     print("{0} weight(s) updated.".format(len(dw_agg)))
     if get_config("autosave_weights")=="true":
@@ -261,7 +269,7 @@ def decode_mode(mode:str):
         case _: 
             return ''
 
-def decode_da(da:str):
+def decode_da(da:str) -> str:
     """
     Converts definitive article code into a definitive article
     """
@@ -368,7 +376,25 @@ def save_weights(file):
     global df
     global weights_updated_not_saved
    
-    de = pd.DataFrame(df.filter(items=['translation','_expression','_weight']), columns = ['translation', '_expression','_weight'])
+    da = pd.DataFrame(df.filter(items=['translation','_expression','_weight']))
+
+    # if data exists, load and update it first. If it doesn't, just make the current selection the contents to write.
+    if path.exists(file):
+        de = pd.read_csv(file)
+
+        if '_weight' in de.columns:
+            de.rename({'_weight':'_weight_ex'}, axis=1,inplace=True)
+
+        de = de.merge(da, how='outer', left_on=['translation','_expression'], right_on =['translation','_expression'])
+        
+        if '_weight' in de.columns:
+            de['_weight'] = de['_weight'].fillna(de['_weight_ex'])
+
+        if '_weight_ex' in de.columns:
+            de.drop('_weight_ex', axis=1, inplace=True)
+    else:
+        de = da
+
     de.to_csv(file, index=False)
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
@@ -416,7 +442,6 @@ def test_1():
     output_decorator('Results', 6)
 
     print ("Your result is {0}%, {1} out of {2}".format(res, sum(dres.Point),len(dres))) 
-    
     save_result('Test 1', res, len(translations))
 
     # update weights
