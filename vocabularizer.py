@@ -202,14 +202,14 @@ def clean_and_save_vocabulary(file=""):
     except Exception as ex:
         print(str(ex))
 
-def new_weight(weight, points):
-    if points == 0:
-        returnvalue = weight + 0.2
-    elif points == np.nan:
-        returnvalue = weight
+def new_weight(row):
+    if row['_PointUpdate'] == 0:
+        returnvalue = row['_weight'] + 0.2
+    elif row['_PointUpdate'] == np.nan:
+        returnvalue = row['_weight']
     else:
-        if weight > 0.2:
-            returnvalue = weight - 0.2
+        if row['_weight'] > 0.2:
+            returnvalue = row['_weight'] - 0.2
         else:
             returnvalue = 0.2
     returnvalue = round(returnvalue, 2)
@@ -225,8 +225,7 @@ def update_weights(dw:pd.DataFrame):
     dw_agg=dw.groupby(['Solution','Word']).agg(_PointUpdate=('Point','mean'))
     df = df.merge(dw_agg, left_on = ['_expression', 'translation'], right_on = ['Solution', 'Word'], how='left')
     #df.apply(lambda x: f(x.col_1, x.col_2), axis=1)
-    df['_weight']=df.apply(lambda x: new_weight(df._weight, df._PointUpdate))
-    
+    df['_weight']=df.apply(new_weight,axis=1)
     df.drop('_PointUpdate', axis = 1, inplace = True)
     weights_updated_not_saved=True
     print("{0} weight(s) updated.".format(len(dw_agg)))
