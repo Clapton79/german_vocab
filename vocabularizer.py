@@ -414,7 +414,7 @@ def test_1():
     if len(df) < count_of_words:
         count_of_words = len(df) 
     # set up test words
-    rnd = [random.choice(range(0, len(df)-1)) for i in range(0,count_of_words)]
+    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
     translations = [df['translation'][i] for i in rnd]
     words = [df['word'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
@@ -451,6 +451,23 @@ def test_1():
         print(dres[dres['Point']==0].filter(items=['Word','Response', 'Solution']))
 
     output_decorator("",0, 'end') 
+
+def test_2():
+    """multiple choice test"""
+    global df
+    
+    output_decorator("Test 2 - Multiple choice", 4)
+
+    count_of_words= int(input("How many words shall I ask from you in this test?(5)") or "5")
+
+    if count_of_words<1:
+        return
+
+    
+    
+
+
+
 def test_selector():
     response = input("""Press the letter of the test to start it:
     a - Test 1 (type words) 

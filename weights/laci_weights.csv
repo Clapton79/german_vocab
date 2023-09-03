@@ -1,23 +1,23 @@
 translation,_expression,_weight
-book,das Buch,0.8
-bird,der Vogel,0.8
+book,das Buch,0.6
+bird,der Vogel,0.6
 cheese,der Käse,0.8
 train,der Zug,0.8
 train,die Bahn,0.8
 tram,die Straßenbahn,0.71
-nickname,der Name,0.47
+nickname,der Name,0.27
 first name,der Vorname,0.8
 surname,der Nachname,0.47
-still, doch,0.8
+still, doch,0.4
 really, wirklich,0.8
-to work, arbeiten,0.8
+to work, arbeiten,0.6
 family status,der Familienstand,0.81
 married, verheiratet,0.8
 age,das Alter,0.77
-foreign language,die Fremdsprache,0.8
-teacher(female),die Lehrerin,0.8
-teacher(male),der Lehrer,0.8
-daughter,das Mädchen,0.8
+foreign language,die Fremdsprache,0.6
+teacher(female),die Lehrerin,0.6
+teacher(male),der Lehrer,0.6
+daughter,das Mädchen,0.6
 boy,der Junge,0.8
 year,das Jahr,0.8
 Turkey,der Türkei,1.0
