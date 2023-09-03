@@ -11,6 +11,7 @@ import random
 from json import loads
 from os import path
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 config = {}
 config_loaded = False
@@ -463,9 +464,14 @@ def test_2():
     if count_of_words<1:
         return
 
-    
+
     
 
+def show_dashboard():
+    dr = pd.read_csv(get_config('results_file'))
+
+    plt.plot(dr.pct)
+    plt.show()
 
 
 def test_selector():
