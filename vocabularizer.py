@@ -205,7 +205,7 @@ def clean_and_save_vocabulary(file=""):
 def new_weight(row):
     if row['_PointUpdate'] == 0:
         returnvalue = row['_weight'] + 0.2
-    elif row['_PointUpdate'] == np.nan:
+    elif pd.isna(row['_PointUpdate']):
         returnvalue = row['_weight']
     else:
         if row['_weight'] > 0.2:
