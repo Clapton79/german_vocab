@@ -12,6 +12,7 @@ from json import loads
 from os import path
 from datetime import datetime
 import matplotlib.pyplot as plt
+from pprint import pprint
 
 config = {}
 config_loaded = False
@@ -92,6 +93,8 @@ def load_file(file):
     #df.drop_duplicates(inplace=True)
     loaded_files.append(file)
     print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
+
+
 
 def load_weights(file):
     global weights_loaded
@@ -471,7 +474,7 @@ def test_2():
     words = [df['word'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
     
-    # randomly select one letter as the solution of the multiple choice
+    # build the dict:
 
     questions_dict = {}
     for idx,val in enumerate(rnd):
@@ -482,27 +485,39 @@ def test_2():
         # select 3 words that are not the asked word
         rnd_alt = random.choices(population =df.index, k = 3)
         rnd_alt_solutions = [df['_expression'][i] for i in rnd_alt]
-
-        question_dict = dict([(letters[0], solutions[idx])])
+        question_dict = {}
+        question_dict[letters[0]]= solutions[idx]
         
         for f in range(0, 3):
             question_dict[letters[f+1]] = rnd_alt_solutions[f]
 
         questions_dict[idx+1]={}
-        questions_dict[idx+1]['items'] = sorted(question_dict.items())
+        questions_dict[idx+1]['options'] = question_dict
         questions_dict[idx+1]['question'] = translations[idx]
         questions_dict[idx+1]['solution'] = solutions[idx]
         questions_dict[idx+1]['solution_choice'] = letters[0]
+        questions_dict[idx+1]['response'] = ''
 
-    print(questions_dict)
+        
 
+    # collect the answers by looping through the dict
+    for key, dictvalue in questions_dict.items():
+        # build padded row of choices
+        row = '     '.join(["{0}) {1}".format(x[0], x[1]) for x in list(sorted(dictvalue['options'].items()))])
+        print("{0}:".format(dictvalue['question']))
+        print(row)
+        response = input ("Select option: ")
+        questions_dict[key]['response'] = response
 
-
-
-    
-    counts = [len(df[df['translation']==i]) for i in translations]
-    
-
+    # show results
+    results = pd.DataFrame([(questions_dict[x]['question'], 
+                             questions_dict[x]['solution'],
+                             questions_dict[x]['solution_choice'], 
+                             questions_dict[x]['response'], 
+                             int(questions_dict[x]['solution_choice']==questions_dict[x]['response'])) for x in questions_dict.keys()],
+                             columns = ['Question', 'Expression','Solution', 'Response', 'Point'])
+    print(results)
+   
 def show_dashboard():
     dr = pd.read_csv(get_config('results_file'))
 
