@@ -407,7 +407,7 @@ def test_1():
     
     output_decorator("Test 1", 4)
 
-    count_of_words= int(input("How many words shall I ask from you in this test?(5)") or "5")
+    count_of_words= int(input("Wordcount in this test(5): ") or "5")
 
     if count_of_words<1:
         return
@@ -459,12 +459,48 @@ def test_2():
     
     output_decorator("Test 2 - Multiple choice", 4)
 
-    count_of_words= int(input("How many words shall I ask from you in this test?(5)") or "5")
+    count_of_words= int(input("Word count in this test?(5):") or "5")
 
     if count_of_words<1:
         return
+    
+    letters = ['a','b','c','d']
+
+    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    translations = [df['translation'][i] for i in rnd]
+    words = [df['word'][i] for i in rnd]
+    solutions = [df['_expression'][i] for i in rnd]
+    
+    # randomly select one letter as the solution of the multiple choice
+
+    questions_dict = {}
+    for idx,val in enumerate(rnd):
+        
+        #shuffle the letters
+        random.shuffle(letters)
+
+        # select 3 words that are not the asked word
+        rnd_alt = random.choices(population =df.index, k = 3)
+        rnd_alt_solutions = [df['_expression'][i] for i in rnd_alt]
+
+        question_dict = dict([(letters[0], solutions[idx])])
+        
+        for f in range(0, 3):
+            question_dict[letters[f+1]] = rnd_alt_solutions[f]
+
+        questions_dict[idx+1]={}
+        questions_dict[idx+1]['items'] = sorted(question_dict.items())
+        questions_dict[idx+1]['question'] = translations[idx]
+        questions_dict[idx+1]['solution'] = solutions[idx]
+        questions_dict[idx+1]['solution_choice'] = letters[0]
+
+    print(questions_dict)
 
 
+
+
+    
+    counts = [len(df[df['translation']==i]) for i in translations]
     
 
 def show_dashboard():
