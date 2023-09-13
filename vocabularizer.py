@@ -402,7 +402,7 @@ def save_weights(file):
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
 
-def test_1():
+def test_1(count_of_words:int):
     """
     Test 1 tests your writing skills and knowledge
     """
@@ -410,13 +410,12 @@ def test_1():
     
     output_decorator("Test 1", 4)
 
-    count_of_words= int(input("Wordcount in this test(5): ") or "5")
-
     if count_of_words<1:
         return
 
     if len(df) < count_of_words:
         count_of_words = len(df) 
+
     # set up test words
     rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
     translations = [df['translation'][i] for i in rnd]
@@ -456,17 +455,18 @@ def test_1():
 
     output_decorator("",0, 'end') 
 
-def test_2():
+def test_2(count_of_words:int):
     """multiple choice test"""
     global df
     
     output_decorator("Test 2 - Multiple choice", 4)
 
-    count_of_words= int(input("Word count in this test?(5):") or "5")
-
     if count_of_words<1:
         return
     
+    if len(df) < count_of_words:
+        count_of_words = len(df) 
+        
     letters = ['a','b','c','d']
 
     rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
