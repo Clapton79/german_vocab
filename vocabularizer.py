@@ -471,7 +471,6 @@ def test_2():
 
     rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
     translations = [df['translation'][i] for i in rnd]
-    words = [df['word'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
     
     # build the dict:
@@ -503,7 +502,7 @@ def test_2():
     # collect the answers by looping through the dict
     for key, dictvalue in questions_dict.items():
         # build padded row of choices
-        row = '     '.join(["{0}) {1}".format(x[0], x[1]) for x in list(sorted(dictvalue['options'].items()))])
+        row = '     '.join(["{0}) {1}".format(x[0], x[1].ljust(20)) for x in list(sorted(dictvalue['options'].items()))])
         print("{0}:".format(dictvalue['question']))
         print(row)
         response = input ("Select option: ")
@@ -515,8 +514,19 @@ def test_2():
                              questions_dict[x]['solution_choice'], 
                              questions_dict[x]['response'], 
                              int(questions_dict[x]['solution_choice']==questions_dict[x]['response'])) for x in questions_dict.keys()],
-                             columns = ['Question', 'Expression','Solution', 'Response', 'Point'])
-    print(results)
+                             columns = ['Word', 'Solution','Solution Choice', 'Response', 'Point'])
+    
+    if sum(results.Point) != len(results):
+        output_decorator('Errors',6)
+        print(results[results.Point!=1])
+
+    res = round(sum(results.Point)/len(results)*100,1)
+    print ("Your result is {0}%, {1} out of {2}".format(res, sum(results.Point),len(results))) 
+    update_weights(results)
+    save_result('Test 2', res, len(results))
+
+    
+
    
 def show_dashboard():
     dr = pd.read_csv(get_config('results_file'))
