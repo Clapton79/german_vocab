@@ -1,2 +1,75 @@
 translation,mode,da,word
-Turkey,n,r,T√ºrkei
+Turkey,n,r,Türkei
+Hello,,,Hallo
+Good morning!,,,Guten Morgen!
+Good morning!,,,Guten Tag!
+Good evening!,,,Guten Abend!
+Good night!,,,Gute Nacht!
+Have a nice day!,,,Schönen Tag!
+Bye!,,,Auf Wiedersehen!
+Bye!,,,Tschüß!
+My name is ...,,,Ich heiße ...
+My name is ...,,,Mein Name ist ...
+Who?,,,Wer?
+How?,,,Wie?
+lady,,e,Frau
+ladies,,e,Frauen
+gentleman,,r,Herr
+gentlemen,,e,Herren
+given name,,r,Vorname
+given names,,e,Vornamen
+family name,,r,Familienname
+family names,,e,Familiennamen
+Where from?,,,Woher?
+country,,s,Land
+countries,,e,Länder
+Germany,,,Deutschland
+Austria,,,Österreich
+Switzerland,,e,Schweiz
+How are you doing?,,,Wie geht's?
+I'm doing fine. ,,,Es mir geht sehr gut.
+I'm doing OK. ,,,Es geht.
+I'm not doing fine. ,,,Es geht nicht so gut.
+further,,,weiter
+alphabet,,s,Alphabet
+alphabets,,e,Alphabete
+to spell,,,buchstabieren
+too,,,auch
+thanks,,,danke
+yes,,,ja
+no,,,nein
+very,,,sehr
+and,,,und
+Who are you?,,,Wer bist du?
+I come from ...,,,Ich komme aus ...
+My name is ...,,,Mein Name ist ...
+nickname,,r,Spitzname
+Exactly.,,,Genau.
+I grew up in Berlin.,,,Ich bin in Berlin aufgewachsen. 
+I work as a ...,,,Ich arbeite als ...
+single,,,single
+single,,,ledig
+single,,,alleinstehend
+book,n,s,Buch
+bird,n,r,Vogel
+cheese,n,r,Käse
+train,n,r,Zug
+train,n,e,Bahn
+tram,n,e,Straßenbahn
+nickname,n,r,Name
+first name,n,r,Vorname
+surname,n,r,Nachname
+still,o,-,doch
+really,o,-,wirklich
+to work,v,-,arbeiten
+family status,n,r,Familienstand
+married,a,-,verheiratet
+age,n,s,Alter
+foreign language,n,e,Fremdsprache
+teacher(female),n,e,Lehrerin
+teacher(male),n,r,Lehrer
+daughter,n,s,Mädchen
+boy,n,r,Junge
+year,n,s,Jahr
+reality,n,e,Wirklichkeit
+married,,,verheiratet
