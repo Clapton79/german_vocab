@@ -17,7 +17,7 @@ from pprint import pprint
 config = {}
 config_loaded = False
 
-library_version = "1.1.2"
+library_version = "1.1.3"
 print ("Vocabularizer {0}".format(library_version))
 
 language = ""
@@ -157,7 +157,7 @@ def show_vocabulary(offset_rows:int,fetch_rows:int):
         range_end = max_len
 
     # display(df.style.set_properties(**{'text-align': 'left'}))
-    print(df.loc[offset_rows:range_end].style.set_properties(**{'text-align':'left'}))
+    print(df.loc[offset_rows:range_end][['translation', '_expression']])
 
 def show_vocabulary_pg(pagesize:int):
     global df
@@ -171,7 +171,7 @@ def show_vocabulary_pg(pagesize:int):
             if range_end>len(df):
                 range_end = len(df)
 
-            print(df.loc[offset:range_end])
+            print(df.loc[offset:range_end][['translation', '_expression']])
             offset=offset+pagesize
             response = input("Continue?(y)") or 'y'
 

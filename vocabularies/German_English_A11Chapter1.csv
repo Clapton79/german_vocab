@@ -1,14 +1,14 @@
 translation,mode,da,word
-Turkey,n,r,TŸrkei
+Turkey,n,r,TÃ¼rkei
 Hello,,,Hallo
 Good morning!,,,Guten Morgen!
 Good morning!,,,Guten Tag!
 Good evening!,,,Guten Abend!
 Good night!,,,Gute Nacht!
-Have a nice day!,,,Schšnen Tag!
+Have a nice day!,,,SchÃ¶nen Tag!
 Bye!,,,Auf Wiedersehen!
-Bye!,,,TschŸ§!
-My name is ...,,,Ich hei§e ...
+Bye!,,,TschÃ¼ÃŸ!
+My name is ...,,,Ich heiÃŸe ...
 My name is ...,,,Mein Name ist ...
 Who?,,,Wer?
 How?,,,Wie?
@@ -22,9 +22,9 @@ family name,,r,Familienname
 family names,,e,Familiennamen
 Where from?,,,Woher?
 country,,s,Land
-countries,,e,LŠnder
+countries,,e,LÃ¤nder
 Germany,,,Deutschland
-Austria,,,…sterreich
+Austria,,,Ã–sterreich
 Switzerland,,e,Schweiz
 How are you doing?,,,Wie geht's?
 I'm doing fine. ,,,Es mir geht sehr gut.
@@ -52,10 +52,10 @@ single,,,ledig
 single,,,alleinstehend
 book,n,s,Buch
 bird,n,r,Vogel
-cheese,n,r,KŠse
+cheese,n,r,Kï¿½se
 train,n,r,Zug
 train,n,e,Bahn
-tram,n,e,Stra§enbahn
+tram,n,e,Straï¿½enbahn
 nickname,n,r,Name
 first name,n,r,Vorname
 surname,n,r,Nachname
@@ -68,8 +68,25 @@ age,n,s,Alter
 foreign language,n,e,Fremdsprache
 teacher(female),n,e,Lehrerin
 teacher(male),n,r,Lehrer
-daughter,n,s,MŠdchen
+daughter,n,s,Mï¿½dchen
 boy,n,r,Junge
 year,n,s,Jahr
 reality,n,e,Wirklichkeit
 married,,,verheiratet
+I am 25 years old.,,,Ich bin 25 Jahre alt. 
+to read,,,lesen
+to travel,,,reisen
+almost,,,fast
+since,,,seit
+How long have you been in Germany?,,,Wie lange bist du schon in Deutschland?
+month,,r,Monat
+What do you work?,,,Was arbeitest du?
+What are your Hobbys?,,,Was sindt deine Hobbys?
+to swim,,,schwimmen
+to cycle,,,radfahren
+bycicle,,s,Fahrrad
+I like cycling.,,,Ich mag Fahrrad fahren.
+to cycle,,,Fahrrad fahren
+to drive,,,fahren
+but,,,aber
+right,,,richtig
