@@ -525,12 +525,6 @@ def test_2():
     update_weights(results)
     save_result('Test 2', res, len(results))
 
-def show_dashboard():
-    dr = pd.read_csv(get_config('results_file'))
-
-    plt.plot(dr.pct)
-    plt.show()
-
 def test_selector():
     response = input("""Press the letter of the test to start it:
     a - Test 1 (type words) 
