@@ -362,7 +362,7 @@ def add_word(word, da, translation, weight, mode):
     Adds a word to the vocabulary in the memory
     """
     global df
-    df = df._append(pd.Series({"mode": mode,"Word":word,"DA":da, "Translation": translation, "Weight":weight}), ignore_index=True)
+    df = df._append(pd.Series({"translation": translation, "mode": mode,"da":da,"word":word}), ignore_index=True)
 
 def save_result(test, points, rounds):
     """
