@@ -11,6 +11,7 @@ import random
 from json import loads
 from os import path
 from datetime import datetime
+import time
 import matplotlib.pyplot as plt
 from pprint import pprint
 
@@ -83,6 +84,8 @@ def load_file(file):
     # transformations:
     # computed column: Full word: look up the definite article and add it to the word
     da['_expression']=da['da'].apply(decode_da)+ ' ' + da['word']
+    da['_expression']=da['_expression'].apply(lambda x: x.strip())
+    da['_weight']=1
     # append loaded vocabulary to the in-memory vocabulary
     df=df._append(da)
 
@@ -401,6 +404,47 @@ def save_weights(file):
     de.to_csv(file, index=False)
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
+
+def word_memorizer(count_of_words:int):
+    """
+    Shows some words
+    """
+    global df
+    global loaded_files
+    # raise error if no vocabulary is loaded 
+    if loaded_files==[]:
+        raise ValueError("No vocabulary has been loaded.")
+
+    output_decorator("Word memorizer", 4)
+
+    sleep_time_seconds = 4
+
+    if count_of_words<1:
+        return
+
+    if len(df) < count_of_words:
+        count_of_words = len(df) 
+
+    # set up test words
+    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+
+    # build dictionary
+    mem = dict({})
+    for i in rnd:
+        mem[i] = {}
+        mem[i]['Translation'] = df.translation[i]
+        mem[i]['Word'] = df._expression[i]
+        mem[i]['Mode'] = decode_mode(df['mode'][i])
+
+    # show the words
+    for i, v in mem.items():
+        row = "{0} {1} {2}".format(mem[i]['Mode'].ljust(30), mem[i]['Translation'].ljust(30), mem[i]['Word'].ljust(30))
+        print("")
+        print(row)
+        time.sleep(sleep_time_seconds)
+
+    print("Word memorizer completed.")
+        
 
 def test_1(count_of_words:int):
     """
