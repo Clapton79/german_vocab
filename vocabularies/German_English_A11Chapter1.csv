@@ -52,10 +52,10 @@ single,,,ledig
 single,,,alleinstehend
 book,n,s,Buch
 bird,n,r,Vogel
-cheese,n,r,K�se
+cheese,n,r,Käse
 train,n,r,Zug
 train,n,e,Bahn
-tram,n,e,Stra�enbahn
+tram,n,e,Straßenbahn
 nickname,n,r,Name
 first name,n,r,Vorname
 surname,n,r,Nachname
@@ -68,7 +68,7 @@ age,n,s,Alter
 foreign language,n,e,Fremdsprache
 teacher(female),n,e,Lehrerin
 teacher(male),n,r,Lehrer
-daughter,n,s,M�dchen
+daughter,n,s,Mädchen
 boy,n,r,Junge
 year,n,s,Jahr
 reality,n,e,Wirklichkeit
