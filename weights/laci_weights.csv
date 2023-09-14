@@ -1,8 +1,8 @@
 translation,_expression,_weight
 book,das Buch,0.4
 bird,der Vogel,0.4
-cheese,der Käse,0.8
-train,der Zug,0.6
+cheese,der Käse,0.6
+train,der Zug,0.4
 train,die Bahn,0.4
 tram,die Straßenbahn,0.71
 nickname,der Name,0.07
@@ -15,9 +15,86 @@ family status,der Familienstand,1.01
 married, verheiratet,0.6
 age,das Alter,0.57
 foreign language,die Fremdsprache,0.6
-teacher(female),die Lehrerin,0.6
+teacher(female),die Lehrerin,0.4
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.4
 boy,der Junge,0.6
 year,das Jahr,0.8
-Turkey,der Türkei,1.0
+Turkey,der Türkei,0.8
+Hello,Hallo,1.0
+Good morning!,Guten Morgen!,1.0
+Good morning!,Guten Tag!,1.0
+Good evening!,Guten Abend!,0.6
+Good night!,Gute Nacht!,1.0
+Have a nice day!,Schönen Tag!,0.6
+Bye!,Auf Wiedersehen!,0.8
+Bye!,Tschüß!,1.0
+My name is ...,Ich heiße ...,0.8
+My name is ...,Mein Name ist ...,1.0
+My name is ...,Mein Name ist ...,1.0
+My name is ...,Mein Name ist ...,1.0
+My name is ...,Mein Name ist ...,1.0
+Who?,Wer?,1.0
+How?,Wie?,1.0
+lady,die Frau,1.0
+ladies,die Frauen,1.0
+gentleman,der Herr,0.8
+gentlemen,die Herren,1.0
+given name,der Vorname,1.0
+given names,die Vornamen,0.8
+family name,der Familienname,1.0
+family names,die Familiennamen,0.8
+Where from?,Woher?,1.0
+country,das Land,1.0
+countries,die Länder,1.0
+Germany,Deutschland,1.0
+Austria,Österreich,1.0
+Switzerland,die Schweiz,1.0
+How are you doing?,Wie geht's?,0.6
+I'm doing fine. ,Es mir geht sehr gut.,1.0
+I'm doing OK. ,Es geht.,1.0
+I'm not doing fine. ,Es geht nicht so gut.,1.0
+further,weiter,0.8
+alphabet,das Alphabet,1.0
+alphabets,die Alphabete,0.8
+to spell,buchstabieren,0.6
+too,auch,1.0
+thanks,danke,0.8
+yes,ja,0.8
+no,nein,0.8
+very,sehr,0.8
+and,und,1.0
+Who are you?,Wer bist du?,1.0
+I come from ...,Ich komme aus ...,0.6
+nickname,der Spitzname,1.0
+Exactly.,Genau.,1.0
+I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
+I work as a ...,Ich arbeite als ...,0.8
+single,single,0.8
+single,ledig,0.8
+single,alleinstehend,1.0
+still,doch,1.0
+really,wirklich,1.0
+to work,arbeiten,1.0
+married,verheiratet,0.6
+married,verheiratet,0.6
+married,verheiratet,0.6
+married,verheiratet,0.6
+reality,die Wirklichkeit,0.8
+I am 25 years old.,Ich bin 25 Jahre alt.,1.0
+to read,lesen,1.0
+to travel,reisen,1.0
+almost,fast,1.0
+since,seit,0.8
+How long have you been in Germany?,Wie lange bist du schon in Deutschland?,1.0
+month,der Monat,1.0
+What do you work?,Was arbeitest du?,1.0
+What are your Hobbys?,Was sindt deine Hobbys?,1.0
+to swim,schwimmen,0.8
+to cycle,radfahren,0.8
+bycicle,das Fahrrad,0.8
+I like cycling.,Ich mag Fahrrad fahren.,1.0
+to cycle,Fahrrad fahren,0.8
+to drive,fahren,1.0
+but,aber,1.0
+right,richtig,0.8
