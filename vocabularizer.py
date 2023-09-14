@@ -18,8 +18,7 @@ from pprint import pprint
 config = {}
 config_loaded = False
 
-library_version = "1.1.3"
-print ("Vocabularizer {0}".format(library_version))
+library_version = "1.1.4"
 
 language = ""
 secondary_language = ""
