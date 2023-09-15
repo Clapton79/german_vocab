@@ -1,9 +1,23 @@
 import vocabularizer as v
+import os
 
 def daily_routine():
-    v.load_file('vocabularies/German_English_A11Chapter1.csv')
-    v.word_memorizer(15)
-    v.test_2(30)
-    v.test_1(15)
+    files = os.listdir('vocabularies')
+    for file in files:
+        v.output_decorator("FILE: {0}".format(file), 2)
+        v.load_file(f'vocabularies/{file}')
+        v.word_memorizer(3)
+        v.test_2(3)
+        v.test_1(5)
+        v.unload_vocabulary()
 
-daily_routine()
+#daily_routine()
+
+def one_file():
+        v.load_file(f'vocabularies/German_English_A11Chapter1.csv')
+        v.word_memorizer(3)
+        v.test_2(3)
+        v.test_1(5)
+        v.unload_vocabulary()
+
+one_file()
