@@ -404,7 +404,7 @@ def save_weights(file):
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
 
-def word_memorizer(count_of_words:int):
+def word_memorizer(count_of_words:int, sleep_time_seconds:int=2):
     """
     Shows some words
     """
@@ -415,8 +415,6 @@ def word_memorizer(count_of_words:int):
         raise ValueError("No vocabulary has been loaded.")
 
     output_decorator("Word memorizer", 4)
-
-    sleep_time_seconds = 4
 
     if count_of_words<1:
         return
