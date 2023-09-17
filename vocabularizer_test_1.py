@@ -23,6 +23,6 @@ def one_file():
 def test():
         v.load_file(f'vocabularies/German_English_A11Chapter1.csv')
         v.test_2(3)
-        v.save_weights(v.get_config('weights_file'))
+       
 
 test()

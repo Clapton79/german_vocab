@@ -67,14 +67,14 @@ Exactly.,Genau.,1.0
 I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
 I work as a ...,Ich arbeite als ...,0.8
 single,single,0.8
-single,ledig,0.8
+single,ledig,0.6
 single,alleinstehend,1.0
 still,doch,1.0
 really,wirklich,1.0
 to work,arbeiten,1.0
 married,verheiratet,0.6
 reality,die Wirklichkeit,0.8
-I am 25 years old.,Ich bin 25 Jahre alt.,1.0
+I am 25 years old.,Ich bin 25 Jahre alt.,0.8
 to read,lesen,1.0
 to travel,reisen,1.0
 almost,fast,1.0
@@ -87,7 +87,7 @@ to swim,schwimmen,0.8
 to cycle,radfahren,0.8
 bycicle,das Fahrrad,0.8
 I like cycling.,Ich mag Fahrrad fahren.,1.0
-to cycle,Fahrrad fahren,0.8
+to cycle,Fahrrad fahren,0.6
 to drive,fahren,1.0
 but,aber,1.0
 right,richtig,0.8

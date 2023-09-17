@@ -102,6 +102,7 @@ def load_weights(file):
     global weights_loaded
     global df
     dw = pd.read_csv(file)
+    dw = dw.drop_duplicates()
 
     if '_weight' in df.columns:
         df.rename({"_weight":"_weight_df"}, axis=1,inplace=True)
