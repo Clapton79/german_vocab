@@ -1,7 +1,7 @@
 translation,_expression,_weight
 book,das Buch,0.4
 bird,der Vogel,0.4
-cheese,der Käse,0.6
+cheese,der Käse,0.4
 train,der Zug,0.4
 train,die Bahn,0.4
 tram,die Straßenbahn,0.71
@@ -12,13 +12,12 @@ still, doch,0.6
 really, wirklich,0.8
 to work, arbeiten,0.4
 family status,der Familienstand,1.01
-married, verheiratet,0.6
 age,das Alter,0.57
 foreign language,die Fremdsprache,0.6
 teacher(female),die Lehrerin,0.4
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.4
-boy,der Junge,0.6
+boy,der Junge,0.4
 year,das Jahr,0.8
 Turkey,der Türkei,0.8
 Hello,Hallo,1.0
@@ -30,9 +29,6 @@ Have a nice day!,Schönen Tag!,0.6
 Bye!,Auf Wiedersehen!,0.8
 Bye!,Tschüß!,1.0
 My name is ...,Ich heiße ...,0.8
-My name is ...,Mein Name ist ...,1.0
-My name is ...,Mein Name ist ...,1.0
-My name is ...,Mein Name ist ...,1.0
 My name is ...,Mein Name ist ...,1.0
 Who?,Wer?,1.0
 How?,Wie?,1.0
@@ -66,7 +62,7 @@ very,sehr,0.8
 and,und,1.0
 Who are you?,Wer bist du?,1.0
 I come from ...,Ich komme aus ...,0.6
-nickname,der Spitzname,1.0
+nickname,der Spitzname,0.8
 Exactly.,Genau.,1.0
 I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
 I work as a ...,Ich arbeite als ...,0.8
@@ -76,9 +72,6 @@ single,alleinstehend,1.0
 still,doch,1.0
 really,wirklich,1.0
 to work,arbeiten,1.0
-married,verheiratet,0.6
-married,verheiratet,0.6
-married,verheiratet,0.6
 married,verheiratet,0.6
 reality,die Wirklichkeit,0.8
 I am 25 years old.,Ich bin 25 Jahre alt.,1.0

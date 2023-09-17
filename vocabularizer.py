@@ -382,6 +382,7 @@ def save_weights(file):
     global weights_updated_not_saved
    
     da = pd.DataFrame(df.filter(items=['translation','_expression','_weight']))
+    da = da.drop_duplicates()
 
     # if data exists, load and update it first. If it doesn't, just make the current selection the contents to write.
     if path.exists(file):
@@ -390,7 +391,7 @@ def save_weights(file):
         if '_weight' in de.columns:
             de.rename({'_weight':'_weight_ex'}, axis=1,inplace=True)
 
-        de = de.merge(da, how='outer', left_on=['translation','_expression'], right_on =['translation','_expression'])
+        de = de.merge(da, how='outer', left_on=['translation','_expression'], right_on =['translation','_expression']).drop_duplicates()
         
         if '_weight' in de.columns:
             de['_weight'] = de['_weight'].fillna(de['_weight_ex'])
