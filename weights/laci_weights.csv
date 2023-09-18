@@ -1,27 +1,27 @@
 translation,_expression,_weight
-book,das Buch,0.4
+book,das Buch,0.2
 bird,der Vogel,0.2
 cheese,der Käse,0.6
 train,der Zug,0.4
 train,die Bahn,0.4
 tram,die Straßenbahn,0.51
 nickname,der Name,0.07
-first name,der Vorname,0.6
+first name,der Vorname,0.4
 surname,der Nachname,0.47
 still, doch,0.6
 really, wirklich,0.8
 to work, arbeiten,0.4
-family status,der Familienstand,1.01
-age,das Alter,0.57
-foreign language,die Fremdsprache,0.6
-teacher(female),die Lehrerin,0.4
+family status,der Familienstand,0.61
+age,das Alter,0.37
+foreign language,die Fremdsprache,0.4
+teacher(female),die Lehrerin,0.2
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.4
 boy,der Junge,0.4
 year,das Jahr,0.6
 Turkey,der Türkei,0.8
 Hello,Hallo,1.0
-Good morning!,Guten Morgen!,1.0
+Good morning!,Guten Morgen!,1.2
 Good morning!,Guten Tag!,1.0
 Good evening!,Guten Abend!,0.6
 Good night!,Gute Nacht!,1.0
@@ -30,7 +30,7 @@ Bye!,Auf Wiedersehen!,0.6
 Bye!,Tschüß!,1.0
 My name is ...,Ich heiße ...,0.8
 My name is ...,Mein Name ist ...,1.0
-Who?,Wer?,1.0
+Who?,Wer?,0.8
 How?,Wie?,0.8
 lady,die Frau,1.0
 ladies,die Frauen,1.0
@@ -47,7 +47,7 @@ Germany,Deutschland,1.0
 Austria,Österreich,1.0
 Switzerland,die Schweiz,1.0
 How are you doing?,Wie geht's?,0.6
-I'm doing fine. ,Es mir geht sehr gut.,1.0
+I'm doing fine. ,Es mir geht sehr gut.,1.2
 I'm doing OK. ,Es geht.,1.0
 I'm not doing fine. ,Es geht nicht so gut.,1.0
 further,weiter,0.8
@@ -58,7 +58,7 @@ too,auch,0.8
 thanks,danke,0.8
 yes,ja,0.6
 no,nein,0.8
-very,sehr,0.8
+very,sehr,0.6
 and,und,1.0
 Who are you?,Wer bist du?,1.0
 I come from ...,Ich komme aus ...,0.6
@@ -72,7 +72,7 @@ single,alleinstehend,1.0
 still,doch,0.6
 really,wirklich,0.8
 to work,arbeiten,0.8
-married,verheiratet,0.6
+married,verheiratet,0.4
 reality,die Wirklichkeit,0.8
 I am 25 years old.,Ich bin 25 Jahre alt.,0.8
 to read,lesen,1.0
@@ -81,43 +81,43 @@ almost,fast,1.0
 since,seit,0.6
 How long have you been in Germany?,Wie lange bist du schon in Deutschland?,1.0
 month,der Monat,1.0
-What do you work?,Was arbeitest du?,1.0
+What do you work?,Was arbeitest du?,0.8
 What are your Hobbys?,Was sindt deine Hobbys?,1.0
 to swim,schwimmen,0.8
 to cycle,radfahren,0.8
 bycicle,das Fahrrad,0.8
 I like cycling.,Ich mag Fahrrad fahren.,1.0
 to cycle,Fahrrad fahren,0.6
-to drive,fahren,1.0
+to drive,fahren,0.8
 but,aber,1.0
 right,richtig,0.8
 bicycle,das Fahrrad,1.0
 bicycles,die Fahrräder,1.0
-tyre,der Reifen,1.0
+tyre,der Reifen,0.8
 tyres,die Reifen,1.2
 break,die Bremse,1.0
-breaks,die Bremsen,1.2
-pedal,das Pedal,1.0
+breaks,die Bremsen,1.0
+pedal,das Pedal,0.8
 pedals,die Pedale,1.0
 gear,die Gangschaltung,1.0
 gears,die Gantschaltungen,1.0
 chain,die Kette,0.8
 saddle,der Sattel,1.0
-bicycle light,das Fahrradlicht,1.0
+bicycle light,das Fahrradlicht,1.2
 handlebar,das Lenkrad,0.8
 handlebar,der Lenker,0.6
-rusty,rostig,1.0
+rusty,rostig,0.8
 old,alt,1.0
 broken,kaputt,1.0
 unstable,unstabil,1.0
 uncomfortable,unbequem,1.0
-flat,platt,1.0
+flat,platt,1.2
 My bicyle is broken.,Mein Fahrrad ist kaputt.,0.8
 My breaks don't work anymore.,Meine Bremsen funktionieren nicht mehr.,1.0
 My saddle is unstable.,Mein Sattel ist unstabil.,1.0
 My saddle is uncomfortable.,Mein Sattel ist unbequem.,1.0
 My pedals are too old.,Meine Pedale sind zu alt.,1.0
 My chain is rusty.,Meine Kette ist rostig.,1.0
-My tires are flat.,Meine Reifen sind platt.,1.0
+My tires are flat.,Meine Reifen sind platt.,1.2
 My front tire is flat.,Mein Vorderreifen ist platt.,1.0
-I can't change gears.,Ich kann den Gang nicht mehr schalten.,1.2
+I can't change gears.,Ich kann den Gang nicht mehr schalten.,1.4
