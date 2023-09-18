@@ -96,8 +96,6 @@ def load_file(file):
     loaded_files.append(file)
     print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
 
-
-
 def load_weights(file):
     global weights_loaded
     global df
@@ -110,7 +108,7 @@ def load_weights(file):
     df = df.merge(dw,how='left', left_on=['translation', '_expression'], right_on=['translation', '_expression'])
 
     if '_weight_df' in df.columns:
-        df['_weight']= df['_weight'].fillna(df['_weight_df']).fillna(1)
+        df['_weight']= df['_weight'].fillna(df['_weight_df']).fillna(2)
         df.drop(['_weight_df'],axis=1, inplace=True)
     
     weights_loaded=True
@@ -271,7 +269,7 @@ def decode_mode(mode:str):
         case 'a':
             return 'Adjektiv'
         case 's':
-            return 'other'
+            return 'Satz oder Frage'
         case _: 
             return ''
 

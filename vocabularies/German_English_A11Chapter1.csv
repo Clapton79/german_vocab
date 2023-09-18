@@ -10,8 +10,8 @@ Bye!,,,Auf Wiedersehen!
 Bye!,,,Tschüß!
 My name is ...,,,Ich heiße ...
 My name is ...,,,Mein Name ist ...
-Who?,,,Wer?
-How?,,,Wie?
+Who?,s,,Wer?
+How?,s,,Wie?
 lady,,e,Frau
 ladies,,e,Frauen
 gentleman,,r,Herr
@@ -33,23 +33,22 @@ I'm not doing fine. ,,,Es geht nicht so gut.
 further,,,weiter
 alphabet,,s,Alphabet
 alphabets,,e,Alphabete
-to spell,,,buchstabieren
+to spell,v,,buchstabieren
 too,,,auch
 thanks,,,danke
 yes,,,ja
 no,,,nein
-very,,,sehr
-and,,,und
+very,a,,sehr
 Who are you?,,,Wer bist du?
 I come from ...,,,Ich komme aus ...
-My name is ...,,,Mein Name ist ...
-nickname,,r,Spitzname
-Exactly.,,,Genau.
-I grew up in Berlin.,,,Ich bin in Berlin aufgewachsen. 
-I work as a ...,,,Ich arbeite als ...
-single,,,single
-single,,,ledig
-single,,,alleinstehend
+My name is ...,s,,Mein Name ist ...
+nickname,n,r,Spitzname
+Exactly.,s,,Genau.
+I grew up in Berlin.,s,,Ich bin in Berlin aufgewachsen. 
+I work as a ...,s,,Ich arbeite als ...
+single,a,,single
+single,a,,ledig
+single,a,,alleinstehend
 book,n,s,Buch
 bird,n,r,Vogel
 cheese,n,r,Käse
@@ -74,19 +73,117 @@ year,n,s,Jahr
 reality,n,e,Wirklichkeit
 married,,,verheiratet
 I am 25 years old.,,,Ich bin 25 Jahre alt. 
-to read,,,lesen
-to travel,,,reisen
+to read,v,,lesen
+to travel,v,,reisen
 almost,,,fast
 since,,,seit
 How long have you been in Germany?,,,Wie lange bist du schon in Deutschland?
-month,,r,Monat
-What do you work?,,,Was arbeitest du?
-What are your Hobbys?,,,Was sindt deine Hobbys?
-to swim,,,schwimmen
-to cycle,,,radfahren
-bycicle,,s,Fahrrad
-I like cycling.,,,Ich mag Fahrrad fahren.
-to cycle,,,Fahrrad fahren
-to drive,,,fahren
+month,n,r,Monat
+What do you work?,s,,Was arbeitest du?
+What are your Hobbys?,s,,Was sindt deine Hobbys?
+to swim,v,,schwimmen
+to cycle,v,,radfahren
+bycicle,n,s,Fahrrad
+I like cycling.,s,,Ich mag Fahrrad fahren.
+to cycle,v,,Fahrrad fahren
+to drive,v,,fahren
 but,,,aber
-right,,,richtig
+right,a,,richtig
+employer,n,r,Arbeitgeber
+training,n,e,Ausbildung
+trainings,n,e,Ausbildungen
+occupation,n,r,Beruf
+occupations,n,e,Berufe
+college,n,e,Hochschule
+colleges,n,e,Hochschulen
+university,n,e,Universität
+universities,n,e,Universitäten
+job,n,r,Job
+internship,n,s,Praktikum
+internships,n,e,Praktika
+school,n,e,Schule
+schools,n,e,Schulen
+job,n,e,Stelle
+jobs,n,e,Stellen
+to work as ...,s,,arbeiten als
+to work at ...,s,,arbeiten bei
+unemployed,a,,arbeitslos
+by profession,s,,von Beruf
+What?,s,,Was?
+architect,n,r,Architekt
+architects,n,r,Architekten
+doctor,n,r,Arzt
+doctors,n,e,Ärzte
+engineer,n,r,Ingenieur
+engineers,n,e,Ingenieure
+hairdresser,n,r,Friseur
+hairdressers,n,e,Friseure
+journalist,n,r,Journalist
+journalists,n,e,Journalisten
+waiter,n,r,Kellner
+nurse,n,e,Krankenschwester
+mechanic engineer,n,r,Mechatroniker
+student,n,r,Student
+students,n,e,Studenten
+actor,n,r,Schauspieler
+student,n,r,Schüler
+assistant,n,r,Sekretär
+seller,n,r,Verkäufer
+age,n,s,Alter
+kid,n,s,Kind
+kids,n,e,Kinder
+to live,v,,leben
+to live alone,v,,allein leben
+to live together,v,,zusammenleben
+to live in,v,,wohnen in
+divorced,a,,geschieden
+Where?,s,,Wo?
+to believe,v,,glauben
+to have,v,,haben
+to make, v,,machen
+true,a,,richtig
+correct,a,,richtig
+false,a,,falsch
+incorrect,a,,falsch
+I don't work.,s,,Ich arbeite nicht
+We live in Malaga.,s,,Wir leben in Malaga.
+Words,n,e,Wörter
+Which?,s,,Welche?
+answer,n,e,Antwort
+to cross,v,,kreuzen
+to speak,v,,sprechen
+Wie viele?,s,,How many?
+ein bisschen,s,,a little
+parents,n,e,Eltern
+picture,n,s,Bild
+pictures,n,e,Bilder
+lamp,n,e,Lampe
+couch,n,s,Sofa
+couches,n,e,Sofas
+chair,n,r,Stuhl
+chairs,n,e,Stühler
+table,n,r,Tisch
+closet,n,r,Schrank
+armchair,n,r,Sessel
+bed,n,s,Bett
+beds,n,e,Betten
+rug,n,r,Teppich
+schlecht,a,,hard
+klein,a,,small
+furniture,n,e,Möbel
+large,a,,groß
+ugly,a,,hässlich
+short,a,,kurz
+long,a,,lang
+light,a,,leicht
+beautiful,a,,schön
+heavy,a,,schwer
+to cost,v,,kosten
+cheap,a,,günstig
+cheap,a,,billig
+expensive,a,,teuer
+help,n,e,Hilfe
+to need,v,,brauchen
+to find,v,,finden
+to say,v,,sagen
+nur,s,,only

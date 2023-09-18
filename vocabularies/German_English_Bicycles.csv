@@ -15,17 +15,21 @@ bicycle light,n,s,Fahrradlicht
 handlebar,n,s,Lenkrad
 handlebar,n,r,Lenker
 rusty,,,rostig
-old,,,alt
-broken,,,kaputt
-unstable,,,unstabil
-uncomfortable,,,unbequem
-flat,,,platt
-My bicyle is broken.,,,Mein Fahrrad ist kaputt.
-My breaks don't work anymore.,,,Meine Bremsen funktionieren nicht mehr.
-My saddle is unstable.,,,Mein Sattel ist unstabil.
-My saddle is uncomfortable.,,,Mein Sattel ist unbequem.
-My pedals are too old.,,,Meine Pedale sind zu alt.
-My chain is rusty.,,,Meine Kette ist rostig.
-My tires are flat.,,,Meine Reifen sind platt.
-My front tire is flat.,,,Mein Vorderreifen ist platt.
-I can't change gears.,,,Ich kann den Gang nicht mehr schalten.
+old,a,,alt
+broken,a,,kaputt
+unstable,a,,unstabil
+uncomfortable,a,,unbequem
+flat,a,,platt
+My bicyle is broken.,s,,Mein Fahrrad ist kaputt.
+My breaks don't work anymore.,s,,Meine Bremsen funktionieren nicht mehr.
+My saddle is unstable.,s,,Mein Sattel ist unstabil.
+My saddle is uncomfortable.,s,,Mein Sattel ist unbequem.
+My pedals are too old.,s,,Meine Pedale sind zu alt.
+My chain is rusty.,s,,Meine Kette ist rostig.
+My tires are flat.,s,,Meine Reifen sind platt.
+My front tire is flat.,s,,Mein Vorderreifen ist platt.
+I can't change gears.,s,,Ich kann den Gang nicht mehr schalten.
+dynamo,n,r,Dynamo
+pump,n,e,Luftpumpe
+gearbox,n,r,Umwerfer
+racing bike,n,s,Rennrad
