@@ -11,7 +11,7 @@ def daily_routine():
         v.test_1(5)
         v.unload_vocabulary()
 
-#daily_routine()
+daily_routine()
 
 def one_file():
         v.load_file(f'vocabularies/German_English_A11Chapter1.csv')
@@ -25,4 +25,3 @@ def test():
         v.test_2(3)
        
 
-test()

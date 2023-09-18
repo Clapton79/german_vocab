@@ -1,10 +1,10 @@
 translation,_expression,_weight
 book,das Buch,0.4
-bird,der Vogel,0.4
-cheese,der Käse,0.4
+bird,der Vogel,0.2
+cheese,der Käse,0.6
 train,der Zug,0.4
 train,die Bahn,0.4
-tram,die Straßenbahn,0.71
+tram,die Straßenbahn,0.51
 nickname,der Name,0.07
 first name,der Vorname,0.6
 surname,der Nachname,0.47
@@ -18,7 +18,7 @@ teacher(female),die Lehrerin,0.4
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.4
 boy,der Junge,0.4
-year,das Jahr,0.8
+year,das Jahr,0.6
 Turkey,der Türkei,0.8
 Hello,Hallo,1.0
 Good morning!,Guten Morgen!,1.0
@@ -26,12 +26,12 @@ Good morning!,Guten Tag!,1.0
 Good evening!,Guten Abend!,0.6
 Good night!,Gute Nacht!,1.0
 Have a nice day!,Schönen Tag!,0.6
-Bye!,Auf Wiedersehen!,0.8
+Bye!,Auf Wiedersehen!,0.6
 Bye!,Tschüß!,1.0
 My name is ...,Ich heiße ...,0.8
 My name is ...,Mein Name ist ...,1.0
 Who?,Wer?,1.0
-How?,Wie?,1.0
+How?,Wie?,0.8
 lady,die Frau,1.0
 ladies,die Frauen,1.0
 gentleman,der Herr,0.8
@@ -53,32 +53,32 @@ I'm not doing fine. ,Es geht nicht so gut.,1.0
 further,weiter,0.8
 alphabet,das Alphabet,1.0
 alphabets,die Alphabete,0.8
-to spell,buchstabieren,0.6
-too,auch,1.0
+to spell,buchstabieren,0.4
+too,auch,0.8
 thanks,danke,0.8
-yes,ja,0.8
+yes,ja,0.6
 no,nein,0.8
 very,sehr,0.8
 and,und,1.0
 Who are you?,Wer bist du?,1.0
 I come from ...,Ich komme aus ...,0.6
-nickname,der Spitzname,0.8
-Exactly.,Genau.,1.0
+nickname,der Spitzname,0.6
+Exactly.,Genau.,0.8
 I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
 I work as a ...,Ich arbeite als ...,0.8
 single,single,0.8
 single,ledig,0.6
 single,alleinstehend,1.0
-still,doch,1.0
-really,wirklich,1.0
-to work,arbeiten,1.0
+still,doch,0.6
+really,wirklich,0.8
+to work,arbeiten,0.8
 married,verheiratet,0.6
 reality,die Wirklichkeit,0.8
 I am 25 years old.,Ich bin 25 Jahre alt.,0.8
 to read,lesen,1.0
 to travel,reisen,1.0
 almost,fast,1.0
-since,seit,0.8
+since,seit,0.6
 How long have you been in Germany?,Wie lange bist du schon in Deutschland?,1.0
 month,der Monat,1.0
 What do you work?,Was arbeitest du?,1.0
@@ -91,3 +91,33 @@ to cycle,Fahrrad fahren,0.6
 to drive,fahren,1.0
 but,aber,1.0
 right,richtig,0.8
+bicycle,das Fahrrad,1.0
+bicycles,die Fahrräder,1.0
+tyre,der Reifen,1.0
+tyres,die Reifen,1.2
+break,die Bremse,1.0
+breaks,die Bremsen,1.2
+pedal,das Pedal,1.0
+pedals,die Pedale,1.0
+gear,die Gangschaltung,1.0
+gears,die Gantschaltungen,1.0
+chain,die Kette,0.8
+saddle,der Sattel,1.0
+bicycle light,das Fahrradlicht,1.0
+handlebar,das Lenkrad,0.8
+handlebar,der Lenker,0.6
+rusty,rostig,1.0
+old,alt,1.0
+broken,kaputt,1.0
+unstable,unstabil,1.0
+uncomfortable,unbequem,1.0
+flat,platt,1.0
+My bicyle is broken.,Mein Fahrrad ist kaputt.,0.8
+My breaks don't work anymore.,Meine Bremsen funktionieren nicht mehr.,1.0
+My saddle is unstable.,Mein Sattel ist unstabil.,1.0
+My saddle is uncomfortable.,Mein Sattel ist unbequem.,1.0
+My pedals are too old.,Meine Pedale sind zu alt.,1.0
+My chain is rusty.,Meine Kette ist rostig.,1.0
+My tires are flat.,Meine Reifen sind platt.,1.0
+My front tire is flat.,Mein Vorderreifen ist platt.,1.0
+I can't change gears.,Ich kann den Gang nicht mehr schalten.,1.2
