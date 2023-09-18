@@ -239,11 +239,11 @@ def update_weights(dw:pd.DataFrame):
     
 def output_decorator(text, level, motiv='start'):
     if motiv=='start':
-        print(72*"#")
+        print(144*"#")
         print("#", level * " ", text)
-        print(72*"=")
+        print(144*"=")
     elif motiv =='end':
-        print(72*"-")
+        print(144*"-")
 
 def left_1 (s:str):
     """
