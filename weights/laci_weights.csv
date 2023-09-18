@@ -3,24 +3,24 @@ book,das Buch,0.2
 bird,der Vogel,0.2
 cheese,der Käse,0.2
 train,der Zug,0.2
-train,die Bahn,0.4
+train,die Bahn,0.2
 tram,die Straßenbahn,0.51
 nickname,der Name,0.07
 first name,der Vorname,0.4
-surname,der Nachname,0.47
+surname,der Nachname,0.27
 still, doch,0.6
 really, wirklich,0.8
 to work, arbeiten,0.4
-family status,der Familienstand,0.61
+family status,der Familienstand,0.81
 age,das Alter,0.17
-foreign language,die Fremdsprache,0.4
+foreign language,die Fremdsprache,0.2
 teacher(female),die Lehrerin,0.2
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.2
 boy,der Junge,0.2
 year,das Jahr,0.2
 Turkey,der Türkei,0.8
-Hello,Hallo,1.0
+Hello,Hallo,0.8
 Good morning!,Guten Morgen!,1.2
 Good morning!,Guten Tag!,1.0
 Good evening!,Guten Abend!,0.6
@@ -68,10 +68,10 @@ I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
 I work as a ...,Ich arbeite als ...,0.8
 single,single,0.8
 single,ledig,0.6
-single,alleinstehend,1.0
-still,doch,0.6
+single,alleinstehend,0.8
+still,doch,0.4
 really,wirklich,0.6
-to work,arbeiten,0.8
+to work,arbeiten,0.6
 married,verheiratet,0.4
 reality,die Wirklichkeit,0.8
 I am 25 years old.,Ich bin 25 Jahre alt.,0.8
@@ -92,29 +92,29 @@ to drive,fahren,0.8
 but,aber,1.0
 right,richtig,0.8
 bicycle,das Fahrrad,0.8
-bicycles,die Fahrräder,1.0
+bicycles,die Fahrräder,0.8
 tyre,der Reifen,0.6
-tyres,die Reifen,1.2
+tyres,die Reifen,1.0
 break,die Bremse,1.0
-breaks,die Bremsen,1.0
-pedal,das Pedal,1.0
+breaks,die Bremsen,0.8
+pedal,das Pedal,0.8
 pedals,die Pedale,1.0
 gear,die Gangschaltung,1.0
 gears,die Gantschaltungen,1.0
 chain,die Kette,0.8
-saddle,der Sattel,1.0
+saddle,der Sattel,0.8
 bicycle light,das Fahrradlicht,1.2
 handlebar,das Lenkrad,0.8
 handlebar,der Lenker,0.4
-rusty,rostig,0.6
+rusty,rostig,0.4
 old,alt,1.0
 broken,kaputt,0.8
 unstable,unstabil,1.0
 uncomfortable,unbequem,0.8
-flat,platt,1.2
+flat,platt,1.0
 My bicyle is broken.,Mein Fahrrad ist kaputt.,0.8
 My breaks don't work anymore.,Meine Bremsen funktionieren nicht mehr.,1.0
-My saddle is unstable.,Mein Sattel ist unstabil.,1.0
+My saddle is unstable.,Mein Sattel ist unstabil.,0.8
 My saddle is uncomfortable.,Mein Sattel ist unbequem.,1.0
 My pedals are too old.,Meine Pedale sind zu alt.,1.0
 My chain is rusty.,Meine Kette ist rostig.,1.0
@@ -130,17 +130,17 @@ college,die Hochschule,1.0
 colleges,die Hochschulen,1.0
 university,die Universität,1.0
 universities,die Universitäten,1.0
-job,der Job,1.0
+job,der Job,0.8
 internship,das Praktikum,1.0
 internships,die Praktika,1.0
 school,die Schule,1.0
-schools,die Schulen,1.0
+schools,die Schulen,1.2
 job,die Stelle,1.0
 jobs,die Stellen,1.0
 to work as ...,arbeiten als,1.0
 to work at ...,arbeiten bei,1.0
 unemployed,arbeitslos,1.0
-by profession,von Beruf,1.0
+by profession,von Beruf,0.6
 What?,Was?,1.0
 architect,der Architekt,1.0
 architects,der Architekten,1.0
@@ -161,7 +161,7 @@ actor,der Schauspieler,1.0
 student,der Schüler,1.0
 assistant,der Sekretär,1.0
 seller,der Verkäufer,1.0
-kid,das Kind,1.0
+kid,das Kind,0.8
 kids,die Kinder,1.0
 to live,leben,0.8
 to live alone,allein leben,1.0
@@ -186,7 +186,7 @@ to speak,sprechen,1.0
 Wie viele?,How many?,1.0
 ein bisschen,a little,1.0
 parents,die Eltern,1.0
-picture,das Bild,1.0
+picture,das Bild,0.8
 pictures,die Bilder,1.0
 lamp,die Lampe,1.0
 couch,das Sofa,1.0
