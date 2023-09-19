@@ -1,5 +1,6 @@
 import vocabularizer as v
 import os
+import time
 
 def daily_routine():
     files = os.listdir('vocabularies')
@@ -10,5 +11,9 @@ def daily_routine():
         v.test_2(15)
         v.test_1(10)
         v.unload_vocabulary()
+        if file != files[-1]:
+                print("5 seconds till the next round.")
+                time.sleep(5)
+        
 
 daily_routine()
