@@ -4,14 +4,14 @@ bird,der Vogel,0.2
 cheese,der Käse,0.2
 train,der Zug,0.2
 train,die Bahn,0.2
-tram,die Straßenbahn,0.51
+tram,die Straßenbahn,0.31
 nickname,der Name,0.07
 first name,der Vorname,0.4
-surname,der Nachname,0.27
+surname,der Nachname,0.07
 still, doch,0.6
 really, wirklich,0.8
 to work, arbeiten,0.4
-family status,der Familienstand,0.81
+family status,der Familienstand,0.41
 age,das Alter,0.17
 foreign language,die Fremdsprache,0.2
 teacher(female),die Lehrerin,0.2
@@ -34,8 +34,8 @@ Who?,Wer?,0.8
 How?,Wie?,0.8
 lady,die Frau,1.0
 ladies,die Frauen,1.0
-gentleman,der Herr,0.8
-gentlemen,die Herren,1.0
+gentleman,der Herr,0.6
+gentlemen,die Herren,0.8
 given name,der Vorname,1.0
 given names,die Vornamen,0.8
 family name,der Familienname,1.0
@@ -43,12 +43,12 @@ family names,die Familiennamen,0.8
 Where from?,Woher?,1.0
 country,das Land,1.0
 countries,die Länder,1.0
-Germany,Deutschland,1.0
+Germany,Deutschland,0.8
 Austria,Österreich,1.0
 Switzerland,die Schweiz,1.0
 How are you doing?,Wie geht's?,0.6
 I'm doing fine. ,Es mir geht sehr gut.,1.2
-I'm doing OK. ,Es geht.,1.0
+I'm doing OK. ,Es geht.,1.2
 I'm not doing fine. ,Es geht nicht so gut.,1.0
 further,weiter,0.8
 alphabet,das Alphabet,1.0
@@ -57,7 +57,7 @@ to spell,buchstabieren,0.4
 too,auch,0.8
 thanks,danke,0.8
 yes,ja,0.6
-no,nein,0.8
+no,nein,0.6
 very,sehr,0.6
 and,und,1.0
 Who are you?,Wer bist du?,1.0
@@ -69,21 +69,21 @@ I work as a ...,Ich arbeite als ...,0.8
 single,single,0.8
 single,ledig,0.6
 single,alleinstehend,0.8
-still,doch,0.4
-really,wirklich,0.6
+still,doch,0.2
+really,wirklich,0.4
 to work,arbeiten,0.6
-married,verheiratet,0.4
+married,verheiratet,0.2
 reality,die Wirklichkeit,0.8
 I am 25 years old.,Ich bin 25 Jahre alt.,0.8
 to read,lesen,1.0
 to travel,reisen,1.0
-almost,fast,1.0
+almost,fast,0.8
 since,seit,0.6
 How long have you been in Germany?,Wie lange bist du schon in Deutschland?,1.0
-month,der Monat,1.0
-What do you work?,Was arbeitest du?,0.8
+month,der Monat,0.6
+What do you work?,Was arbeitest du?,0.6
 What are your Hobbys?,Was sindt deine Hobbys?,1.0
-to swim,schwimmen,0.8
+to swim,schwimmen,0.6
 to cycle,radfahren,0.8
 bycicle,das Fahrrad,0.8
 I like cycling.,Ich mag Fahrrad fahren.,1.0
@@ -145,16 +145,16 @@ What?,Was?,1.0
 architect,der Architekt,1.0
 architects,der Architekten,1.0
 doctor,der Arzt,1.0
-doctors,die Ärzte,1.0
-engineer,der Ingenieur,1.0
+doctors,die Ärzte,0.8
+engineer,der Ingenieur,1.2
 engineers,die Ingenieure,1.0
 hairdresser,der Friseur,0.8
 hairdressers,die Friseure,1.0
 journalist,der Journalist,1.0
 journalists,die Journalisten,1.0
 waiter,der Kellner,0.8
-nurse,die Krankenschwester,1.0
-mechanic engineer,der Mechatroniker,1.0
+nurse,die Krankenschwester,0.8
+mechanic engineer,der Mechatroniker,0.8
 student,der Student,1.0
 students,die Studenten,1.0
 actor,der Schauspieler,1.0
@@ -168,17 +168,17 @@ to live alone,allein leben,1.0
 to live together,zusammenleben,1.0
 to live in,wohnen in,1.0
 divorced,geschieden,1.0
-Where?,Wo?,1.0
+Where?,Wo?,0.8
 to believe,glauben,1.0
 to have,haben,1.0
-to make,machen,1.0
-true,richtig,1.0
+to make,machen,0.8
+true,richtig,0.8
 correct,richtig,1.0
 false,falsch,1.0
 incorrect,falsch,1.0
 I don't work.,Ich arbeite nicht,1.0
 We live in Malaga.,Wir leben in Malaga.,1.0
-Words,die Wörter,1.0
+Words,die Wörter,0.6
 Which?,Welche?,1.0
 answer,die Antwort,1.2
 to cross,kreuzen,1.0
@@ -189,18 +189,18 @@ parents,die Eltern,1.0
 picture,das Bild,0.8
 pictures,die Bilder,1.0
 lamp,die Lampe,1.0
-couch,das Sofa,1.0
+couch,das Sofa,1.2
 couches,die Sofas,1.0
 chair,der Stuhl,1.0
 chairs,die Stühler,1.0
 table,der Tisch,1.0
 closet,der Schrank,1.0
-armchair,der Sessel,1.0
-bed,das Bett,1.0
+armchair,der Sessel,0.8
+bed,das Bett,0.8
 beds,die Betten,1.0
-rug,der Teppich,1.0
+rug,der Teppich,0.8
 schlecht,hard,1.0
-klein,small,1.0
+klein,small,0.8
 furniture,die Möbel,1.0
 large,groß,1.0
 ugly,hässlich,1.0
