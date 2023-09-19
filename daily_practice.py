@@ -12,16 +12,3 @@ def daily_routine():
         v.unload_vocabulary()
 
 daily_routine()
-
-def one_file():
-        v.load_file(f'vocabularies/German_English_A11Chapter1.csv')
-        v.word_memorizer(3)
-        v.test_2(3)
-        v.test_1(5)
-        v.unload_vocabulary()
-
-def test():
-        v.load_file(f'vocabularies/German_English_A11Chapter1.csv')
-        v.test_2(3)
-       
-

@@ -2,8 +2,6 @@
 This simple app helps speed testing and building vocabulary in a foreign language. 
 """
     
-
-
 import pandas as pd
 import logging 
 import numpy as np
@@ -31,6 +29,9 @@ if path.exists('config.json'):
     with open ('config.json', 'r') as f:
         config = loads(f.read())
         config_loaded=True
+
+def get_version():
+    return library_version
 
 def get_config(config_item):
     """
