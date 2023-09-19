@@ -6,9 +6,9 @@ def daily_routine():
     for file in files:
         v.output_decorator("FILE: {0}".format(file), 2)
         v.load_file(f'vocabularies/{file}')
-        v.word_memorizer(3)
-        v.test_2(3)
-        v.test_1(5)
+        v.word_memorizer(20)
+        v.test_2(15)
+        v.test_1(10)
         v.unload_vocabulary()
 
 daily_routine()
