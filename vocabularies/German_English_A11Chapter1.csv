@@ -152,8 +152,8 @@ Which?,s,,Welche?
 answer,n,e,Antwort
 to cross,v,,kreuzen
 to speak,v,,sprechen
-Wie viele?,s,,How many?
-ein bisschen,s,,a little
+How many?,s,,Wie viele?
+a little,s,,ein bisschen
 parents,n,e,Eltern
 picture,n,s,Bild
 pictures,n,e,Bilder
@@ -168,7 +168,7 @@ armchair,n,r,Sessel
 bed,n,s,Bett
 beds,n,e,Betten
 rug,n,r,Teppich
-schlecht,a,,hard
+hard,a,,schlecht
 klein,a,,small
 furniture,n,e,Möbel
 large,a,,groß
@@ -186,4 +186,5 @@ help,n,e,Hilfe
 to need,v,,brauchen
 to find,v,,finden
 to say,v,,sagen
-nur,s,,only
+only,s,,nur
+expression,n,r,Ausdruck
