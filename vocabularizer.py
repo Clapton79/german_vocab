@@ -269,6 +269,8 @@ def decode_mode(mode:str):
             return 'Verb'
         case 'a':
             return 'Adjektiv'
+        case 'e':
+            return 'Ausdruck'
         case 's':
             return 'Satz oder Frage'
         case _: 
@@ -346,6 +348,24 @@ def translate(word:str, all:str='first', rev:str='str', da:str='da') -> list:
         result = ['#N/A']
 
     return result
+
+def random_choice(word_mode:str,count_of_words:int) -> list: 
+    global df
+    if count_of_words>len(df):
+        count_of_words=len(df)
+    rnd = []
+    if word_mode=='':
+         dr = df.copy(deep=False)
+    else:
+        dr = df[df['mode']==word_mode].copy(deep=False)
+
+    if len(dr)==0:
+        return []
+
+    # filling up the list twice with duplications removed usually helps achieve the desired count.
+    rnd = list(set(random.choices(population = dr.index,weights = dr._weight, k = count_of_words)))
+    rnd = list(set(rnd + list(set(random.choices(population = dr.index,weights = dr._weight, k = count_of_words)))))
+    return rnd[0:count_of_words]
 
 def translate_list(words:list, rev:str='str',da:str='da') -> list:
     """
@@ -444,7 +464,7 @@ def word_memorizer(count_of_words:int, sleep_time_seconds:int=2):
     print("Word memorizer completed.")
         
 
-def test_1(count_of_words:int):
+def test_1(word_mode:str,count_of_words:int):
     """
     Test 1 tests your writing skills and knowledge
     """
@@ -459,7 +479,8 @@ def test_1(count_of_words:int):
         count_of_words = len(df) 
 
     # set up test words
-    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    #rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    rnd = random_choice(word_mode,count_of_words)
     translations = [df['translation'][i] for i in rnd]
     words = [df['word'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
@@ -497,7 +518,7 @@ def test_1(count_of_words:int):
 
     output_decorator("",0, 'end') 
 
-def test_2(count_of_words:int):
+def test_2(word_mode:str,count_of_words:int):
     """multiple choice test"""
     global df
     
@@ -511,7 +532,8 @@ def test_2(count_of_words:int):
         
     letters = ['a','b','c','d']
 
-    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    #rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    rnd = random_choice(word_mode,count_of_words)
     translations = [df['translation'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
     
