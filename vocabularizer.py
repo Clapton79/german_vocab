@@ -465,7 +465,7 @@ def word_memorizer(count_of_words:int, sleep_time_seconds:int=4):
     print("Word memorizer completed.")
         
 
-def test_1(word_mode:str,count_of_words:int):
+def test_1(word_mode:str = '',count_of_words:int=10):
     """
     Test 1 tests your writing skills and knowledge
     """
