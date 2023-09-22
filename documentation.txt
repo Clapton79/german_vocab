@@ -1,4 +1,3 @@
-Vocabularizer 1.1.1
 Help on module vocabularizer:
 
 NAME
@@ -11,7 +10,7 @@ FUNCTIONS
     clean_and_save_vocabulary(file='')
         used internally only: drops _ columns and exports dataframe.
     
-    decode_da(da: str)
+    decode_da(da: str) -> str
         Converts definitive article code into a definitive article
     
     decode_mode(mode: str)
@@ -19,6 +18,9 @@ FUNCTIONS
     
     get_config(config_item)
         If configuration has been loaded, this function will retrieve the value of the config_item.
+    
+    get_version()
+        Displays library version
     
     left_1(s: str)
         Returns the first character of a string. 
@@ -29,7 +31,11 @@ FUNCTIONS
     
     load_weights(file)
     
+    new_weight(row)
+    
     output_decorator(text, level, motiv='start')
+    
+    random_choice(word_mode: str, count_of_words: int) -> list
     
     save_result(test, points, rounds)
         Saves the result of a test in the results file.
@@ -48,8 +54,11 @@ FUNCTIONS
     
     show_vocabulary_pg(pagesize: int)
     
-    test_1()
+    test_1(word_mode: str, count_of_words: int)
         Test 1 tests your writing skills and knowledge
+    
+    test_2(word_mode: str = '', count_of_words: int = 20)
+        multiple choice test
     
     test_selector()
     
@@ -67,3 +76,6 @@ FUNCTIONS
         Clears the memory from all loaded vocabularies.
     
     update_weights(dw: pandas.core.frame.DataFrame)
+        Updates the weights based on the latest test result
+    
+    word_memorizer(count_of_words: int, sleep_time_seconds: int = 4)
