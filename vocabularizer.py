@@ -31,6 +31,7 @@ if path.exists('config.json'):
         config_loaded=True
 
 def get_version():
+    """Displays library version"""
     return library_version
 
 def get_config(config_item):
@@ -425,9 +426,9 @@ def save_weights(file):
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
 
-def word_memorizer(count_of_words:int, sleep_time_seconds:int=2):
+def word_memorizer(count_of_words:int, sleep_time_seconds:int=4):
     """
-    Shows some words
+    Shows some words for few seconds for you to memorize.
     """
     global df
     global loaded_files
@@ -518,7 +519,7 @@ def test_1(word_mode:str,count_of_words:int):
 
     output_decorator("",0, 'end') 
 
-def test_2(word_mode:str,count_of_words:int):
+def test_2(word_mode:str = '',count_of_words:int = 20):
     """multiple choice test"""
     global df
     
