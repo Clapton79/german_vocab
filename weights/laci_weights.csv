@@ -4,7 +4,7 @@ bird,der Vogel,0.2
 cheese,der Käse,0.2
 train,der Zug,0.2
 train,die Bahn,0.2
-tram,die Straßenbahn,0.31
+tram,die Straßenbahn,0.11
 nickname,der Name,0.07
 first name,der Vorname,0.4
 surname,der Nachname,0.07
@@ -12,14 +12,14 @@ still, doch,0.6
 really, wirklich,0.8
 to work, arbeiten,0.4
 family status,der Familienstand,0.41
-age,das Alter,0.17
+age,das Alter,0.2
 foreign language,die Fremdsprache,0.2
 teacher(female),die Lehrerin,0.2
 teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.2
 boy,der Junge,0.2
 year,das Jahr,0.2
-Turkey,der Türkei,0.8
+Turkey,der Türkei,0.6
 Hello,Hallo,0.4
 Good morning!,Guten Morgen!,1.0
 Good morning!,Guten Tag!,1.0
@@ -29,9 +29,9 @@ Have a nice day!,Schönen Tag!,0.4
 Bye!,Auf Wiedersehen!,0.4
 Bye!,Tschüß!,1.0
 My name is ...,Ich heiße ...,0.8
-My name is ...,Mein Name ist ...,0.6
-Who?,Wer?,0.8
-How?,Wie?,0.8
+My name is ...,Mein Name ist ...,0.4
+Who?,Wer?,0.6
+How?,Wie?,0.6
 lady,die Frau,1.0
 ladies,die Frauen,1.0
 gentleman,der Herr,0.6
@@ -53,42 +53,42 @@ I'm not doing fine. ,Es geht nicht so gut.,1.2
 further,weiter,0.8
 alphabet,das Alphabet,1.0
 alphabets,die Alphabete,0.6
-to spell,buchstabieren,0.4
+to spell,buchstabieren,0.2
 too,auch,0.6
 thanks,danke,1.0
 yes,ja,0.8
 no,nein,0.6
-very,sehr,0.4
+very,sehr,0.2
 and,und,1.0
 Who are you?,Wer bist du?,1.0
 I come from ...,Ich komme aus ...,0.6
 nickname,der Spitzname,0.4
-Exactly.,Genau.,0.8
+Exactly.,Genau.,0.6
 I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
 I work as a ...,Ich arbeite als ...,0.6
-single,single,0.6
+single,single,0.4
 single,ledig,0.6
-single,alleinstehend,1.0
+single,alleinstehend,0.6
 still,doch,0.2
 really,wirklich,0.4
 to work,arbeiten,0.4
 married,verheiratet,0.2
 reality,die Wirklichkeit,0.6
 I am 25 years old.,Ich bin 25 Jahre alt.,0.6
-to read,lesen,0.8
-to travel,reisen,1.2
+to read,lesen,0.4
+to travel,reisen,0.8
 almost,fast,0.8
 since,seit,0.6
 How long have you been in Germany?,Wie lange bist du schon in Deutschland?,0.8
-month,der Monat,0.6
-What do you work?,Was arbeitest du?,0.6
-What are your Hobbys?,Was sindt deine Hobbys?,0.8
-to swim,schwimmen,0.4
+month,der Monat,0.4
+What do you work?,Was arbeitest du?,0.4
+What are your Hobbys?,Was sindt deine Hobbys?,0.4
+to swim,schwimmen,0.2
 to cycle,radfahren,0.4
 bycicle,das Fahrrad,0.4
 I like cycling.,Ich mag Fahrrad fahren.,1.0
-to cycle,Fahrrad fahren,0.6
-to drive,fahren,0.6
+to cycle,Fahrrad fahren,0.4
+to drive,fahren,0.4
 but,aber,1.0
 right,richtig,0.8
 bicycle,das Fahrrad,0.4
@@ -122,12 +122,12 @@ My tires are flat.,Meine Reifen sind platt.,1.0
 My front tire is flat.,Mein Vorderreifen ist platt.,1.0
 I can't change gears.,Ich kann den Gang nicht mehr schalten.,1.6
 employer,der Arbeitgeber,1.0
-training,die Ausbildung,1.2
-trainings,die Ausbildungen,0.8
+training,die Ausbildung,0.8
+trainings,die Ausbildungen,0.6
 occupation,der Beruf,0.8
-occupations,die Berufe,1.0
-college,die Hochschule,1.0
-colleges,die Hochschulen,1.0
+occupations,die Berufe,0.8
+college,die Hochschule,0.8
+colleges,die Hochschulen,0.8
 university,die Universität,0.8
 universities,die Universitäten,1.0
 job,der Job,0.8
@@ -137,11 +137,11 @@ school,die Schule,1.2
 schools,die Schulen,1.2
 job,die Stelle,1.0
 jobs,die Stellen,1.0
-to work as ...,arbeiten als,0.6
-to work at ...,arbeiten bei,1.0
-unemployed,arbeitslos,1.0
-by profession,von Beruf,0.6
-What?,Was?,0.8
+to work as ...,arbeiten als,0.4
+to work at ...,arbeiten bei,0.6
+unemployed,arbeitslos,0.8
+by profession,von Beruf,0.2
+What?,Was?,0.4
 architect,der Architekt,1.0
 architects,der Architekten,1.0
 doctor,der Arzt,1.0
@@ -162,67 +162,68 @@ student,der Schüler,1.2
 assistant,der Sekretär,1.0
 seller,der Verkäufer,0.8
 kid,das Kind,0.6
-kids,die Kinder,1.0
-to live,leben,0.6
-to live alone,allein leben,1.0
+kids,die Kinder,0.6
+to live,leben,0.4
+to live alone,allein leben,0.8
 to live together,zusammenleben,1.0
-to live in,wohnen in,1.0
-divorced,geschieden,0.6
-Where?,Wo?,0.8
-to believe,glauben,0.8
-to have,haben,1.0
+to live in,wohnen in,0.8
+divorced,geschieden,0.2
+Where?,Wo?,0.4
+to believe,glauben,0.6
+to have,haben,0.6
 to make,machen,0.8
-true,richtig,0.8
-correct,richtig,0.8
-false,falsch,0.8
-incorrect,falsch,1.0
+true,richtig,0.4
+correct,richtig,0.6
+false,falsch,0.6
+incorrect,falsch,0.8
 I don't work.,Ich arbeite nicht,0.8
-We live in Malaga.,Wir leben in Malaga.,1.0
+We live in Malaga.,Wir leben in Malaga.,1.2
 Words,die Wörter,0.6
-Which?,Welche?,1.0
-answer,die Antwort,1.2
-to cross,kreuzen,0.8
-to speak,sprechen,1.0
+Which?,Welche?,0.6
+answer,die Antwort,1.4
+to cross,kreuzen,0.6
+to speak,sprechen,0.6
 Wie viele?,How many?,1.0
 ein bisschen,a little,1.0
-parents,die Eltern,0.8
+parents,die Eltern,0.6
 picture,das Bild,0.8
-pictures,die Bilder,1.0
-lamp,die Lampe,1.0
-couch,das Sofa,1.2
+pictures,die Bilder,0.8
+lamp,die Lampe,0.8
+couch,das Sofa,1.0
 couches,die Sofas,1.2
-chair,der Stuhl,0.8
-chairs,die Stühler,1.0
-table,der Tisch,1.0
-closet,der Schrank,1.0
-armchair,der Sessel,0.8
+chair,der Stuhl,0.6
+chairs,die Stühler,0.8
+table,der Tisch,0.6
+closet,der Schrank,1.2
+armchair,der Sessel,0.6
 bed,das Bett,0.8
 beds,die Betten,1.0
-rug,der Teppich,0.8
+rug,der Teppich,0.6
 schlecht,hard,1.0
-klein,small,0.8
-furniture,die Möbel,1.2
-large,groß,0.8
-ugly,hässlich,1.0
+klein,small,0.4
+furniture,die Möbel,1.0
+large,groß,0.6
+ugly,hässlich,0.8
 short,kurz,0.8
-long,lang,1.0
-light,leicht,1.0
-beautiful,schön,1.0
-heavy,schwer,1.0
-to cost,kosten,0.8
+long,lang,0.6
+light,leicht,0.8
+beautiful,schön,0.8
+heavy,schwer,0.6
+to cost,kosten,0.4
 cheap,günstig,1.0
-cheap,billig,1.0
-expensive,teuer,1.0
-help,die Hilfe,1.0
-to need,brauchen,1.0
-to find,finden,1.0
-to say,sagen,1.0
+cheap,billig,0.8
+expensive,teuer,0.8
+help,die Hilfe,1.2
+to need,brauchen,0.6
+to find,finden,0.8
+to say,sagen,0.6
 nur,only,0.8
 dynamo,der Dynamo,1.0
 pump,die Luftpumpe,1.0
 gearbox,der Umwerfer,1.0
 racing bike,das Rennrad,1.0
-How many?,Wie viele?,1.0
-a little,ein bisschen,1.0
+How many?,Wie viele?,0.6
+a little,ein bisschen,0.6
 hard,schlecht,1.0
-only,nur,1.0
+only,nur,0.8
+expression,der Ausdruck,1.0
