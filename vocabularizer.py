@@ -380,12 +380,29 @@ def translate_list(words:list, rev:str='str',da:str='da') -> list:
     return sum([translate(x, 'first',rev,da) for x in words],[])
 
 # Vocabulary content commands
-def add_word(word, da, translation, weight, mode):
+def add_word(word, da, translation, mode):
     """
     Adds a word to the vocabulary in the memory
     """
     global df
     df = df._append(pd.Series({"translation": translation, "mode": mode,"da":da,"word":word}), ignore_index=True)
+
+def add_word_it():
+    output_decorator("Add new word to vocabulary",6)
+    word = input("Word: ")
+    if len(word)==0:
+        return
+    da = input("Definitive article: ")
+    translation = input("Translation: ")
+    mode = input("Word type (default: 'n'): ") or 'n'
+
+    proceed=input("Proceed adding this?(y) Word: {0}, definite article: {1}, translation: {2}, mode: {3} ".format(word,da,translation,mode)) or 'y'
+    if proceed !='y':
+        return
+
+    if len(word)>0 and len(translation)>0:
+        add_word(word,da,translation,mode)
+        save_vocabulary_to_file(loaded_files[0])
 
 def save_result(test, points, rounds):
     """
