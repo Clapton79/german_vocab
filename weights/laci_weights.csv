@@ -6,7 +6,7 @@ train,der Zug,0.2
 train,die Bahn,0.2
 tram,die Straßenbahn,0.11
 nickname,der Name,0.2
-first name,der Vorname,0.6
+first name,der Vorname,0.4
 surname,der Nachname,0.07
 still, doch,0.6
 really, wirklich,0.8
@@ -20,22 +20,22 @@ daughter,das Mädchen,0.2
 boy,der Junge,0.2
 year,das Jahr,0.2
 Turkey,der Türkei,0.6
-Hello,Hallo,0.4
+Hello,Hallo,0.2
 Good morning!,Guten Morgen!,0.8
 Good morning!,Guten Tag!,1.0
-Good evening!,Guten Abend!,0.6
-Good night!,Gute Nacht!,1.2
+Good evening!,Guten Abend!,0.4
+Good night!,Gute Nacht!,1.0
 Have a nice day!,Schönen Tag!,0.4
 Bye!,Auf Wiedersehen!,0.4
 Bye!,Tschüß!,1.0
 My name is ...,Ich heiße ...,1.0
 My name is ...,Mein Name ist ...,0.4
-Who?,Wer?,0.6
-How?,Wie?,0.4
+Who?,Wer?,0.4
+How?,Wie?,0.2
 lady,die Frau,1.0
 ladies,die Frauen,1.0
 gentleman,der Herr,0.6
-gentlemen,die Herren,0.8
+gentlemen,die Herren,1.0
 given name,der Vorname,1.0
 given names,die Vornamen,0.8
 family name,der Familienname,1.0
@@ -43,7 +43,7 @@ family names,die Familiennamen,0.8
 Where from?,Woher?,1.0
 country,das Land,1.0
 countries,die Länder,1.0
-Germany,Deutschland,0.8
+Germany,Deutschland,0.6
 Austria,Österreich,1.0
 Switzerland,die Schweiz,1.0
 How are you doing?,Wie geht's?,0.8
@@ -64,10 +64,10 @@ Who are you?,Wer bist du?,0.8
 I come from ...,Ich komme aus ...,0.4
 nickname,der Spitzname,0.4
 Exactly.,Genau.,0.6
-I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.8
+I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.6
 I work as a ...,Ich arbeite als ...,0.6
 single,single,0.2
-single,ledig,0.4
+single,ledig,0.2
 single,alleinstehend,0.4
 still,doch,0.2
 really,wirklich,0.4
@@ -76,7 +76,7 @@ married,verheiratet,0.2
 reality,die Wirklichkeit,0.4
 I am 25 years old.,Ich bin 25 Jahre alt.,0.6
 to read,lesen,0.6
-to travel,reisen,0.6
+to travel,reisen,0.2
 almost,fast,0.8
 since,seit,0.6
 How long have you been in Germany?,Wie lange bist du schon in Deutschland?,0.8
@@ -84,34 +84,34 @@ month,der Monat,0.4
 What do you work?,Was arbeitest du?,0.2
 What are your Hobbys?,Was sindt deine Hobbys?,0.2
 to swim,schwimmen,0.2
-to cycle,radfahren,0.6
+to cycle,radfahren,0.2
 bycicle,das Fahrrad,0.4
-I like cycling.,Ich mag Fahrrad fahren.,0.8
-to cycle,Fahrrad fahren,0.4
+I like cycling.,Ich mag Fahrrad fahren.,0.6
+to cycle,Fahrrad fahren,0.2
 to drive,fahren,0.2
 but,aber,1.0
 right,richtig,0.8
-bicycle,das Fahrrad,0.4
+bicycle,das Fahrrad,0.2
 bicycles,die Fahrräder,0.6
-tyre,der Reifen,0.6
+tyre,der Reifen,0.4
 tyres,die Reifen,0.8
-break,die Bremse,1.0
-breaks,die Bremsen,0.8
+break,die Bremse,0.8
+breaks,die Bremsen,0.6
 pedal,das Pedal,0.8
-pedals,die Pedale,0.8
-gear,die Gangschaltung,1.0
-gears,die Gantschaltungen,0.8
-chain,die Kette,0.6
-saddle,der Sattel,0.6
-bicycle light,das Fahrradlicht,1.0
-handlebar,das Lenkrad,0.8
+pedals,die Pedale,0.6
+gear,die Gangschaltung,0.8
+gears,die Gantschaltungen,0.6
+chain,die Kette,0.4
+saddle,der Sattel,0.4
+bicycle light,das Fahrradlicht,0.8
+handlebar,das Lenkrad,0.6
 handlebar,der Lenker,0.4
 rusty,rostig,0.2
-old,alt,1.0
-broken,kaputt,0.6
-unstable,unstabil,1.0
-uncomfortable,unbequem,0.8
-flat,platt,0.8
+old,alt,0.8
+broken,kaputt,0.4
+unstable,unstabil,0.8
+uncomfortable,unbequem,0.6
+flat,platt,0.6
 My bicyle is broken.,Mein Fahrrad ist kaputt.,0.6
 My breaks don't work anymore.,Meine Bremsen funktionieren nicht mehr.,0.8
 My saddle is unstable.,Mein Sattel ist unstabil.,0.6
@@ -121,9 +121,9 @@ My chain is rusty.,Meine Kette ist rostig.,0.8
 My tires are flat.,Meine Reifen sind platt.,1.0
 My front tire is flat.,Mein Vorderreifen ist platt.,1.0
 I can't change gears.,Ich kann den Gang nicht mehr schalten.,1.6
-employer,der Arbeitgeber,1.0
+employer,der Arbeitgeber,0.8
 training,die Ausbildung,0.8
-trainings,die Ausbildungen,0.6
+trainings,die Ausbildungen,0.4
 occupation,der Beruf,0.8
 occupations,die Berufe,0.6
 college,die Hochschule,0.8
@@ -161,43 +161,43 @@ actor,der Schauspieler,1.0
 student,der Schüler,1.2
 assistant,der Sekretär,0.8
 seller,der Verkäufer,0.8
-kid,das Kind,0.4
-kids,die Kinder,0.6
+kid,das Kind,0.2
+kids,die Kinder,0.8
 to live,leben,0.2
-to live alone,allein leben,0.6
-to live together,zusammenleben,0.8
+to live alone,allein leben,0.4
+to live together,zusammenleben,0.6
 to live in,wohnen in,0.6
 divorced,geschieden,0.2
 Where?,Wo?,0.2
 to believe,glauben,0.4
-to have,haben,0.6
+to have,haben,0.4
 to make,machen,0.8
 true,richtig,0.2
-correct,richtig,0.6
-false,falsch,0.6
-incorrect,falsch,0.6
+correct,richtig,0.4
+false,falsch,0.4
+incorrect,falsch,0.4
 I don't work.,Ich arbeite nicht,0.6
-We live in Malaga.,Wir leben in Malaga.,1.0
+We live in Malaga.,Wir leben in Malaga.,0.8
 Words,die Wörter,0.4
-Which?,Welche?,0.4
-answer,die Antwort,1.2
-to cross,kreuzen,0.6
-to speak,sprechen,0.4
+Which?,Welche?,0.2
+answer,die Antwort,1.0
+to cross,kreuzen,0.4
+to speak,sprechen,0.2
 Wie viele?,How many?,1.0
 ein bisschen,a little,1.0
 parents,die Eltern,0.6
 picture,das Bild,0.8
-pictures,die Bilder,0.8
+pictures,die Bilder,0.6
 lamp,die Lampe,0.8
-couch,das Sofa,1.0
+couch,das Sofa,0.8
 couches,die Sofas,1.0
 chair,der Stuhl,0.4
 chairs,die Stühler,0.6
 table,der Tisch,0.4
-closet,der Schrank,1.0
-armchair,der Sessel,0.6
+closet,der Schrank,0.8
+armchair,der Sessel,0.4
 bed,das Bett,0.6
-beds,die Betten,1.0
+beds,die Betten,0.8
 rug,der Teppich,0.4
 schlecht,hard,1.0
 klein,small,0.4
@@ -205,25 +205,70 @@ furniture,die Möbel,1.0
 large,groß,0.4
 ugly,hässlich,0.8
 short,kurz,0.6
-long,lang,0.4
-light,leicht,0.6
+long,lang,0.2
+light,leicht,0.4
 beautiful,schön,0.6
-heavy,schwer,0.8
+heavy,schwer,0.6
 to cost,kosten,0.2
-cheap,günstig,1.0
-cheap,billig,0.6
-expensive,teuer,0.4
+cheap,günstig,0.8
+cheap,billig,0.4
+expensive,teuer,0.2
 help,die Hilfe,0.8
 to need,brauchen,0.4
-to find,finden,0.8
+to find,finden,0.6
 to say,sagen,0.4
 nur,only,0.8
-dynamo,der Dynamo,1.0
-pump,die Luftpumpe,1.0
-gearbox,der Umwerfer,1.0
-racing bike,das Rennrad,1.0
-How many?,Wie viele?,0.4
+dynamo,der Dynamo,0.8
+pump,die Luftpumpe,0.8
+gearbox,der Umwerfer,0.8
+racing bike,das Rennrad,1.2
+How many?,Wie viele?,0.2
 a little,ein bisschen,0.4
 hard,schlecht,0.6
-only,nur,0.6
-expression,der Ausdruck,0.8
+only,nur,0.4
+expression,der Ausdruck,1.0
+modified,geändert,0.8
+listed,aufgeführten,0.8
+billing,die Abrechnung,1.0
+invoice,die Rechnung,1.0
+approved,genehmigt,1.0
+status,stehen auf,0.8
+shipping date,das Versanddatum,1.2
+settlement date,das Abrechnungsdatum,1.0
+pronunciation,die Aussprache,1.0
+See you soon!,die Bis bald!,1.0
+Have a nice day!,Einen schönen Tag noch!,0.8
+I don't like winters in Berlin.,Ich mag Berlin Winterwetter nicht.,0.8
+Where to?,Wohin?,0.8
+For what?,Wofür?,0.8
+Why?,Warum?,1.0
+How many?,Wie viel?,1.0
+From where?,Woher?,1.0
+possibility,die Möglichkeit,1.2
+society,die Gesellschaft,1.0
+time,die Zeit,1.0
+football,der Fußball,0.8
+photo,das Foto,1.0
+similarities,die Gemeinsamkeiten,0.8
+differences,die Unterschiede,0.8
+cat,die Katze,1.0
+cat (male),der Kater,0.8
+food,das Essen,0.8
+Something else?,Noch etwas?,1.0
+to like,mögen,1.0
+solution,die Lösung,1.0
+exceptions,die Ausnahmen,1.0
+Nice to meet you.,Es ist shön dich kennen zu lernen.,1.0
+You idiot!,Du pfosten!,1.0
+Read aloud!,Lies mal vor!,1.0
+How nice!,Wie schön!,1.0
+Iran,der Iran,1.0
+My pleasure.,Freut mich.,1.0
+straight,gerade,1.0
+to attempt,versuchen,1.0
+again,nochmal,1.0
+to forget,vergessen,0.8
+following,folgendes,1.0
+user account,das Benutzerkonto,1.0
+password,das Passwort,1.0
+to log on,anmelden,0.8
