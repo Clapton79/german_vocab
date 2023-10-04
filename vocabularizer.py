@@ -274,6 +274,8 @@ def decode_mode(mode:str):
             return 'Ausdruck'
         case 's':
             return 'Satz oder Frage'
+        case 'adv':
+            return 'adverb'
         case _: 
             return ''
 
