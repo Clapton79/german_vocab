@@ -203,7 +203,7 @@ schlecht,hard,1.0
 klein,small,0.4
 furniture,die Möbel,1.0
 large,groß,0.4
-ugly,hässlich,0.8
+ugly,hässlich,0.4
 short,kurz,0.6
 long,lang,0.2
 light,leicht,0.4
@@ -272,3 +272,66 @@ following,folgendes,1.0
 user account,das Benutzerkonto,1.0
 password,das Passwort,1.0
 to log on,anmelden,0.8
+not bad,nicht schlecht,0.6
+Kann ich Ihnen helfen?,Can I help you?,1.0
+the keys,den Schlüssel,1.2
+to go,gehen,0.6
+to look for,suchen,0.8
+today,heute,0.8
+with,mit,1.0
+I like to play soccer.,Ich spiele gern Fußball.,0.6
+Don't you like to play football?,Spielst du nicht gern Fußball?,1.0
+Have fun!,Viel Spaß!,0.8
+always,immer,1.0
+often,oft,0.8
+sometimes,manchmal,0.6
+almost never,fast nie,0.8
+never,nie,0.6
+to cook,kochen,1.2
+to ski,Ski fahren,0.6
+to play the guitar,gitarre spielen,1.0
+to bake,backen,1.0
+to play tennis,tennis spielen,0.8
+We can all swim well.,Wir könnt alle gut schwimmen.,0.8
+anyway,sowieso,0.6
+to paint,malen,0.8
+to dance,tanzen,0.8
+unfortunately,leider,0.8
+I am sorry.,Tut mir leid.,1.0
+to meet,treffen,0.8
+to love,lieben,0.8
+to go for a walk,spazieren gehen,0.8
+clear,klar,0.8
+to have fun,Spaß machen,0.6
+How often?,Wie oft?,0.8
+visit,besuchen,0.8
+trip,der Ausflug,0.8
+leisure time,die Freizeit,0.8
+2.30pm,halb drei am Nachmittag,1.0
+7:05,fünf nach sieben,1.0
+behaviour,das Verhalten,1.0
+expected,voraussichtlich,0.8
+to contact,wenden sich,1.2
+to note,beachten,1.2
+Pay attention!,Beachten Sie!,0.8
+Please note ...,Bitte beachten Sie ...,1.0
+to get redirected,weitergelietet werden,0.8
+tension,die Spannung,0.8
+fun,der Spaß,0.8
+Autumn,der Herbst,0.8
+member,das Mitglied,0.8
+until now,bisher,0.8
+adverb,das Adverb,0.8
+to spoil,verwöhnen,0.8
+over,vorbei,1.0
+again,wieder,1.0
+grey,grau,0.8
+rain,der Regen,0.8
+to shape,prägen,1.0
+to discover,entdecken,1.0
+to enjoy,genießen,1.0
+to spend,verbringen,1.0
+to relax,entspannen,1.0
+certainly,bestimmt,1.0
+despite,trotz,1.0
+nevertheless,trotzdem,1.0
