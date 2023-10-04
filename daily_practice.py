@@ -7,7 +7,7 @@ def daily_routine():
     for file in files:
         v.output_decorator("FILE: {0}".format(file), 2)
         v.load_file(f'vocabularies/{file}')
-        v.word_memorizer(20)
+        v.word_memorizer(20,3,'last')
         v.test_2('n', 15)
         v.test_2('a', 15)
         v.test_2('v', 15)

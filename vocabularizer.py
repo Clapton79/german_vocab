@@ -445,7 +445,7 @@ def save_weights(file):
     weights_updated_not_saved=False
     print('Weights saved. ({0} words)'.format(len(de)))
 
-def word_memorizer(count_of_words:int, sleep_time_seconds:int=4):
+def word_memorizer(count_of_words:int, sleep_time_seconds:int=4, random_or_last:str='rnd'):
     """
     Shows some words for few seconds for you to memorize.
     """
@@ -463,8 +463,14 @@ def word_memorizer(count_of_words:int, sleep_time_seconds:int=4):
     if len(df) < count_of_words:
         count_of_words = len(df) 
 
+    rnd = []
     # set up test words
-    rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    if random_or_last=='rnd':
+        rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
+    elif random_or_last=='last':
+        rnd = list(df[-1*count_of_words:].index)
+    elif random_or_last=='first':
+        rnd = list(df[:count_of_words].index)
 
     # build dictionary
     mem = dict({})
