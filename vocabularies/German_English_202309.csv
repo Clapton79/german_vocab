@@ -9,9 +9,7 @@ Have a nice day!,,,Schönen Tag!
 Bye!,,,Auf Wiedersehen!
 Bye!,,,Tschüß!
 My name is ...,,,Ich heiße ...
-My name is ...,,,Mein Name ist ...
 Who?,s,,Wer?
-How?,s,,Wie?
 lady,,e,Frau
 ladies,,e,Frauen
 gentleman,,r,Herr
@@ -71,7 +69,6 @@ daughter,n,s,Mädchen
 boy,n,r,Junge
 year,n,s,Jahr
 reality,n,e,Wirklichkeit
-married,,,verheiratet
 I am 25 years old.,,,Ich bin 25 Jahre alt. 
 to read,v,,lesen
 to travel,v,,reisen
@@ -129,7 +126,6 @@ actor,n,r,Schauspieler
 student,n,r,Schüler
 assistant,n,r,Sekretär
 seller,n,r,Verkäufer
-age,n,s,Alter
 kid,n,s,Kind
 kids,n,e,Kinder
 to live,v,,leben
@@ -200,15 +196,11 @@ pronunciation,n,e,Aussprache
 See you soon!,s,e,Bis bald!
 Have a nice day!,s,,Einen schönen Tag noch!
 I don't like winters in Berlin.,s,,Ich mag Berlin Winterwetter nicht.
-What?,s,,Was?
-Where?,s,,Wo?
 Where to?,s,,Wohin?
 How?,s,,Wie?
 For what?,s,,Wofür?
 Why?,s,,Warum?
-Who?,s,,Wer?
 How many?,s,,Wie viel?
-From where?,s,,Woher?
 possibility,n,e,Möglichkeit
 society,n,e,Gesellschaft
 time,n,e,Zeit
