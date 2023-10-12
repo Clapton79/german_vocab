@@ -1,6 +1,5 @@
 import vocabularizer as v
 import os
-import time
 
 def daily_routine():
     files = os.listdir('vocabularies')
