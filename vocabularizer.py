@@ -64,10 +64,15 @@ def load_file(file):
     #try:
     if file == "":
         raise ValueError("Filename cannot be empty.")
+
     print("Loading {0}".format(file))
+
     if file in loaded_files:
         raise ValueError("File {0} has already been loaded.".format(file))
     
+    if not path.exists(file):
+        raise ValueError(f"File {file} does not exist.")
+
     *info, ext = file.split('/')[-1].split('.')
     _language, _secondary_language, _vocabulary_type, *others = info[0].split('_')
     if (language != "" and language != _language) or (secondary_language != _secondary_language and secondary_language!="") :
@@ -558,7 +563,6 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
         
     letters = ['a','b','c','d']
 
-    #rnd = random.choices(population = df.index,weights = df._weight, k = count_of_words)
     rnd = random_choice(word_mode,count_of_words)
     translations = [df['translation'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
@@ -572,7 +576,7 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
         random.shuffle(letters)
 
         # select 3 words that are not the asked word
-        rnd_alt = random.choices(population =df.index, k = 3)
+        rnd_alt = random.choices(population =df.index[df.index!=idx], k = 3)
         rnd_alt_solutions = [df['_expression'][i] for i in rnd_alt]
         question_dict = {}
         question_dict[letters[0]]= solutions[idx]
@@ -594,6 +598,7 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
         # build padded row of choices
         row = '     '.join(["{0}) {1}".format(x[0], x[1].ljust(20)) for x in list(sorted(dictvalue['options'].items()))])
         print("{0}:".format(dictvalue['question']))
+        print('')
         print(row)
         response = input ("Select option: ")
         questions_dict[key]['response'] = response
@@ -627,6 +632,23 @@ def test_selector():
             raise NotImplementedError
         case _:
             print("Nothing selected.")
+
+def inspect_vocabulary():
+    """Gives a brief overview of the loaded words in different groupings."""
+    global df 
+    if len(loaded_files)==0:
+        raise ValueError("No vocabulary loaded. Load at least one vocabulary file and run inspection again.")
+
+    print(f'Number of files loaded: {len(loaded_files)}')
+    print(f'Number of words loaded: {len(df)}')
+    
+    df_agg = df.groupby(['mode', 'da']).agg(CountOfWords = ('word', 'count'))
+    df_agg.reset_index(inplace=True)
+
+    df_agg['Mode'] = df_agg['mode'].apply(decode_mode)
+    df_agg['Definitive article'] = df_agg['da'].apply(decode_da)
+    df_agg.set_index(['Mode', 'Definitive article'])
+    print(df_agg)
 
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
