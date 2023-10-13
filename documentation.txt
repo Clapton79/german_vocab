@@ -3,9 +3,47 @@ Help on module vocabularizer:
 NAME
     vocabularizer - This simple app helps speed testing and building vocabulary in a foreign language.
 
+CLASSES
+    builtins.object
+        bcolors
+    
+    class bcolors(builtins.object)
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  BOLD = '\x1b[1m'
+     |  
+     |  ENDC = '\x1b[0m'
+     |  
+     |  FAIL = '\x1b[91m'
+     |  
+     |  HEADER = '\x1b[95m'
+     |  
+     |  OKBLUE = '\x1b[94m'
+     |  
+     |  OKCYAN = '\x1b[96m'
+     |  
+     |  OKGREEN = '\x1b[92m'
+     |  
+     |  UNDERLINE = '\x1b[4m'
+     |  
+     |  WARNING = '\x1b[93m'
+
 FUNCTIONS
-    add_word(word, da, translation, weight, mode)
+    add_word(word, da, translation, mode)
         Adds a word to the vocabulary in the memory
+    
+    add_word_it()
+    
+    bcolor_da(da: str) -> str
     
     clean_and_save_vocabulary(file='')
         used internally only: drops _ columns and exports dataframe.
@@ -21,6 +59,9 @@ FUNCTIONS
     
     get_version()
         Displays library version
+    
+    inspect_vocabulary()
+        Gives a brief overview of the loaded words in different groupings.
     
     left_1(s: str)
         Returns the first character of a string. 
@@ -54,7 +95,7 @@ FUNCTIONS
     
     show_vocabulary_pg(pagesize: int)
     
-    test_1(word_mode: str, count_of_words: int)
+    test_1(word_mode: str = '', count_of_words: int = 10)
         Test 1 tests your writing skills and knowledge
     
     test_2(word_mode: str = '', count_of_words: int = 20)
@@ -78,4 +119,4 @@ FUNCTIONS
     update_weights(dw: pandas.core.frame.DataFrame)
         Updates the weights based on the latest test result
     
-    word_memorizer(count_of_words: int, sleep_time_seconds: int = 4)
+    word_memorizer(count_of_words: int, sleep_time_seconds: int = 4, random_or_last: str = 'rnd')
