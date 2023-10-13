@@ -4,13 +4,11 @@ This simple app helps speed testing and building vocabulary in a foreign languag
 
 Test|Description
 :---|:---
-Test 1| You have to type in the translation (and the definitive article in case of nouns) for 5 words
+Test 1| Type in the translation (and the definitive article in case of nouns) for one or more words
+Test 2| Multiple choice word test by word type
 
 
 # How to Run
 ```sh
-python vocabularizer_test_1.py
-```
-```sh
-python3 vocabularizer_test_1.py
+python3 daily_practice.py
 ```
