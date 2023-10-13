@@ -30,6 +30,17 @@ if path.exists('config.json'):
         config = loads(f.read())
         config_loaded=True
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 def get_version():
     """Displays library version"""
     return library_version
@@ -246,11 +257,11 @@ def update_weights(dw:pd.DataFrame):
     
 def output_decorator(text, level, motiv='start'):
     if motiv=='start':
-        print(144*"#")
-        print("#", level * " ", text)
-        print(144*"=")
+        print(f"{bcolors.OKBLUE}{144 * '='}{bcolors.ENDC}")
+        print(f"{bcolors.OKBLUE}#{level * ' '}{text}{bcolors.ENDC}")
+        print(f"{bcolors.OKBLUE}{144 * '='}{bcolors.ENDC}")
     elif motiv =='end':
-        print(144*"-")
+        print(f"{bcolors.FAIL}{144 * '-'}{bcolors.ENDC}")
 
 def left_1 (s:str):
     """
@@ -301,6 +312,17 @@ def decode_da(da:str) -> str:
             return 'den'
         case _:
             return ''
+
+def bcolor_da(da:str) -> str:
+    match da:
+        case 's':
+            return bcolors.OKGREEN
+        case 'r': 
+            return bcolors.OKBLUE
+        case 'e':
+            return bcolors.FAIL
+        case _:
+            return bcolors.ENDC
 
 def set_convert(s:set):
     """
@@ -482,7 +504,7 @@ def word_memorizer(count_of_words:int, sleep_time_seconds:int=4, random_or_last:
     for i in rnd:
         mem[i] = {}
         mem[i]['Translation'] = df.translation[i]
-        mem[i]['Word'] = df._expression[i]
+        mem[i]['Word'] = f"{bcolor_da(df.da[i])}{df._expression[i]}{bcolors.ENDC}"
         mem[i]['Mode'] = decode_mode(df['mode'][i])
 
     # show the words
@@ -567,6 +589,9 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
     translations = [df['translation'][i] for i in rnd]
     solutions = [df['_expression'][i] for i in rnd]
     
+    if len(rnd)==0:
+        raise ValueError(f"{bcolors.FAIL}No words found({decode_mode(word_mode)}).{bcolors.ENDC}")
+
     # build the dict:
 
     questions_dict = {}
@@ -592,15 +617,14 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
         questions_dict[idx+1]['response'] = ''
 
         
-
     # collect the answers by looping through the dict
     for key, dictvalue in questions_dict.items():
         # build padded row of choices
         row = '     '.join(["{0}) {1}".format(x[0], x[1].ljust(20)) for x in list(sorted(dictvalue['options'].items()))])
-        print("{0}:".format(dictvalue['question']))
         print('')
+        print(f"{bcolors.OKBLUE}{dictvalue['question']}{bcolors.ENDC}:")
         print(row)
-        response = input ("Select option: ")
+        response = input (f"{bcolors.OKGREEN}Select option: {bcolors.ENDC}")
         questions_dict[key]['response'] = response
 
     # show results
@@ -616,7 +640,14 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
         print(results[results.Point!=1])
 
     res = round(sum(results.Point)/len(results)*100,1)
-    print ("Your result is {0}%, {1} out of {2}".format(res, sum(results.Point),len(results))) 
+
+    match res < 85:
+        case True:
+            this_color = bcolors.FAIL
+        case _:
+            this_color = bcolors.ENDC
+
+    print (f"{this_color}Your result is {res}%, {sum(results.Point)} out of {len(results)}{bcolors.ENDC}") 
     update_weights(results)
     save_result('Test 2', res, len(results))
 
