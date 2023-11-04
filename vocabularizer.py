@@ -12,6 +12,7 @@ from datetime import datetime
 import time
 import matplotlib.pyplot as plt
 from pprint import pprint
+from os import listdir
 
 config = {}
 config_loaded = False
@@ -114,7 +115,14 @@ def load_file(file):
     loaded_files.append(file)
     print('Loaded {3} words from {0} vocabulary ({1} - {2})'.format(_vocabulary_type,language,secondary_language, len(da)))
 
+def load_all_files():
+    """Loads all vocabularies from the vocabularies folder"""
+    files = listdir('vocabularies')
+    for file in files:
+        load_file(f'vocabularies/{file}')
+
 def load_weights(file):
+    """Loads weights from weights file."""
     global weights_loaded
     global df
     dw = pd.read_csv(file)
