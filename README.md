@@ -8,7 +8,14 @@ Test 1| Type in the translation (and the definitive article in case of nouns) fo
 Test 2| Multiple choice word test by word type
 
 
-# How to Run
+# How-to 
+## Run daily practice
 ```sh
 python3 daily_practice.py
 ```
+
+## Add words
+```sh
+python3 word_add.py
+```
+
