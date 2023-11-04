@@ -19,16 +19,16 @@ teacher(male),der Lehrer,0.2
 daughter,das Mädchen,0.2
 boy,der Junge,0.2
 year,das Jahr,0.2
-Turkey,der Türkei,0.6
+Turkey,der Türkei,0.4
 Hello,Hallo,0.2
-Good morning!,Guten Morgen!,0.8
+Good morning!,Guten Morgen!,0.6
 Good morning!,Guten Tag!,1.0
-Good evening!,Guten Abend!,0.4
-Good night!,Gute Nacht!,1.0
+Good evening!,Guten Abend!,0.2
+Good night!,Gute Nacht!,0.8
 Have a nice day!,Schönen Tag!,0.4
 Bye!,Auf Wiedersehen!,0.4
 Bye!,Tschüß!,1.0
-My name is ...,Ich heiße ...,1.0
+My name is ...,Ich heiße ...,0.8
 My name is ...,Mein Name ist ...,0.4
 Who?,Wer?,0.4
 How?,Wie?,0.2
@@ -41,21 +41,21 @@ given names,die Vornamen,0.8
 family name,der Familienname,1.0
 family names,die Familiennamen,0.8
 Where from?,Woher?,1.0
-country,das Land,1.0
+country,das Land,1.2
 countries,die Länder,1.0
 Germany,Deutschland,0.6
 Austria,Österreich,1.0
 Switzerland,die Schweiz,1.0
 How are you doing?,Wie geht's?,0.8
 I'm doing fine. ,Es mir geht sehr gut.,1.2
-I'm doing OK. ,Es geht.,1.2
+I'm doing OK. ,Es geht.,1.0
 I'm not doing fine. ,Es geht nicht so gut.,1.2
 further,weiter,1.0
 alphabet,das Alphabet,1.0
 alphabets,die Alphabete,0.6
 to spell,buchstabieren,0.2
 too,auch,0.6
-thanks,danke,1.0
+thanks,danke,0.8
 yes,ja,0.8
 no,nein,0.6
 very,sehr,0.2
@@ -63,12 +63,12 @@ and,und,1.0
 Who are you?,Wer bist du?,0.8
 I come from ...,Ich komme aus ...,0.4
 nickname,der Spitzname,0.4
-Exactly.,Genau.,0.4
-I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.6
-I work as a ...,Ich arbeite als ...,0.6
+Exactly.,Genau.,0.2
+I grew up in Berlin.,Ich bin in Berlin aufgewachsen.,0.4
+I work as a ...,Ich arbeite als ...,0.4
 single,single,0.2
 single,ledig,0.2
-single,alleinstehend,0.4
+single,alleinstehend,0.2
 still,doch,0.2
 really,wirklich,0.4
 to work,arbeiten,0.2
@@ -85,12 +85,12 @@ What do you work?,Was arbeitest du?,0.2
 What are your Hobbys?,Was sindt deine Hobbys?,0.2
 to swim,schwimmen,0.2
 to cycle,radfahren,0.2
-bycicle,das Fahrrad,0.4
+bycicle,das Fahrrad,0.2
 I like cycling.,Ich mag Fahrrad fahren.,0.6
 to cycle,Fahrrad fahren,0.2
 to drive,fahren,0.2
 but,aber,1.0
-right,richtig,0.8
+right,richtig,0.6
 bicycle,das Fahrrad,0.2
 bicycles,die Fahrräder,0.6
 tyre,der Reifen,0.4
@@ -139,7 +139,7 @@ job,die Stelle,1.0
 jobs,die Stellen,1.0
 to work as ...,arbeiten als,0.2
 to work at ...,arbeiten bei,0.2
-unemployed,arbeitslos,0.6
+unemployed,arbeitslos,0.4
 by profession,von Beruf,0.2
 What?,Was?,0.2
 architect,der Architekt,1.0
@@ -162,21 +162,21 @@ student,der Schüler,1.2
 assistant,der Sekretär,0.8
 seller,der Verkäufer,0.8
 kid,das Kind,0.2
-kids,die Kinder,0.8
+kids,die Kinder,0.4
 to live,leben,0.2
 to live alone,allein leben,0.2
-to live together,zusammenleben,0.6
+to live together,zusammenleben,0.2
 to live in,wohnen in,0.4
 divorced,geschieden,0.2
 Where?,Wo?,0.2
 to believe,glauben,0.4
-to have,haben,0.4
+to have,haben,0.2
 to make,machen,0.8
 true,richtig,0.2
 correct,richtig,0.4
-false,falsch,0.4
+false,falsch,0.2
 incorrect,falsch,0.2
-I don't work.,Ich arbeite nicht,0.6
+I don't work.,Ich arbeite nicht,0.8
 We live in Malaga.,Wir leben in Malaga.,0.6
 Words,die Wörter,0.4
 Which?,Welche?,0.2
@@ -188,34 +188,34 @@ ein bisschen,a little,1.0
 parents,die Eltern,0.6
 picture,das Bild,0.8
 pictures,die Bilder,0.6
-lamp,die Lampe,0.8
-couch,das Sofa,0.8
-couches,die Sofas,1.0
+lamp,die Lampe,0.6
+couch,das Sofa,0.6
+couches,die Sofas,0.8
 chair,der Stuhl,0.4
 chairs,die Stühler,0.6
 table,der Tisch,0.4
 closet,der Schrank,0.8
 armchair,der Sessel,0.4
-bed,das Bett,0.4
-beds,die Betten,0.8
-rug,der Teppich,0.4
+bed,das Bett,0.2
+beds,die Betten,0.6
+rug,der Teppich,0.2
 schlecht,hard,1.0
 klein,small,0.4
-furniture,die Möbel,1.0
+furniture,die Möbel,0.8
 large,groß,0.4
 ugly,hässlich,0.2
-short,kurz,0.6
+short,kurz,0.4
 long,lang,0.2
 light,leicht,0.4
-beautiful,schön,0.6
-heavy,schwer,0.4
+beautiful,schön,0.4
+heavy,schwer,0.2
 to cost,kosten,0.2
-cheap,günstig,0.8
+cheap,günstig,0.6
 cheap,billig,0.4
 expensive,teuer,0.2
 help,die Hilfe,0.8
-to need,brauchen,0.4
-to find,finden,0.6
+to need,brauchen,0.2
+to find,finden,0.4
 to say,sagen,0.4
 nur,only,0.8
 dynamo,der Dynamo,0.8
@@ -225,53 +225,53 @@ racing bike,das Rennrad,1.0
 How many?,Wie viele?,0.2
 a little,ein bisschen,0.2
 hard,schlecht,0.6
-only,nur,0.4
+only,nur,0.6
 expression,der Ausdruck,1.0
-modified,geändert,0.8
-listed,aufgeführten,0.8
+modified,geändert,0.6
+listed,aufgeführten,0.6
 billing,die Abrechnung,1.0
 invoice,die Rechnung,1.0
-approved,genehmigt,1.0
+approved,genehmigt,0.8
 status,stehen auf,0.8
-shipping date,das Versanddatum,1.2
+shipping date,das Versanddatum,1.0
 settlement date,das Abrechnungsdatum,1.0
-pronunciation,die Aussprache,1.2
-See you soon!,die Bis bald!,1.0
+pronunciation,die Aussprache,1.0
+See you soon!,die Bis bald!,0.8
 Have a nice day!,Einen schönen Tag noch!,0.6
-I don't like winters in Berlin.,Ich mag Berlin Winterwetter nicht.,0.8
-Where to?,Wohin?,0.8
-For what?,Wofür?,0.8
-Why?,Warum?,1.0
-How many?,Wie viel?,1.0
+I don't like winters in Berlin.,Ich mag Berlin Winterwetter nicht.,0.6
+Where to?,Wohin?,0.6
+For what?,Wofür?,0.6
+Why?,Warum?,0.6
+How many?,Wie viel?,0.8
 From where?,Woher?,1.0
-possibility,die Möglichkeit,1.0
+possibility,die Möglichkeit,0.8
 society,die Gesellschaft,0.8
 time,die Zeit,1.0
 football,der Fußball,0.8
-photo,das Foto,1.0
+photo,das Foto,0.8
 similarities,die Gemeinsamkeiten,0.8
 differences,die Unterschiede,0.8
 cat,die Katze,1.0
 cat (male),der Kater,0.8
 food,das Essen,0.8
 Something else?,Noch etwas?,1.0
-to like,mögen,1.0
-solution,die Lösung,1.0
-exceptions,die Ausnahmen,1.0
-Nice to meet you.,Es ist shön dich kennen zu lernen.,1.0
-You idiot!,Du pfosten!,1.0
-Read aloud!,Lies mal vor!,1.0
+to like,mögen,0.8
+solution,die Lösung,0.8
+exceptions,die Ausnahmen,0.8
+Nice to meet you.,Es ist shön dich kennen zu lernen.,0.8
+You idiot!,Du pfosten!,0.8
+Read aloud!,Lies mal vor!,0.8
 How nice!,Wie schön!,1.0
 Iran,der Iran,1.0
 My pleasure.,Freut mich.,1.0
 straight,gerade,1.0
-to attempt,versuchen,1.0
+to attempt,versuchen,0.8
 again,nochmal,1.0
-to forget,vergessen,0.6
-following,folgendes,0.8
+to forget,vergessen,0.4
+following,folgendes,0.6
 user account,das Benutzerkonto,1.0
 password,das Passwort,1.0
-to log on,anmelden,0.8
+to log on,anmelden,0.6
 not bad,nicht schlecht,0.2
 Kann ich Ihnen helfen?,Can I help you?,0.4
 the keys,den Schlüssel,1.2
@@ -280,15 +280,15 @@ to look for,suchen,0.2
 today,heute,0.2
 with,mit,0.2
 I like to play soccer.,Ich spiele gern Fußball.,0.2
-Don't you like to play football?,Spielst du nicht gern Fußball?,0.4
+Don't you like to play football?,Spielst du nicht gern Fußball?,0.2
 Have fun!,Viel Spaß!,0.2
 always,immer,0.4
 often,oft,0.2
 sometimes,manchmal,0.2
-almost never,fast nie,0.4
+almost never,fast nie,0.2
 never,nie,0.2
-to cook,kochen,0.4
-to ski,Ski fahren,0.4
+to cook,kochen,0.2
+to ski,Ski fahren,0.2
 to play the guitar,gitarre spielen,0.2
 to bake,backen,0.2
 to play tennis,tennis spielen,0.2
@@ -299,7 +299,7 @@ to dance,tanzen,0.2
 unfortunately,leider,0.2
 I am sorry.,Tut mir leid.,0.2
 to meet,treffen,0.2
-to love,lieben,0.6
+to love,lieben,0.4
 to go for a walk,spazieren gehen,0.2
 clear,klar,0.2
 to have fun,Spaß machen,0.4
@@ -308,13 +308,13 @@ visit,besuchen,0.2
 trip,der Ausflug,0.2
 leisure time,die Freizeit,0.2
 2.30pm,halb drei am Nachmittag,0.2
-7:05,fünf nach sieben,0.6
+7:05,fünf nach sieben,0.4
 behaviour,das Verhalten,0.2
 expected,voraussichtlich,0.2
-to contact,wenden sich,1.2
+to contact,wenden sich,1.0
 to note,beachten,0.2
-Pay attention!,Beachten Sie!,0.4
-Please note ...,Bitte beachten Sie ...,0.6
+Pay attention!,Beachten Sie!,0.2
+Please note ...,Bitte beachten Sie ...,0.4
 to get redirected,weitergelietet werden,0.6
 tension,die Spannung,0.2
 fun,der Spaß,0.2
@@ -332,6 +332,104 @@ to discover,entdecken,0.4
 to enjoy,genießen,0.8
 to spend,verbringen,0.2
 to relax,entspannen,0.4
-certainly,bestimmt,1.0
+certainly,bestimmt,1.2
 despite,trotz,1.0
 nevertheless,trotzdem,1.0
+I think ...,Ich glaube ...,0.8
+to whisper,flüstern,1.2
+I think ...,Ich denke ...,0.8
+I think ...,Ich vermute,1.0
+to change,wechseln,0.8
+colour pencil,der Bundstift,1.0
+to translate,übersetzen,1.0
+exception,der Ausname,1.2
+style,die Weise,1.0
+to announce,durchsagen,0.8
+delay,die Verspätung,1.0
+departure,der Abflug,1.0
+arrival,die Ankunft,1.0
+exceptionally,ausnahmsweise,1.2
+yellow,gelb,1.0
+orange,orange,1.0
+silver,silbern,0.8
+black,schwarz,0.8
+monochrome,schwarzweis,0.8
+checkered,kariert,1.2
+colour,die Farbe,1.0
+pattern,das Muster,1.0
+dot pattern,das Punktmuster,1.0
+striped,das Streifenmuster,0.8
+edgy,eckig,0.8
+triangle,das Dreieck,0.8
+square,das Quadrat,1.0
+round,rund,0.8
+quadrant,rechteckig,0.8
+wood,das Holz,0.8
+paper,das Papier,1.0
+glass,das Glas,1.0
+leather,das Leder,1.0
+plastic,das Kunstoff,1.0
+plastic,das Plastik,1.0
+metal,das Metal,1.0
+The pen is made of plastic.,Der Stift ist aus Plastik.,0.8
+different,verschieden,0.8
+to get,bekomment,0.8
+third,dritte,1.0
+frame,das Gestell,0.8
+optician,der Optiker,1.0
+to type,tippen,0.8
+rubber band,das Gummiband,1.0
+bracelet,das Armband,1.0
+cotton,die Baumwolle,1.0
+soap,die Seife,1.0
+umbrella,der Schirm,1.0
+match,das Streichholtz,1.0
+clock,die Uhr,1.0
+role,die Rolle,1.0
+object,der Gegenstand,1.0
+monk,der Mönch,1.0
+eyeglasses,die Brille,1.0
+lighter,das Feuerzeug,1.0
+bottle,die Flasche,1.0
+camera,der Fotoapparat,1.0
+wallet,die Geldbörse,1.0
+pen,der Kugelschreiber,1.0
+umbrella,der Regenschirm,1.0
+ring,der Ring,1.0
+key,der Schlüssel,1.0
+address,die Adresse,1.0
+email,die E-Mail,1.2
+fax,das Fax,1.0
+date of birth,das Geburtsdatum,0.6
+house number,die Hausnummer,1.0
+location,der Ort,1.0
+postcode,die Postleitzahl,0.8
+street,die Straße,1.0
+telephone,das Telefon,1.0
+amount,die Menge,1.2
+apology,die Entschuldigung,1.0
+problem,das Problem,0.8
+product,das Produkt,1.0
+word,das Wort,0.6
+words,die Wörter,1.0
+dictionary,das Wörterbuch,0.8
+to offer,bieten,0.8
+to write,schreiben,0.8
+now,jetzt,1.0
+How do you say ...?,Wie sagt man ...?,0.8
+every,jede,0.8
+every,jeder,1.0
+season,die Jahreszeit,0.8
+spring,der Frühling,0.8
+autumn,der Herbst,0.8
+winter,der Winter,1.0
+summer,der Sommer,1.0
+objects,die Gegenstände,0.8
+blackboard,die Tafel,0.8
+mouse,die Maus,1.0
+necessary,nötig,0.8
+Just look!,Schau mal!,1.0
+workplace,der Arbeitsplatz,1.0
+screen,der Bildschirm,1.0
+stamp,die Briefmarke,1.0
+It's already 12 o'clock.,Es ist doch shown 12 Uhr.,0.6
