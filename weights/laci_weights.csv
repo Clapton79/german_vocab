@@ -180,7 +180,7 @@ I don't work.,Ich arbeite nicht,0.8
 We live in Malaga.,Wir leben in Malaga.,0.6
 Words,die Wörter,0.4
 Which?,Welche?,0.2
-answer,die Antwort,1.0
+answer,die Antwort,0.8
 to cross,kreuzen,0.4
 to speak,sprechen,0.2
 Wie viele?,How many?,1.0
@@ -215,8 +215,8 @@ cheap,billig,0.4
 expensive,teuer,0.2
 help,die Hilfe,0.8
 to need,brauchen,0.2
-to find,finden,0.4
-to say,sagen,0.4
+to find,finden,0.2
+to say,sagen,0.2
 nur,only,0.8
 dynamo,der Dynamo,0.8
 pump,die Luftpumpe,0.8
@@ -274,7 +274,7 @@ password,das Passwort,1.0
 to log on,anmelden,0.6
 not bad,nicht schlecht,0.2
 Kann ich Ihnen helfen?,Can I help you?,0.4
-the keys,den Schlüssel,1.2
+the keys,den Schlüssel,1.4
 to go,gehen,0.2
 to look for,suchen,0.2
 today,heute,0.2
@@ -282,7 +282,7 @@ with,mit,0.2
 I like to play soccer.,Ich spiele gern Fußball.,0.2
 Don't you like to play football?,Spielst du nicht gern Fußball?,0.2
 Have fun!,Viel Spaß!,0.2
-always,immer,0.4
+always,immer,0.2
 often,oft,0.2
 sometimes,manchmal,0.2
 almost never,fast nie,0.2
@@ -302,7 +302,7 @@ to meet,treffen,0.2
 to love,lieben,0.4
 to go for a walk,spazieren gehen,0.2
 clear,klar,0.2
-to have fun,Spaß machen,0.4
+to have fun,Spaß machen,0.6
 How often?,Wie oft?,0.2
 visit,besuchen,0.2
 trip,der Ausflug,0.2
@@ -311,10 +311,10 @@ leisure time,die Freizeit,0.2
 7:05,fünf nach sieben,0.4
 behaviour,das Verhalten,0.2
 expected,voraussichtlich,0.2
-to contact,wenden sich,1.0
+to contact,wenden sich,0.8
 to note,beachten,0.2
 Pay attention!,Beachten Sie!,0.2
-Please note ...,Bitte beachten Sie ...,0.4
+Please note ...,Bitte beachten Sie ...,0.2
 to get redirected,weitergelietet werden,0.6
 tension,die Spannung,0.2
 fun,der Spaß,0.2
@@ -323,56 +323,56 @@ member,das Mitglied,0.2
 until now,bisher,0.2
 adverb,das Adverb,0.2
 to spoil,verwöhnen,0.2
-over,vorbei,1.0
-again,wieder,1.0
+over,vorbei,1.2
+again,wieder,1.2
 grey,grau,0.2
 rain,der Regen,0.2
 to shape,prägen,0.2
-to discover,entdecken,0.4
-to enjoy,genießen,0.8
+to discover,entdecken,0.2
+to enjoy,genießen,0.6
 to spend,verbringen,0.2
 to relax,entspannen,0.4
 certainly,bestimmt,1.2
 despite,trotz,1.0
-nevertheless,trotzdem,1.0
-I think ...,Ich glaube ...,0.8
-to whisper,flüstern,1.2
-I think ...,Ich denke ...,0.8
-I think ...,Ich vermute,1.0
+nevertheless,trotzdem,1.2
+I think ...,Ich glaube ...,0.6
+to whisper,flüstern,1.0
+I think ...,Ich denke ...,0.6
+I think ...,Ich vermute,0.8
 to change,wechseln,0.8
-colour pencil,der Bundstift,1.0
-to translate,übersetzen,1.0
-exception,der Ausname,1.2
-style,die Weise,1.0
-to announce,durchsagen,0.8
+colour pencil,der Bundstift,0.8
+to translate,übersetzen,0.6
+exception,der Ausname,1.0
+style,die Weise,0.8
+to announce,durchsagen,0.6
 delay,die Verspätung,1.0
-departure,der Abflug,1.0
+departure,der Abflug,0.8
 arrival,die Ankunft,1.0
-exceptionally,ausnahmsweise,1.2
+exceptionally,ausnahmsweise,1.0
 yellow,gelb,1.0
-orange,orange,1.0
-silver,silbern,0.8
-black,schwarz,0.8
-monochrome,schwarzweis,0.8
-checkered,kariert,1.2
-colour,die Farbe,1.0
-pattern,das Muster,1.0
+orange,orange,0.8
+silver,silbern,0.6
+black,schwarz,0.6
+monochrome,schwarzweis,0.6
+checkered,kariert,1.0
+colour,die Farbe,0.8
+pattern,das Muster,0.8
 dot pattern,das Punktmuster,1.0
-striped,das Streifenmuster,0.8
-edgy,eckig,0.8
+striped,das Streifenmuster,0.6
+edgy,eckig,0.6
 triangle,das Dreieck,0.8
 square,das Quadrat,1.0
-round,rund,0.8
-quadrant,rechteckig,0.8
-wood,das Holz,0.8
+round,rund,0.6
+quadrant,rechteckig,0.6
+wood,das Holz,0.6
 paper,das Papier,1.0
 glass,das Glas,1.0
 leather,das Leder,1.0
 plastic,das Kunstoff,1.0
 plastic,das Plastik,1.0
 metal,das Metal,1.0
-The pen is made of plastic.,Der Stift ist aus Plastik.,0.8
-different,verschieden,0.8
+The pen is made of plastic.,Der Stift ist aus Plastik.,0.6
+different,verschieden,0.6
 to get,bekomment,0.8
 third,dritte,1.0
 frame,das Gestell,0.8
@@ -400,36 +400,66 @@ key,der Schlüssel,1.0
 address,die Adresse,1.0
 email,die E-Mail,1.2
 fax,das Fax,1.0
-date of birth,das Geburtsdatum,0.6
+date of birth,das Geburtsdatum,0.8
 house number,die Hausnummer,1.0
-location,der Ort,1.0
+location,der Ort,0.8
 postcode,die Postleitzahl,0.8
-street,die Straße,1.0
+street,die Straße,0.8
 telephone,das Telefon,1.0
-amount,die Menge,1.2
-apology,die Entschuldigung,1.0
-problem,das Problem,0.8
+amount,die Menge,1.0
+apology,die Entschuldigung,0.6
+problem,das Problem,0.6
 product,das Produkt,1.0
-word,das Wort,0.6
+word,das Wort,0.4
 words,die Wörter,1.0
 dictionary,das Wörterbuch,0.8
 to offer,bieten,0.8
-to write,schreiben,0.8
+to write,schreiben,0.6
 now,jetzt,1.0
-How do you say ...?,Wie sagt man ...?,0.8
+How do you say ...?,Wie sagt man ...?,0.6
 every,jede,0.8
 every,jeder,1.0
 season,die Jahreszeit,0.8
-spring,der Frühling,0.8
+spring,der Frühling,0.4
 autumn,der Herbst,0.8
-winter,der Winter,1.0
-summer,der Sommer,1.0
+winter,der Winter,0.8
+summer,der Sommer,0.8
 objects,die Gegenstände,0.8
-blackboard,die Tafel,0.8
-mouse,die Maus,1.0
-necessary,nötig,0.8
+blackboard,die Tafel,1.0
+mouse,die Maus,0.8
+necessary,nötig,0.6
 Just look!,Schau mal!,1.0
-workplace,der Arbeitsplatz,1.0
+workplace,der Arbeitsplatz,0.8
 screen,der Bildschirm,1.0
 stamp,die Briefmarke,1.0
 It's already 12 o'clock.,Es ist doch shown 12 Uhr.,0.6
+to calculate,rechnen,0.8
+to ask,fragen,0.8
+question,die Frage,0.6
+to answer,antworten,0.8
+to wait,warten,0.6
+lucky,glücklich,0.6
+not sure,unsicher,0.6
+sound,der Klang,1.0
+superb,klasse,0.8
+awesome,toll,1.0
+string,die Saite,0.8
+last,letzte,0.6
+to explain,erklären,0.6
+yesterday,gestern,0.8
+to know,kennen,0.8
+to know something,wissen,0.6
+"Yes, please.","Ja, gerne.",0.6
+later,später,1.0
+to draw,zeichen,0.6
+to win,gewinnen,0.6
+fast,schnell,0.6
+slow,langsam,0.8
+repeat,wiederholen,0.8
+to get,holen,0.8
+to stay,bleiben,1.0
+I call my mom every week.,Ich telefoniere jede Woche mit meine Mutter.,0.8
+I ask for directions.,Ich frage nach dem Weg.,0.8
+I ask the time.,Ich frage nach der Uhrzeit.,0.8
+to laugh,lachen,0.8
+to smile,lächeln,0.8
