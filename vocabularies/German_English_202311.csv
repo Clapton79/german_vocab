@@ -32,3 +32,56 @@ s,,Ich frage nach dem Weg.,I ask for directions.
 s,,Ich frage nach der Uhrzeit.,I ask the time.
 v,,lachen,to laugh
 v,,lächeln,to smile
+s,,Das macht Spaß!,That's fun!
+s,,Oft gehe ich spazieren.,I often go hiking.
+s,,Ich höre gern Musik.,I like to listen to music.
+s,,Ich fahre ...,I drive ...
+s,,Du fährst ...,You drive ...
+s,,Er fährt ...,He drives ...
+s,,Sie fährt ...,She drives ...
+s,,Ich lese ...,I read ...
+s,,Du liest ...,You read ...
+s,,Er liest ...,He reads ...
+s,,Sie liest ...,She reads ...
+s,,Ich gehe manchmal ins Kino.,I sometimes go to cinema.
+n,r,Vormittag,morning
+n,r,Abend,evening
+n,r,Nachmittag,afternoon
+n,e,Nacht,night
+n,r,Mittag,noon
+n,r,Morgen,morning
+adv,r,Montag,Monday
+adv,r,Dienstag,Tuesday
+adv,r,Mittwoch,Wednesday
+adv,r,Donnerstag,Thursday
+adv,r,Freitag,Friday
+adv,r,Samstag,Saturday
+adv,r,Sonntag,Sunday
+adv,,am Dienstag,on Tuesday
+adv,,am Abend,in the evening
+adv,,in der Nacht,in the night
+adv,,kurz nach,shortly after
+s,,Lust auf ...?,Do you feel like ...?
+adv,,vielleicht,maybe
+adv,,um 7 Uhr,at 7 o'clock
+s,,Ich habe leider doch keine Zeit.,Unfortunately I don't have time.
+s,,Kannst du heute Abend ...?,Can you ... this afternoon?
+s,,Wann denn?,What time then?
+n,s,Café,café
+n,s,Schwimmbad,swimming pool
+n,s,Museum,museum
+n,e,Museen,museums
+n,s,Theater,theater
+n,e,Bar,bar
+n,e,Disko,discotheque
+n,s,Kino,cinema
+n,s,Konzert,concert
+n,s,Restaurant,restaurant
+s,,Ich erinnere mich.,I remember.
+v,,vorschlagen,to suggest
+n,e,Meinung,opinion
+n,r,Tag,day
+v,,möchten,to like to
+v,,wollen,to want
+v,,müssen,to have to
+v,,sollen,should
