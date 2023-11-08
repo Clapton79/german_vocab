@@ -51,7 +51,7 @@ FUNCTIONS
     decode_da(da: str) -> str
         Converts definitive article code into a definitive article
     
-    decode_mode(mode: str)
+    decode_mode(mode: str) -> str
         converts a mode code into the mode description
     
     get_config(config_item)

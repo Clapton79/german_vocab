@@ -42,7 +42,7 @@ modes = {
         "s":        "Satz oder Frage",
         "adv":      "Adverb"
     }
-    
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -291,6 +291,7 @@ def left_1 (s:str):
 
 def decode_mode(mode:str) -> str:
 
+    """converts a mode code into the mode description"""
     global modes 
 
     try:
