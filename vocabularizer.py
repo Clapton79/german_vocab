@@ -17,7 +17,7 @@ from os import listdir
 config = {}
 config_loaded = False
 
-library_version = "1.1.4"
+library_version = "1.2.0"
 
 language = ""
 secondary_language = ""
@@ -31,6 +31,18 @@ if path.exists('config.json'):
         config = loads(f.read())
         config_loaded=True
 
+modes = {
+        "n":        "Nominativ",
+        "d":        "Dativ",
+        "g":        "Genitiv",
+        "acc":      "Akkusativ",
+        "v":        "Verb",
+        "a":        "Adjektiv",
+        "e":        "Ausdruck",
+        "s":        "Satz oder Frage",
+        "adv":      "Adverb"
+    }
+    
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -277,31 +289,16 @@ def left_1 (s:str):
     Used in dataframe value references"""
     return s[0]
 
-def decode_mode(mode:str):
-    """
-    converts a mode code into the mode description
-    """
-    match mode:
-        case 'n':
-            return 'Nominativ-Substantiv'
-        case 'd':
-            return 'Dativ-Substantiv'
-        case 'a':
-            return 'Akkusativ Substantiv'
-        case 'g':
-            return 'Genitiv-Substantiv'
-        case 'v':
-            return 'Verb'
-        case 'a':
-            return 'Adjektiv'
-        case 'e':
-            return 'Ausdruck'
-        case 's':
-            return 'Satz oder Frage'
-        case 'adv':
-            return 'adverb'
-        case _: 
-            return ''
+def decode_mode(mode:str) -> str:
+
+    global modes 
+
+    try:
+        response = modes[mode]
+    except KeyError:
+        response = ''
+    
+    return response
 
 def decode_da(da:str) -> str:
     """
