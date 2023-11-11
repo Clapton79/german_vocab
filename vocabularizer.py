@@ -43,6 +43,14 @@ modes = {
         "adv":      "Adverb"
     }
 
+da = {
+    "r": "der",
+    "e": "die",
+    "s": "das",
+    "n": "den",
+    "m": "dem"
+}
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -301,23 +309,17 @@ def decode_mode(mode:str) -> str:
     
     return response
 
-def decode_da(da:str) -> str:
+def decode_da(df:str) -> str:
     """
     Converts definitive article code into a definitive article
     """
-    match da:
-        case 's':
-            return 'das'
-        case 'r': 
-            return 'der'
-        case 'e':
-            return 'die'
-        case 'm':
-            return 'dem'
-        case 'n':
-            return 'den'
-        case _:
-            return ''
+    global da
+    try: 
+        response = da[df]
+    except KeyError:
+        response = ''
+    
+    return response
 
 def bcolor_da(da:str) -> str:
     match da:
