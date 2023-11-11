@@ -12,6 +12,7 @@ def daily_routine():
         test_2('a', 15)
         test_2('v', 15)
         test_2('s', 15)
+        test_2('adv', 15)
 
         test_1('', 15)
         unload_vocabulary()
