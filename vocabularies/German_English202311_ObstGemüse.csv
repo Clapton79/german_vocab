@@ -1,0 +1,53 @@
+mode,da,word,translation
+n,r,Truthahn,turkey
+n,s,Obst,fruit
+n,e,Banane,banana
+n,r,Apfel,apple
+n,e,Traube,grape
+n,e,Weintraube,grape
+n,e,Erdbeere,strawberry
+n,e,Himbeere,raspberry
+n,e,Johannisbeere,currant
+n,e,Stachelbeere,gooseberry
+n,e,Gänsehaut,goosebump
+n,e,Zitrone,lemon
+n,e,Melone,melon
+n,r,Pfirsich,peach
+n,e,Aprikose,apricot
+n,e,Nektarine,nectarin
+n,e,Birne,pear
+n,e,Ananas,pineapple
+n,e,Quitte,quince
+n,e,Kirsche,cherry
+n,e,Sauerkirsche,sour cherry
+a,,eingemachte,pickled
+n,s,Dessert,dessert
+n,r,Nachtisch,dessert
+n,e,Wassermelone,melon
+n,e,Scheibe,slice
+n,e,Tomate,tomato
+n,r,Salat,salad
+n,e,Sellerie,celery
+n,e,Mühre,carrot
+n,e,Karotte,carrot
+n,e,Erbse,pea
+a,,tiefkühl,frozen
+n,e,Kartoffel,potato
+n,e,Aubergine,aubergine
+n,e,Gurke,cucumber
+n,e,Zucchini,zucchini
+n,r,Kürbis,pumpkin
+n,r,Knoblauch,garlic
+n,e,Zwiebel,onion
+n,e,Rote Zwiebel,red onion
+n,r,Blumenkohl,cauliflower
+n,e,Paprik,pepper
+n,s,Radieschen,radish
+n,r,Spargel,asparagus
+n,r,Rettich,radish
+n,e,Pastinake,parsnip
+n,r,Ingwer,ginger
+n,e,Rote Bete,beetroot
+n,r,Spinat,spinach
+n,r,Kohlrabi,kohlrabi
+n,r,Meerrettich,horse radish
