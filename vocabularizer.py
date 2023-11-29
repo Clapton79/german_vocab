@@ -580,7 +580,7 @@ def test_1(word_mode:str = '',count_of_words:int=10):
     output_decorator("",0, 'end') 
 
 def test_2(word_mode:str = '',count_of_words:int = 20):
-    """multiple choice test"""
+    """Multiple choice test for translating"""
     global df
     
     output_decorator("Test 2 - Multiple choice", 4)
@@ -658,6 +658,87 @@ def test_2(word_mode:str = '',count_of_words:int = 20):
     print (f"{this_color}Your result is {res}%, {sum(results.Point)} out of {len(results)}{bcolors.ENDC}") 
     update_weights(results)
     save_result('Test 2', res, len(results))
+
+def test_3(count_of_words:int = 10):
+    """Multiple choice test for definitive articles."""
+    global df
+    
+    output_decorator("Test 3 - Definitive article test", 4)
+
+    if count_of_words<1:
+        return
+    
+    if len(df) < count_of_words:
+        count_of_words = len(df) 
+        
+    letters = ['a','b','c']
+    definitive_article_choice = ['r','e','s']
+
+    rnd = random_choice('n',count_of_words)
+    words = [df['word'][i] for i in rnd]
+    solutions = [df['da'][i] for i in rnd]
+
+    if len(rnd)==0:
+        raise ValueError(f"{bcolors.FAIL}No words found({decode_mode('n')}).{bcolors.ENDC}")
+
+    # build the dict:
+
+    questions_dict = {}
+    for idx,val in enumerate(rnd):
+        
+        #shuffle the letters
+        random.shuffle(letters)
+
+        definitive_articles_alt = [decode_da(x) for x in definitive_article_choice if x!= solutions[idx]]
+        random.shuffle(definitive_articles_alt)
+
+        question_dict = {}
+        question_dict[letters[0]]= decode_da(solutions[idx])
+        
+        for f in range(0, 2):
+            question_dict[letters[f+1]] = definitive_articles_alt[f]
+
+        questions_dict[idx+1]={}
+        questions_dict[idx+1]['options'] = question_dict
+        questions_dict[idx+1]['question'] = words[idx]
+        questions_dict[idx+1]['solution'] = decode_da(solutions[idx])
+        questions_dict[idx+1]['solution_choice'] = letters[0]
+        questions_dict[idx+1]['response'] = ''
+
+        
+    # collect the answers by looping through the dict
+    for key, dictvalue in questions_dict.items():
+        # build padded row of choices
+        row = '     '.join(["{0}) {1}".format(x[0], x[1].ljust(20)) for x in list(sorted(dictvalue['options'].items()))])
+        print('')
+        print(f"{bcolors.OKBLUE}{dictvalue['question']}{bcolors.ENDC}:")
+        print(row)
+        response = input (f"{bcolors.OKGREEN}Select option: {bcolors.ENDC}")
+        questions_dict[key]['response'] = response
+
+    # show results
+    results = pd.DataFrame([(questions_dict[x]['question'], 
+                             questions_dict[x]['solution'],
+                             questions_dict[x]['solution_choice'], 
+                             questions_dict[x]['response'], 
+                             int(questions_dict[x]['solution_choice']==questions_dict[x]['response'])) for x in questions_dict.keys()],
+                             columns = ['Word', 'Solution','Solution Choice', 'Response', 'Point'])
+    
+    if sum(results.Point) != len(results):
+        output_decorator('Errors',6)
+        print(results[results.Point!=1])
+
+    res = round(sum(results.Point)/len(results)*100,1)
+
+    match res < 85:
+        case True:
+            this_color = bcolors.FAIL
+        case _:
+            this_color = bcolors.ENDC
+
+    print (f"{this_color}Your result is {res}%, {sum(results.Point)} out of {len(results)}{bcolors.ENDC}") 
+    #update_weights(results)
+    save_result('Test 3', res, len(results))
 
 def test_selector():
     response = input("""Press the letter of the test to start it:
