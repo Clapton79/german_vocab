@@ -180,7 +180,7 @@ I don't work.,Ich arbeite nicht,0.8
 We live in Malaga.,Wir leben in Malaga.,0.6
 Words,die Wörter,0.4
 Which?,Welche?,0.2
-answer,die Antwort,0.8
+answer,die Antwort,0.4
 to cross,kreuzen,0.4
 to speak,sprechen,0.2
 Wie viele?,How many?,1.0
@@ -433,33 +433,97 @@ workplace,der Arbeitsplatz,0.8
 screen,der Bildschirm,1.0
 stamp,die Briefmarke,1.0
 It's already 12 o'clock.,Es ist doch shown 12 Uhr.,0.4
-to calculate,rechnen,0.4
-to ask,fragen,0.6
+to calculate,rechnen,0.2
+to ask,fragen,0.2
 question,die Frage,0.2
-to answer,antworten,0.8
+to answer,antworten,0.4
 to wait,warten,0.2
-lucky,glücklich,0.4
-not sure,unsicher,0.4
-sound,der Klang,1.0
-superb,klasse,0.8
-awesome,toll,0.8
-string,die Saite,0.6
-last,letzte,0.4
+lucky,glücklich,0.2
+not sure,unsicher,0.2
+sound,der Klang,0.6
+superb,klasse,0.6
+awesome,toll,0.2
+string,die Saite,0.2
+last,letzte,0.2
 to explain,erklären,0.2
 yesterday,gestern,0.8
-to know,kennen,0.6
+to know,kennen,0.4
 to know something,wissen,0.2
 "Yes, please.","Ja, gerne.",0.4
-later,später,1.0
-to draw,zeichen,0.4
-to win,gewinnen,0.4
+later,später,0.4
+to draw,zeichen,0.2
+to win,gewinnen,0.2
 fast,schnell,0.2
-slow,langsam,0.6
-repeat,wiederholen,0.8
-to get,holen,0.6
-to stay,bleiben,0.6
-I call my mom every week.,Ich telefoniere jede Woche mit meine Mutter.,0.4
-I ask for directions.,Ich frage nach dem Weg.,0.6
+slow,langsam,0.2
+repeat,wiederholen,0.4
+to get,holen,0.2
+to stay,bleiben,0.2
+I call my mom every week.,Ich telefoniere jede Woche mit meine Mutter.,0.2
+I ask for directions.,Ich frage nach dem Weg.,0.4
 I ask the time.,Ich frage nach der Uhrzeit.,0.6
-to laugh,lachen,0.6
-to smile,lächeln,0.4
+to laugh,lachen,0.4
+to smile,lächeln,0.2
+That's fun!,Das macht Spaß!,0.6
+I often go hiking.,Oft gehe ich spazieren.,0.8
+I like to listen to music.,Ich höre gern Musik.,0.4
+I drive ...,Ich fahre ...,0.6
+You drive ...,Du fährst ...,0.8
+He drives ...,Er fährt ...,0.8
+She drives ...,Sie fährt ...,0.4
+I read ...,Ich lese ...,0.4
+You read ...,Du liest ...,0.4
+He reads ...,Er liest ...,0.4
+She reads ...,Sie liest ...,0.4
+I sometimes go to cinema.,Ich gehe manchmal ins Kino.,0.6
+morning,der Vormittag,0.4
+evening,der Abend,0.4
+afternoon,der Nachmittag,0.8
+night,die Nacht,0.6
+noon,der Mittag,0.4
+morning,der Morgen,1.0
+Monday,der Montag,0.8
+Tuesday,der Dienstag,0.4
+Wednesday,der Mittwoch,0.4
+Thursday,der Donnerstag,0.4
+Friday,der Freitag,0.4
+Saturday,der Samstag,1.0
+Sunday,der Sonntag,0.4
+on Tuesday,am Dienstag,0.4
+in the evening,am Abend,0.4
+in the night,in der Nacht,0.4
+shortly after,kurz nach,0.4
+Do you feel like ...?,Lust auf ...?,0.6
+maybe,vielleicht,1.0
+at 7 o'clock,um 7 Uhr,0.4
+Unfortunately I don't have time.,Ich habe leider doch keine Zeit.,0.6
+Can you ... this afternoon?,Kannst du heute Abend ...?,0.4
+What time then?,Wann denn?,0.6
+café,das Café,1.0
+swimming pool,das Schwimmbad,0.4
+museum,das Museum,0.4
+museums,die Museen,0.8
+theater,das Theater,0.6
+bar,die Bar,0.4
+discotheque,die Disko,0.4
+cinema,das Kino,0.6
+concert,das Konzert,0.4
+restaurant,das Restaurant,1.0
+I remember.,Ich erinnere mich.,0.4
+to suggest,vorschlagen,0.6
+opinion,die Meinung,0.6
+day,der Tag,0.8
+to like to,möchten,0.4
+to want,wollen,0.4
+to have to,müssen,0.4
+should,sollen,0.4
+headscarf,das Kopftuch,0.8
+scarf,der Schaal,1.0
+tissue,das Taschentuch,1.0
+anxious,ängstlich,0.4
+to talk,reden,0.6
+can,können,0.6
+would like,möchten,1.0
+must,müssen,1.0
+want,wollen,1.0
+may,dürfen,0.8
+will,werden,0.6
