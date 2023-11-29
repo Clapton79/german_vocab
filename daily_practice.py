@@ -1,4 +1,4 @@
-from vocabularizer import load_file, test_2, output_decorator, word_memorizer, test_1, unload_vocabulary
+from vocabularizer import load_file, test_2,test_3, output_decorator, word_memorizer, test_1, unload_vocabulary
 import os
 import time
 
@@ -14,6 +14,7 @@ def daily_routine():
         test_2('s', 15)
         test_2('adv', 15)
 
+        test_3(25)
         test_1('', 15)
         unload_vocabulary()
         if file != files[-1]:
