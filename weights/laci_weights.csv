@@ -135,7 +135,7 @@ internship,das Praktikum,1.0
 internships,die Praktika,0.8
 school,die Schule,1.2
 schools,die Schulen,1.2
-job,die Stelle,1.0
+job,die Stelle,0.8
 jobs,die Stellen,1.0
 to work as ...,arbeiten als,0.2
 to work at ...,arbeiten bei,0.2
@@ -148,7 +148,7 @@ doctor,der Arzt,1.0
 doctors,die Ärzte,0.8
 engineer,der Ingenieur,1.0
 engineers,die Ingenieure,0.8
-hairdresser,der Friseur,0.8
+hairdresser,der Friseur,0.6
 hairdressers,die Friseure,1.0
 journalist,der Journalist,0.8
 journalists,die Journalisten,0.8
@@ -158,7 +158,7 @@ mechanic engineer,der Mechatroniker,0.8
 student,der Student,1.0
 students,die Studenten,1.0
 actor,der Schauspieler,1.0
-student,der Schüler,1.2
+student,der Schüler,1.0
 assistant,der Sekretär,0.8
 seller,der Verkäufer,0.8
 kid,das Kind,0.2
@@ -180,7 +180,7 @@ I don't work.,Ich arbeite nicht,0.8
 We live in Malaga.,Wir leben in Malaga.,0.6
 Words,die Wörter,0.4
 Which?,Welche?,0.2
-answer,die Antwort,0.4
+answer,die Antwort,0.2
 to cross,kreuzen,0.4
 to speak,sprechen,0.2
 Wie viele?,How many?,1.0
@@ -262,7 +262,7 @@ Nice to meet you.,Es ist shön dich kennen zu lernen.,0.8
 You idiot!,Du pfosten!,0.8
 Read aloud!,Lies mal vor!,0.8
 How nice!,Wie schön!,1.0
-Iran,der Iran,1.0
+Iran,der Iran,0.8
 My pleasure.,Freut mich.,1.0
 straight,gerade,1.0
 to attempt,versuchen,0.8
@@ -439,91 +439,150 @@ question,die Frage,0.2
 to answer,antworten,0.4
 to wait,warten,0.2
 lucky,glücklich,0.2
-not sure,unsicher,0.2
+not sure,unsicher,0.4
 sound,der Klang,0.6
-superb,klasse,0.6
-awesome,toll,0.2
+superb,klasse,1.0
+awesome,toll,0.4
 string,die Saite,0.2
-last,letzte,0.2
+last,letzte,0.4
 to explain,erklären,0.2
-yesterday,gestern,0.8
-to know,kennen,0.4
+yesterday,gestern,1.0
+to know,kennen,0.6
 to know something,wissen,0.2
-"Yes, please.","Ja, gerne.",0.4
-later,später,0.4
-to draw,zeichen,0.2
-to win,gewinnen,0.2
+"Yes, please.","Ja, gerne.",0.2
+later,später,0.6
+to draw,zeichen,0.4
+to win,gewinnen,0.4
 fast,schnell,0.2
-slow,langsam,0.2
-repeat,wiederholen,0.4
+slow,langsam,0.4
+repeat,wiederholen,0.6
 to get,holen,0.2
 to stay,bleiben,0.2
 I call my mom every week.,Ich telefoniere jede Woche mit meine Mutter.,0.2
 I ask for directions.,Ich frage nach dem Weg.,0.4
-I ask the time.,Ich frage nach der Uhrzeit.,0.6
+I ask the time.,Ich frage nach der Uhrzeit.,0.8
 to laugh,lachen,0.4
-to smile,lächeln,0.2
-That's fun!,Das macht Spaß!,0.6
-I often go hiking.,Oft gehe ich spazieren.,0.8
-I like to listen to music.,Ich höre gern Musik.,0.4
-I drive ...,Ich fahre ...,0.6
-You drive ...,Du fährst ...,0.8
-He drives ...,Er fährt ...,0.8
-She drives ...,Sie fährt ...,0.4
-I read ...,Ich lese ...,0.4
-You read ...,Du liest ...,0.4
+to smile,lächeln,0.4
+That's fun!,Das macht Spaß!,0.8
+I often go hiking.,Oft gehe ich spazieren.,1.0
+I like to listen to music.,Ich höre gern Musik.,0.6
+I drive ...,Ich fahre ...,1.0
+You drive ...,Du fährst ...,1.0
+He drives ...,Er fährt ...,0.6
+She drives ...,Sie fährt ...,0.6
+I read ...,Ich lese ...,0.6
+You read ...,Du liest ...,0.8
 He reads ...,Er liest ...,0.4
 She reads ...,Sie liest ...,0.4
-I sometimes go to cinema.,Ich gehe manchmal ins Kino.,0.6
+I sometimes go to cinema.,Ich gehe manchmal ins Kino.,0.4
 morning,der Vormittag,0.4
-evening,der Abend,0.4
+evening,der Abend,0.2
 afternoon,der Nachmittag,0.8
 night,die Nacht,0.6
-noon,der Mittag,0.4
-morning,der Morgen,1.0
-Monday,der Montag,0.8
-Tuesday,der Dienstag,0.4
+noon,der Mittag,0.6
+morning,der Morgen,1.2
+Monday,der Montag,1.0
+Tuesday,der Dienstag,0.8
 Wednesday,der Mittwoch,0.4
 Thursday,der Donnerstag,0.4
-Friday,der Freitag,0.4
-Saturday,der Samstag,1.0
-Sunday,der Sonntag,0.4
-on Tuesday,am Dienstag,0.4
-in the evening,am Abend,0.4
-in the night,in der Nacht,0.4
-shortly after,kurz nach,0.4
-Do you feel like ...?,Lust auf ...?,0.6
-maybe,vielleicht,1.0
-at 7 o'clock,um 7 Uhr,0.4
-Unfortunately I don't have time.,Ich habe leider doch keine Zeit.,0.6
-Can you ... this afternoon?,Kannst du heute Abend ...?,0.4
-What time then?,Wann denn?,0.6
-café,das Café,1.0
-swimming pool,das Schwimmbad,0.4
-museum,das Museum,0.4
-museums,die Museen,0.8
-theater,das Theater,0.6
+Friday,der Freitag,0.8
+Saturday,der Samstag,1.4
+Sunday,der Sonntag,0.2
+on Tuesday,am Dienstag,0.6
+in the evening,am Abend,0.6
+in the night,in der Nacht,0.6
+shortly after,kurz nach,0.6
+Do you feel like ...?,Lust auf ...?,0.8
+maybe,vielleicht,1.4
+at 7 o'clock,um 7 Uhr,0.6
+Unfortunately I don't have time.,Ich habe leider doch keine Zeit.,0.8
+Can you ... this afternoon?,Kannst du heute Abend ...?,0.2
+What time then?,Wann denn?,0.8
+café,das Café,0.8
+swimming pool,das Schwimmbad,0.2
+museum,das Museum,0.2
+museums,die Museen,0.6
+theater,das Theater,0.4
 bar,die Bar,0.4
 discotheque,die Disko,0.4
 cinema,das Kino,0.6
 concert,das Konzert,0.4
-restaurant,das Restaurant,1.0
-I remember.,Ich erinnere mich.,0.4
-to suggest,vorschlagen,0.6
-opinion,die Meinung,0.6
-day,der Tag,0.8
-to like to,möchten,0.4
-to want,wollen,0.4
-to have to,müssen,0.4
-should,sollen,0.4
-headscarf,das Kopftuch,0.8
+restaurant,das Restaurant,0.8
+I remember.,Ich erinnere mich.,0.6
+to suggest,vorschlagen,0.8
+opinion,die Meinung,0.4
+day,der Tag,1.0
+to like to,möchten,0.2
+to want,wollen,0.6
+to have to,müssen,0.6
+should,sollen,0.6
+headscarf,das Kopftuch,1.0
 scarf,der Schaal,1.0
 tissue,das Taschentuch,1.0
-anxious,ängstlich,0.4
-to talk,reden,0.6
-can,können,0.6
+anxious,ängstlich,0.2
+to talk,reden,0.8
+can,können,0.8
 would like,möchten,1.0
 must,müssen,1.0
 want,wollen,1.0
-may,dürfen,0.8
-will,werden,0.6
+may,dürfen,0.6
+will,werden,0.8
+Poor thing!,Du Arme!,1.0
+actually,eigentlich,1.0
+craftsman,der Handwerkeer,1.2
+since,seitdem,1.0
+to clean,putzen,1.0
+at least,wenigstens,1.0
+to become,geworden,1.0
+turkey,der Truthahn,1.0
+fruit,das Obst,1.0
+banana,die Banane,1.0
+apple,der Apfel,1.0
+grape,die Traube,1.0
+grape,die Weintraube,1.0
+strawberry,die Erdbeere,1.0
+raspberry,die Himbeere,1.0
+currant,die Johannisbeere,1.0
+gooseberry,die Stachelbeere,1.0
+goosebump,die Gänsehaut,1.0
+lemon,die Zitrone,0.8
+melon,die Melone,1.0
+peach,der Pfirsich,1.0
+apricot,die Aprikose,0.8
+nectarin,die Nektarine,0.8
+pear,die Birne,1.0
+pineapple,die Ananas,1.0
+quince,die Quitte,1.0
+cherry,die Kirsche,1.0
+sour cherry,die Sauerkirsche,1.0
+pickled,eingemachte,1.0
+dessert,das Dessert,1.0
+dessert,der Nachtisch,1.0
+melon,die Wassermelone,1.0
+slice,die Scheibe,1.0
+tomato,die Tomate,1.0
+salad,der Salat,1.2
+celery,die Sellerie,1.0
+carrot,die Mühre,1.0
+carrot,die Karotte,1.0
+pea,die Erbse,0.8
+frozen,tiefkühl,1.0
+potato,die Kartoffel,1.0
+aubergine,die Aubergine,1.0
+cucumber,die Gurke,1.0
+zucchini,die Zucchini,1.0
+pumpkin,der Kürbis,1.0
+garlic,der Knoblauch,1.0
+onion,die Zwiebel,1.0
+red onion,die Rote Zwiebel,1.0
+cauliflower,der Blumenkohl,1.0
+pepper,die Paprik,1.0
+radish,das Radieschen,1.0
+asparagus,der Spargel,1.0
+radish,der Rettich,1.0
+parsnip,die Pastinake,1.0
+ginger,der Ingwer,1.0
+beetroot,die Rote Bete,1.0
+spinach,der Spinat,1.0
+kohlrabi,der Kohlrabi,1.0
+horse radish,der Meerrettich,1.0

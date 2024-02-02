@@ -770,6 +770,15 @@ def inspect_vocabulary():
     df_agg.set_index(['Mode', 'Definitive article'])
     print(df_agg)
 
+def get_word(word_to_look_up:str):
+   global df
+   d = df[df.word==word_to_look_up]
+   e = df[df.translation==word_to_look_up]
+   if len(d)+len(e)==0:
+    print(f'{word_to_look_up} not found')
+   else:
+    print(d._append(e))
+
 if config_loaded and get_config("auto_load_default_vocabulary")=="true":
     load_file(get_config("default_vocabulary"))
 

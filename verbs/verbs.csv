@@ -1,0 +1,12 @@
+verb,tense,tags,conjugation
+sehen,Präsens,Vokalwechsel,sehe;siehst;sieht;sehen;seht;sehen
+lesen,Präsens,Vokalwechsel,lese;liest;liest;lesen;lest;lesen
+haben,Präsens,Hilfsverb,habe;hast;hat;haben;habt;haben
+haben,Präteritum,Hilfsverb,hatte;hattest;hatte;hatten;hattet;hatten
+werden,Präsens,Hilfsverb;Modalverb,werde;wird;wird;werden;werdet;werden
+werden,Präteritum,Hilfsverb;Modalverb,wurde;wurdest;wurde;wurden;wurdet;wurden
+sollen,Präsens,Modalverb,soll;sollst;soll;sollen;sollt;sollen
+möchten,Präsens,Modalverb,möchte;möchtest;möchtet;möchten;möchtet;möchten
+wollen,Präsens,Modalverb,will;willst;will;wollen;wollt;wollen
+dürfen,Präsens,Modalverb,darf;darfst;darf;dürfen;dürft;dürfen
+mögen,Präsens,,mag;magst;mag;mögen;mögt;mögen

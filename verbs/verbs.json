@@ -1,0 +1,94 @@
+{
+    "Präsens": {
+        "sehen": [
+            "sehe",
+            "siehst",
+            "sieht",
+            "sehen",
+            "seht",
+            "sehen"
+        ],
+        "lesen": [
+            "lese",
+            "liest",
+            "liest",
+            "lesen",
+            "lest",
+            "lesen"
+        ],
+        "haben": [
+            "habe",
+            "hast",
+            "hat",
+            "haben",
+            "habt",
+            "haben"
+        ],
+        "werden": [
+            "werde",
+            "wird",
+            "wird",
+            "werden",
+            "werdet",
+            "werden"
+        ],
+        "sollen": [
+            "soll",
+            "sollst",
+            "soll",
+            "sollen",
+            "sollt",
+            "sollen"
+        ],
+        "möchten": [
+            "möchte",
+            "möchtest",
+            "möchtet",
+            "möchten",
+            "möchtet",
+            "möchten"
+        ],
+        "wollen": [
+            "will",
+            "willst",
+            "will",
+            "wollen",
+            "wollt",
+            "wollen"
+        ],
+        "dürfen": [
+            "darf",
+            "darfst",
+            "darf",
+            "dürfen",
+            "dürft",
+            "dürfen"
+        ],
+        "mögen": [
+            "mag",
+            "magst",
+            "mag",
+            "mögen",
+            "mögt",
+            "mögen"
+        ]
+    },
+    "Präteritum": {
+        "haben": [
+            "hatte",
+            "hattest",
+            "hatte",
+            "hatten",
+            "hattet",
+            "hatten"
+        ],
+        "werden": [
+            "wurde",
+            "wurdest",
+            "wurde",
+            "wurden",
+            "wurdet",
+            "wurden"
+        ]
+    }
+}
