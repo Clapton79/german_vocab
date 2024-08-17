@@ -1,7 +1,7 @@
 verb,tense,tags,conjugation
-sehen,Präsens,Vokalwechsel,sehe;siehst;sieht;sehen;seht;sehen
-lesen,Präsens,Vokalwechsel,lese;liest;liest;lesen;lest;lesen
-haben,Präsens,Hilfsverb,habe;hast;hat;haben;habt;haben
+sehen,Präsens,Vokalwechsel;V1,sehe;siehst;sieht;sehen;seht;sehen
+lesen,Präsens,Vokalwechsel;V1,lese;liest;liest;lesen;lest;lesen
+haben,Präsens,Hilfsverb;V3,habe;hast;hat;haben;habt;haben
 haben,Präteritum,Hilfsverb,hatte;hattest;hatte;hatten;hattet;hatten
 werden,Präsens,Hilfsverb;Modalverb,werde;wird;wird;werden;werdet;werden
 werden,Präteritum,Hilfsverb;Modalverb,wurde;wurdest;wurde;wurden;wurdet;wurden
