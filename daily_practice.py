@@ -1,6 +1,7 @@
 from vocabularizer import load_file, test_2,test_3, output_decorator, word_memorizer, test_1, unload_vocabulary
 import os
 import time
+from verbs import conjugation_test_1
 
 def daily_routine():
     files = os.listdir('vocabularies')
@@ -20,5 +21,7 @@ def daily_routine():
         if file != files[-1]:
                 print("10 seconds till the next round.")
                 time.sleep(10)
+        
+    conjugation_test_1(15)
  
 daily_routine()
