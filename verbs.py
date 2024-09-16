@@ -1,12 +1,12 @@
 import csv 
 import random
-from coloring import compare_two_lists
+from functions import *
 
 library_version = "1.1.0"
 
 pronouns = ['ich','du','er/sie/es','wir','ihr','sie/Sie']
 verbs={}
-verbsfile="verbs/verbs.csv"
+verbsfile="data/verbs.csv"
 verbsfile_loaded = False
 
 
@@ -65,10 +65,6 @@ def conjugation_table(verb:str):
             line.append(conj[k][i])
         print(str([x.ljust(padding,' ') for x in line]).replace('[','').replace(']','').replace(',','').replace("'",""))
        
-
-
-    
-
 def conjugation_test_1(iterations):
     v = load_file()
     correct_responses=0
@@ -80,7 +76,14 @@ def conjugation_test_1(iterations):
         test_tense = random.choice(list(v[test_verb]['conjugation'].keys()))
     
         test_response = str(input(f'What is the conjugation of {test_verb} in {test_tense}? ')).split(',')
+        
         solution = v[test_verb]['conjugation'][test_tense]
+        if len(test_response) == 0:
+            test_response = ["" for x in range(len(solution))]
+
+        if len(test_response) != len(solution):
+            test_response = [list_find(test_response,x) for x in range(len(solution))]
+
 
         responses.append(test_response)
         solutions.append(solution)
@@ -90,5 +93,6 @@ def conjugation_test_1(iterations):
             
     for i in range(len(responses)):
         compare_two_lists(responses[i], solutions[i],"Response","Solution")
+        print ("")
         
     print(f'Result: {round(float(correct_responses)/float(iterations),4)*100}%')

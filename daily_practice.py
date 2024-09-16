@@ -4,6 +4,7 @@ import time
 from verbs import conjugation_test_1
 
 def daily_routine():
+    conjugation_test_1(5)
     files = os.listdir('vocabularies')
     for file in files:
         output_decorator("FILE: {0}".format(file), 2)
@@ -22,6 +23,6 @@ def daily_routine():
                 print("10 seconds till the next round.")
                 time.sleep(10)
         
-    conjugation_test_1(15)
+   
  
 daily_routine()

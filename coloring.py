@@ -20,12 +20,3 @@ def output_decorator(text, level, motiv='start'):
     elif motiv =='end':
         print(f"{bcolors.FAIL}{144 * '-'}{bcolors.ENDC}")
 
-def compare_two_lists(a:list, b:list,header1:str="Header1",header2:str="Header2", padding:int=8) -> list:
-    if len(a)!=len(b):
-        raise ValueError("Comparison can only be made on lists with equal members.")
-    print(f"{str(header1).ljust(padding,' ')} - {str(header2).ljust(padding,' ')}")
-    for i in range(len(a)):
-        if a[i]==b[i]:
-            print(f"{bcolors.OKGREEN}{str(a[i]).ljust(padding,' ')} - {str(b[i]).ljust(padding,' ')}")
-        else:
-            print(f"{bcolors.FAIL}{str(a[i]).ljust(padding,' ')} - {str(b[i]).ljust(padding,' ')}")

@@ -29,17 +29,3 @@ def file_dq():
 
         v.unload_vocabulary()
 
-
-def mesh_all() -> pd.DataFrame:
-    d = pd.DataFrame()
-    for file in files:
-        dv = pd.read_csv(f'vocabularies/{file}')
-        dv['file']=file
-        d = d._append(dv)
-
-    return d
-    
-
-
-
-
