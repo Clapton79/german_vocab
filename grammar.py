@@ -14,13 +14,13 @@ modes = {
             "2nd Formal": "Sie"
         },
         "Articles": {
-            "Definitive": {
+            "Definite": {
                 "Masculine":"der",
                 "Feminine": "die",
                 "Neutral": "das",
                 "Plural": "die"
             },
-            "Indefinitive": {
+            "Indefinite": {
                 "Masculine":"ein",
                 "Feminine": "eine",
                 "Neutral": "ein"
@@ -41,13 +41,13 @@ modes = {
             "2nd Formal": "Sie"
         },
         "Articles": {
-            "Definitive": {
+            "Definite": {
                 "Masculine":"den",
                 "Feminine": "die",
                 "Neutral": "das",
                 "Plural": "die"
             },
-            "Indefinitive": {
+            "Indefinite": {
                 "Masculine":"einen",
                 "Feminine": "eine",
                 "Neutral": "ein"
@@ -68,13 +68,13 @@ modes = {
             "2nd Formal": "Ihnen"
         },
         "Articles": {
-            "Definitive": {
+            "Definite": {
                 "Masculine":"dem",
                 "Feminine": "der",
                 "Neutral": "dem",
                 "Plural": "den"
             },
-            "Indefinitive": {
+            "Indefinite": {
                 "Masculine":"einem",
                 "Feminine": "einer",
                 "Neutral": "einem"
@@ -100,13 +100,13 @@ The house of my sister is very interesting. / My sister’s house is very big. T
             "2nd Formal": "Ihrer"
         },
         "Articles": {
-            "Definitive": {
+            "Definite": {
                 "Masculine":"des",
                 "Feminine": "der",
                 "Neutral": "des",
                 "Plural": "der"
             },
-            "Indefinitive": {
+            "Indefinite": {
                 "Masculine":"eines",
                 "Feminine": "einer",
                 "Neutral": "eines"
@@ -128,3 +128,5 @@ def mode_decoder (mode:str) -> str:
             return "Plural"
         case _:
             return ""
+
+def definite_articles():

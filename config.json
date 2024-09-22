@@ -3,7 +3,7 @@
     "auto_load_default_vocabulary":"false",
     "default_vocabulary":"data/German_English_202312.csv",
     "autostart_test_selector":"false",
-    "results_file":"results/laci.csv",
+    "results_file":"data/laci_results.csv",
     "weights_file":"data/laci_weights.csv",
     "autosave_weights":"true",
     "logfile":"vocabularizer.log"
