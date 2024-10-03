@@ -20,8 +20,8 @@ def load_file(**kwargs):
         force=False
     except ValueError:
         force=False
-    if verbsfile_loaded and not force:
-        return verbs
+    # if verbsfile_loaded and not force:
+    #     return verbs
 
     with open(verbsfile,'r') as reader:
         for line in csv.DictReader(reader):
@@ -31,7 +31,7 @@ def load_file(**kwargs):
                 tags = verbs[line['verb']]['tags']
             except KeyError:
                 tags = []
-
+            
             verbs[line['verb']]['tags'] = list(set([x for x in tags+line['tags'].split(';') if x !='']))
             
             try:
@@ -42,7 +42,7 @@ def load_file(**kwargs):
             verbs[line['verb']]['conjugation'][line['tense']]=line['conjugation'].split(';')
 
     verbsfile_loaded = True
-    return verbs
+    # return verbs
 
 def conjugate_verb(verb:str) -> list:
     v = load_file()
@@ -96,3 +96,4 @@ def conjugation_test_1(iterations):
         print ("")
         
     print(f'Result: {round(float(correct_responses)/float(iterations),4)*100}%')
+

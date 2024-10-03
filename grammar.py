@@ -129,4 +129,3 @@ def mode_decoder (mode:str) -> str:
         case _:
             return ""
 
-def definite_articles():
