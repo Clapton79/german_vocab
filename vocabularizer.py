@@ -131,7 +131,7 @@ def load_file(file):
 
 def load_all_files():
     """Loads all vocabularies from the vocabularies folder"""
-    files = listdir('vocabularies')
+    files = listdir('data')
     for file in files:
         load_file(f'vocabularies/{file}')
 

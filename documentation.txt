@@ -11,10 +11,10 @@ CLASSES
      |  Data descriptors defined here:
      |  
      |  __dict__
-     |      dictionary for instance variables (if defined)
+     |      dictionary for instance variables
      |  
      |  __weakref__
-     |      list of weak references to the object (if defined)
+     |      list of weak references to the object
      |  
      |  ----------------------------------------------------------------------
      |  Data and other attributes defined here:
@@ -48,7 +48,7 @@ FUNCTIONS
     clean_and_save_vocabulary(file='')
         used internally only: drops _ columns and exports dataframe.
     
-    decode_da(da: str) -> str
+    decode_da(df: str) -> str
         Converts definitive article code into a definitive article
     
     decode_mode(mode: str) -> str
@@ -59,6 +59,8 @@ FUNCTIONS
     
     get_version()
         Displays library version
+    
+    get_word(word_to_look_up: str)
     
     inspect_vocabulary()
         Gives a brief overview of the loaded words in different groupings.
@@ -96,9 +98,6 @@ FUNCTIONS
     
     random_choice(word_mode: str, count_of_words: int) -> list
     
-    save_result(test, points, rounds)
-        Saves the result of a test in the results file.
-    
     save_vocabulary_to_file(file='')
         Exports a vocabulary file.
     
@@ -112,14 +111,6 @@ FUNCTIONS
     show_vocabulary(offset_rows: int, fetch_rows: int)
     
     show_vocabulary_pg(pagesize: int)
-    
-    test_1(word_mode: str = '', count_of_words: int = 10)
-        Test 1 tests your writing skills and knowledge
-    
-    test_2(word_mode: str = '', count_of_words: int = 20)
-        multiple choice test
-    
-    test_selector()
     
     translate(word: str, all: str = 'first', rev: str = 'str', da: str = 'da') -> list
         Translates a word, outputs a list
@@ -135,6 +126,3 @@ FUNCTIONS
         Clears the memory from all loaded vocabularies.
     
     update_weights(dw: pandas.core.frame.DataFrame)
-        Updates the weights based on the latest test result
-    
-    word_memorizer(count_of_words: int, sleep_time_seconds: int = 4, random_or_last: str = 'rnd')
