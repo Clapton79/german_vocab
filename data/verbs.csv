@@ -1,21 +1,46 @@
 verb,tense,tags,conjugation
-sehen,Präsens,Vokalwechsel;V1,sehe;siehst;sieht;sehen;seht;sehen
-lesen,Präsens,Vokalwechsel;V1,lese;liest;liest;lesen;lest;lesen
-haben,Präsens,Hilfsverb;V3,habe;hast;hat;haben;habt;haben
-haben,Präteritum,Hilfsverb,hatte;hattest;hatte;hatten;hattet;hatten
-werden,Präsens,Hilfsverb;Modalverb,werde;wird;wird;werden;werdet;werden
-werden,Präteritum,Hilfsverb;Modalverb,wurde;wurdest;wurde;wurden;wurdet;wurden
-sollen,Präsens,Modalverb,soll;sollst;soll;sollen;sollt;sollen
-möchten,Präsens,Modalverb,möchte;möchtest;möchtet;möchten;möchtet;möchten
-wollen,Präsens,Modalverb,will;willst;will;wollen;wollt;wollen
-dürfen,Präsens,Modalverb,darf;darfst;darf;dürfen;dürft;dürfen
+sehen,Präsens,,sehe;siehst;sieht;sehen;seht;sehen
+sehen,Präteritum,,sah;sahst;sah;sahen;saht;sahen
+sehen,Perfekt,,habe gesehen;hast gesehen;hat gesehen;haben gesehen;habt gesehen;haben gesehen
+lesen,Präsens,,lese;liest;liest;lesen;lest;lesen
+lesen,Präteritum,,las;lasest;las;lasen;last;lasen
+lesen,Perfekt,,habe gelesen;hast gelesen;hat gelesen;haben gelesen;habt gelesen;haben gelesen
+haben,Präsens,,habe;hast;hat;haben;habt;haben
+haben,Präteritum,,hatte;hattest;hatte;hatten;hattet;hatten
+haben,Perfekt,,habe gehabt;hast gehabt;hat gehabt;haben gehabt;habt gehabt;haben gehabt
+werden,Präsens,,werde;wirst;wird;werden;werdet;werden
+werden,Präteritum,,wurde;wurdest;wurde;wurden;wurdet;wurden
+werden,Perfekt,,bin geworden;bist geworden;ist geworden;sind geworden;seid geworden;sind geworden
+sollen,Präsens,,soll;sollst;soll;sollen;sollt;sollen
+sollen,Präteritum,,sollte;solltest;sollte;sollten;solltet;sollten
+sollen,Perfekt,,habe gesollt;hast gesollt;hat gesollt;haben gesollt;habt gesollt;haben gesollt
+möchten,Präsens,,mag;magst;mag;mögen;mögt;mögen
+möchten,Präteritum,,mochte;mochtest;mochte;mochten;mochtet;mochten
+möchten,Perfekt,,habe gemocht;hast gemocht;hat gemocht;haben gemocht;habt gemocht;haben gemocht
+wollen,Präsens,,will;willst;will;wollen;wollt;wollen
+wollen,Präteritum,,wollte;wolltest;wollte;wollten;wolltet;wollten
+wollen,Perfekt,,habe gewollt;hast gewollt;hat gewollt;haben gewollt;habt gewollt;haben gewollt
+dürfen,Präsens,,darf;darfst;darf;dürfen;dürft;dürfen
+dürfen,Präteritum,,durfte;durftest;durfte;durften;durftet;durften
+dürfen,Perfekt,,habe gedurft;hast gedurft;hat gedurft;haben gedurft;habt gedurft;haben gedurft
 mögen,Präsens,,mag;magst;mag;mögen;mögt;mögen
+mögen,Präteritum,,mochte;mochtest;mochte;mochten;mochtet;mochten
+mögen,Perfekt,,habe gemocht;hast gemocht;hat gemocht;haben gemocht;habt gemocht;haben gemocht
 betreten,Präsens,,betrete;betrittst;betritt;betreten;betretet;betreten
 betreten,Präteritum,,betrat;betratst;betrat;betraten;betratet;betraten
-betreten,Perfekt,bin,betreten;betreten;betreten;betreten;betreten;betreten
-berichten,Präsens,haben,berichte;berichtest;berichtet;berichten;berichtet;berichten
-berichten,Perfekt,haben,berichtet;berichtet;berichtet;berichtet;berichtet;berichtet
+betreten,Perfekt,,bin betreten;bist betreten;ist betreten;sind betreten;seid betreten;sind betreten
+berichten,Präsens,,berichte;berichtest;berichtet;berichten;berichtet;berichten
 berichten,Präteritum,,berichtete;berichtetest;berichtete;berichteten;berichtetet;berichteten
+berichten,Perfekt,,habe berichtet;hast berichtet;hat berichtet;haben berichtet;habt berichtet;haben berichtet
+laufen,Präsens,,laufe;läufst;läuft;laufen;lauft;laufen
+laufen,Präteritum,,lief;liefst;lief;liefen;lieft;liefen
+laufen,Perfekt,,bin gelaufen;bist gelaufen;ist gelaufen;sind gelaufen;seid gelaufen;sind gelaufen
+liegen,Präsens,,liege;liegst;liegt;liegen;liegt;liegen
+liegen,Präteritum,,lag;lagst;lag;lagen;lagt;lagen
+liegen,Perfekt,,habe gelegen;hast gelegen;hat gelegen;haben gelegen;habt gelegen;haben gelegen
 schaffen,Präsens,,schaffe;schaffst;schafft;schaffen;schafft;schaffen
 schaffen,Präteritum,,schuf;schufst;schuf;schufen;schuft;schufen
-schaffen,Perfekt,,geschafft;geschafft;geschafft;geschafft;geschafft;geschafft
+schaffen,Perfekt,,habe geschaffen;hast geschaffen;hat geschaffen;haben geschaffen;habt geschaffen;haben geschaffen
+lieben,Präsens,,liebe;liebst;liebt;lieben;liebt;lieben
+lieben,Präteritum,,liebte;liebtest;liebte;liebten;liebtet;liebten
+lieben,Perfekt,,habe geliebt;hast geliebt;hat geliebt;haben geliebt;habt geliebt;haben geliebt

@@ -1,6 +1,7 @@
 import csv 
 import random
 from functions import *
+import coloring 
 
 library_version = "1.1.0"
 
@@ -20,8 +21,8 @@ def load_file(**kwargs):
         force=False
     except ValueError:
         force=False
-    # if verbsfile_loaded and not force:
-    #     return verbs
+    if verbsfile_loaded and not force:
+        return verbs
 
     with open(verbsfile,'r') as reader:
         for line in csv.DictReader(reader):
@@ -42,11 +43,14 @@ def load_file(**kwargs):
             verbs[line['verb']]['conjugation'][line['tense']]=line['conjugation'].split(';')
 
     verbsfile_loaded = True
-    # return verbs
+    return verbs
 
 def conjugate_verb(verb:str) -> list:
     v = load_file()
-    conj = v[verb]['conjugation']
+    try:
+        conj = v[verb]['conjugation']
+    except KeyError:
+        conj = {}
     return conj
 
 def conjugate_verb_one_mode(verb:str,mode:str) -> list:
@@ -54,17 +58,26 @@ def conjugate_verb_one_mode(verb:str,mode:str) -> list:
     return conj[mode]
 
 def conjugation_table(verb:str):
-    padding = 10
+    padding = 15
     conj = conjugate_verb(verb)
-
-    line = ['Pronoun'] + list(conj.keys())
-    print(str([x.ljust(padding, ' ') for x in line]).replace('[','').replace(']','').replace(',','').replace("'",""))
-    for i in range(len(pronouns)):
-        line = [pronouns[i]]
-        for k in conj.keys():
-            line.append(conj[k][i])
-        print(str([x.ljust(padding,' ') for x in line]).replace('[','').replace(']','').replace(',','').replace("'",""))
-       
+    
+    if len(conj)>0:
+        print(f"{bcolors.OKGREEN}{bcolors.BOLD}{str(verb.upper()).rjust(padding,' ')}{bcolors.ENDC}")
+        print('----------------------------------------------------------------')
+        line = ['Pronoun'] + list(conj.keys())
+        line_print=(str([x.ljust(padding, ' ') for x in line]).replace('[','').replace(']','').replace(',','').replace("'",""))
+        print(f"{bcolors.BOLD}{line_print}{bcolors.ENDC}")
+        
+        for i in range(len(pronouns)):
+            line = [pronouns[i]]
+            for k in conj.keys():
+                line.append(conj[k][i])
+            line_print = str([x.ljust(padding, ' ') for x in line]).replace('[', '').replace(']', '').replace(',', '').replace("'", "")
+            print(line_print)
+        print('================================================================')
+    else:
+        print(f'No conjugation data found for {verb}')
+        
 def conjugation_test_1(iterations):
     v = load_file()
     correct_responses=0
@@ -75,7 +88,11 @@ def conjugation_test_1(iterations):
     for test_verb in test_verbs:
         test_tense = random.choice(list(v[test_verb]['conjugation'].keys()))
     
-        test_response = str(input(f'What is the conjugation of {test_verb} in {test_tense}? ')).split(',')
+        test_response = str(input(f'What is the conjugation of {test_verb} in {test_tense}? '))
+        if ';' in test_response:
+            test_response = test_response.split(';')
+        elif ',' in test_response:
+            test_response = test_response.split(',')            
         
         solution = v[test_verb]['conjugation'][test_tense]
         if len(test_response) == 0:
