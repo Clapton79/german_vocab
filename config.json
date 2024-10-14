@@ -1,7 +1,7 @@
 {
     "profile": "Laci",
     "auto_load_default_vocabulary":"false",
-    "default_vocabulary":"data/ger-hun/German_Hungarian_general.csv",
+    "default_vocabulary":"data/vocabularies/German_Hungarian_A2.2_13.csv",
     "autostart_test_selector":"false",
     "results_file":"data/results.csv",
     "weights_file":"data/weights.csv",

@@ -1,16 +1,16 @@
 verb,tense,tags,conjugation
-sehen,Präsens,,sehe;siehst;sieht;sehen;seht;sehen
-sehen,Präteritum,,sah;sahst;sah;sahen;saht;sahen
-sehen,Perfekt,,habe gesehen;hast gesehen;hat gesehen;haben gesehen;habt gesehen;haben gesehen
-lesen,Präsens,,lese;liest;liest;lesen;lest;lesen
-lesen,Präteritum,,las;lasest;las;lasen;last;lasen
-lesen,Perfekt,,habe gelesen;hast gelesen;hat gelesen;haben gelesen;habt gelesen;haben gelesen
-haben,Präsens,,habe;hast;hat;haben;habt;haben
-haben,Präteritum,,hatte;hattest;hatte;hatten;hattet;hatten
-haben,Perfekt,,habe gehabt;hast gehabt;hat gehabt;haben gehabt;habt gehabt;haben gehabt
-werden,Präsens,,werde;wirst;wird;werden;werdet;werden
-werden,Präteritum,,wurde;wurdest;wurde;wurden;wurdet;wurden
-werden,Perfekt,,bin geworden;bist geworden;ist geworden;sind geworden;seid geworden;sind geworden
+sehen,Präsens,Sieh!,sehe;siehst;sieht;sehen;seht;sehen
+sehen,Präteritum,Sieh!,sah;sahst;sah;sahen;saht;sahen
+sehen,Perfekt,Sieh!,habe gesehen;hast gesehen;hat gesehen;haben gesehen;habt gesehen;haben gesehen
+lesen,Präsens,Lies!,lese;liest;liest;lesen;lest;lesen
+lesen,Präteritum,Lies!,las;lasest;las;lasen;last;lasen;las;last;las;lasen;last;lasen
+lesen,Perfekt,Lies!,habe gelesen;hast gelesen;hat gelesen;haben gelesen;habt gelesen;haben gelesenhaben,Präsens,,habe;hast;hat;haben;habt;haben
+haben,Präsens,Habe!,habe;hast;hat;haben;habt;haben
+haben,Präteritum,Habe!,hatte;hattest;hatte;hatten;hattet;hatten
+haben,Perfekt,Habe!,habe gehabt;hast gehabt;hat gehabt;haben gehabt;habt gehabt;haben gehabt
+werden,Präsens,Werde!,werde;wirst;wird;werden;werdet;werden
+werden,Präteritum,Werde!,wurde;wurdest;wurde;wurden;wurdet;wurden
+werden,Perfekt,Werde!,bin geworden;bist geworden;ist geworden;sind geworden;seid geworden;sind geworden
 sollen,Präsens,,soll;sollst;soll;sollen;sollt;sollen
 sollen,Präteritum,,sollte;solltest;sollte;sollten;solltet;sollten
 sollen,Perfekt,,habe gesollt;hast gesollt;hat gesollt;haben gesollt;habt gesollt;haben gesollt
@@ -26,21 +26,36 @@ dürfen,Perfekt,,habe gedurft;hast gedurft;hat gedurft;haben gedurft;habt gedurf
 mögen,Präsens,,mag;magst;mag;mögen;mögt;mögen
 mögen,Präteritum,,mochte;mochtest;mochte;mochten;mochtet;mochten
 mögen,Perfekt,,habe gemocht;hast gemocht;hat gemocht;haben gemocht;habt gemocht;haben gemocht
-betreten,Präsens,,betrete;betrittst;betritt;betreten;betretet;betreten
-betreten,Präteritum,,betrat;betratst;betrat;betraten;betratet;betraten
-betreten,Perfekt,,bin betreten;bist betreten;ist betreten;sind betreten;seid betreten;sind betreten
-berichten,Präsens,,berichte;berichtest;berichtet;berichten;berichtet;berichten
-berichten,Präteritum,,berichtete;berichtetest;berichtete;berichteten;berichtetet;berichteten
-berichten,Perfekt,,habe berichtet;hast berichtet;hat berichtet;haben berichtet;habt berichtet;haben berichtet
-laufen,Präsens,,laufe;läufst;läuft;laufen;lauft;laufen
-laufen,Präteritum,,lief;liefst;lief;liefen;lieft;liefen
-laufen,Perfekt,,bin gelaufen;bist gelaufen;ist gelaufen;sind gelaufen;seid gelaufen;sind gelaufen
-liegen,Präsens,,liege;liegst;liegt;liegen;liegt;liegen
-liegen,Präteritum,,lag;lagst;lag;lagen;lagt;lagen
-liegen,Perfekt,,habe gelegen;hast gelegen;hat gelegen;haben gelegen;habt gelegen;haben gelegen
-schaffen,Präsens,,schaffe;schaffst;schafft;schaffen;schafft;schaffen
-schaffen,Präteritum,,schuf;schufst;schuf;schufen;schuft;schufen
-schaffen,Perfekt,,habe geschaffen;hast geschaffen;hat geschaffen;haben geschaffen;habt geschaffen;haben geschaffen
-lieben,Präsens,,liebe;liebst;liebt;lieben;liebt;lieben
-lieben,Präteritum,,liebte;liebtest;liebte;liebten;liebtet;liebten
-lieben,Perfekt,,habe geliebt;hast geliebt;hat geliebt;haben geliebt;habt geliebt;haben geliebt
+betreten,Präsens,Betritt!,betrete;betrittst;betritt;betreten;betretet;betreten
+betreten,Präteritum,Betritt!,betrat;betratst;betrat;betraten;betratet;betraten
+betreten,Perfekt,Betritt!,bin betreten;bist betreten;ist betreten;sind betreten;seid betreten;sind betreten
+berichten,Präsens,Berichte!,berichte;berichtest;berichtet;berichten;berichtet;berichten
+berichten,Präteritum,Berichte!,berichtete;berichtetest;berichtete;berichteten;berichtetet;berichteten
+berichten,Perfekt,Berichte!,habe berichtet;hast berichtet;hat berichtet;haben berichtet;habt berichtet;haben berichtet
+laufen,Präsens,Lauf!,laufe;läufst;läuft;laufen;lauft;laufen
+laufen,Präteritum,Lauf!,lief;liefst;lief;liefen;lieft;liefen
+laufen,Perfekt,Lauf!,bin gelaufen;bist gelaufen;ist gelaufen;sind gelaufen;seid gelaufen;sind gelaufen
+liegen,Präsens,Liege!,liege;liegst;liegt;liegen;liegt;liegen
+liegen,Präteritum,Liege!,lag;lagst;lag;lagen;lagt;lagen
+liegen,Perfekt,Liege!,habe gelegen;hast gelegen;hat gelegen;haben gelegen;habt gelegen;haben gelegen
+schaffen,Präsens,Schaff!,schaffe;schaffst;schafft;schaffen;schafft;schaffen
+schaffen,Präteritum,Schaff!,schuf;schufst;schuf;schufen;schuft;schufen
+schaffen,Perfekt,Schaff!,habe geschaffen;hast geschaffen;hat geschaffen;haben geschaffen;habt geschaffen;haben geschaffen
+lieben,Präsens,Liebe!,liebe;liebst;liebt;lieben;liebt;lieben
+lieben,Präteritum,Liebe!,liebte;liebtest;liebte;liebten;liebtet;liebten
+lieben,Perfekt,Liebe!,habe geliebt;hast geliebt;hat geliebt;haben geliebt;habt geliebt;haben geliebt
+lösen,Präsens,Löse!,löse;löst;löst;lösen;löst;lösen
+lösen,Präteritum,Löse!,löste;löstest;löste;lösten;löstet;lösten
+lösen,Perfekt,Löse!,habe gelöst;hast gelöst;hat gelöst;haben gelöst;habt gelöst;haben gelöst
+zeichnen,Präsens,Zeichne!,zeichne;zeichnest;zeichnet;zeichnen;zeichnet;zeichnen
+zeichnen,Präteritum,Zeichne!,zeichnete;zeichnetest;zeichnete;zeichneten;zeichnetet;zeichneten
+zeichnen,Perfekt,Zeichne!,habe gezeichnet;hast gezeichnet;hat gezeichnet;haben gezeichnet;habt gezeichnet;haben gezeichnet
+wiederholen,Präsens,Wiederhole!,wiederhole;wiederholst;wiederholt;wiederholen;wiederholt;wiederholen;hole wieder;holst wieder;holt wieder;holen wieder;holt wieder;holen wieder
+wiederholen,Präteritum,Wiederhole!,wiederholte;wiederholtest;wiederholte;wiederholten;wiederholtet;wiederholten;holte wieder;holtest wieder;holte wieder;holten wieder;holtet wieder;holten wieder
+wiederholen,Perfekt,Wiederhole!,habe wiederholt;hast wiederholt;hat wiederholt;haben wiederholt;habt wiederholt;haben wiederholt;habe wiedergeholt;hast wiedergeholt;hat wiedergeholt;haben wiedergeholt;habt wiedergeholt;haben wiedergeholt
+singen,Präsens,Sing!,singe;singst;singt;singen;singt;singen
+singen,Präteritum,Sing!,sang;sangst;sang;sangen;sangt;sangen
+singen,Perfekt,Sing!,habe gesungen;hast gesungen;hat gesungen;haben gesungen;habt gesungen;haben gesungen
+bewegen,Präsens,Bewege!,bewege;bewegst;bewegt;bewegen;bewegt;bewegen
+bewegen,Präteritum,Bewege!,bewegte;bewegtest;bewegte;bewegten;bewegte;bewegten;bewog;bewogst;bewog;bewogen;bewogt;bewogen
+bewegen,Perfekt,Bewege!,habe bewogen;hast bewogen;hat bewogen;haben bewogen;habt bewogen;haben bewogen;habe bewegt;hast bewegt;hat bewegt;haben bewegt;habt bewegt;haben bewegt

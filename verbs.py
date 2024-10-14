@@ -34,7 +34,13 @@ def load_file(**kwargs):
                 tags = []
             
             verbs[line['verb']]['tags'] = list(set([x for x in tags+line['tags'].split(';') if x !='']))
-            
+            imperative = [x for x in verbs[line['verb']]['tags'] if x[-1] == '!']
+            if len(imperative)>0:
+                imperative = imperative[0]
+            else:
+                imperative = ''
+                
+            verbs[line['verb']]['imperative'] = imperative
             try:
                 conjugation = verbs[line['verb']]['conjugation']
             except KeyError:
@@ -78,39 +84,4 @@ def conjugation_table(verb:str):
     else:
         print(f'No conjugation data found for {verb}')
         
-def conjugation_test_1(iterations):
-    v = load_file()
-    correct_responses=0
-    test_verbs = random.sample(list(v.keys()),iterations)
-
-    responses = []
-    solutions = []
-    for test_verb in test_verbs:
-        test_tense = random.choice(list(v[test_verb]['conjugation'].keys()))
-    
-        test_response = str(input(f'What is the conjugation of {test_verb} in {test_tense}? '))
-        if ';' in test_response:
-            test_response = test_response.split(';')
-        elif ',' in test_response:
-            test_response = test_response.split(',')            
-        
-        solution = v[test_verb]['conjugation'][test_tense]
-        if len(test_response) == 0:
-            test_response = ["" for x in range(len(solution))]
-
-        if len(test_response) != len(solution):
-            test_response = [list_find(test_response,x) for x in range(len(solution))]
-
-
-        responses.append(test_response)
-        solutions.append(solution)
-         
-        if test_response == solution:
-            correct_responses+=1
-            
-    for i in range(len(responses)):
-        compare_two_lists(responses[i], solutions[i],"Response","Solution")
-        print ("")
-        
-    print(f'Result: {round(float(correct_responses)/float(iterations),4)*100}%')
 

@@ -1,5 +1,6 @@
 from vocabularizer import *
 from functions import *
+from verbs import *
 
 
 def save_result(test, points, rounds):
@@ -274,6 +275,80 @@ def test_3(count_of_words:int = 10):
     #update_weights(results)
     save_result('Test 3', res, len(results))
 
+def test_4(iterations):
+    """
+    Conjugation test
+    """
+    v = load_file()
+    correct_responses = 0
+    test_verbs = random.sample(list(v.keys()), iterations)
+
+    responses = []
+    solutions = []
+    for test_verb in test_verbs:
+        test_tense = random.choice(list(v[test_verb]['conjugation'].keys()))
+
+        test_response = str(
+            input(f'What is the conjugation of {test_verb} in {test_tense}? '))
+        if ';' in test_response:
+            test_response = test_response.split(';')
+        elif ',' in test_response:
+            test_response = test_response.split(',')
+
+        solution = v[test_verb]['conjugation'][test_tense]
+        if len(test_response) == 0:
+            test_response = ["" for x in range(len(solution))]
+
+        if len(test_response) != len(solution):
+            test_response = [list_find(test_response, x)
+                             for x in range(len(solution))]
+
+        responses.append(test_response)
+        solutions.append(solution)
+
+        if test_response == solution:
+            correct_responses += 1
+
+    for i in range(len(responses)):
+        compare_two_lists(responses[i], solutions[i], "Response", "Solution")
+        print("")
+
+    result_point = round(float(correct_responses)/float(iterations), 4)*100
+    save_result('Test 4', result_point, len(solutions))
+    print(f'Result: {result_point}%')
+
+def test_5(iterations):
+    """
+    Imperative verbs test
+    """
+    v = load_file()
+    correct_responses = 0
+    test_verbs = random.sample(list(v.keys()), iterations)
+
+    responses = []
+    solutions = []
+    for test_verb in test_verbs:
+
+        test_response = str(input(f'What is the imperative of {test_verb}? '))
+
+        solution = v[test_verb]['imperative']
+
+        if len(test_response) == 0:
+            test_response = ""
+
+        responses.append(test_response)
+        solutions.append(solution)
+
+        if test_response == solution:
+            correct_responses += 1
+
+    compare_two_lists(responses, solutions, "Response", "Solution")
+    print("")
+
+    result_point = round(float(correct_responses)/float(iterations), 4)*100
+    save_result('Test 5', result_point, iterations)
+    print(f'Result: {result_point}%')
+        
 def test_selector():
     response = input("""Press the letter of the test to start it:
     a - Test 1 (type words) 
