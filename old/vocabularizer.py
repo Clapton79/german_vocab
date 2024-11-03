@@ -3,15 +3,9 @@ This simple app helps speed testing and building vocabulary in a foreign languag
 """
     
 import pandas as pd
-import logging 
-import numpy as np
 import random 
 from json import loads
 from os import path
-from datetime import datetime
-import time
-import matplotlib.pyplot as plt
-from pprint import pprint
 from os import listdir
 
 
@@ -25,6 +19,11 @@ vocabulary_type = ""
 loaded_files = []
 weights_loaded = False
 weights_updated_not_saved = False
+
+df = pd.DataFrame()
+df.style.set_properties(**{'text-align': 'left'})
+res = pd.DataFrame()
+
 modes = {
         "n":        "Nominativ",
         "d":        "Dativ",
@@ -72,9 +71,7 @@ def get_config(config_item):
     else:
         return ''
 
-df = pd.DataFrame()
-df.style.set_properties(**{'text-align': 'left'})
-res = pd.DataFrame()
+
 
 # Vocabulary file handling
 def load_file(file):
@@ -312,12 +309,6 @@ def output_decorator(text, level, motiv='start'):
         print(f"{bcolors.OKBLUE}{144 * '='}{bcolors.ENDC}")
     elif motiv =='end':
         print(f"{bcolors.FAIL}{144 * '-'}{bcolors.ENDC}")
-
-def left_1 (s:str):
-    """
-    Returns the first character of a string. 
-    Used in dataframe value references"""
-    return s[0]
 
 def decode_mode(mode:str) -> str:
 

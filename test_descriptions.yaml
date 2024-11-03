@@ -1,0 +1,25 @@
+tests:
+- verb conjugation:
+    description: The test shows verbs and tenses and you need to provide the correct
+      conjugation
+    example: 'haben in Präteritum: hatte;hattest;hatte;hatten;hattet;hatten'
+
+- verb translation:
+    description: The test translates verbs from one language to another
+    example: beszélgetni - reden
+
+- imperative verb form:
+    description: The test shows verbs in their imperative form
+    example: reden - Rede!
+
+- noun translation:
+    description: The test translates nouns from one language to another
+    example: telefon - das Handy
+
+- definite article:
+    description: The test checks whether the definite article is used correctly
+    example: Handy - das
+
+- adjectives:
+    description: Translation of adjectives
+    example: rossz - schlecht

@@ -1,0 +1,81 @@
+definite article: 
+    https://der-artikel.de/der/Fall.html
+    
+load existing words to yaml
+
+core
+    zip - unzip DONE
+    
+teaching method
+    screen display of words with colouring
+    vocabulary builder based on topics
+    
+write tests
+    definite article of nouns
+    plural of nouns
+    translation
+    conjugation of verbs
+    imperative of verbs
+    
+application layers: 
+    helper functions
+        formatting
+            colouring           DONE
+            decoration          DONE
+        charting
+        compare lists           DONE
+        compare dicts
+    core - file
+        write
+        read
+        create backup
+        compress
+    logical 1 - vocab data
+        select 
+            words of a class
+            words of a topic
+            lately added words
+            random words
+        add words to vocabulary
+            yaml model for each word class
+        remove words from vocabulary 
+        update words in vocabulary
+            clear weights
+            update weights
+        get external data
+            https://conjugator.reverso.net/conjugation-german.html
+            https://der-artikel.de/der/See.html
+            https://www.verbformen.com/conjugation/erza3hlen.htm
+    
+    logical 2 - quality test
+    
+    logical 3 - test host
+        encapsulate test activity
+        load vocabulary
+        run tests
+        save results
+        
+        class design
+            class Vocabulary() 
+                load file
+                
+            class Test 
+                configuration
+                    creation time 
+                    results file
+                    type
+                run test 
+                
+                    
+        
+    logical 4 - tests and teaching
+        
+        definite article
+        word translation
+        phrase translation
+        conjugation
+        word multiple choice
+        phrase multiple choice
+        imperative
+        
+   

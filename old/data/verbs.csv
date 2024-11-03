@@ -4,7 +4,8 @@ sehen,Präteritum,Sieh!,sah;sahst;sah;sahen;saht;sahen
 sehen,Perfekt,Sieh!,habe gesehen;hast gesehen;hat gesehen;haben gesehen;habt gesehen;haben gesehen
 lesen,Präsens,Lies!,lese;liest;liest;lesen;lest;lesen
 lesen,Präteritum,Lies!,las;lasest;las;lasen;last;lasen;las;last;las;lasen;last;lasen
-lesen,Perfekt,Lies!,habe gelesen;hast gelesen;hat gelesen;haben gelesen;habt gelesen;haben gelesenhaben,Präsens,,habe;hast;hat;haben;habt;haben
+lesen,Perfekt,Lies!,habe gelesen;hast gelesen;hat gelesen;haben gelesen;habt gelesen;haben gelesen 
+haben,Präsens,,habe;hast;hat;haben;habt;haben
 haben,Präsens,Habe!,habe;hast;hat;haben;habt;haben
 haben,Präteritum,Habe!,hatte;hattest;hatte;hatten;hattet;hatten
 haben,Perfekt,Habe!,habe gehabt;hast gehabt;hat gehabt;haben gehabt;habt gehabt;haben gehabt
@@ -50,15 +51,15 @@ lösen,Perfekt,Löse!,habe gelöst;hast gelöst;hat gelöst;haben gelöst;habt g
 zeichnen,Präsens,Zeichne!,zeichne;zeichnest;zeichnet;zeichnen;zeichnet;zeichnen
 zeichnen,Präteritum,Zeichne!,zeichnete;zeichnetest;zeichnete;zeichneten;zeichnetet;zeichneten
 zeichnen,Perfekt,Zeichne!,habe gezeichnet;hast gezeichnet;hat gezeichnet;haben gezeichnet;habt gezeichnet;haben gezeichnet
-wiederholen,Präsens,Wiederhole!,wiederhole;wiederholst;wiederholt;wiederholen;wiederholt;wiederholen;hole wieder;holst wieder;holt wieder;holen wieder;holt wieder;holen wieder
-wiederholen,Präteritum,Wiederhole!,wiederholte;wiederholtest;wiederholte;wiederholten;wiederholtet;wiederholten;holte wieder;holtest wieder;holte wieder;holten wieder;holtet wieder;holten wieder
-wiederholen,Perfekt,Wiederhole!,habe wiederholt;hast wiederholt;hat wiederholt;haben wiederholt;habt wiederholt;haben wiederholt;habe wiedergeholt;hast wiedergeholt;hat wiedergeholt;haben wiedergeholt;habt wiedergeholt;haben wiedergeholt
+wiederholen,Präsens,Wiederhole!,wiederhole;wiederholst;wiederholt;wiederholen;wiederholt;wiederholen
+wiederholen,Präteritum,Wiederhole!,wiederholte;wiederholtest;wiederholte;wiederholten;wiederholtet;wiederholten
+wiederholen,Perfekt,Wiederhole!,habe wiederholt;hast wiederholt;hat wiederholt;haben wiederholt;habt wiederholt;haben wiederhol
 singen,Präsens,Sing!,singe;singst;singt;singen;singt;singen
 singen,Präteritum,Sing!,sang;sangst;sang;sangen;sangt;sangen
 singen,Perfekt,Sing!,habe gesungen;hast gesungen;hat gesungen;haben gesungen;habt gesungen;haben gesungen
 bewegen,Präsens,Bewege!,bewege;bewegst;bewegt;bewegen;bewegt;bewegen
 bewegen,Präteritum,Bewege!,bewegte;bewegtest;bewegte;bewegten;bewegte;bewegten;bewog;bewogst;bewog;bewogen;bewogt;bewogen
-bewegen,Perfekt,Bewege!,habe bewogen;hast bewogen;hat bewogen;haben bewogen;habt bewogen;haben bewogen;habe bewegt;hast bewegt;hat bewegt;haben bewegt;habt bewegt;haben bewegt
+bewegen,Perfekt,Bewege!,habe bewogen;hast bewogen;hat bewogen;haben bewogen;habt bewogen;haben bewogen
 erzählen,Präsens,Erzähle!,erzähle;erzählst;erzählt;erzählen;erzählt;erzählen
 erzählen,Präteritum,Erzähle!,erzählte;erzähltest;erzählte;erzählten;erzähltet;erzählten
 erzählen,Perfekt,Erzähle!,habe erzählt;hast erzählt;hat erzählt;haben erzählt;habt erzählt;haben erzählt
@@ -80,7 +81,7 @@ bejahen,Perfekt,Bejahe!,habe bejaht;hast bejaht;hat bejaht;haben bejaht;habt bej
 wegnehmen,Präsens,Nimm!,nehme weg;nimmst weg;nimmt weg;nehmen weg;nehmt weg;nehmen weg
 wegnehmen,Präteritum,Nimm!,nahm weg;nahmst weg;nahm weg;nahmen weg;nahmt weg;nahmen weg
 wegnehmen,Perfekt,Nimm!,habe weggenommen;hast weggenommen;hat weggenommen;haben weggenommen;habt weggenommen;haben weggenommen
-verwickeln,Präsens,Verwickle!,verwickle;verwickelst;verwickelt;verwickeln;verwickelt;verwickeln;verwickele;verwickelst;verwickelt;verwickeln;verwickelt;verwickeln
+verwickeln,Präsens,Verwickle!,verwickle;verwickelst;verwickelt;verwickeln;verwickelt;verwickeln
 verwickeln,Präteritum,Verwickle!,verwickelte;verwickeltest;verwickelte;verwickelten;verwickeltet;verwickelten
 verwickeln,Perfekt,Verwickle!,habe verwickelt;hast verwickelt;hat verwickelt;haben verwickelt;habt verwickelt;haben verwickelt
 leihen,Präsens,Leih!,leihe;leihst;leiht;leihen;leiht;leihen
@@ -96,5 +97,5 @@ loben,Präsens,Lobe!,lobe;lobst;lobt;loben;lobt;loben
 loben,Präteritum,Lobe!,lobte;lobtest;lobte;lobten;lobtet;lobten
 loben,Perfekt,Lobe!,habe gelobt;hast gelobt;hat gelobt;haben gelobt;habt gelobt;haben gelobt
 verwenden,Präsens,Verwende!,verwende;verwendest;verwendet;verwenden;verwendet;verwenden
-verwenden,Präteritum,Verwende!,verwandte;verwandtest;verwandte;verwandten;verwandtet;verwandten;verwendete;verwendetest;verwendete;verwendeten;verwendetet;verwendeten
-verwenden,Perfekt,Verwende!,habe verwandt;hast verwandt;hat verwandt;haben verwandt;habt verwandt;haben verwandt;habe verwendet;hast verwendet;hat verwendet;haben verwendet;habt verwendet;haben verwendet
+verwenden,Präteritum,Verwende!,verwandte;verwandtest;verwandte;verwandten;verwandtet;verwandten
+verwenden,Perfekt,Verwende!,habe verwendet;hast verwendet;hat verwendet;haben verwendet;habt verwendet;haben verwendet

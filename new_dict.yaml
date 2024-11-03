@@ -1,0 +1,92 @@
+tags:
+  topic: general
+  level: a1
+words:
+  erzählen:
+    weights:
+      translation: 50
+      verb_conjugation: 50
+      verb_translation: 50
+      imperative: 50
+    translations:
+      hungarian:
+      - elmond
+      - mesél
+    class: verb
+    imperative:
+    - erzähl
+    - erzählen
+    - erzählt
+    - erzählen
+    topics:
+    - core
+    - a1
+    tags:
+    - weak
+    prepositions:
+    - erzählen von
+    - jemand erzählt aus/über/von jemandem/jemanden/etwas etwas
+    - jemand/etwas erzählt etwas über jemanden/etwas
+    - jemand/etwas erzählt etwas über sich
+    - jemand/etwas erzählt jemandem von etwas
+    - jemand/etwas erzählt jemandem von jemandem/etwas
+    - jemand/etwas erzählt jemandem über jemanden/etwas
+    - jemand/etwas erzählt von etwas
+    conjugations:
+      Präsens:
+      - erzähle
+      - erzählst
+      - erzählt
+      - erzählen
+      - erzählt
+      - erzählen
+      Präteritum:
+      - erzählte
+      - erzähltest
+      - erzählte
+      - erzählten
+      - erzähltet
+      - erzählten
+      Perfekt:
+      - habe erzählt
+      - hast erzählt
+      - hat erzählt
+      - haben erzählt
+      - habt erzählt
+      - haben erzählt
+  Fall:
+    weights:
+      translation: 50
+      noun_translation: 50
+      definite_article: 50
+      plural: 50
+    translations:
+      hungarian:
+      - ügy
+    class: noun
+    definite_article: der
+    plural: Fälle
+    tags:
+    - legal
+  brummig:
+    weights:
+      translation: 50
+      adjective_translation: 50
+    translations:
+      hungarian:
+      - zsémbes
+    class: adjective
+    tags:
+    - description
+  inzwischen:
+    weights:
+    translations:
+      hungarian:
+      - addig is
+    class: adverb
+  sodass:
+    weights:
+    translations:
+      hungarian:
+      - szóval
+    class: conjunction

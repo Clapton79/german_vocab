@@ -1,0 +1,46 @@
+tags:
+  level: a1
+  topic: general
+target_language: German
+translation_language: Hungarian
+words:
+  Fall:
+    class: noun
+    definite_article: der
+    plural: Fälle
+    translation: ügy
+  brummig:
+    class: adjective
+    translation: zsémbes
+  erzählen:
+    class: verb
+    conjugations:
+      Perfekt:
+      - habe erzählt
+      - hast erzählt
+      - hat erzählt
+      - haben erzählt
+      - habt erzählt
+      - haben erzählt
+      Präsens:
+      - erzähle
+      - erzählst
+      - erzählt
+      - erzählen
+      - erzählt
+      - erzählen
+      Präteritum:
+      - erzählte
+      - erzähltest
+      - erzählte
+      - erzählten
+      - erzähltet
+      - erzählten
+    imperative: Erzähle!
+    translation: mondani
+  inzwischen:
+    class: adverb
+    translation: addig is
+  sodass:
+    class: conjunction
+    translation: szóval
