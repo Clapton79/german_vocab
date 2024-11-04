@@ -1,8 +1,74 @@
 import fileoperations as fo
 import random 
 from vfunctions import *
+from datetime import datetime
 from pprint import pprint
 
+
+class Word():
+    def __init__(self, word_class):
+        self.word_class = word_class
+        self.word_data = {}
+        self.word_to_add = None
+        self.date_added = format(datetime.now(), "%Y-%m-%d")
+    
+    def __str__(self):
+        return self.word_to_add
+        
+    def items(self):
+        return self.word_data
+        
+    def update(self):
+        defaults = {'translation_language': 'hungarian'}
+        
+        questions = {
+            'noun':{
+                'translations': {
+                    'question': "What are the possible translations noun you'd like to add? (specify in list format: [list of translations]) ",
+                    'type':  dict
+                    
+                },
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: ",
+                    'type': list
+                    },
+                'plural': {
+                    'question': "What is the plural of this noun? ",
+                    'type': str
+                },
+                'definite_article':
+                {
+                    'question': "What is the definite article of this noun? ",
+                    'type': str
+                }
+            }
+        }    
+        
+        if self.word_class not in questions.keys():
+            print(f"Unspecified word class: {self.word_class}")
+            return
+        
+        self.word_to_add = input(f"What is the {self.word_class} you want to add?: ")
+        
+        for question, details in questions[self.word_class].items():
+            response = input(details['question'])
+            
+            if question =='translations':
+                response = dict({defaults['translation_language']: response.split(',')})
+            
+            if details['type'] == list:
+                response = response.split(',')
+                
+            data_obj = details['type'](response)
+            if not isinstance(data_obj, details['type']):
+                print(f"Invalid response for {details['question']}. Expected {details['type'].__name__}")
+                return
+        
+            self.word_data[question]=data_obj
+            
+        self.word_data['date_added']=self.date_added
+    
+    
 class Vocabulary():
     def __init__(self, filename):
         self.filename = filename
@@ -13,6 +79,18 @@ class Vocabulary():
         self.nouns = [x for x, d in self.vocab.items() if d['class']=='noun']
         self.adjectives = [x for x, d in self.vocab.items() if d['class']=='adjective']
 
+    # file operations
+    def save(self, filename:str = None):
+        if filename is None:
+            filename = self.filename
+            
+        data = {"tags": self.custom_data, "words": self.vocab}
+        fo.save_to_file(filename, data)
+        
+    def backup(self):
+        fo.backup_file(self.filename)
+        
+    # item operations
     def __getitem__(self, key):
         if key in self.vocab:
             return self.vocab[key]
@@ -31,15 +109,15 @@ class Vocabulary():
         for item, detail in self.vocab.items():
             if detail['class']== word_class:
                 yield item
-   
-    def save_as(self, filename:str = None):
-        if filename is None:
-            filename = self.filename
-            
-        data = {"tags": self.custom_data, "words": self.vocab}
-        fo.save_to_file(filename, data)
+                
+    def add(self,word:Word):
+        if word in self.vocab.keys():
+            print(f"This word is already in this vocabulary. Remove it first and try again.")
+            return
         
+        self.vocab[word.word_to_add] = word.word_data
         
+       
 ##################################################################
 #  Data selector functions
 ##################################################################
@@ -175,3 +253,9 @@ class LanguageTest():
             elif solution_type == list and solution_type == answer_type:
                 print(f"{i+1}. {question.ljust(10,' ')}")
                 compare_two_lists(self.solutions[i], self.answers[i], no_header=True, padding_default=16)
+                
+
+    
+    
+            
+    

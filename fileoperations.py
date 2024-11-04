@@ -17,6 +17,7 @@ def load_file (filename):
 def save_to_file(filename, contents:dict):
     with open(filename, 'w', encoding='utf-8') as f:
         yaml.dump(contents, f, default_flow_style=False,allow_unicode=True)
+    print(f"{filename} written")
         
 def backup_file(filename):
     fileserial =datetime.now()

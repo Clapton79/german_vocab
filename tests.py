@@ -7,11 +7,14 @@ from datetime import datetime
 
 v = Vocabulary('new_dict.yaml')
 
-pprint(v['sodass'])
+w = Word('noun')
+w.update()
+pprint(w.items())
+v.add(w)
 
-for k in v.items():
-    print(k, v[k]['class'])
-   
+v.save()
+v.backup()
+
 
 #pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])
 # #@@@@@@@@@@@ Test tester
