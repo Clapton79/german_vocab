@@ -26,10 +26,10 @@ application layers:
         compare lists           DONE
         compare dicts
     core - file
-        write
-        read
-        create backup
-        compress
+        write                   DONE
+        read                    DONE
+        create backup           DONE
+        compress                DONE
     logical 1 - vocab data
         select 
             words of a class

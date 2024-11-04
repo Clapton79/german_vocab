@@ -1,7 +1,7 @@
 import fileoperations as fo
 import random 
 from vfunctions import *
-
+from pprint import pprint
 
 class Vocabulary():
     def __init__(self, filename):
@@ -10,27 +10,56 @@ class Vocabulary():
         vocab = fo.load_file(filename)
         self.vocab = vocab['words']
         self.custom_data = vocab['tags']
-        self.verbs = [x for x, d in self.vocab.items() if d['class']=='verb']
         self.nouns = [x for x, d in self.vocab.items() if d['class']=='noun']
         self.adjectives = [x for x, d in self.vocab.items() if d['class']=='adjective']
 
+    def __getitem__(self, key):
+        if key in self.vocab:
+            return self.vocab[key]
+        else:
+            return None
+    def items(self):
+        return self.vocab
+    
+    def verbs(self):
+        return [x for x, d in self.items() if d['class']=='verb']
+               
+    def __str__ (self):
+        return (str(self.vocab))
+        
+    def filter_by_class(self, word_class):
+        for item, detail in self.vocab.items():
+            if detail['class']== word_class:
+                yield item
+   
+    def save_as(self, filename:str = None):
+        if filename is None:
+            filename = self.filename
+            
+        data = {"tags": self.custom_data, "words": self.vocab}
+        fo.save_to_file(filename, data)
+        
+        
 ##################################################################
 #  Data selector functions
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
-    #try:
-    questions = [(x,random.choice(vocabulary.get(x).get('conjugation').keys())) for x in random.choices(vocabulary.verbs,k=num_questions)]
-    solutions = [vocabulary.vocab[x[0]].get('conjugation').get(x[1]) for x in questions]
-    #except Exception as e: 
-        # print(str(e))
-        # return [False,[],[]]
-    return [True, questions, solutions]
+    try:
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(vocabulary.verbs,k=num_questions)]
+        solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
+        question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
+    except Exception as e: 
+        print(str(e))
+        return [False,[],[]]
+    return [True, question_formatted, solutions]
     
 def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(list(vocabulary.vocab.keys()), k=num_questions)
-        solutions = [vocabulary.vocab[x].get('translations').get('hungarian')[0] for x in questions]
-    except: 
+        base = random.choices(list(vocabulary.vocab.keys()), k=num_questions)
+        questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
+        solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
+    except Exception as e: 
+        print(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
 
@@ -41,7 +70,25 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     except: 
         return [False,[],[]]
     return [True, questions, solutions]
+
+def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(vocabulary.nouns, k=num_questions)]
+        solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
+    except: 
+        return [False,[],[]]
+    return [True, questions, solutions]
     
+def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
+    try:
+        base = random.choices(list(vocabulary.nouns), k=num_questions)
+        questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
+        solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
+        
+    except: 
+        return [False,[],[]]
+    return [True, questions, solutions]
+        
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
         questions = random.choices(vocabulary.verbs, k=num_questions)
@@ -49,22 +96,22 @@ def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary)
     except: 
         return [False,[],[]]
     return [True, questions, solutions]
-
+    
 test_functions = {
-    "verb conjugation": "",
+    "verb conjugation": data_selector_verb_conjugation,
     "verb translation": "",
     "imperative verb form": data_selector_imperative_verb_form,
-    "noun translation":"",
-    "noun plural form":"",
+    "noun translation":data_selector_noun_translation,
+    "noun plural form":data_selector_noun_plural,
     "definite article":data_selector_definite_article,
     "adjectives":"",
     "translation": data_selector_translation
 }
 
 def get_available_tests():
-    return [key.capitalize() for key, item in test_functions.items() if item is not None and item != ""]
+    return [key for key, item in test_functions.items() if item is not None and item != ""]
         
-class Test():
+class LanguageTest():
     def __init__(self, num_questions: int, test_type:str, vocabulary:Vocabulary,immediate_correction:bool=False):
         self.test_type = test_type
         self.num_questions = num_questions
@@ -82,7 +129,6 @@ class Test():
         
         if not self.test_load_success:
             print("Failed to load test data due to an internal error.")
-            
             
     def run(self):
         if self.function is None or self.function == "" or not self.test_load_success:

@@ -4,21 +4,17 @@ import zipfile36 as zipfile
 import shutil
 from datetime import datetime
 
-     
 # file operations
 def load_file (filename):
     vocab = {}
     
     # read the file
-    line_id = 0
-    key_index = 0
     with open (filename, 'r') as f:
         vocab = yaml.safe_load(f)
     
     return vocab
 
 def save_to_file(filename, contents:dict):
-    
     with open(filename, 'w', encoding='utf-8') as f:
         yaml.dump(contents, f, default_flow_style=False,allow_unicode=True)
         
