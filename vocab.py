@@ -130,7 +130,7 @@ class Vocabulary():
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(vocabulary.filter_by_class_and_tag('verb'),k=num_questions)]
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(list(vocabulary.filter_by_class_and_tag('verb')),k=num_questions)]
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
@@ -150,7 +150,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)
+        questions = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
         solutions = [vocabulary.vocab[x].get("definite_article") for x in questions]
     except: 
         return [False,[],[]]
@@ -158,7 +158,7 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)]
+        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
     except: 
         return [False,[],[]]
@@ -166,7 +166,7 @@ def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     
 def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)
+        base = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
         
@@ -176,7 +176,7 @@ def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
         
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(vocabulary.filter_by_class_and_tag('verb'), k=num_questions)
+        questions = random.choices(list(vocabulary.filter_by_class_and_tag('verb')), k=num_questions)
         solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('imperative')] for x in questions]
     except: 
         return [False,[],[]]
@@ -214,28 +214,37 @@ class LanguageTest():
         
         if not self.test_load_success:
             print("Failed to load test data due to an internal error.")
-            
-    def run(self):
-        if self.function is None or self.function == "" or not self.test_load_success:
-            print("Unable to execute non-existent, not implemented or erroneous test")
-            return
-        for i, question in enumerate(self.questions):
-            answer = input(f"{i+1}. {question}: ")
-            answer = answer.split(';') if len(answer.split(';')) > 1 else answer
-            answer = answer if answer else ""
-            self.answers.append(answer)
-            if self.immediate_correction and answer != self.solutions[i]:
-                if isinstance(self.solutions[i],str):
-                    print (f"{' '.ljust(5,' ')}{bcolors.FAIL}Correct answer: {bcolors.OKGREEN}{self.solutions[i]}{bcolors.ENDC}")
-                    
-                elif isinstance(self.solutions[i],list):
-                    print (f"{' '.ljust(5,' ')}{bcolors.FAIL}Correct answer:")
-                    for j, sol in enumerate(self.solutions[i]):
-                        print(f"{''.ljust(10,' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
-            
+    
+    def is_ready_to_run(self):
+        return self.function is not None and self.function != "" and self.test_load_success
+
+    def get_answer(self, index, question):
+        answer = input(f"{index + 1}. {question}: ")
+        return answer.split(';') if len(answer.split(';')) > 1 else answer or ""
+
+    def check_immediate_correction(self, index, answer):
+        if self.immediate_correction and answer != self.solutions[index]:
+            self.display_correct_answer(index)
+
+    def display_correct_answer(self, index):
+        correct_answer = self.solutions[index]
+        if isinstance(correct_answer, str):
+            print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer: {bcolors.OKGREEN}{correct_answer}{bcolors.ENDC}")
+        elif isinstance(correct_answer, list):
+            print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer:")
+            for sol in correct_answer:
+                print(f"{''.ljust(10, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
+
+    def calculate_results(self):
         self.results = [self.solutions[i] == self.answers[i] for i in range(len(self.questions))]
-        self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)
+        self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)       
         
+  
+    
+    def save_results(self, filename):
+        with open (filename, 'a') as f:
+            f.write(f"{datetime.datetime.now().strftime},{self.test_type.title()},{self.num_questions},{self.accuracy}")
+     
     def show_results(self):
         print("==========================================")
         print(f"{'Test type: '.ljust(15,' ')}{self.test_type.title()}")
@@ -261,7 +270,23 @@ class LanguageTest():
                 print(f"{i+1}. {question.ljust(10,' ')}")
                 compare_two_lists(self.solutions[i], self.answers[i], no_header=True, padding_default=16)
                 
+            else:
+                print(f"{i+1}. {question.ljust(10,' ')}")
+                for solution in self.solutions[i]:
+                    print (f"{''.ljust(16, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
+                
+    def run(self):
+        if not self.is_ready_to_run():
+            print("Unable to execute non-existent, not implemented or erroneous test")
+            return
 
+        for i, question in enumerate(self.questions):
+            answer = self.get_answer(i, question)
+            self.answers.append(answer)
+            self.check_immediate_correction(i, answer)
+
+        self.calculate_results()
+        self.show_results()
     
     
             

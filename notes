@@ -46,14 +46,15 @@ application layers:
             https://conjugator.reverso.net/conjugation-german.html
             https://der-artikel.de/der/See.html
             https://www.verbformen.com/conjugation/erza3hlen.htm
+            https://translate.google.com/?sl=de&tl=hu&text=%C3%84rztin&op=translate
     
     logical 2 - quality test
     
     logical 3 - test host
-        encapsulate test activity
-        load vocabulary
-        run tests
-        save results
+        encapsulate test activity                   
+        load vocabulary                     
+        run tests                                   
+        save results                                
         
         class design
             class Vocabulary() 
