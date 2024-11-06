@@ -7,14 +7,19 @@ from datetime import datetime
 
 v = Vocabulary('new_dict.yaml')
 
-w = Word('noun')
-w.update()
-pprint(w.items())
-v.add(w)
+# w = Word('noun')
+# w.update()
+# pprint(w.items())
+# v.add(w)
 
-v.save()
-v.backup()
-
+# v.save()
+# v.backup()
+#print(list(v.filter_by_class('noun')))
+w = v.filter_by_class_and_tag('noun')
+v.append_tags_to_words(list(w),['core'])
+print(list(v.filter_by_class_and_tag('noun','core')))
+print(list(v.filter_by_class_and_tag('noun')))
+#print(list(v.filter_by_topic_and_class('noun','building')))
 
 #pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])
 # #@@@@@@@@@@@ Test tester

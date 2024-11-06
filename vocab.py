@@ -9,11 +9,11 @@ class Word():
     def __init__(self, word_class):
         self.word_class = word_class
         self.word_data = {}
-        self.word_to_add = None
+        self.word_text = None
         self.date_added = format(datetime.now(), "%Y-%m-%d")
     
     def __str__(self):
-        return self.word_to_add
+        return self.word_text
         
     def items(self):
         return self.word_data
@@ -26,7 +26,6 @@ class Word():
                 'translations': {
                     'question': "What are the possible translations noun you'd like to add? (specify in list format: [list of translations]) ",
                     'type':  dict
-                    
                 },
                 'tags':{
                     'question': "Specify a list of tags you'd like to add: ",
@@ -48,7 +47,7 @@ class Word():
             print(f"Unspecified word class: {self.word_class}")
             return
         
-        self.word_to_add = input(f"What is the {self.word_class} you want to add?: ")
+        self.word_text = input(f"What is the {self.word_class} you want to add?: ")
         
         for question, details in questions[self.word_class].items():
             response = input(details['question'])
@@ -68,7 +67,6 @@ class Word():
             
         self.word_data['date_added']=self.date_added
     
-    
 class Vocabulary():
     def __init__(self, filename):
         self.filename = filename
@@ -76,8 +74,6 @@ class Vocabulary():
         vocab = fo.load_file(filename)
         self.vocab = vocab['words']
         self.custom_data = vocab['tags']
-        self.nouns = [x for x, d in self.vocab.items() if d['class']=='noun']
-        self.adjectives = [x for x, d in self.vocab.items() if d['class']=='adjective']
 
     # file operations
     def save(self, filename:str = None):
@@ -99,31 +95,42 @@ class Vocabulary():
     def items(self):
         return self.vocab
     
-    def verbs(self):
-        return [x for x, d in self.items() if d['class']=='verb']
-               
     def __str__ (self):
         return (str(self.vocab))
         
-    def filter_by_class(self, word_class):
+    def filter_by_class_and_tag(self, word_class:str, tag:str=None):
         for item, detail in self.vocab.items():
-            if detail['class']== word_class:
-                yield item
+            if detail['class'] == word_class:
+                if tag is None or tag in detail['tags']:
+                    yield item
                 
     def add(self,word:Word):
         if word in self.vocab.keys():
-            print(f"This word is already in this vocabulary. Remove it first and try again.")
+            print(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
-        self.vocab[word.word_to_add] = word.word_data
+        self.vocab[word.word_text] = word.word_data
         
-       
+    def remove(self,word:Word):
+        if word in self.vocab.keys():
+            del self.vocab[word.word_text]
+        else:
+            print(f"The word {word.word_text} is not in this vocabulary.")
+    
+    def append_tags_to_words(self,words:list,tags:list):
+        for word in words:
+            if word in self.vocab.keys():
+                for tag in tags:
+                    if tag not in self.vocab[word]['tags']:
+                        self.vocab[word]['tags'].append(tag)
+            else:
+                print(f"The word {word} is not in this vocabulary.")
 ##################################################################
 #  Data selector functions
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(vocabulary.verbs,k=num_questions)]
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(vocabulary.filter_by_class_and_tag('verb'),k=num_questions)]
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
@@ -143,7 +150,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(vocabulary.nouns, k=num_questions)
+        questions = random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)
         solutions = [vocabulary.vocab[x].get("definite_article") for x in questions]
     except: 
         return [False,[],[]]
@@ -151,7 +158,7 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(vocabulary.nouns, k=num_questions)]
+        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
     except: 
         return [False,[],[]]
@@ -159,7 +166,7 @@ def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     
 def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.choices(list(vocabulary.nouns), k=num_questions)
+        base = random.choices(vocabulary.filter_by_class_and_tag('noun'), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
         
@@ -169,7 +176,7 @@ def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
         
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(vocabulary.verbs, k=num_questions)
+        questions = random.choices(vocabulary.filter_by_class_and_tag('verb'), k=num_questions)
         solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('imperative')] for x in questions]
     except: 
         return [False,[],[]]

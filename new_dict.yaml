@@ -33,6 +33,7 @@ words:
       plural: 50
       translation: 50
   Gegend:
+    class: noun
     date_added: '2024-11-04'
     definite_article: die
     plural: Gegenden
