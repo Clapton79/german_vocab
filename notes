@@ -50,17 +50,17 @@ application layers:
     
     logical 2 - quality test
     
-    logical 3 - test host
+    logical 3 - test host                       DONE
         encapsulate test activity                   
-        load vocabulary                     
-        run tests                                   
-        save results                                
+        load vocabulary                         DONE               
+        run tests                               DONE                          
+        save results                            DONE                          
         
         class design
-            class Vocabulary() 
+            class Vocabulary()                  DONE
                 load file
                 
-            class Test 
+            class Test                          DONE
                 configuration
                     creation time 
                     results file

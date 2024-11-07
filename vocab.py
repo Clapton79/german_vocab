@@ -4,7 +4,6 @@ from vfunctions import *
 from datetime import datetime
 from pprint import pprint
 
-
 class Word():
     def __init__(self, word_class):
         self.word_class = word_class
@@ -215,18 +214,18 @@ class LanguageTest():
         if not self.test_load_success:
             print("Failed to load test data due to an internal error.")
     
-    def is_ready_to_run(self):
+    def __is_ready_to_run(self):
         return self.function is not None and self.function != "" and self.test_load_success
 
-    def get_answer(self, index, question):
+    def __get_answer(self, index, question):
         answer = input(f"{index + 1}. {question}: ")
         return answer.split(';') if len(answer.split(';')) > 1 else answer or ""
 
-    def check_immediate_correction(self, index, answer):
+    def __check_immediate_correction(self, index, answer):
         if self.immediate_correction and answer != self.solutions[index]:
-            self.display_correct_answer(index)
+            self.__display_correct_answer(index)
 
-    def display_correct_answer(self, index):
+    def __display_correct_answer(self, index):
         correct_answer = self.solutions[index]
         if isinstance(correct_answer, str):
             print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer: {bcolors.OKGREEN}{correct_answer}{bcolors.ENDC}")
@@ -235,11 +234,9 @@ class LanguageTest():
             for sol in correct_answer:
                 print(f"{''.ljust(10, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
 
-    def calculate_results(self):
+    def __calculate_results(self):
         self.results = [self.solutions[i] == self.answers[i] for i in range(len(self.questions))]
         self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)       
-        
-  
     
     def save_results(self, filename):
         with open (filename, 'a') as f:
@@ -276,16 +273,16 @@ class LanguageTest():
                     print (f"{''.ljust(16, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
                 
     def run(self):
-        if not self.is_ready_to_run():
+        if not self.__is_ready_to_run():
             print("Unable to execute non-existent, not implemented or erroneous test")
             return
 
         for i, question in enumerate(self.questions):
-            answer = self.get_answer(i, question)
+            answer = self.__get_answer(i, question)
             self.answers.append(answer)
-            self.check_immediate_correction(i, answer)
+            self.__check_immediate_correction(i, answer)
 
-        self.calculate_results()
+        self.__calculate_results()
         self.show_results()
     
     

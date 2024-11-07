@@ -40,6 +40,7 @@ words:
     tags:
     - core
     - geography
+    - land
     translations:
       hungarian:
       - terület
@@ -51,6 +52,7 @@ words:
     tags:
     - everyday
     - building
+    - land
     translations:
       hungarian:
       - ház
