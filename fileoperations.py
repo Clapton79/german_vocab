@@ -26,12 +26,16 @@ def backup_file(filename):
     try:
         shutil.copy(filename, backup_filename)
         print(f"Backup created: {backup_filename}")
+        return backup_filename
     except FileNotFoundError:
         print(f"Error: File {filename} not found.")
+        return None
     except PermissionError:
         print(f"Error: Permission denied to create backup of {filename}.")
+        return None
     except Exception as e:
         print(f"Error backing up file {filename}: {str(e)}")
+        return None
     
 def zip_files(file_paths, zip_name):
     with zipfile.ZipFile(zip_name, 'w') as zipf:

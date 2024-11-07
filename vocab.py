@@ -70,9 +70,12 @@ class Vocabulary():
     def __init__(self, filename):
         self.filename = filename
         self.load_success = None
+        self.last_backupfile = None
         vocab = fo.load_file(filename)
-        self.vocab = vocab['words']
-        self.custom_data = vocab['tags']
+        self.vocab, self.custom_data = vocab['words'],vocab['tags']
+        
+        if len(self.vocab.keys()) > 0:
+            self.load_success = True
 
     # file operations
     def save(self, filename:str = None):
@@ -83,7 +86,7 @@ class Vocabulary():
         fo.save_to_file(filename, data)
         
     def backup(self):
-        fo.backup_file(self.filename)
+        self.last_backupfile = fo.backup_file(self.filename)
         
     # item operations
     def __getitem__(self, key):

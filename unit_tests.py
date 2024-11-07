@@ -1,14 +1,17 @@
 import sys
 import vocab as v
 from vfunctions import bcolors
+import os
 
-
+#################################################################
+# Variables needed to run the unit tests
+#################################################################
+vocabulary_file = "new_dict.yaml"
 
 #################################################################
 # Tests
 #################################################################
-
-def test_get_available_tests():
+def available_tests_display() -> bool:
     try:
         output = v.get_available_tests()
         if len(output) == 0:
@@ -17,19 +20,50 @@ def test_get_available_tests():
     except:
         return False
     
+def vocabulary_loads() -> bool:
+    vocabulary = v.Vocabulary(vocabulary_file)
+    return vocabulary.load_success
+    
+def a_word_can_be_added_to_vocabulary() -> bool:
+    try:
+        vocabulary = v.Vocabulary(vocabulary_file)
+        w = v.Word('noun')
+        vocabulary.add(w)
+        return True
+    except: 
+        return False
 
-# v = Vocabulary('new_dict.yaml')
-
-
-# # w = Word('noun')
-# # w.update()
-# # pprint(w.items())
-# # v.add(w)
-
-# # v.save()
-# # v.backup()
-# #print(list(v.filter_by_class('noun')))
-# # w = v.filter_by_class_and_tag('noun')
+def vocabulary_returns_nouns() -> bool:
+    vocabulary = v.Vocabulary(vocabulary_file)
+    w = vocabulary.filter_by_class_and_tag('noun')
+    return len(next(w)) > 0
+   
+def vocabulary_returns_verbs() -> bool:
+    vocabulary = v.Vocabulary(vocabulary_file)
+    w = vocabulary.filter_by_class_and_tag('verb')
+    return len(next(w)) > 0
+    
+def vocabulary_saves() -> bool:
+    try:
+        vocabulary = v.Vocabulary(vocabulary_file)
+        vocabulary.save()
+        return True
+    except: 
+        return False
+        
+def vocabular_backs_up() -> bool:
+    try:
+        vocabulary = v.Vocabulary(vocabulary_file)
+        vocabulary.backup()
+        backup_file = vocabulary.last_backupfile
+        if backup_file is None:
+            return False
+        else:
+            os.remove(backup_file)
+            return True
+    except:
+        return False
+    
 # words = ['Hause','Gegend']
 # tags = ['land']
 # v.append_tags_to_words(words,tags)
@@ -42,8 +76,8 @@ def test_get_available_tests():
 #pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])
 #@@@@@@@@@@@ Test tester
 
-def test_languagetest_class():
-    vc = v.Vocabulary('new_dict.yaml')
+def language_test_loads():
+    vc = v.Vocabulary(vocabulary_file)
     t = v.LanguageTest(2,"imperative verb form",vc)
     return t.test_load_success
     
