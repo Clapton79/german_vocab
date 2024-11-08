@@ -103,6 +103,6 @@ for method_name in callable_methods:
     method = getattr(current_module, method_name)
     test_result = method()  # Call the method
     bcolor = bcolors.OKGREEN if test_result else bcolors.FAIL
-    print(f"Method: {method_name.ljust(36, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
+    print(f"Test: {method_name.replace('_',' ').capitalize().ljust(36, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
     
 os.environ['VOCAB_LOGLEVEL']= 'ERROR'
