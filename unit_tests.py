@@ -2,12 +2,12 @@ import sys
 import vocab as v
 from vfunctions import bcolors
 import os
+from applogger import logger
 
 #################################################################
 # Variables needed to run the unit tests
 #################################################################
 vocabulary_file = "new_dict.yaml"
-
 #################################################################
 # Tests
 #################################################################
@@ -89,7 +89,7 @@ def language_test_loads():
 
 current_module = sys.modules[__name__]
 all_attributes = dir(current_module)
-callable_methods = [attr for attr in all_attributes if callable(getattr(current_module, attr)) and not attr.startswith("__") and not attr.startswith("bcolor")]
+callable_methods = [attr for attr in all_attributes if callable(getattr(current_module, attr)) and not attr.startswith("__") and attr != 'setup_logger' and not attr.startswith("bcolor")]
 
 print ("####################################################################")
 print ("#                   Library Unit Tests")
@@ -97,6 +97,7 @@ print ("####################################################################")
 
 # Dynamically call each method
 for method_name in callable_methods:
+    logger.info(f"Running unit test: {method_name}")  # Log the test name to the logger
     method = getattr(current_module, method_name)
     test_result = method()  # Call the method
     bcolor = bcolors.OKGREEN if test_result else bcolors.FAIL

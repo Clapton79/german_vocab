@@ -1,8 +1,11 @@
 import fileoperations as fo
 import random 
+from os import getenv
+from applogger import logger
 from vfunctions import *
 from datetime import datetime
-from pprint import pprint
+
+
 
 class Word():
     def __init__(self, word_class):
@@ -10,6 +13,7 @@ class Word():
         self.word_data = {}
         self.word_text = None
         self.date_added = format(datetime.now(), "%Y-%m-%d")
+        logger.debug(f"Initialized WordClass {self.word_class}")
     
     def __str__(self):
         return self.word_text
@@ -43,7 +47,7 @@ class Word():
         }    
         
         if self.word_class not in questions.keys():
-            print(f"Unspecified word class: {self.word_class}")
+            logger.error(f"Unspecified word class for recording data: {self.word_class}")
             return
         
         self.word_text = input(f"What is the {self.word_class} you want to add?: ")
@@ -59,7 +63,7 @@ class Word():
                 
             data_obj = details['type'](response)
             if not isinstance(data_obj, details['type']):
-                print(f"Invalid response for {details['question']}. Expected {details['type'].__name__}")
+                logger.error(f"Invalid response for {details['question']}. Expected {details['type'].__name__}")
                 return
         
             self.word_data[question]=data_obj
@@ -76,6 +80,8 @@ class Vocabulary():
         
         if len(self.vocab.keys()) > 0:
             self.load_success = True
+            
+        logger.debug(f"Vocabulary initialized. Data load success: {self.load_success}")
 
     # file operations
     def save(self, filename:str = None):
@@ -108,7 +114,7 @@ class Vocabulary():
                 
     def add(self,word:Word):
         if word in self.vocab.keys():
-            print(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
+            logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
         self.vocab[word.word_text] = word.word_data
@@ -117,7 +123,7 @@ class Vocabulary():
         if word in self.vocab.keys():
             del self.vocab[word.word_text]
         else:
-            print(f"The word {word.word_text} is not in this vocabulary.")
+            logger.error(f"The word {word.word_text} is not in this vocabulary.")
     
     def append_tags_to_words(self,words:list,tags:list):
         for word in words:
@@ -126,7 +132,7 @@ class Vocabulary():
                     if tag not in self.vocab[word]['tags']:
                         self.vocab[word]['tags'].append(tag)
             else:
-                print(f"The word {word} is not in this vocabulary.")
+                logger.error(f"The word {word} is not in this vocabulary.")
 ##################################################################
 #  Data selector functions
 ##################################################################
@@ -136,7 +142,7 @@ def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
-        print(str(e))
+        logger.error(str(e))
         return [False,[],[]]
     return [True, question_formatted, solutions]
     
@@ -146,7 +152,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
     except Exception as e: 
-        print(str(e))
+        logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
 
@@ -154,7 +160,8 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
         questions = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
         solutions = [vocabulary.vocab[x].get("definite_article") for x in questions]
-    except: 
+    except Exception as e:  
+        logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
 
@@ -162,7 +169,8 @@ def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
         questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
-    except: 
+    except Exception as e:  
+        logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
     
@@ -170,9 +178,9 @@ def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
     try:
         base = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
-        solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
-        
-    except: 
+        solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]  
+    except Exception as e:  
+        logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
         
@@ -180,7 +188,8 @@ def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary)
     try:
         questions = random.choices(list(vocabulary.filter_by_class_and_tag('verb')), k=num_questions)
         solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('imperative')] for x in questions]
-    except: 
+    except Exception as e:  
+        logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
     
@@ -210,12 +219,13 @@ class LanguageTest():
         self.function = test_functions.get(test_type)
         
         if self.function is None:
-            print(f"Unknown test type: {test_type}")
+            logger.error(f"Unknown language test type: {test_type}")
             
         self.test_load_success, self.questions, self.solutions = self.function(self.num_questions, self.vocabulary)
+        logger.debug(f"Language test {self.test_type} initialized.")
         
         if not self.test_load_success:
-            print("Failed to load test data due to an internal error.")
+            logger.error(f"Failed to load test {self.test_type} data due to an internal error.")
     
     def __is_ready_to_run(self):
         return self.function is not None and self.function != "" and self.test_load_success
@@ -238,12 +248,18 @@ class LanguageTest():
                 print(f"{''.ljust(10, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
 
     def __calculate_results(self):
-        self.results = [self.solutions[i] == self.answers[i] for i in range(len(self.questions))]
-        self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)       
+        try:
+            self.results = [self.solutions[i] == self.answers[i] for i in range(len(self.questions))]
+            self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)   
+        except Exception as e:
+            logger.error(f"Failed to calculate results due to an internal error: {str(e)}")
     
     def save_results(self, filename):
-        with open (filename, 'a') as f:
-            f.write(f"{datetime.datetime.now().strftime},{self.test_type.title()},{self.num_questions},{self.accuracy}")
+        try:
+            with open (filename, 'a') as f:
+                f.write(f"{datetime.datetime.now().strftime},{self.test_type.title()},{self.num_questions},{self.accuracy}")
+        except IOError as e:
+            logger.error(f"Error saving results to file: {filename} ({str(e)})")
      
     def show_results(self):
         print("==========================================")
@@ -276,17 +292,20 @@ class LanguageTest():
                     print (f"{''.ljust(16, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
                 
     def run(self):
-        if not self.__is_ready_to_run():
-            print("Unable to execute non-existent, not implemented or erroneous test")
-            return
+        logger.debug("Running test")
+        try:
+            if not self.__is_ready_to_run():
+                raise RuntimeError("Unable to execute non-existent, not implemented or erroneous test")
 
-        for i, question in enumerate(self.questions):
-            answer = self.__get_answer(i, question)
-            self.answers.append(answer)
-            self.__check_immediate_correction(i, answer)
+            for i, question in enumerate(self.questions):
+                answer = self.__get_answer(i, question)
+                self.answers.append(answer)
+                self.__check_immediate_correction(i, answer)
 
-        self.__calculate_results()
-        self.show_results()
+            self.__calculate_results()
+            self.show_results()
+        except Exception as e:
+            logger.error(f"Failed to run test due to an internal error: {str(e)}")
     
     
             
