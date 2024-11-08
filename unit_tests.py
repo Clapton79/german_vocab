@@ -4,6 +4,8 @@ from vfunctions import bcolors
 import os
 from applogger import logger
 
+os.environ['VOCAB_LOGLEVEL']= 'DEBUG'
+
 #################################################################
 # Variables needed to run the unit tests
 #################################################################
@@ -102,3 +104,5 @@ for method_name in callable_methods:
     test_result = method()  # Call the method
     bcolor = bcolors.OKGREEN if test_result else bcolors.FAIL
     print(f"Method: {method_name.ljust(36, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
+    
+os.environ['VOCAB_LOGLEVEL']= 'ERROR'

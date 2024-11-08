@@ -5,8 +5,6 @@ from applogger import logger
 from vfunctions import *
 from datetime import datetime
 
-
-
 class Word():
     def __init__(self, word_class):
         self.word_class = word_class
@@ -133,6 +131,7 @@ class Vocabulary():
                         self.vocab[word]['tags'].append(tag)
             else:
                 logger.error(f"The word {word} is not in this vocabulary.")
+                
 ##################################################################
 #  Data selector functions
 ##################################################################
