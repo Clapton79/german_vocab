@@ -1,4 +1,5 @@
 from applogger import logger
+from fileoperations import load_file
 
 class bcolors:
     HEADER = '\033[95m'
@@ -33,3 +34,45 @@ def compare_two_lists(a:list, b:list,header1:str="Header1",header2:str="Header2"
     
     except Exception as e:
         logger.error(f"Error in compare_two_lists: {str(e)}")
+
+def get_vocabulary_model(vocabulary_object_class: str=None):
+    # Reads a yaml file and returns a dictionary
+    model_dict = load_file('model.yaml')
+
+    if vocabulary_object_class is None:
+        return model_dict
+    else:
+        return model_dict['words'][vocabulary_object_class]
+      
+def check_dict_structure(param_dict, model_dict,word):
+    """
+    Check if param_dict has the same keys as model_dict, including nested dictionaries.
+    
+    :param param_dict: The dictionary to check.
+    :param model_dict: The model dictionary to compare against.
+    :return: True if the structure matches, False otherwise.
+    """
+    try:
+        if not isinstance(param_dict, dict) :
+            logger.info("Not a dictionary.")
+            return False
+
+        for key in model_dict.keys():
+            if key not in param_dict.keys():
+                logger.warning(f"Dictionary model check (word: {word}): missing key: {key}")
+                return False
+            
+            # If the value is a dictionary, check its structure recursively
+            if isinstance(model_dict[key], dict):
+                if not isinstance(param_dict[key], dict):
+                    logger.warning(f"Dictionary model check: expected dictionary for key: {key}")
+                    return False
+                if not check_dict_structure(param_dict[key], model_dict[key],word):
+                    logger.info(f"Dictionary model check: structure mismatch for key: {key}")
+                    return False
+        return True
+    except Exception as e:
+            logger.error(f"Error in check_dict_structure: {str(e)}")
+            return False
+                
+    

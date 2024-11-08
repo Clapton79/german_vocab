@@ -66,6 +66,10 @@ def vocabular_backs_up() -> bool:
     except:
         return False
     
+def vocabulary_has_no_data_quality_issues() -> bool:
+    vocabulary = v.Vocabulary(vocabulary_file)
+    return vocabulary.check_structure()
+    
 # words = ['Hause','Gegend']
 # tags = ['land']
 # v.append_tags_to_words(words,tags)
@@ -99,10 +103,10 @@ print ("####################################################################")
 
 # Dynamically call each method
 for method_name in callable_methods:
-    logger.info(f"Running unit test: {method_name}")  # Log the test name to the logger
+    logger.info(f"Running unit test: {method_name.replace('_',' ').capitalize()}")  # Log the test name to the logger
     method = getattr(current_module, method_name)
     test_result = method()  # Call the method
     bcolor = bcolors.OKGREEN if test_result else bcolors.FAIL
-    print(f"Test: {method_name.replace('_',' ').capitalize().ljust(36, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
+    print(f"Test: {method_name.replace('_',' ').capitalize().ljust(46, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
     
 os.environ['VOCAB_LOGLEVEL']= 'ERROR'
