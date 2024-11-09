@@ -5,7 +5,9 @@ from applogger import logger
 from vfunctions import *
 from datetime import datetime
 
+
 class Word():
+    __slots__ = ['word_class','word_data','word_text','date_added']
     def __init__(self, word_class):
         self.word_class = word_class
         self.word_data = {}
@@ -69,6 +71,7 @@ class Word():
         self.word_data['date_added']=self.date_added
     
 class Vocabulary():
+    __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']
     def __init__(self, filename):
         self.filename = filename
         self.load_success = None
@@ -233,6 +236,7 @@ def get_available_tests():
     return [key for key, item in test_functions.items() if item is not None and item != ""]
         
 class LanguageTest():
+    __slots__ = ['test_type','num_questions','answers','results','accuracy','vocabulary','immediate_correction','function','test_load_success','questions','solutions']
     def __init__(self, num_questions: int, test_type:str, vocabulary:Vocabulary,immediate_correction:bool=False):
         self.test_type = test_type
         self.num_questions = num_questions

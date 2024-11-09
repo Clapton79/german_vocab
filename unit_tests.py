@@ -100,13 +100,20 @@ callable_methods = [attr for attr in all_attributes if callable(getattr(current_
 print ("####################################################################")
 print ("#                   Library Unit Tests")
 print ("####################################################################")
-
+print ("")
+print (f"Vocabulary file: {vocabulary_file}")
+print ("")
+print ("")
 # Dynamically call each method
 for method_name in callable_methods:
     logger.info(f"Running unit test: {method_name.replace('_',' ').capitalize()}")  # Log the test name to the logger
     method = getattr(current_module, method_name)
-    test_result = method()  # Call the method
-    bcolor = bcolors.OKGREEN if test_result else bcolors.FAIL
-    print(f"Test: {method_name.replace('_',' ').capitalize().ljust(46, ' ')} Result: {bcolor}{test_result}{bcolors.ENDC}")
+    try:
+        test_result = method()  # Call the method
+    except: 
+        test_result = False
+        
+    bcolor,message = (bcolors.OKGREEN,'Pass') if test_result else (bcolors.FAIL,'Failed')
+    print(f"{method_name.replace('_',' ').capitalize().ljust(46, ' ')} Result: {bcolor}{message}{bcolors.ENDC}")
     
 os.environ['VOCAB_LOGLEVEL']= 'ERROR'
