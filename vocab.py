@@ -4,7 +4,7 @@ from os import getenv
 from applogger import logger
 from vfunctions import *
 from datetime import datetime
-
+import scraper
 
 class Word():
     __slots__ = ['word_class','word_data','word_text','date_added']
@@ -20,28 +20,83 @@ class Word():
         
     def items(self):
         return self.word_data
-        
+    
+    def get_definite_article(self):
+        if self.word_class != 'noun':
+            return None
+        else:
+            return scraper.get_definite_article(self.word_text)
+           
     def update(self):
         defaults = {'translation_language': 'hungarian'}
         
         questions = {
             'noun':{
                 'translations': {
-                    'question': "What are the possible translations noun you'd like to add? (specify in list format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in dict format: [list of translations]) ",
                     'type':  dict
                 },
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: ",
+                    'question': "Specify a list of tags you'd like to add: (topic, specialty)",
                     'type': list
                     },
                 'plural': {
                     'question': "What is the plural of this noun? ",
                     'type': str
+                }
+            },
+            'verb': {
+                'translations': {
+                    'question': "What are the translations you'd like to add? (specify in dict format: [list of translations]) ",
+                    'type':  dict
                 },
-                'definite_article':
-                {
-                    'question': "What is the definite article of this noun? ",
-                    'type': str
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: (haben|sein, sich, ) ",
+                    'type': list
+                    },
+                'prepositions':{
+                    'question': "Specify a list of examples with prepositions:",
+                    'type': list
+                    }
+                },
+            'adjective': {
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'type': list
+                    },
+                'translations': {
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'type':  dict
+                }
+            },
+            'conjunction': {
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'type': list
+                    },
+                'translations': {
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'type':  dict
+                }
+            },
+            'adverb': {
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'type': list
+                    },
+                'translations': {
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'type':  dict
+                }
+            },
+            'phrase': {
+                'tags':{
+                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'type': list
+                    },
+                'translations': {
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'type':  dict
                 }
             }
         }    
@@ -65,10 +120,14 @@ class Word():
             if not isinstance(data_obj, details['type']):
                 logger.error(f"Invalid response for {details['question']}. Expected {details['type'].__name__}")
                 return
-        
+            
             self.word_data[question]=data_obj
             
+            if self.word_class == 'noun':
+                self.definite_article=self.get_definite_article()
+            
         self.word_data['date_added']=self.date_added
+        
     
 class Vocabulary():
     __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']

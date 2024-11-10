@@ -76,3 +76,9 @@ conjunction:
   translations:
     hungarian:
     - szóval
+phrase:
+  class: phrase
+  date_added: '2024-11-04'
+  translations:
+    hungarian:
+    - szóval
