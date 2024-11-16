@@ -1,0 +1,33 @@
+tags: {}
+words:
+  Auto:
+    date_added: '2024-11-16'
+    plural: Autos
+    tags:
+    - core
+    - vehicle
+    - level_a1
+    translations:
+      hungarian:
+      - autó
+  Buch:
+    date_added: '2024-11-16'
+    plural: Bücher
+    tags:
+    - core
+    - house
+    - level_a1
+    translations:
+      hungarian:
+      - könyv
+  reden:
+    date_added: '2024-11-16'
+    prepositions:
+    - reden über
+    - reden mit jemandem
+    - reden von etwas
+    tags:
+    - haben
+    translations:
+      hungarian:
+      - beszélget

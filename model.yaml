@@ -57,9 +57,15 @@ verb:
   - jemand/etwas erzählt von etwas
   tags:
   - weak
-  topics:
+  - haben
+  - sein
+  - dativ
+  - akkusativ
+  - nominativ
+  - topic
+  - reflexive
   - core
-  - a1
+  - level_a1
   translations:
     hungarian:
     - elmond
@@ -82,3 +88,10 @@ phrase:
   translations:
     hungarian:
     - szóval
+preposition:
+  class: preposition
+  date_added: '2024-11-04'
+  pronoun_mode: 'dativ'
+  translations:
+    hungarian:
+    - a

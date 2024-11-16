@@ -1,0 +1,37 @@
+tags: {}
+words:
+  Termin:
+    date_added: '2024-11-16'
+    plural: Termine
+    tags:
+    - core
+    - level_a1
+    - calendar
+    translations:
+      hungarian:
+      - időpont
+  absagen:
+    date_added: '2024-11-16'
+    prepositions:
+    - ''
+    tags:
+    - level_a2
+    - calendar
+    - doctor
+    - official
+    translations:
+      hungarian:
+      - lemond
+  reden:
+    date_added: '2024-11-16'
+    prepositions:
+    - reden über
+    - reden von
+    tags:
+    - haben
+    - level_a1
+    - conversation
+    - sich
+    translations:
+      hungarian:
+      - beszél

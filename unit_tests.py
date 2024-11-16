@@ -70,17 +70,11 @@ def vocabulary_has_no_data_quality_issues() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
     return vocabulary.check_structure()
     
-# words = ['Hause','Gegend']
-# tags = ['land']
-# v.append_tags_to_words(words,tags)
-# # v.save()
- 
-#print(list(v.filter_by_class_and_tag('noun','land')))
-# print(list(v.filter_by_class_and_tag('noun')))
-#print(list(v.filter_by_topic_and_class('noun','building')))
+def vocabulary_returns_all_tags() -> bool:
+    vocabulary = v.Vocabulary(vocabulary_file)
+    tags = vocabulary.topics()
+    return len(tags) > 0
 
-#pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])
-#@@@@@@@@@@@ Test tester
 
 def language_test_loads():
     vc = v.Vocabulary(vocabulary_file)

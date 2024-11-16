@@ -1,13 +1,13 @@
 import fileoperations as fo
 import random 
-from os import getenv
+from os import getenv, path
 from applogger import logger
 from vfunctions import *
 from datetime import datetime
 import scraper
 
 class Word():
-    __slots__ = ['word_class','word_data','word_text','date_added']
+    __slots__ = ['word_class','word_data','word_text','date_added','definite_article']
     def __init__(self, word_class):
         self.word_class = word_class
         self.word_data = {}
@@ -26,14 +26,32 @@ class Word():
             return None
         else:
             return scraper.get_definite_article(self.word_text)
-           
+            
+    def update_from_dict(self, data_dict:dict): 
+        self.word_class = data_dict['word_class']   
+        self.word_text = data_dict['word_text']
+        self.word_data = data_dict['word_data']
+        self.date_added = format(datetime.now(), "%Y-%m-%d")    
+    
+    def convert_to_dict(self):
+        word_dict = {self.word_text: {'class': self.word_class}}
+        for key, value in self.word_data.items():
+            word_dict[self.word_data][key] = value
+        return word_dict
+        
+    def check_structure(self):
+        dict_to_check = self.convert_to_dict()
+        dict_model = get_vocabulary_model()
+        
+        return check_dict_structure(dict_to_check, dict_model,self.word_text)
+        
     def update(self):
         defaults = {'translation_language': 'hungarian'}
         
         questions = {
             'noun':{
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in dict format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add in the selected language? (specify in list format) ",
                     'type':  dict
                 },
                 'tags':{
@@ -131,22 +149,25 @@ class Word():
     
 class Vocabulary():
     __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']
-    def __init__(self, filename):
+    def __init__(self, filename:str=None):
         self.filename = filename
         self.load_success = None
         self.last_backupfile = None
-        vocab = fo.load_file(filename)
-        self.vocab, self.custom_data = vocab['words'],vocab['tags']
-        
-        if len(self.vocab.keys()) > 0:
-            self.load_success = True
+        if filename is not None and path.isfile(filename):
+            vocab = fo.load_file(filename)
+            self.vocab, self.custom_data = vocab['words'],vocab['tags']
+        else:
+            self.vocab = {}
+            self.custom_data = {}
             
-        logger.debug(f"Vocabulary initialized. Data load success: {self.load_success}")
+        if len(self.vocab.keys()) > 0 or filename is None:
+            self.load_success = True
 
     # file operations
     def save(self, filename:str = None):
         if filename is None:
             filename = self.filename
+        
             
         data = {"tags": self.custom_data, "words": self.vocab}
         fo.save_to_file(filename, data)
@@ -185,6 +206,7 @@ class Vocabulary():
         else:
             logger.error(f"The word {word.word_text} is not in this vocabulary.")
     
+    #collection operations
     def append_tags_to_words(self,words:list,tags:list):
         for word in words:
             if word in self.vocab.keys():
@@ -193,7 +215,7 @@ class Vocabulary():
                         self.vocab[word]['tags'].append(tag)
             else:
                 logger.error(f"The word {word} is not in this vocabulary.")
-          
+    
     def check_structure(self):
         try:
             model = get_vocabulary_model()
@@ -218,8 +240,20 @@ class Vocabulary():
         except Exception as e:
             logger.error(f"Error in checking vocabulary structure: {str(e)}")
             return False
-              
-        
+     
+    def topics(self):
+        topics = []
+        for word, value in self.vocab.items():
+            topics += value.tags
+                
+        return list(set(topics))
+                     
+def merge(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary):
+    for word, detail in source_vocabulary.vocab.items():
+        if word not in target_vocabulary.vocab.keys():
+            target_vocabulary.vocab[word] = detail    
+            
+    target_vocabulary.custom_data.append(source_vocabulary.custom_data)
 ##################################################################
 #  Data selector functions
 ##################################################################
