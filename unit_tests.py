@@ -9,7 +9,7 @@ os.environ['VOCAB_LOGLEVEL']= 'DEBUG'
 #################################################################
 # Variables needed to run the unit tests
 #################################################################
-vocabulary_file = "new_dict.yaml"
+vocabulary_file = "dict.yaml"
 #################################################################
 # Tests
 #################################################################
@@ -72,16 +72,25 @@ def vocabulary_has_no_data_quality_issues() -> bool:
     
 def vocabulary_returns_all_tags() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
-    tags = vocabulary.topics()
+    tags = vocabulary.tags()
     return len(tags) > 0
-
 
 def language_test_loads():
     vc = v.Vocabulary(vocabulary_file)
     t = v.LanguageTest(2,"imperative verb form",vc)
     return t.test_load_success
     
-
+def two_vocabularies_can_be_merged():
+    try:
+        vc = v.Vocabulary(vocabulary_file)
+        vc_word_count = len(vc.vocab.keys())
+        ve = v.Vocabulary("my_second_dict.yaml")
+        ve_word_count = len(ve.vocab.keys())
+        v.merge(vc, ve)
+        return True 
+    except: 
+        return False
+    
 #'verb conjugation', 'imperative verb form', 'noun translation', 'noun plural form', 'definite article', 'translation'
 #v.vocab['sodass']['date_added']=format(datetime.now(),"%Y-%m-%d")
 #pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])

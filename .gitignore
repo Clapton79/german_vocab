@@ -6,3 +6,4 @@ tasks
 /.vscode/**
 /*.swp
 *.log
+/vocabenv/**

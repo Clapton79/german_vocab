@@ -22,22 +22,32 @@ class Word():
         return self.word_data
     
     def get_definite_article(self):
-        if self.word_class != 'noun':
+        if self.word_class =='noun':
+            self.definite_article= scraper.get_definite_article(self.word_text)
+    
+    def get_conjugations(self):
+        if self.word_class!= 'verb':
             return None
         else:
-            return scraper.get_definite_article(self.word_text)
-            
+            self['word_data'] =  scraper.webquery_conjugation(self.word_text)      
+              
     def update_from_dict(self, data_dict:dict): 
-        self.word_class = data_dict['word_class']   
-        self.word_text = data_dict['word_text']
-        self.word_data = data_dict['word_data']
-        self.date_added = format(datetime.now(), "%Y-%m-%d")    
+        try:
+            self.word_class = data_dict['word_class']   
+            self.word_text = data_dict['word_text']
+            self.word_data = data_dict['word_data']
+            self.date_added = format(datetime.now(), "%Y-%m-%d")    
+        except Exception as e:
+            logger.error(f"Error updating Word data: {str(e)}")
+            return False
     
     def convert_to_dict(self):
-        word_dict = {self.word_text: {'class': self.word_class}}
-        for key, value in self.word_data.items():
-            word_dict[self.word_data][key] = value
-        return word_dict
+        try:
+            word_dict = {self.word_text: {'class': self.word_class, **self.word_data}}
+            return word_dict
+        except Exception as e:
+            logger.error(f"Error converting {self.word_text} to dict: {str(e)}")
+            return None
         
     def check_structure(self):
         dict_to_check = self.convert_to_dict()
@@ -51,7 +61,7 @@ class Word():
         questions = {
             'noun':{
                 'translations': {
-                    'question': "What are the translations you'd like to add in the selected language? (specify in list format) ",
+                    'question': "What are the translations you'd like to add in the selected language? (specify in list format)",
                     'type':  dict
                 },
                 'tags':{
@@ -65,11 +75,11 @@ class Word():
             },
             'verb': {
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in dict format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in dict format: [list of translations])",
                     'type':  dict
                 },
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: (haben|sein, sich, ) ",
+                    'question': "Specify a list of tags you'd like to add: (haben|sein, sich, )",
                     'type': list
                     },
                 'prepositions':{
@@ -79,41 +89,41 @@ class Word():
                 },
             'adjective': {
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'question': "Specify a list of tags you'd like to add: (topics)",
                     'type': list
                     },
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations])",
                     'type':  dict
                 }
             },
             'conjunction': {
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'question': "Specify a list of tags you'd like to add: (topics)",
                     'type': list
                     },
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations])",
                     'type':  dict
                 }
             },
             'adverb': {
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'question': "Specify a list of tags you'd like to add: (topics)",
                     'type': list
                     },
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations])",
                     'type':  dict
                 }
             },
             'phrase': {
                 'tags':{
-                    'question': "Specify a list of tags you'd like to add: (topics) ",
+                    'question': "Specify a list of tags you'd like to add: (topics)",
                     'type': list
                     },
                 'translations': {
-                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations]) ",
+                    'question': "What are the translations you'd like to add? (specify in list format: [list of translations])",
                     'type':  dict
                 }
             }
@@ -146,7 +156,6 @@ class Word():
             
         self.word_data['date_added']=self.date_added
         
-    
 class Vocabulary():
     __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']
     def __init__(self, filename:str=None):
@@ -177,10 +186,8 @@ class Vocabulary():
         
     # item operations
     def __getitem__(self, key):
-        if key in self.vocab:
-            return self.vocab[key]
-        else:
-            return None
+        return self.vocab.get(key)
+        
     def items(self):
         return self.vocab
     
@@ -241,19 +248,24 @@ class Vocabulary():
             logger.error(f"Error in checking vocabulary structure: {str(e)}")
             return False
      
-    def topics(self):
-        topics = []
-        for word, value in self.vocab.items():
-            topics += value.tags
-                
-        return list(set(topics))
+    def tags(self):
+        tags = []
+        for word,detail in self.vocab.items():
+            word_tags = detail.get('tags')
+            if word_tags is not None:
+                tags+=word_tags
+
+        return list(set(tags))
                      
-def merge(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary):
-    for word, detail in source_vocabulary.vocab.items():
-        if word not in target_vocabulary.vocab.keys():
-            target_vocabulary.vocab[word] = detail    
-            
-    target_vocabulary.custom_data.append(source_vocabulary.custom_data)
+def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary) -> None:
+    try:
+        for word, detail in source_vocabulary.vocab.items():
+            if word not in target_vocabulary.vocab.keys():
+                target_vocabulary.vocab[word] = detail    
+                
+        target_vocabulary.custom_data = source_vocabulary.custom_data
+    except Exception as e:
+            logger.error(f"Error in merging vocabularies: {str(e)}")
 ##################################################################
 #  Data selector functions
 ##################################################################

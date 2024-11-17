@@ -2,6 +2,16 @@ tags:
   level: a1
   topic: general
 words:
+  Ergebnis:
+    date_added: '2024-11-17'
+    plural: Ergebnisse
+    tags:
+    - vocabulary_Pg_01
+    - exam
+    - project
+    translations:
+      hungarian:
+      - eredmény
   Fall:
     class: noun
     date_added: '2024-09-04'
@@ -61,6 +71,16 @@ words:
       noun_translation: 50
       plural: 50
       translation: 50
+  Hörnchen:
+    date_added: '2024-11-17'
+    plural: ''
+    tags:
+    - vocabulary_Pg_01
+    - bakery
+    - food
+    translations:
+      hungarian:
+      - kifli
   brummig:
     class: adjective
     date_added: '2024-11-04'
@@ -132,6 +152,16 @@ words:
       hungarian:
       - addig is
     weights: null
+  sammeln:
+    date_added: '2024-11-17'
+    prepositions:
+    - ''
+    tags:
+    - haben
+    - vocabulary_Pg_01
+    translations:
+      hungarian:
+      - gyűjt
   sodass:
     class: conjunction
     date_added: '2024-11-04'
