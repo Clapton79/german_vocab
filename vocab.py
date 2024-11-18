@@ -196,7 +196,7 @@ class Vocabulary():
         
     def filter_by_class_and_tag(self, word_class:str, tag:str=None):
         for item, detail in self.vocab.items():
-            if detail['class'] == word_class:
+            if detail.get('class') == word_class:
                 if tag is None or tag in detail['tags']:
                     yield item
                 
@@ -257,13 +257,16 @@ class Vocabulary():
 
         return list(set(tags))
                      
-def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary) -> None:
+def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,overwrite:bool=False) -> None:
     try:
         for word, detail in source_vocabulary.vocab.items():
             if word not in target_vocabulary.vocab.keys():
-                target_vocabulary.vocab[word] = detail    
-                
-        target_vocabulary.custom_data = source_vocabulary.custom_data
+                target_vocabulary.vocab[word] = detail 
+            elif overwrite:
+                target_vocabulary.vocab[word] = detail
+        
+        for key, item in target_vocabulary.custom_data.items():     
+            target_vocabulary.custom_data[key] = item  
     except Exception as e:
             logger.error(f"Error in merging vocabularies: {str(e)}")
 ##################################################################
