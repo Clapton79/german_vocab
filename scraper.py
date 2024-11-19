@@ -1,25 +1,31 @@
 import requests 
-#import beautifulsoup4 as BeautifulSoup 
+import bs4  
+from urllib3.exceptions import InsecureRequestWarning
+from urllib3 import disable_warnings
+from applogger import logger
 
-def get_definite_article(noun:str=None):
+disable_warnings(InsecureRequestWarning)
+def get_definite_article(noun:str=None) -> str:
+    logger.debug(f'get_definite_article for {noun}')
     if noun is None:
         raise ValueError("Noun is required")
         
     articles = ['der','die','das']
     for article in articles:
-        response = requests.get(f"https://der-artikel.de/{article}/{noun}.html")
+        response = requests.get(f"https://der-artikel.de/{article}/{noun}.html", verify=False)
         if response.status_code == 200:
             return article
 
-    return None
+    return ''
     
 def webquery_conjugation(verb):
+    logger.debug(f'webquery_conjugation for {verb}')
     url = f"https://conjugator.reverso.net/conjugation-german-verb-{verb}.html"
     sess = requests.session()
     sess.headers.update({'User-Agent': 'EventParser PowerShell/7.3.4'})
     page = sess.get(url, verify=False)
-    soup = beautifulsoup(page.content, "html.parser")
-    output = {'conjugations':'', 'imperative':''}
+    soup = bs4.BeautifulSoup(page.content, "html.parser")
+    output = {'conjugations':{}, 'imperative':''}
     # imperative 
     imperative = soup.find_all('div', class_='blue-box-wrap alt-tense')
     for c in imperative:
@@ -35,14 +41,14 @@ def webquery_conjugation(verb):
         title = c['mobile-title']
         if title[0:9] == 'Indikativ' and title.split(' ')[1] in ['Präsens', 'Präteritum', 'Perfekt']:
             res_tense = c.p.string
-           
+            output['conjugations'][res_tense] = []
             for conjugation_block in c.find_all('ul', class_='wrap-verbs-listing'):
                 conj_data = []
                 for row in conjugation_block.children:
                     conj_data.append(' '.join(row.text.split(' ')[1:])) # remove the personal pronoun
                 
                 #output.append(','.join([verb,res_tense,res_tags,';'.join(conj_data)]))    
-                output[res_tense] = conj_data
+                output['conjugations'][res_tense] = conj_data
     return output
    
     

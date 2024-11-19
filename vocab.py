@@ -26,10 +26,14 @@ class Word():
             self.definite_article= scraper.get_definite_article(self.word_text)
     
     def get_conjugations(self):
+        logger.debug(f"Getting conjugations for {self.word_text}")
         if self.word_class!= 'verb':
             return None
         else:
-            self['word_data'] =  scraper.webquery_conjugation(self.word_text)      
+            webdata = scraper.webquery_conjugation(self.word_text)
+            logger.debug(webdata)
+            self.word_data['conjugations'] = webdata['conjugations']    
+            self.word_data['imperative'] = webdata['imperative']
               
     def update_from_dict(self, data_dict:dict): 
         try:
@@ -200,18 +204,17 @@ class Vocabulary():
                 if tag is None or tag in detail['tags']:
                     yield item
                 
-    def add(self,word:Word):
-        if word in self.vocab.keys():
+    def add(self,word:Word,overwrite:bool=False):
+        if word in self.vocab.keys() and overwrite == False:
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
+        self.remove(word)
         self.vocab[word.word_text] = word.word_data
         
     def remove(self,word:Word):
         if word in self.vocab.keys():
             del self.vocab[word.word_text]
-        else:
-            logger.error(f"The word {word.word_text} is not in this vocabulary.")
     
     #collection operations
     def append_tags_to_words(self,words:list,tags:list):

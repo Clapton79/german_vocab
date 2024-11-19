@@ -6,7 +6,7 @@
             "request": "launch",
             "program": "${file}",
             "justMyCode": true,
-            "python": "/Users/lpal/Documents/Deutsch/german_vocab/myenv/bin/python3"
+            "python": "/Users/lpal/Documents/Deutsch/german_vocab/vocabenv/bin/python3.10"
         }
     ]
 }
