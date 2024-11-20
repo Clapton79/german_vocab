@@ -89,6 +89,22 @@ def test_11_two_vocabularies_can_be_merged():
         return True 
     except: 
         return False
+        
+def test_12_vocabulary_word_can_be_updated():
+    try:
+        vc = v.Vocabulary(vocabulary_file)
+        #get a verb
+        verbs = list(vc.filter_by_class_and_tag('verb'))
+        verb = verbs[0]
+        w = vc.vocab[verb]
+        ww = v.Word('verb')
+        ww.update_from_dict({verb : w})
+        ww.word_data['tags']= ['tag1','tag2']
+        vc.add(ww,overwrite=True)
+        return True
+    except Exception as e:
+        print(str(e))
+        return False
     
 #'verb conjugation', 'imperative verb form', 'noun translation', 'noun plural form', 'definite article', 'translation'
 #v.vocab['sodass']['date_added']=format(datetime.now(),"%Y-%m-%d")
