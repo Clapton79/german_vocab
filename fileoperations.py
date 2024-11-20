@@ -19,12 +19,13 @@ def load_file (filename):
         return None
 
 def save_to_file(filename, contents:dict):
-    try:
-        with open(filename, 'w', encoding='utf-8') as f:
-            yaml.dump(contents, f, default_flow_style=False,allow_unicode=True)
-        logger.info(f"{filename} written")
-    except Exception as e:
-            logger.error(f"Error writing to file {filename}: {str(e)}")
+    # try:
+    with open(filename, 'w', encoding='utf-8') as f:
+        yaml.dump(contents, f, default_flow_style=False,allow_unicode=True)
+    
+    # except Exception as e:
+    #         #logger.error(f"Error writing to file {filename}: {str(e)}")
+    #         print(str(e))
         
 def backup_file(filename):
     try:

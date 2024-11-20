@@ -16,10 +16,10 @@ class Word():
         logger.debug(f"Initialized WordClass {self.word_class}")
     
     def __str__(self):
-        return self.word_text
+        return str(self.word_text)
         
     def items(self):
-        return self.word_data
+        return {self.word_text: {'class': self.word_class, **self.word_data}}
     
     def get_definite_article(self):
         if self.word_class =='noun':
@@ -37,9 +37,10 @@ class Word():
               
     def update_from_dict(self, data_dict:dict): 
         try:
-            self.word_class = data_dict['word_class']   
-            self.word_text = data_dict['word_text']
-            self.word_data = data_dict['word_data']
+            k = data_dict.keys()
+            self.word_class = data_dict[k[0]]['class']
+            self.word_text = k[0]
+            self.word_data = data_dict[k[0]]
             self.date_added = format(datetime.now(), "%Y-%m-%d")    
         except Exception as e:
             logger.error(f"Error updating Word data: {str(e)}")
@@ -181,7 +182,6 @@ class Vocabulary():
         if filename is None:
             filename = self.filename
         
-            
         data = {"tags": self.custom_data, "words": self.vocab}
         fo.save_to_file(filename, data)
         
@@ -209,7 +209,6 @@ class Vocabulary():
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
-        self.remove(word)
         self.vocab[word.word_text] = word.word_data
         
     def remove(self,word:Word):
@@ -223,8 +222,7 @@ class Vocabulary():
                 for tag in tags:
                     if tag not in self.vocab[word]['tags']:
                         self.vocab[word]['tags'].append(tag)
-            else:
-                logger.error(f"The word {word} is not in this vocabulary.")
+            
     
     def check_structure(self):
         try:

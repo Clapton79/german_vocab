@@ -16,6 +16,7 @@ if cnt == 0:
     exit(0)
 #create a new vocabulary
 v = Vocabulary('dict.yaml')
+print(f"Number of words in dict: {len(v.vocab.keys())}")
 word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
 
 for i in range(cnt):
@@ -28,9 +29,10 @@ for i in range(cnt):
         w.get_definite_article()
     elif word_class == 'verb':
         w.get_conjugations()
+        
     
-    print(w.convert_to_dict())
     v.add(w,overwrite=True)
+    v.save()
    
 
 
