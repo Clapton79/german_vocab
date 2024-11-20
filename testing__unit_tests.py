@@ -1,6 +1,6 @@
 import sys
 import vocab as v
-from vfunctions import bcolors
+from vocab_utilities import bcolors
 import os
 from applogger import logger
 

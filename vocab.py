@@ -1,10 +1,8 @@
-import fileoperations as fo
 import random 
-from os import getenv, path
+from os import path
 from applogger import logger
-from vfunctions import *
+from vocab_utilities import *
 from datetime import datetime
-import scraper
 
 class Word():
     __slots__ = ['word_class','word_data','word_text','date_added','definite_article']
@@ -23,14 +21,14 @@ class Word():
     
     def get_definite_article(self):
         if self.word_class =='noun':
-            self.definite_article= scraper.get_definite_article(self.word_text)
+            self.definite_article= get_definite_article(self.word_text)
     
     def get_conjugations(self):
         logger.debug(f"Getting conjugations for {self.word_text}")
         if self.word_class!= 'verb':
             return None
         else:
-            webdata = scraper.webquery_conjugation(self.word_text)
+            webdata = webquery_conjugation(self.word_text)
             logger.debug(webdata)
             self.word_data['conjugations'] = webdata['conjugations']    
             self.word_data['imperative'] = webdata['imperative']
@@ -168,7 +166,7 @@ class Vocabulary():
         self.load_success = None
         self.last_backupfile = None
         if filename is not None and path.isfile(filename):
-            vocab = fo.load_file(filename)
+            vocab = load_file(filename)
             self.vocab, self.custom_data = vocab['words'],vocab['tags']
         else:
             self.vocab = {}
@@ -183,10 +181,10 @@ class Vocabulary():
             filename = self.filename
         
         data = {"tags": self.custom_data, "words": self.vocab}
-        fo.save_to_file(filename, data)
+        save_to_file(filename, data)
         
     def backup(self):
-        self.last_backupfile = fo.backup_file(self.filename)
+        self.last_backupfile = backup_file(self.filename)
         
     # item operations
     def __getitem__(self, key):
