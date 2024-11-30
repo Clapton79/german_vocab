@@ -5,12 +5,15 @@ from vocab_utilities import *
 from datetime import datetime
 
 class Word():
-    __slots__ = ['word_class','word_data','word_text','date_added','definite_article']
+    __slots__ = ['word_class','word_data','word_text','date_added','definite_article','dq','dq_list']
     def __init__(self, word_class):
         self.word_class = word_class
+        self.definite_article = ""
         self.word_data = {}
         self.word_text = None
         self.date_added = format(datetime.now(), "%Y-%m-%d")
+        self.dq = ""
+        self.dq_list = []
         logger.debug(f"Initialized WordClass {self.word_class}")
     
     def __str__(self):
@@ -35,18 +38,19 @@ class Word():
               
     def update_from_dict(self, data_dict:dict): 
         try:
-            k = data_dict.keys()
+            k = list(data_dict.keys())
             self.word_class = data_dict[k[0]]['class']
             self.word_text = k[0]
             self.word_data = data_dict[k[0]]
             self.date_added = format(datetime.now(), "%Y-%m-%d")    
         except Exception as e:
+            print(str(e))
             logger.error(f"Error updating Word data: {str(e)}")
             return False
     
     def convert_to_dict(self):
         try:
-            word_dict = {self.word_text: {'class': self.word_class, **self.word_data}}
+            word_dict = {self.word_text: {'class': self.word_class, 'definite_article':self.definite_article,**self.word_data}}
             return word_dict
         except Exception as e:
             logger.error(f"Error converting {self.word_text} to dict: {str(e)}")
@@ -54,9 +58,10 @@ class Word():
         
     def check_structure(self):
         dict_to_check = self.convert_to_dict()
-        dict_model = get_vocabulary_model()
+        dict_to_check = dict_to_check[self.word_text]
+        dict_model = get_vocabulary_model(self.word_class)
         
-        return check_dict_structure(dict_to_check, dict_model,self.word_text)
+        self.dq, self.dq_list =  check_dict_structure(dict_to_check, dict_model,self.word_text,verbose=True)
         
     def update(self):
         defaults = {'translation_language': 'hungarian'}
