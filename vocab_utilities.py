@@ -171,9 +171,12 @@ def check_dict_structure(param_dict, model_dict,word,verbose:bool=False, recursi
     try:
         if not isinstance(param_dict, dict) :
             logger.info("Not a dictionary.")
-            return False
+            if verbose :
+                return False, ["Not a dictionary"]
+            else:
+                return False
         
-        result = False
+        result = True
         result_verbose = []
         
         for key in model_dict.keys():

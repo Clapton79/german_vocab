@@ -20,11 +20,14 @@ class Word():
         return str(self.word_text)
         
     def items(self):
-        return {self.word_text: {'class': self.word_class, **self.word_data}}
+        if self.word_class == "noun":
+            return {self.word_text: {'class': self.word_class,'definite_article':self.definite_article ,**self.word_data}}
+        else:
+            return {self.word_text: {'class': self.word_class, **self.word_data}}
     
-    def get_definite_article(self):
+    def get_word_definite_article(self):
         if self.word_class =='noun':
-            self.definite_article= get_definite_article(self.word_text)
+            self.definite_article = get_definite_article(self.word_text)
     
     def get_conjugations(self):
         logger.debug(f"Getting conjugations for {self.word_text}")
@@ -50,7 +53,11 @@ class Word():
     
     def convert_to_dict(self):
         try:
-            word_dict = {self.word_text: {'class': self.word_class, 'definite_article':self.definite_article,**self.word_data}}
+            if self.word_class == 'noun':
+                word_dict = {self.word_text: {'class': self.word_class, 'definite_article':self.definite_article,**self.word_data}}
+            else:
+                word_dict = {self.word_text: {'class': self.word_class,
+                                              **self.word_data}}
             return word_dict
         except Exception as e:
             logger.error(f"Error converting {self.word_text} to dict: {str(e)}")
@@ -212,7 +219,7 @@ class Vocabulary():
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
-        self.vocab[word.word_text] = word.word_data
+        self.vocab[word.word_text] = word.items()
         
     def remove(self,word:Word):
         if word in self.vocab.keys():

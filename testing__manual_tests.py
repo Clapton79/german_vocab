@@ -1,12 +1,32 @@
 import vocab as v
 
-w = v.Word('noun')
+voc = v.Vocabulary()
+
 word_data = {'Ergebnis': {'class': 'noun', 'date_added': '2024-11-17',
                           'plural': 'Ergebnisse', 
-                           'tags': ['vocabulary_Pg_01', 'exam', 'project'], 'translations': {'hungarian': ['eredmény']}}}
-                          
-w.update_from_dict(word_data)
-w.get_definite_article()
-print(w.convert_to_dict())
-w.check_structure()
-print(w.dq, w.dq_list)
+                           'tags': ['vocabulary_Pg_01', 'exam', 'project'], 'translations': {'hungarian': ['eredmény']}},
+            'lesen' : {'class': 'verb', 'date_added': '2024-12-01',
+                        'tags': ['vocabulary_Pg_01', 'core', 'life'],
+                        'translations': {'hungarian': ['olvas']},
+                        'imperative': ['lies','lesen','liest','lesen'],
+                        'prepositions': [],
+                        }
+            }
+            
+for item in word_data.keys():
+    print(item)
+    w = v.Word(word_data[item]['class'])
+    w.update_from_dict({item:word_data[item]})
+    if w.word_class=='noun':
+        w.get_word_definite_article()
+    elif w.word_class=='verb':
+        w.get_conjugations()
+    
+    print(w.convert_to_dict())
+    w.check_structure()
+    print(w.dq, w.dq_list)
+    
+    voc.add(w, overwrite=True)
+    
+print(voc.vocab['Ergebnis'])
+print("vocabulary check result: ", voc.check_structure())
