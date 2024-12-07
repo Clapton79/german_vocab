@@ -228,11 +228,21 @@ class Vocabulary():
         return (str(self.vocab))
         
     def filter_by_class_and_tag(self, word_class:str, tag:str=None):
-        for item, detail in self.vocab.items():
-            if detail.get('class') == word_class:
-                if tag is None or tag in detail['tags']:
-                    yield item
-                
+            for item, detail in self.vocab.items():
+                if detail.get('class') == word_class:
+                    if tag is None or tag in detail['tags']:
+                        yield item
+          
+    def clone(self, word_class_filter:str=None, tag_filter:str=None):
+        """Creates a new instance of the vocabulary based on the given word_class and tag_filter"""
+        new_vocab = Vocabulary()
+        new_vocab.vocab = {k: v for k, v in self.vocab.items() if word_class_filter is None or v.get('class') == word_class_filter}
+        new_vocab.custom_data = self.custom_data
+        if tag_filter is not None:
+            new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if tag_filter in v.get('tags', [])}
+        return new_vocab
+        
+                  
     def add(self,word:Word,overwrite:bool=False):
         if word in self.vocab.keys() and overwrite == False:
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
