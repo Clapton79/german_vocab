@@ -1,7 +1,7 @@
 from vocab import *
 from os import environ
 
-environ['VOCAB_LOGLEVEL'] = 'DEBUG'
+environ['VOCAB_LOGLEVEL'] = 'ERROR'
 
 cnt = input('How many words would you like to register?: ')
 cnt = 1 if cnt == '' else cnt 
@@ -15,7 +15,7 @@ except:
 if cnt == 0:
     exit(0)
 #create a new vocabulary
-v = Vocabulary('dict.yaml')
+v = Vocabulary()
 print(f"Number of words in dict: {len(v.vocab.keys())}")
 word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
 
@@ -32,7 +32,7 @@ for i in range(cnt):
         
     
     v.add(w,overwrite=True)
-    v.save()
+    v.save('new_dict.yaml')
    
 
 

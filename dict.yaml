@@ -161,7 +161,7 @@ words:
     translations:
       hungarian:
       - addig is
-    weights: null
+    weights:
   loben:
     date_added: '2024-11-17'
     prepositions:

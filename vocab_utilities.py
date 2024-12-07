@@ -1,3 +1,4 @@
+from ruamel.yaml import YAML as yaml2
 import yaml
 from os import path
 import zipfile36 as zipfile
@@ -8,6 +9,7 @@ import requests
 import bs4
 from urllib3.exceptions import InsecureRequestWarning
 from urllib3 import disable_warnings
+import json
 
 disable_warnings(InsecureRequestWarning)
 
@@ -38,10 +40,10 @@ def get_conjugation(verb):
     # imperative
     imperative = soup.find_all('div', class_='blue-box-wrap alt-tense')
     for c in imperative:
-        title = c['mobile-title']
+        title = str(c['mobile-title'])
         if title == 'Imperativ Präsens':
             verb_imperative = c.find('i', class_='verbtxt')
-            output['imperative'] = verb_imperative.text
+            output['imperative'] = str(verb_imperative.text)
 
     # conjugation
     conjugation = soup.find_all('div', class_='blue-box-wrap')
@@ -49,40 +51,55 @@ def get_conjugation(verb):
     for c in conjugation:
         title = c['mobile-title']
         if title[0:9] == 'Indikativ' and title.split(' ')[1] in ['Präsens', 'Präteritum', 'Perfekt']:
-            res_tense = c.p.string
+            res_tense = str(c.p.string)
             output['conjugations'][res_tense] = []
             for conjugation_block in c.find_all('ul', class_='wrap-verbs-listing'):
                 conj_data = []
                 for row in conjugation_block.children:
                     # remove the personal pronoun
-                    conj_data.append(' '.join(row.text.split(' ')[1:]))
+                    conj_data.append(str(' '.join(row.text.split(' ')[1:])))
 
                 # output.append(','.join([verb,res_tense,res_tags,';'.join(conj_data)]))
                 output['conjugations'][res_tense] = conj_data
     return output
-    
 def load_file(filename):
     try:
         vocab = {}
 
         # read the file
         with open(filename, 'r') as f:
-            vocab = yaml.safe_load(f)
+            if filename.endswith('.yaml'):
+                vocab = yaml.safe_load(f)
+            elif filename.endswith('.json'):
+                vocab = json.load(f)
+            else:
+                raise ValueError(f"Unsupported file format: {filename.split('.')[-1]}")
 
         return vocab
     except Exception as e:
         logger.error(f"Error loading file {filename}: {str(e)}")
+        print(f"Error loading file {filename}: {str(e)}")
         return None
 
+def save_to_file(filename, contents: dict, format:str='yaml',safe:bool=False):
+    try:
+        logger.info(f"Saving to file {filename}, format: {format}, safe: {safe}")
+        with open(filename, 'w', encoding='utf-8') as f:
+            if format == 'json':
+                json.dump(contents, f, indent=4, ensure_ascii=False)
+            elif format == 'yaml' and safe is False:
+                yaml.dump(contents, f, default_flow_style=False, allow_unicode=True)
+            elif format == 'yaml' and safe is True:
+                yaml.safe_dump_all(contents, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            elif format =='ruamel':
+                yaml=yaml2()
+                yaml.dump(contents,f)
+            else:
+                raise ValueError("Unsupported file format")
 
-def save_to_file(filename, contents: dict):
-    # try:
-    with open(filename, 'w', encoding='utf-8') as f:
-        yaml.dump(contents, f, default_flow_style=False, allow_unicode=True)
-
-    # except Exception as e:
-    #         #logger.error(f"Error writing to file {filename}: {str(e)}")
-    #         print(str(e))
+    except Exception as e:
+            logger.error(f"Error writing to file {filename}: {str(e)}")
+            print(str(e))
 
 
 def backup_file(filename):
@@ -98,7 +115,6 @@ def backup_file(filename):
         logger.error(f"Error backing up file {filename}: {str(e)}")
         return None
 
-
 def zip_files(file_paths, zip_name):
     try:
         with zipfile.ZipFile(zip_name, 'w') as zipf:
@@ -107,7 +123,6 @@ def zip_files(file_paths, zip_name):
         logger.info(f"Files zipped into {zip_name}")
     except Exception as e:
         logger.error(f"Error zipping files: {str(e)}")
-
 
 def unzip_file(zip_name, extract_to):
     try:

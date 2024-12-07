@@ -25,7 +25,7 @@ class Word():
         else:
             return {self.word_text: {'class': self.word_class, **self.word_data}}
     
-    def get_word_definite_article(self):
+    def get_definite_article(self):
         if self.word_class =='noun':
             self.definite_article = get_definite_article(self.word_text)
     
@@ -178,26 +178,41 @@ class Word():
 class Vocabulary():
     __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']
     def __init__(self, filename:str=None):
-        self.filename = filename
-        self.load_success = None
-        self.last_backupfile = None
-        if filename is not None and path.isfile(filename):
-            vocab = load_file(filename)
-            self.vocab, self.custom_data = vocab['words'],vocab['tags']
-        else:
+        try:
+            self.filename = filename
+            self.load_success = None
+            self.last_backupfile = None
             self.vocab = {}
             self.custom_data = {}
             
-        if len(self.vocab.keys()) > 0 or filename is None:
-            self.load_success = True
+            if filename is not None and path.isfile(filename):
+                vocab = load_file(filename)
+                if vocab is None or len(vocab) == 0:
+                    logger.error("No vocabulary data found in file.")
+                    self.load_success = False
+                    
+                else:
+                    self.vocab, self.custom_data = vocab.get('words'),vocab.get('tags')
+                    self.load_success = True
+        
+        except Exception as e:
+            logger.error(f"Error initializing vocabulary: {str(e)}")
 
     # file operations
-    def save(self, filename:str = None):
+    def save(self, filename:str = None,fileformat:str = None):
         if filename is None:
             filename = self.filename
-        
-        data = {"tags": self.custom_data, "words": self.vocab}
-        save_to_file(filename, data)
+        try:
+            safe = False
+            if fileformat is None:
+                fileformat = 'json' if filename.endswith('.json') else 'ruamel'
+
+            
+            data = {"tags": self.custom_data, "words": self.vocab}
+            save_to_file(filename, data, fileformat,safe=safe)
+            
+        except Exception as e:
+            logger.error(f"Could not save vocabulary to file: {str(e)}")
         
     def backup(self):
         self.last_backupfile = backup_file(self.filename)
@@ -228,7 +243,6 @@ class Vocabulary():
     def remove(self,word:Word):
         if word in self.vocab.keys():
             del self.vocab[word.word_text]
-    
     #collection operations
     def append_tags_to_words(self,words:list,tags:list):
         for word in words:
@@ -236,8 +250,6 @@ class Vocabulary():
                 for tag in tags:
                     if tag not in self.vocab[word]['tags']:
                         self.vocab[word]['tags'].append(tag)
-            
-    
     def check_structure(self):
         try:
             model = get_vocabulary_model()
@@ -262,7 +274,6 @@ class Vocabulary():
         except Exception as e:
             logger.error(f"Error in checking vocabulary structure: {str(e)}")
             return False
-     
     def tags(self):
         tags = []
         for word,detail in self.vocab.items():
@@ -275,10 +286,8 @@ class Vocabulary():
 def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,overwrite:bool=False) -> None:
     try:
         for word, detail in source_vocabulary.vocab.items():
-            if word not in target_vocabulary.vocab.keys():
+            if word not in target_vocabulary.vocab.keys() or overwrite:
                 target_vocabulary.vocab[word] = detail 
-            elif overwrite:
-                target_vocabulary.vocab[word] = detail
         
         for key, item in target_vocabulary.custom_data.items():     
             target_vocabulary.custom_data[key] = item  

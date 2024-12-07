@@ -1,10 +1,8 @@
 import sys
 import vocab as v
-from vocab_utilities import bcolors
+from vocab_utilities import bcolors, get_conjugation, get_definite_article
 import os
-from applogger import logger
-import scraper as sc
-
+from applogger import setup_logger
 
 #################################################################
 # Variables needed to run the unit tests
@@ -66,10 +64,6 @@ def test_07_vocabular_backs_up() -> bool:
     except:
         return False
     
-# def test_08_vocabulary_has_no_data_quality_issues() -> bool:
-#     vocabulary = v.Vocabulary(vocabulary_file)
-#     return vocabulary.check_structure()
-    
 def test_09_vocabulary_returns_all_tags() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
     tags = vocabulary.tags()
@@ -109,7 +103,7 @@ def test_12_vocabulary_word_can_be_updated():
 def test_13_webquery_returns_definite_article():
     try:
         word = 'Auto'
-        definite_article = sc.get_definite_article(word)
+        definite_article = get_definite_article(word)
         if definite_article == 'das':
             return True
         else:
@@ -120,7 +114,7 @@ def test_13_webquery_returns_definite_article():
 def test_14_webquery_returns_conjugations():
     try:
         word = 'erzählen'
-        conjugations = sc.get_conjugation(word)
+        conjugations = get_conjugation(word)
         if len(conjugations) > 0:
             return True
         else:
@@ -128,12 +122,15 @@ def test_14_webquery_returns_conjugations():
     except Exception as e:
         return False
 
-os.environ['VOCAB_LOGLEVEL']= 'DEBUG'
+os.environ['VOCAB_LOGLEVEL']= 'ERROR'
+os.environ['VOCAB_LOG_TO_SCREEN'] = "False"
+logger=setup_logger()
+
 
 
 current_module = sys.modules[__name__]
 all_attributes = dir(current_module)
-callable_methods = [attr for attr in all_attributes if callable(getattr(current_module, attr)) and not attr.startswith("__") and attr != 'setup_logger' and not attr.startswith("bcolor")]
+callable_methods = [attr for attr in all_attributes if callable(getattr(current_module, attr)) and attr.startswith('test')]
 
 print ("####################################################################")
 print ("#                   Library Unit Tests")
@@ -154,4 +151,4 @@ for method_name in callable_methods:
     bcolor,message = (bcolors.OKGREEN,'Pass') if test_result else (bcolors.FAIL,'Failed')
     print(f"{method_name.replace('_',' ').capitalize().ljust(46, ' ')} Result: {bcolor}{message}{bcolors.ENDC}")
     
-os.environ['VOCAB_LOGLEVEL']= 'ERROR'
+
