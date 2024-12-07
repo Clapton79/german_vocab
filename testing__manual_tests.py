@@ -22,11 +22,7 @@ for item in word_data.keys():
     elif w.word_class=='verb':
         w.get_conjugations()
     
-    print(w.convert_to_dict())
     w.check_structure()
-    print(w.dq, w.dq_list)
-    
     voc.add(w, overwrite=True)
+    print("vocabulary check result: ", voc.check_structure())
     
-print(voc.vocab['Ergebnis'])
-print("vocabulary check result: ", voc.check_structure())

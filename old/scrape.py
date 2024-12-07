@@ -9,7 +9,7 @@ def imperative_format(word: str) -> str:
     return f"{word[0].upper()}{word[1:].lower().replace(' ','')}!"
     
 
-def webquery_conjugation(verb):
+def get_conjugation(verb):
     url = f"https://conjugator.reverso.net/conjugation-german-verb-{verb}.html"
     sess = requests.session()
     sess.headers.update({'User-Agent': 'EventParser PowerShell/7.3.4'})

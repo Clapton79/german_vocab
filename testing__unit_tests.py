@@ -3,6 +3,7 @@ import vocab as v
 from vocab_utilities import bcolors
 import os
 from applogger import logger
+import scraper as sc
 
 
 #################################################################
@@ -103,13 +104,29 @@ def test_12_vocabulary_word_can_be_updated():
         vc.add(ww,overwrite=True)
         return True
     except Exception as e:
-        print(str(e))
         return False
     
-#'verb conjugation', 'imperative verb form', 'noun translation', 'noun plural form', 'definite article', 'translation'
-#v.vocab['sodass']['date_added']=format(datetime.now(),"%Y-%m-%d")
-#pprint([(x,dtl['date_added']) for x, dtl in v.vocab.items()])
-#v.save_as()
+def test_13_webquery_returns_definite_article():
+    try:
+        word = 'Auto'
+        definite_article = sc.get_definite_article(word)
+        if definite_article == 'das':
+            return True
+        else:
+            return False
+    except Exception as e:
+        return False
+
+def test_14_webquery_returns_conjugations():
+    try:
+        word = 'erzählen'
+        conjugations = sc.get_conjugation(word)
+        if len(conjugations) > 0:
+            return True
+        else:
+            return False
+    except Exception as e:
+        return False
 
 os.environ['VOCAB_LOGLEVEL']= 'DEBUG'
 

@@ -1,3 +1,3 @@
 from verbs import imperative_test
-#print(webquery_conjugation('vergessen'))
+#print(get_conjugation('vergessen'))
 imperative_test(3)

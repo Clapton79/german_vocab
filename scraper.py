@@ -18,8 +18,8 @@ def get_definite_article(noun:str=None) -> str:
 
     return ''
     
-def webquery_conjugation(verb):
-    logger.debug(f'webquery_conjugation for {verb}')
+def get_conjugation(verb):
+    logger.debug(f'get_conjugation for {verb}')
     url = f"https://conjugator.reverso.net/conjugation-german-verb-{verb}.html"
     sess = requests.session()
     sess.headers.update({'User-Agent': 'EventParser PowerShell/7.3.4'})

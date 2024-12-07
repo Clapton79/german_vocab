@@ -34,7 +34,7 @@ class Word():
         if self.word_class!= 'verb':
             return None
         else:
-            webdata = webquery_conjugation(self.word_text)
+            webdata = get_conjugation(self.word_text)
             logger.debug(webdata)
             self.word_data['conjugations'] = webdata['conjugations']    
             self.word_data['imperative'] = webdata['imperative']
@@ -51,21 +51,25 @@ class Word():
             logger.error(f"Error updating Word data: {str(e)}")
             return False
     
-    def convert_to_dict(self):
+    def convert_to_dict(self,no_key:bool=False):
         try:
-            if self.word_class == 'noun':
+            if self.word_class == 'noun' and not no_key:
                 word_dict = {self.word_text: {'class': self.word_class, 'definite_article':self.definite_article,**self.word_data}}
-            else:
+            elif self.word_class == 'noun' and no_key:
+                word_dict = {'class': self.word_class, 'definite_article':self.definite_article,**self.word_data}
+            elif not no_key:
                 word_dict = {self.word_text: {'class': self.word_class,
                                               **self.word_data}}
+            else:
+                word_dict = {'class': self.word_class,**self.word_data}
             return word_dict
+            
         except Exception as e:
             logger.error(f"Error converting {self.word_text} to dict: {str(e)}")
             return None
         
     def check_structure(self):
-        dict_to_check = self.convert_to_dict()
-        dict_to_check = dict_to_check[self.word_text]
+        dict_to_check = self.convert_to_dict(no_key=True)
         dict_model = get_vocabulary_model(self.word_class)
         
         self.dq, self.dq_list =  check_dict_structure(dict_to_check, dict_model,self.word_text,verbose=True)
@@ -219,7 +223,7 @@ class Vocabulary():
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
-        self.vocab[word.word_text] = word.items()
+        self.vocab[word.word_text] = word.convert_to_dict(no_key=True)
         
     def remove(self,word:Word):
         if word in self.vocab.keys():
@@ -241,7 +245,7 @@ class Vocabulary():
             for word in self.vocab.keys():
                 logger.debug(f"Checking {word} data quality.")
                 dict_to_check = dict(self.vocab[word])
-                dict_model = dict(model[self.vocab[word].get('class')])
+                dict_model = dict(model[self.vocab[word]['class']])
                 result = check_dict_structure(dict_to_check, dict_model,word)
                 results.append(result)
             
