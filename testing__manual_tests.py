@@ -15,12 +15,6 @@ word_data = {'Ergebnis': {'class': 'noun', 'date_added': '2024-11-17',
                         'prepositions': [],
                         }
             }
-# word_data = {'lesen': {'class': 'verb', 'date_added': '2024-12-01',
-#                                                'tags': ['vocabulary_Pg_01', 'core', 'life'],
-#                                                'translations': {'hungarian': ['olvas']},
-#                                                'imperative': ['lies','lesen','liest','lesen'],
-#                                                'prepositions': [],
-#                                                }}
                                             
 for item in word_data.keys():
     w = v.Word(word_data[item]['class'])
