@@ -14,11 +14,11 @@ except:
 
 if cnt == 0:
     exit(0)
-#create a new vocabulary
-v = Vocabulary()
-print(f"Number of words in dict: {len(v.vocab.keys())}")
-word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
 
+vv = Vocabulary('dict.yaml')    # open the main vocabulary file
+v = Vocabulary()  # create a new vocabulary
+word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
+print(f"Used tags: {vv.tags()}")
 for i in range(cnt):
     
     word_class_selection = input("Select word class: " + str([': '.join ([str(i+1),x]) for i,x in enumerate(word_classes)]))
@@ -36,7 +36,7 @@ for i in range(cnt):
     v.save('new_dict.yaml')
     
 # open the main vocabulary file
-vv = Vocabulary('dict.yaml')
+
 # merge the vocabulary into the main vocabulary file
 merge_vocabulary(v,vv,overwrite=True)
 

@@ -453,40 +453,43 @@ class LanguageTest():
             logger.error(f"Error saving results to file: {filename} ({str(e)})")
      
     def show_results(self):
-        
-        max_length_q = max([len(x) for x in self.questions])+1
-        max_length_a = max([len(x) for x in self.answers])+1
-        max_length_s = max([len(x) for x in self.solutions])+1
-        print("==========================================")
-        print(f"{'Test type: '.ljust(15,' ')}{self.test_type.title()}")
-        print(f"{'Questions: '.ljust(15,' ')}{self.num_questions}")
-        print(f"{'Accuracy: '.ljust(15,' ')}{self.accuracy}%")
-        print("==========================================")
-        print(f"{'Question'.ljust(max_length_q+3,' ')}{'Solution'.ljust(max_length_s,' ')}{'Answer'.ljust(max_length_a,' ')}")
-        print("==========================================")
-        
-        formats = [bcolors.OKGREEN if x else bcolors.FAIL for x in self.results]
-        
-        
-        for i, question in enumerate(self.questions):
+        try:
+            questions_display = [f"{i+1}. {x}" for i,x in enumerate(self.questions)]
+            max_length_q = max([len(x) for x in questions_display])+1
+            max_length_a = max([len(x) for x in self.answers])+1
+            max_length_s = max([len(x) for x in self.solutions])+1
+            print("==========================================")
+            print(f"{'Test type: '.ljust(15,' ')}{self.test_type.title()}")
+            print(f"{'Questions: '.ljust(15,' ')}{self.num_questions}")
+            print(f"{'Accuracy: '.ljust(15,' ')}{self.accuracy}%")
+            print("==========================================")
+            print(f"{'Question'.ljust(max_length_q,' ')}{'Solution'.ljust(max_length_s,' ')}{'Answer'.ljust(max_length_a,' ')}")
+            print("==========================================")
             
-            solution_type = type(self.solutions[i])
-            answer_type = type(self.answers[i])
+            formats = [bcolors.OKGREEN if x else bcolors.FAIL for x in self.results]
             
-            # default case: str 
-            if solution_type == str and solution_type == answer_type:
-                print(f"{i+1}. {question.ljust(max_length_q,' ')}{bcolors.OKGREEN}{self.solutions[i].ljust(max_length_s,' ')}{bcolors.ENDC}{formats[i]}{self.answers[i]}{bcolors.ENDC}")
-            
-            # extra case: matching lists
-            elif solution_type == list and solution_type == answer_type:
-                print(f"{i+1}. {question.ljust(10,' ')}")
-                compare_two_lists(self.solutions[i], self.answers[i], no_header=True, padding_default=16)
+            for i, question in enumerate(questions_display):
+
+                solution_type = type(self.solutions[i])
+                answer_type = type(self.answers[i])
                 
-            else:
-                print(f"{i+1}. {question.ljust(10,' ')}")
-                for solution in self.solutions[i]:
-                    print (f"{''.ljust(max_length_s, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
+                # default case: str 
+                if solution_type == str and solution_type == answer_type:
+                    print(f"{question.ljust(max_length_q,' ')}{bcolors.OKGREEN}{self.solutions[i].ljust(max_length_s,' ')}{bcolors.ENDC}{formats[i]}{self.answers[i]}{bcolors.ENDC}")
                 
+                # extra case: matching lists
+                elif solution_type == list and solution_type == answer_type:
+                    print(f"{i+1}. {question.ljust(max_length_q,' ')}")
+                    compare_two_lists(self.solutions[i], self.answers[i], no_header=True, padding_default=16)
+                    
+                else:
+                    print(f"{i+1}. {question.ljust(10,' ')}")
+                    for solution in self.solutions[i]:
+                        print (f"{''.ljust(max_length_s, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
+        except Exception as e:
+            logger.error(f"Failed to show results due to an internal error: {str(e)}")
+            print(str(e))
+                      
     def run(self):
         logger.debug("Running test")
         try:
@@ -495,6 +498,7 @@ class LanguageTest():
 
             for i, question in enumerate(self.questions):
                 answer = self.__get_answer(i, question)
+                answer = answer if len(answer) > 0 else "-"
                 self.answers.append(answer)
                 self.__check_immediate_correction(i, answer)
 

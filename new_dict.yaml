@@ -1,86 +1,136 @@
 tags: {}
 words:
-  Paket:
-    class: noun
-    definite_article: das
-    translations:
-      hungarian:
-      - csomag
-    tags:
-    - _speakEasy_page004
-    - post
-    plural: Pakete
-    date_added: '2024-12-08'
-  Bund:
-    class: noun
-    definite_article: das
-    translations:
-      hungarian:
-      - csokor
-    tags:
-    - _speakEasy_page004
-    - market
-    - shopping
-    - post
-    plural: Bünde
-    date_added: '2024-12-08'
-  Flasche:
-    class: noun
-    definite_article: die
-    translations:
-      hungarian:
-      - üveg
-    tags:
-    - _speakEasy_page004
-    - shopping
-    - market
-    - drink
-    plural: Flaschen
-    date_added: '2024-12-08'
-  Stück:
-    class: noun
-    definite_article: das
-    translations:
-      hungarian:
-      - darab
-    tags:
-    - _speakEasy_page004
-    - market
-    - shopping
-    - unit
-    plural: Stücke
-    date_added: '2024-12-08'
-  vergleichen:
+  schießen:
     class: verb
     translations:
       hungarian:
-      - összehasonlít
+      - rúg
     tags:
     - _speakEasy_page004
-    - compare
+    - sport
+    - football
     prepositions:
     - ''
     date_added: '2024-12-08'
     conjugations:
       Präsens:
-      - vergleiche
-      - vergleichst
-      - vergleicht
-      - vergleichen
-      - vergleicht
-      - vergleichen
+      - schieße
+      - schießt
+      - schießt
+      - schießen
+      - schießt
+      - schießen
       Präteritum:
-      - verglich
-      - verglichst
-      - verglich
-      - verglichen
-      - verglicht
-      - verglichen
+      - schoss
+      - schossest
+      - schoss
+      - schossen
+      - schosst
+      - schossen
+      - schoß
+      - schosst
+      - schoß
+      - schossen
+      - schoßt
+      - schossen
       Perfekt:
-      - habe verglichen
-      - hast verglichen
-      - hat verglichen
-      - haben verglichen
-      - habt verglichen
-      - haben verglichen
-    imperative: vergleiche
+      - bin geschossen
+      - bist geschossen
+      - ist geschossen
+      - sind geschossen
+      - seid geschossen
+      - sind geschossen
+    imperative: schieße
+  mager:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - zsírszegény
+    date_added: '2024-12-08'
+  Scheibe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szelet
+      - lemez
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    plural: Scheiben
+    date_added: '2024-12-08'
+  reif:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - fruits
+    - food
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - érett
+    date_added: '2024-12-08'
+  unreif:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - fruits
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - éretlen
+    date_added: '2024-12-08'
+  dazu kommt:
+    class: phrase
+    tags:
+    - _speakEasy_page004
+    - shopping
+    translations:
+      hungarian:
+      - ezen felül
+    date_added: '2024-12-08'
+  schmecken:
+    class: verb
+    translations:
+      hungarian:
+      - ízlik
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    prepositions:
+    - ''
+    date_added: '2024-12-08'
+    conjugations:
+      Präsens:
+      - schmecke
+      - schmeckst
+      - schmeckt
+      - schmecken
+      - schmeckt
+      - schmecken
+      Präteritum:
+      - schmeckte
+      - schmecktest
+      - schmeckte
+      - schmeckten
+      - schmecktet
+      - schmeckten
+      Perfekt:
+      - habe geschmeckt
+      - hast geschmeckt
+      - hat geschmeckt
+      - haben geschmeckt
+      - habt geschmeckt
+      - haben geschmeckt
+    imperative: schmecke

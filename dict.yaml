@@ -651,3 +651,218 @@ words:
       - habt verglichen
       - haben verglichen
     imperative: vergleiche
+  selten:
+    class: adverb
+    tags:
+    - _speakEasy_page004
+    - time
+    - frequency
+    translations:
+      hungarian:
+      - ritkán
+    date_added: '2024-12-08'
+  Markt:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - piac
+    tags:
+    - _speakEasy_page004
+    - market
+    - shopping
+    plural: Märkte
+    date_added: '2024-12-08'
+  einfrieren:
+    class: verb
+    translations:
+      hungarian:
+      - lefagyaszt
+    tags:
+    - _speakEasy_page004
+    - kitchen
+    - food
+    - cooking
+    prepositions:
+    - ''
+    date_added: '2024-12-08'
+    conjugations:
+      Präsens:
+      - friere ein
+      - frierst ein
+      - friert ein
+      - frieren ein
+      - friert ein
+      - frieren ein
+      Präteritum:
+      - fror ein
+      - frorst ein
+      - fror ein
+      - froren ein
+      - frort ein
+      - froren ein
+      Perfekt:
+      - bin eingefroren
+      - bist eingefroren
+      - ist eingefroren
+      - sind eingefroren
+      - seid eingefroren
+      - sind eingefroren
+    imperative: friere
+  eingefroren:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - kitchen
+    - food
+    - cooking
+    translations:
+      hungarian:
+      - lefagyasztott
+    date_added: '2024-12-08'
+  Tor:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - gól
+    tags:
+    - _speakEasy_page004
+    - sport
+    - football
+    plural: Tore
+    date_added: '2024-12-08'
+  schießen:
+    class: verb
+    translations:
+      hungarian:
+      - rúg
+    tags:
+    - _speakEasy_page004
+    - sport
+    - football
+    prepositions:
+    - ''
+    date_added: '2024-12-08'
+    conjugations:
+      Präsens:
+      - schieße
+      - schießt
+      - schießt
+      - schießen
+      - schießt
+      - schießen
+      Präteritum:
+      - schoss
+      - schossest
+      - schoss
+      - schossen
+      - schosst
+      - schossen
+      - schoß
+      - schosst
+      - schoß
+      - schossen
+      - schoßt
+      - schossen
+      Perfekt:
+      - bin geschossen
+      - bist geschossen
+      - ist geschossen
+      - sind geschossen
+      - seid geschossen
+      - sind geschossen
+    imperative: schieße
+  mager:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - zsírszegény
+    date_added: '2024-12-08'
+  Scheibe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szelet
+      - lemez
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    plural: Scheiben
+    date_added: '2024-12-08'
+  reif:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - fruits
+    - food
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - érett
+    date_added: '2024-12-08'
+  unreif:
+    class: adjective
+    tags:
+    - _speakEasy_page004
+    - fruits
+    - kitchen
+    - cooking
+    translations:
+      hungarian:
+      - éretlen
+    date_added: '2024-12-08'
+  dazu kommt:
+    class: phrase
+    tags:
+    - _speakEasy_page004
+    - shopping
+    translations:
+      hungarian:
+      - ezen felül
+    date_added: '2024-12-08'
+  schmecken:
+    class: verb
+    translations:
+      hungarian:
+      - ízlik
+    tags:
+    - _speakEasy_page004
+    - food
+    - kitchen
+    - cooking
+    prepositions:
+    - ''
+    date_added: '2024-12-08'
+    conjugations:
+      Präsens:
+      - schmecke
+      - schmeckst
+      - schmeckt
+      - schmecken
+      - schmeckt
+      - schmecken
+      Präteritum:
+      - schmeckte
+      - schmecktest
+      - schmeckte
+      - schmeckten
+      - schmecktet
+      - schmeckten
+      Perfekt:
+      - habe geschmeckt
+      - hast geschmeckt
+      - hat geschmeckt
+      - haben geschmeckt
+      - habt geschmeckt
+      - haben geschmeckt
+    imperative: schmecke
