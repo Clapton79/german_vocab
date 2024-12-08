@@ -239,13 +239,15 @@ class Vocabulary():
                     if tag is None or tag in detail['tags']:
                         yield item
           
-    def clone(self, word_class_filter:str=None, tag_filter:str=None):
+    def clone(self, word_class_filter:str=None, tag_filter:str=None,words_filter:list=None):
         """Creates a new instance of the vocabulary based on the given word_class and tag_filter"""
         new_vocab = Vocabulary()
         new_vocab.vocab = {k: v for k, v in self.vocab.items() if word_class_filter is None or v.get('class') == word_class_filter}
         new_vocab.custom_data = self.custom_data
         if tag_filter is not None:
             new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if tag_filter in v.get('tags', [])}
+        if words_filter is not None:
+            new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if k in words_filter}
         return new_vocab
         
     def add(self,word:Word,overwrite:bool=False):
@@ -338,7 +340,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     try:
         base = random.choices(list(vocabulary.vocab.keys()), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
-        solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]
+        solutions = [(" ".join([(vocabulary[x].get('definite_article') or ""),x])).lstrip().rstrip() for x in base]
     except Exception as e: 
         logger.error(str(e))
         return [False,[],[]]
@@ -420,7 +422,7 @@ class LanguageTest():
         return self.function is not None and self.function != "" and self.test_load_success
 
     def __get_answer(self, index, question):
-        answer = input(f"{index + 1}. {question}: ")
+        answer = input(f"{index + 1}. {question}: ").rstrip().lstrip()
         return answer.split(';') if len(answer.split(';')) > 1 else answer or ""
 
     def __check_immediate_correction(self, index, answer):
@@ -451,15 +453,20 @@ class LanguageTest():
             logger.error(f"Error saving results to file: {filename} ({str(e)})")
      
     def show_results(self):
+        
+        max_length_q = max([len(x) for x in self.questions])+1
+        max_length_a = max([len(x) for x in self.answers])+1
+        max_length_s = max([len(x) for x in self.solutions])+1
         print("==========================================")
         print(f"{'Test type: '.ljust(15,' ')}{self.test_type.title()}")
         print(f"{'Questions: '.ljust(15,' ')}{self.num_questions}")
         print(f"{'Accuracy: '.ljust(15,' ')}{self.accuracy}%")
         print("==========================================")
-        print("Question\tSolution\tAnswer")
+        print(f"{'Question'.ljust(max_length_q+3,' ')}{'Solution'.ljust(max_length_s,' ')}{'Answer'.ljust(max_length_a,' ')}")
         print("==========================================")
         
         formats = [bcolors.OKGREEN if x else bcolors.FAIL for x in self.results]
+        
         
         for i, question in enumerate(self.questions):
             
@@ -468,7 +475,7 @@ class LanguageTest():
             
             # default case: str 
             if solution_type == str and solution_type == answer_type:
-                print(f"{i+1}. {question.ljust(10,' ')}\t{bcolors.OKGREEN}{self.solutions[i].ljust(10,' ')}{bcolors.ENDC}\t{formats[i]}{self.answers[i]}{bcolors.ENDC}")
+                print(f"{i+1}. {question.ljust(max_length_q,' ')}{bcolors.OKGREEN}{self.solutions[i].ljust(max_length_s,' ')}{bcolors.ENDC}{formats[i]}{self.answers[i]}{bcolors.ENDC}")
             
             # extra case: matching lists
             elif solution_type == list and solution_type == answer_type:
@@ -478,7 +485,7 @@ class LanguageTest():
             else:
                 print(f"{i+1}. {question.ljust(10,' ')}")
                 for solution in self.solutions[i]:
-                    print (f"{''.ljust(16, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
+                    print (f"{''.ljust(max_length_s, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
                 
     def run(self):
         logger.debug("Running test")

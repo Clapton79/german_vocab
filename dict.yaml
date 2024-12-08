@@ -270,7 +270,7 @@ words:
     imperative: schnurre
   Backenbart:
     class: noun
-    definite_article: ''
+    definite_article: der
     translations:
       hungarian:
       - pofaszakáll
@@ -382,3 +382,272 @@ words:
     - bodyparts
     plural: Ziegenbärte
     date_added: '2024-12-07'
+  hässlich:
+    class: adjective
+    tags:
+    - _speakEasy_page003
+    - core
+    - beauty
+    translations:
+      hungarian:
+      - csúnya
+    date_added: '2024-12-08'
+  hübsch:
+    class: adjective
+    tags:
+    - _speakEasy_page003
+    - core
+    - beauty
+    translations:
+      hungarian:
+      - szép
+      - csinos
+    date_added: '2024-12-08'
+  vollschlank:
+    class: adjective
+    tags:
+    - _speakEasy_page003
+    - core
+    - beauty
+    translations:
+      hungarian:
+      - kövér
+    date_added: '2024-12-08'
+  Bauch:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - has
+    tags:
+    - human
+    - _speakEasy_page003
+    - bodyparts
+    plural: Bäuche
+    date_added: '2024-12-08'
+  seltsam:
+    class: adjective
+    tags:
+    - _speakEasy_page003
+    - core
+    translations:
+      hungarian:
+      - furcsa
+    date_added: '2024-12-08'
+  fröhlich:
+    class: adjective
+    tags:
+    - atmosphere
+    - core
+    translations:
+      hungarian:
+      - vidám
+    date_added: '2024-12-08'
+  traurig:
+    class: adjective
+    tags:
+    - atmosphere
+    - _speakEasy_page003
+    - core
+    - feeling
+    translations:
+      hungarian:
+      - szomorú
+    date_added: '2024-12-08'
+  Kravatte:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - nyakkendő
+    tags:
+    - human
+    - _speakEasy_page003
+    - clothing
+    plural: ''
+    date_added: '2024-12-08'
+  Schlips:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - nyakkendő
+    tags:
+    - human
+    - _speakEasy_page003
+    - clothing
+    plural: Schlipse
+    date_added: '2024-12-08'
+  Fliege:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - csokornyakkendő
+    tags:
+    - human
+    - _speakEasy_page003
+    - clothing
+    plural: Fliegen
+    date_added: '2024-12-08'
+  schließlich:
+    class: adverb
+    tags:
+    - _speakEasy_page003
+    - time
+    translations:
+      hungarian:
+      - végül
+    date_added: '2024-12-08'
+  '':
+    class: adverb
+    tags:
+    - ''
+    translations:
+      hungarian:
+      - ''
+    date_added: '2024-12-08'
+  eigen:
+    class: adjective
+    tags:
+    - property
+    - _speakEasy_page003
+    - core
+    translations:
+      hungarian:
+      - saját
+    date_added: '2024-12-08'
+  gemeinsam:
+    class: adverb
+    tags:
+    - _speakEasy_page003
+    translations:
+      hungarian:
+      - együtt
+    date_added: '2024-12-08'
+  berühmte:
+    class: adjective
+    tags:
+    - human
+    - _speakEasy_page003
+    - fame
+    translations:
+      hungarian:
+      - híres
+    date_added: '2024-12-08'
+  ähnlich:
+    class: adjective
+    tags:
+    - comparison
+    - _speakEasy_page003
+    - core
+    translations:
+      hungarian:
+      - hasonló
+    date_added: '2024-12-08'
+  Einkaufstasche:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - bevásárlószatyor
+    tags:
+    - shopping
+    - _speakEasy_page003
+    plural: Einkaufstaschen
+    date_added: '2024-12-08'
+  Tüte:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - zacskó
+    tags:
+    - shopping
+    - _speakEasy_page003
+    plural: Tüten
+    date_added: '2024-12-08'
+  Paket:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - csomag
+    tags:
+    - _speakEasy_page004
+    - post
+    plural: Pakete
+    date_added: '2024-12-08'
+  Bund:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - csokor
+    tags:
+    - _speakEasy_page004
+    - market
+    - shopping
+    - post
+    plural: Bünde
+    date_added: '2024-12-08'
+  Flasche:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - üveg
+    tags:
+    - _speakEasy_page004
+    - shopping
+    - market
+    - drink
+    plural: Flaschen
+    date_added: '2024-12-08'
+  Stück:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - darab
+    tags:
+    - _speakEasy_page004
+    - market
+    - shopping
+    - unit
+    plural: Stücke
+    date_added: '2024-12-08'
+  vergleichen:
+    class: verb
+    translations:
+      hungarian:
+      - összehasonlít
+    tags:
+    - _speakEasy_page004
+    - compare
+    prepositions:
+    - ''
+    date_added: '2024-12-08'
+    conjugations:
+      Präsens:
+      - vergleiche
+      - vergleichst
+      - vergleicht
+      - vergleichen
+      - vergleicht
+      - vergleichen
+      Präteritum:
+      - verglich
+      - verglichst
+      - verglich
+      - verglichen
+      - verglicht
+      - verglichen
+      Perfekt:
+      - habe verglichen
+      - hast verglichen
+      - hat verglichen
+      - haben verglichen
+      - habt verglichen
+      - haben verglichen
+    imperative: vergleiche
