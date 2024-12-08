@@ -43,7 +43,7 @@ def get_conjugation(verb):
         title = str(c['mobile-title'])
         if title == 'Imperativ Präsens':
             verb_imperative = c.find('i', class_='verbtxt')
-            output['imperative'] = str(verb_imperative.text)
+            output['imperative'] = str(verb_imperative.text).rstrip()
 
     # conjugation
     conjugation = soup.find_all('div', class_='blue-box-wrap')
@@ -62,18 +62,18 @@ def get_conjugation(verb):
                 # output.append(','.join([verb,res_tense,res_tags,';'.join(conj_data)]))
                 output['conjugations'][res_tense] = conj_data
     return output
-def load_file(filename):
+def load_file(filename,file_type:str=None):
     try:
         vocab = {}
 
         # read the file
         with open(filename, 'r') as f:
-            if filename.endswith('.yaml'):
+            if filename.endswith('.yaml') or file_type=='yaml':
                 vocab = yaml.safe_load(f)
-            elif filename.endswith('.json'):
+            elif filename.endswith('.json') or file_type=='json':
                 vocab = json.load(f)
             else:
-                raise ValueError(f"Unsupported file format: {filename.split('.')[-1]}")
+                raise ValueError(f"Invalid arguments. {filename.split('.')[-1]}, {file_type}")
 
         return vocab
     except Exception as e:

@@ -32,7 +32,18 @@ for i in range(cnt):
         
     
     v.add(w,overwrite=True)
+    # always save the vocabulary before moving to the next word
     v.save('new_dict.yaml')
-   
+    
+# open the main vocabulary file
+vv = Vocabulary('dict.yaml')
+# merge the vocabulary into the main vocabulary file
+merge_vocabulary(v,vv,overwrite=True)
 
+# back up the vocabulary file before saving
+vv.backup()
+vv.save()
 
+print(f"Number of words in dict: {len(vv.vocab.keys())}")
+print("Vocabulary updated successfully.")
+print("New words have been added to the main vocabulary.")

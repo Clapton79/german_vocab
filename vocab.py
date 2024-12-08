@@ -224,6 +224,12 @@ class Vocabulary():
     def items(self):
         return self.vocab
     
+    def words(self):
+        return list(self.vocab.keys())
+        
+    def count(self):
+        return len(self.vocab)
+        
     def __str__ (self):
         return (str(self.vocab))
         
@@ -242,24 +248,36 @@ class Vocabulary():
             new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if tag_filter in v.get('tags', [])}
         return new_vocab
         
-                  
     def add(self,word:Word,overwrite:bool=False):
         if word in self.vocab.keys() and overwrite == False:
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
             return
         
         self.vocab[word.word_text] = word.convert_to_dict(no_key=True)
-        
     def remove(self,word:Word):
         if word in self.vocab.keys():
             del self.vocab[word.word_text]
     #collection operations
-    def append_tags_to_words(self,words:list,tags:list):
+    def append_tag_to_words(self,tag:str,words:list=[]):
+        
+        if len(words) == 0:
+            words = self.vocab.keys()
+        else:
+            words = [word for word in self.vocab.keys() if word in words]
+            
         for word in words:
-            if word in self.vocab.keys():
-                for tag in tags:
-                    if tag not in self.vocab[word]['tags']:
-                        self.vocab[word]['tags'].append(tag)
+            self.vocab[word]['tags'] = list(set(self.vocab[word]['tags']+[tag]))
+   
+    def remove_tags_from_words(self, tag: str,words: list = []):
+        """Removes a parameter tag from a list of words or all of the words in the vocabulary."""
+        if len(words) == 0:
+            words = self.vocab.keys()
+        else:
+            words = [word for word in self.vocab.keys() if word in words]
+        
+        for word in words:
+            self.vocab[word]['tags'] = [t for t in self.vocab[word]['tags'] if t!= tag]
+        
     def check_structure(self):
         try:
             model = get_vocabulary_model()
@@ -291,7 +309,7 @@ class Vocabulary():
             if word_tags is not None:
                 tags+=word_tags
 
-        return list(set(tags))
+        return sorted(set(tags))
                      
 def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,overwrite:bool=False) -> None:
     try:

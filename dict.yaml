@@ -6,9 +6,9 @@ words:
     date_added: '2024-11-17'
     plural: Ergebnisse
     tags:
-    - vocabulary_Pg_01
-    - exam
     - project
+    - exam
+    - _speakEasy_page001
     translations:
       hungarian:
       - eredmény
@@ -85,7 +85,7 @@ words:
     date_added: '2024-11-17'
     plural: ''
     tags:
-    - vocabulary_Pg_01
+    - _speakEasy_page001
     - bakery
     - food
     translations:
@@ -167,8 +167,7 @@ words:
     date_added: '2024-11-17'
     prepositions:
     - ''
-    tags:
-    - ''
+    tags: []
     translations:
       hungarian:
       - dicsér
@@ -178,8 +177,7 @@ words:
     prepositions:
     - ''
     tags:
-    - haben
-    - vocabulary_Pg_01
+    - _speakEasy_page001
     translations:
       hungarian:
       - gyűjt
@@ -198,8 +196,8 @@ words:
       hungarian:
       - szerep
     tags:
-    - Pg002
     - theater
+    - _speakEasy_page002
     date_added: '2024-12-07'
   verlieren:
     class: verb
@@ -207,7 +205,7 @@ words:
       hungarian:
       - elkészít
     tags:
-    - Pg002
+    - _speakEasy_page002
     - core
     prepositions:
     - ''
@@ -234,16 +232,16 @@ words:
       - haben verloren
       - habt verloren
       - haben verloren
-    imperative: 'verliere '
+    imperative: verliere
   schnurren:
     class: verb
     translations:
       hungarian:
       - dorombol
     tags:
-    - Pg002
-    - animals
     - sounds
+    - _speakEasy_page002
+    - animals
     prepositions:
     - ''
     date_added: '2024-12-07'
@@ -269,7 +267,7 @@ words:
       - sind geschnurrt
       - seid geschnurrt
       - sind geschnurrt
-    imperative: 'schnurre '
+    imperative: schnurre
   Backenbart:
     class: noun
     definite_article: ''
@@ -277,8 +275,9 @@ words:
       hungarian:
       - pofaszakáll
     tags:
-    - Pg002
+    - _speakEasy_page002
     - face
+    - human
     - bodyparts
     plural: Backenbärte
     date_added: '2024-12-07'
@@ -289,7 +288,7 @@ words:
       hungarian:
       - kecske
     tags:
-    - Pg002
+    - _speakEasy_page002
     - animals
     plural: Ziegen
     date_added: '2024-12-07'
@@ -300,15 +299,16 @@ words:
       hungarian:
       - szakáll
     tags:
-    - Pg002
+    - _speakEasy_page002
     - face
+    - human
     - bodyparts
     plural: Bärte
     date_added: '2024-12-07'
   mittellange:
     class: adjective
     tags:
-    - Pg002
+    - _speakEasy_page002
     - length
     translations:
       hungarian:
@@ -317,9 +317,9 @@ words:
   glatte:
     class: adjective
     tags:
-    - Pg002
-    - length
     - physics
+    - _speakEasy_page002
+    - length
     translations:
       hungarian:
       - egyenes
@@ -327,8 +327,8 @@ words:
   kraus:
     class: adjective
     tags:
-    - Pg002
     - hair
+    - _speakEasy_page002
     translations:
       hungarian:
       - göndör
@@ -336,7 +336,7 @@ words:
   dick:
     class: adjective
     tags:
-    - Pg002
+    - _speakEasy_page002
     translations:
       hungarian:
       - vastag
@@ -345,7 +345,7 @@ words:
   schlank:
     class: adjective
     tags:
-    - Pg002
+    - _speakEasy_page002
     - body
     translations:
       hungarian:
@@ -354,7 +354,7 @@ words:
   dünn:
     class: adjective
     tags:
-    - Pg002
+    - _speakEasy_page002
     - body
     translations:
       hungarian:
@@ -363,7 +363,7 @@ words:
   dürr:
     class: adjective
     tags:
-    - Pg002
+    - _speakEasy_page002
     - body
     translations:
       hungarian:
@@ -376,8 +376,9 @@ words:
       hungarian:
       - kecskeszakáll
     tags:
-    - Pg002
+    - _speakEasy_page002
     - face
+    - human
     - bodyparts
     plural: Ziegenbärte
     date_added: '2024-12-07'
