@@ -3,6 +3,7 @@ from os import path
 from applogger import logger
 from vocab_utilities import *
 from datetime import datetime
+from pprint import pprint
 
 class Word():
     __slots__ = ['word_class','word_data','word_text','date_added','definite_article','dq','dq_list']
@@ -280,30 +281,27 @@ class Vocabulary():
         for word in words:
             self.vocab[word]['tags'] = [t for t in self.vocab[word]['tags'] if t!= tag]
         
-    def check_structure(self):
+    def data_quality_errors(self) -> dict:
         try:
             model = get_vocabulary_model()
-            results = []
+            results = {}
             for word in self.vocab.keys():
                 logger.debug(f"Checking {word} data quality.")
                 dict_to_check = dict(self.vocab[word])
-                dict_model = dict(model[self.vocab[word]['class']])
-                result = check_dict_structure(dict_to_check, dict_model,word)
-                results.append(result)
-            
-            if len(results) == 0:
-                logger.warning("Not able to test data quality.")  
-                return False  
-            elif len(results) != sum(results):
-                logger.warning("Data quality issues found in vocabulary.")
-                return False
-            else:
-                logger.info(f"No data quality issues found in vocabulary ({len(results)} words)")
-                return True
+                dict_model = dict(model[self.vocab[word].get('class')])
+                if len(dict_model.keys()) == 0:
+                    result,problems = False,['class']
+                else:
+                    result,problems = check_dict_structure(dict_to_check, dict_model,word,verbose=True, recursive=False)
+                
+                if len(problems) > 0: 
+                    results[word]=problems
+                         
+            return results
                 
         except Exception as e:
-            logger.error(f"Error in checking vocabulary structure: {str(e)}")
-            return False
+            print(f"Error in checking vocabulary structure of {word}: {str(e)}")
+            return results
     def tags(self):
         tags = []
         for word,detail in self.vocab.items():

@@ -4,6 +4,8 @@ tags:
 words:
   Ergebnis:
     date_added: '2024-11-17'
+    class: noun
+    definite_article: das
     plural: Ergebnisse
     tags:
     - project
@@ -43,6 +45,8 @@ words:
       plural: 50
       translation: 50
   Fertiggericht:
+    class: noun
+    definite_article: das
     date_added: '2024-11-17'
     plural: Fertiggerichte
     tags:
@@ -82,6 +86,8 @@ words:
       plural: 50
       translation: 50
   Hörnchen:
+    class: noun
+    definite_article: das
     date_added: '2024-11-17'
     plural: ''
     tags:
@@ -171,6 +177,29 @@ words:
     translations:
       hungarian:
       - dicsér
+    conjugations:
+      Präsens:
+      - lobe
+      - lobst
+      - lobt
+      - loben
+      - lobt
+      - loben
+      Präteritum:
+      - lobte
+      - lobtest
+      - lobte
+      - lobten
+      - lobtet
+      - lobten
+      Perfekt:
+      - habe gelobt
+      - hast gelobt
+      - hat gelobt
+      - haben gelobt
+      - habt gelobt
+      - haben gelobt
+    imperative: lobe
   sammeln:
     class: verb
     date_added: '2024-11-17'
@@ -181,6 +210,35 @@ words:
     translations:
       hungarian:
       - gyűjt
+    conjugations:
+      Präsens:
+      - sammle
+      - sammelst
+      - sammelt
+      - sammeln
+      - sammelt
+      - sammeln
+      - sammele
+      - sammelst
+      - sammelt
+      - sammeln
+      - sammelt
+      - sammeln
+      Präteritum:
+      - sammelte
+      - sammeltest
+      - sammelte
+      - sammelten
+      - sammeltet
+      - sammelten
+      Perfekt:
+      - habe gesammelt
+      - hast gesammelt
+      - hat gesammelt
+      - haben gesammelt
+      - habt gesammelt
+      - haben gesammelt
+    imperative: sammle
   sodass:
     class: conjunction
     date_added: '2024-11-04'
@@ -191,6 +249,7 @@ words:
       translation: 50
   Rolle:
     class: noun
+    plural: Rollen
     definite_article: die
     translations:
       hungarian:
