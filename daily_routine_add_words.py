@@ -2,6 +2,7 @@ from vocab import *
 from os import environ
 
 environ['VOCAB_LOGLEVEL'] = 'ERROR'
+environ['VOCAB_LOG_TO_SCREEN']='True'
 
 cnt = input('How many words would you like to register?: ')
 cnt = 1 if cnt == '' else cnt 

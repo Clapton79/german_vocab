@@ -490,10 +490,12 @@ class LanguageTest():
                       
     def run(self):
         logger.debug("Running test")
+        
         try:
             if not self.__is_ready_to_run():
                 raise RuntimeError("Unable to execute non-existent, not implemented or erroneous test")
-
+            print("=========================================")
+            print (f"Test: {self.test_type.title()}")
             for i, question in enumerate(self.questions):
                 answer = self.__get_answer(i, question)
                 answer = answer if len(answer) > 0 else "-"
