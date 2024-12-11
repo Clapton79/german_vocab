@@ -373,7 +373,7 @@ words:
       hungarian:
       - középhosszú
     date_added: '2024-12-07'
-  glatte:
+  gerade:
     class: adjective
     tags:
     - physics
@@ -430,7 +430,7 @@ words:
     date_added: '2024-12-07'
   Ziegenbart:
     class: noun
-    definite_article: ''
+    definite_article: 'der'
     translations:
       hungarian:
       - kecskeszakáll
@@ -925,3 +925,227 @@ words:
       - habt geschmeckt
       - haben geschmeckt
     imperative: schmecke
+  Ironie:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - irónia
+    tags:
+    - _speakEasy_page005
+    plural: ''
+    date_added: '2024-12-11'
+  angaben:
+    class: verb
+    translations:
+      hungarian:
+      - felmutat
+      - jelez
+    tags:
+    - _speakEasy_page005
+    prepositions:
+    - ''
+    date_added: '2024-12-11'
+    conjugations:
+      Präsens:
+      - gabe an
+      - gast an
+      - gat an
+      - gaben an
+      - gabt an
+      - gaben an
+      Präteritum:
+      - gatte an
+      - gattest an
+      - gatte an
+      - gatten an
+      - gattet an
+      - gatten an
+      Perfekt:
+      - habe angegabt
+      - hast angegabt
+      - hat angegabt
+      - haben angegabt
+      - habt angegabt
+      - haben angegabt
+    imperative: gabe
+  eine Angabe machen:
+    class: phrase
+    tags:
+    - _speakEasy_page005
+    translations:
+      hungarian:
+      - nyilatkozatot tesz
+    date_added: '2024-12-11'
+  preiswert:
+    class: adjective
+    tags:
+    - _speakEasy_page005
+    translations:
+      hungarian:
+      - olcsó
+    date_added: '2024-12-11'
+  bezierungsweise:
+    class: conjunction
+    tags:
+    - _speakEasy_page005
+    translations:
+      hungarian:
+      - illetőleg
+    date_added: '2024-12-11'
+  würfeln:
+    class: verb
+    translations:
+      hungarian:
+      - dob
+    tags:
+    - _speakEasy_page005
+    prepositions:
+    - ''
+    date_added: '2024-12-11'
+    conjugations:
+      Präsens:
+      - würfle
+      - würfelst
+      - würfelt
+      - würfeln
+      - würfelt
+      - würfeln
+      - würfele
+      - würfelst
+      - würfelt
+      - würfeln
+      - würfelt
+      - würfeln
+      Präteritum:
+      - würfelte
+      - würfeltest
+      - würfelte
+      - würfelten
+      - würfeltet
+      - würfelten
+      Perfekt:
+      - habe gewürfelt
+      - hast gewürfelt
+      - hat gewürfelt
+      - haben gewürfelt
+      - habt gewürfelt
+      - haben gewürfelt
+    imperative: würfle
+  abbrechen:
+    class: verb
+    translations:
+      hungarian:
+      - megszüntet
+    tags:
+    - _speakEasy_page005
+    prepositions:
+    - ''
+    date_added: '2024-12-11'
+    conjugations:
+      Präsens:
+      - breche ab
+      - brichst ab
+      - bricht ab
+      - brechen ab
+      - brecht ab
+      - brechen ab
+      Präteritum:
+      - brach ab
+      - brachst ab
+      - brach ab
+      - brachen ab
+      - bracht ab
+      - brachen ab
+      Perfekt:
+      - habe abgebrochen
+      - hast abgebrochen
+      - hat abgebrochen
+      - haben abgebrochen
+      - habt abgebrochen
+      - haben abgebrochen
+    imperative: brich
+  hinzufügen:
+    class: verb
+    translations:
+      hungarian:
+      - hozzáad
+    tags:
+    - _speakEasy_page005
+    prepositions:
+    - ''
+    date_added: '2024-12-11'
+    conjugations:
+      Präsens:
+      - füge hinzu
+      - fügst hinzu
+      - fügt hinzu
+      - fügen hinzu
+      - fügt hinzu
+      - fügen hinzu
+      Präteritum:
+      - fügte hinzu
+      - fügtest hinzu
+      - fügte hinzu
+      - fügten hinzu
+      - fügtet hinzu
+      - fügten hinzu
+      Perfekt:
+      - habe hinzugefügt
+      - hast hinzugefügt
+      - hat hinzugefügt
+      - haben hinzugefügt
+      - habt hinzugefügt
+      - haben hinzugefügt
+    imperative: füge
+  kneten:
+    class: verb
+    translations:
+      hungarian:
+      - gyúr
+    tags:
+    - _speakEasy_page005
+    prepositions:
+    - ''
+    date_added: '2024-12-11'
+    conjugations:
+      Präsens:
+      - knete
+      - knetest
+      - knetet
+      - kneten
+      - knetet
+      - kneten
+      Präteritum:
+      - knetete
+      - knetetest
+      - knetete
+      - kneteten
+      - knetetet
+      - kneteten
+      Perfekt:
+      - habe geknetet
+      - hast geknetet
+      - hat geknetet
+      - haben geknetet
+      - habt geknetet
+      - haben geknetet
+    imperative: knete
+  Teig:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tészta
+    tags:
+    - _speakEasy_page005
+    plural: ''
+    date_added: '2024-12-11'
+  flüssig:
+    class: adjective
+    tags:
+    - _speakEasy_page005
+    translations:
+      hungarian:
+      - folyékony
+    date_added: '2024-12-11'

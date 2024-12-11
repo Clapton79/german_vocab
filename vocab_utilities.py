@@ -1,6 +1,6 @@
 from ruamel.yaml import YAML as yaml2
 import yaml
-from os import path
+from os import path,remove
 import zipfile36 as zipfile
 import shutil
 from datetime import datetime
@@ -121,7 +121,7 @@ def backup_file(filename):
         logger.error(f"Error backing up file {filename}: {str(e)}")
         return None
 
-def zip_files(file_paths, zip_name):
+def zip_files(file_paths:list, zip_name:str):
     try:
         with zipfile.ZipFile(zip_name, 'w') as zipf:
             for file in file_paths:
@@ -229,4 +229,3 @@ def check_dict_structure(param_dict, model_dict,word,verbose:bool=False, recursi
             logger.error(f"Error in check_dict_structure: {str(e)}")
             return False
                 
-    

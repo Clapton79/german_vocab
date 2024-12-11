@@ -411,7 +411,7 @@ class LanguageTest():
             logger.error(f"Unknown language test type: {test_type}")
             
         self.test_load_success, self.questions, self.solutions = self.function(self.num_questions, self.vocabulary)
-        logger.debug(f"Language test {self.test_type} initialized.")
+        logger.debug(f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
         
         if not self.test_load_success:
             logger.error(f"Failed to load test {self.test_type} data due to an internal error.")
@@ -421,7 +421,7 @@ class LanguageTest():
 
     def __get_answer(self, index, question):
         answer = input(f"{index + 1}. {question}: ").rstrip().lstrip()
-        return answer.split(';') if len(answer.split(';')) > 1 else answer or ""
+        return answer.split(',') if len(answer.split(',')) > 1 else answer or ""
 
     def __check_immediate_correction(self, index, answer):
         if self.immediate_correction and answer != self.solutions[index]:
@@ -433,8 +433,11 @@ class LanguageTest():
             print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer: {bcolors.OKGREEN}{correct_answer}{bcolors.ENDC}")
         elif isinstance(correct_answer, list):
             print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer:")
-            for sol in correct_answer:
-                print(f"{''.ljust(10, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
+            # padding = max([len (x) for x in correct_answer])
+            # for sol in correct_answer:
+            #     print(
+            #         f"{' - {sol}'.ljust(padding + 2, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
+            compare_two_lists(correct_answer,self.answers[index])
 
     def __calculate_results(self):
         try:
@@ -494,8 +497,10 @@ class LanguageTest():
         try:
             if not self.__is_ready_to_run():
                 raise RuntimeError("Unable to execute non-existent, not implemented or erroneous test")
-            print("=========================================")
-            print (f"Test: {self.test_type.title()}")
+            divider_length = 40
+            print("=" * divider_length)
+            print(f"  * Test: {self.test_type.title()}")
+            print("=" * divider_length)
             for i, question in enumerate(self.questions):
                 answer = self.__get_answer(i, question)
                 answer = answer if len(answer) > 0 else "-"
@@ -505,6 +510,7 @@ class LanguageTest():
             self.__calculate_results()
             self.show_results()
         except Exception as e:
+            print(str(e))
             logger.error(f"Failed to run test due to an internal error: {str(e)}")
     
     

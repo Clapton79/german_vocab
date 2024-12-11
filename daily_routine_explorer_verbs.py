@@ -3,11 +3,10 @@ from pprint import pprint
 from vocab import *
 from vocab_utilities import bcolors
 
-pagefilter = "_speakEasy_page002"
 # load the main vocabulary  
 v = Vocabulary('dict.yaml')
 print('Verbs in vocabulary:')
-print([x for x in v.filter_by_class_and_tag(word_class = 'verb', tag=pagefilter)])
+print([x for x in v.filter_by_class_and_tag(word_class = 'verb')])
 
 answer = input("Enter a verb: ")
 

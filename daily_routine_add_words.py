@@ -6,7 +6,12 @@ environ['VOCAB_LOG_TO_SCREEN']='True'
 
 cnt = input('How many words would you like to register?: ')
 cnt = 1 if cnt == '' else cnt 
-    
+
+default_tags = input('Default tags to add to the words:')
+
+if default_tags:
+    default_tags = default_tags.split(',')
+
 try:
     cnt = int(cnt)
 except:
@@ -23,21 +28,27 @@ print(f"Used tags: {vv.tags()}")
 for i in range(cnt):
     
     word_class_selection = input("Select word class: " + str([': '.join ([str(i+1),x]) for i,x in enumerate(word_classes)]))
+    if word_class_selection == 0:
+        print("Skipping word.")
+        continue
+    
     word_class = word_classes[int(word_class_selection)-1]
+    
     w = Word(word_class)
     w.update()
     if word_class == 'noun':
         w.get_definite_article()
     elif word_class == 'verb':
         w.get_conjugations()
-        
     
     v.add(w,overwrite=True)
+    
     # always save the vocabulary before moving to the next word
     v.save('new_dict.yaml')
     
+for default_tag in default_tags:
+    v.append_tag_to_words(default_tag,[])
 # open the main vocabulary file
-
 # merge the vocabulary into the main vocabulary file
 merge_vocabulary(v,vv,overwrite=True)
 
