@@ -1,13 +1,24 @@
 from vocab import *
 from os import environ
+from pprint import pprint
+
+title = '* Word adding *'
+debug = True
+print('#' * 86)
+print('#', ' ' * 15, title, ' ' * (80-15-len(title)), '#')
+print('#' * 86)
 
 environ['VOCAB_LOGLEVEL'] = 'ERROR'
 environ['VOCAB_LOG_TO_SCREEN']='True'
+vv = Vocabulary('dict.yaml')    # open the main vocabulary file
+print(f"Used main tags: {[x for x in vv.tags() if x.startswith('_')]}")
 
-cnt = input('How many words would you like to register?: ')
+cnt = input('How many words would you like to register? (1): ')
 cnt = 1 if cnt == '' else cnt 
-
-default_tags = input('Default tags to add to the words:')
+if cnt == 0:
+    exit(0)
+words_added_to_vocabulary = 0
+default_tags = input('Default tags to add to the words: ')
 
 if default_tags:
     default_tags = default_tags.split(',')
@@ -18,13 +29,12 @@ except:
     print("Invalid input. Please enter a number.")
     exit(1)
 
-if cnt == 0:
-    exit(0)
 
-vv = Vocabulary('dict.yaml')    # open the main vocabulary file
+
+
 v = Vocabulary()  # create a new vocabulary
 word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
-print(f"Used tags: {vv.tags()}")
+
 for i in range(cnt):
     
     word_class_selection = input("Select word class: " + str([': '.join ([str(i+1),x]) for i,x in enumerate(word_classes)]))
@@ -41,13 +51,22 @@ for i in range(cnt):
     elif word_class == 'verb':
         w.get_conjugations()
     
-    v.add(w,overwrite=True)
+    if len(default_tags)>0:
+        w.word_data['tags'] = w.word_data['tags'] + default_tags
+            
+    print(f"Word {w.word_text} \n Details:")
+    pprint(w.convert_to_dict())
+    
+    do_save = input("Do you want to save it? (Enter/n): ")
+    do_save = True if len(do_save) == 0 else False
+    if do_save:
+        
+        v.add(w,overwrite=True)
+        words_added_to_vocabulary += 1
     
     # always save the vocabulary before moving to the next word
     v.save('new_dict.yaml')
     
-for default_tag in default_tags:
-    v.append_tag_to_words(default_tag,[])
 # open the main vocabulary file
 # merge the vocabulary into the main vocabulary file
 merge_vocabulary(v,vv,overwrite=True)
@@ -56,6 +75,6 @@ merge_vocabulary(v,vv,overwrite=True)
 vv.backup()
 vv.save()
 
-print(f"Number of words in dict: {len(vv.vocab.keys())}")
-print("Vocabulary updated successfully.")
-print("New words have been added to the main vocabulary.")
+
+print(f"{words_added_to_vocabulary} new words have been added to the cache vocabulary and merged to the main one.")
+print(f"Number of words in main dict: {len(vv.vocab.keys())}")

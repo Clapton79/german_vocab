@@ -287,6 +287,7 @@ class Vocabulary():
             results = {}
             for word in self.vocab.keys():
                 logger.debug(f"Checking {word} data quality.")
+                
                 dict_to_check = dict(self.vocab[word])
                 dict_model = dict(model[self.vocab[word].get('class')])
                 if len(dict_model.keys()) == 0:
@@ -296,7 +297,7 @@ class Vocabulary():
                 
                 if len(problems) > 0: 
                     results[word]=problems
-                         
+                    
             return results
                 
         except Exception as e:

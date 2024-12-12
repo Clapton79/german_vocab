@@ -26,7 +26,7 @@ else:
 
     
 print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
-print(test_v.words())
+
 if number_of_questions > 0:
     #verb conjugation using new vocabulary
     my_test = LanguageTest(number_of_questions,

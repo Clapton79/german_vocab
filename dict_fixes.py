@@ -1,10 +1,13 @@
 from vocab import *
+from pprint import pprint
 import vocab_utilities as vu
 
 test_v = Vocabulary('dict.yaml')
-my_test = LanguageTest(10,
-                           'verb conjugation', test_v, True)
-my_test.run()
+results = test_v.data_quality_errors()
+pprint(results)
+# my_test = LanguageTest(10,
+#                            'verb conjugation', test_v, True)
+# my_test.run()
     
 # base_v = Vocabulary('dict.yaml')
 
