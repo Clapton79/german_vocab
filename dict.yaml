@@ -1469,10 +1469,10 @@ words:
       - alkalmaz
     tags:
     - ''
-    - _speakEasy_page006
+    - _speakEasy_page007
     prepositions:
     - ''
-    date_added: '2024-12-12'
+    date_added: '2024-12-15'
     conjugations:
       Präsens:
       - gelte
@@ -1528,3 +1528,1086 @@ words:
     - _speakEasy_page006
     plural: Leitungen
     date_added: '2024-12-12'
+  bisher:
+    class: adverb
+    tags:
+    - time
+    - _speakEasy_page007
+    translations:
+      hungarian:
+      - eddig
+    date_added: '2024-12-15'
+  Herd:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tűzhely
+    tags:
+    - kitchen
+    - home
+    - _speakEasy_page007
+    plural: Herde
+    date_added: '2024-12-15'
+  Ehepaar:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - házaspár
+    tags:
+    - social
+    - marriage
+    - _speakEasy_page007
+    plural: Ehepaare
+    date_added: '2024-12-15'
+  Auszeichnung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - díj
+    tags:
+    - ''
+    - _speakEasy_page007
+    plural: Auszeichnungen
+    date_added: '2024-12-15'
+  zusehen:
+    class: verb
+    translations:
+      hungarian:
+      - megnéz
+    tags:
+    - ''
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - sehe zu
+      - siehst zu
+      - sieht zu
+      - sehen zu
+      - seht zu
+      - sehen zu
+      Präteritum:
+      - sah zu
+      - sahst zu
+      - sah zu
+      - sahen zu
+      - saht zu
+      - sahen zu
+      Perfekt:
+      - habe zugesehen
+      - hast zugesehen
+      - hat zugesehen
+      - haben zugesehen
+      - habt zugesehen
+      - haben zugesehen
+    imperative: sieh
+  Geheimtipp:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tipp
+    tags:
+    - knowledge
+    - _speakEasy_page007
+    plural: Geheimtipps
+    date_added: '2024-12-15'
+  Empfehlung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - ajánlat
+    tags:
+    - business
+    - restaurant
+    - _speakEasy_page007
+    plural: Empfehlungen
+    date_added: '2024-12-15'
+  Zeile:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - sor
+      - vonal
+    tags:
+    - reading
+    - _speakEasy_page007
+    plural: Zeilen
+    date_added: '2024-12-15'
+  mitteilen:
+    class: verb
+    translations:
+      hungarian:
+      - közöl
+      - értesít
+    tags:
+    - ''
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - teile mit
+      - teilst mit
+      - teilt mit
+      - teilen mit
+      - teilt mit
+      - teilen mit
+      Präteritum:
+      - teilte mit
+      - teiltest mit
+      - teilte mit
+      - teilten mit
+      - teiltet mit
+      - teilten mit
+      Perfekt:
+      - bin mitgeteilt
+      - bist mitgeteilt
+      - ist mitgeteilt
+      - sind mitgeteilt
+      - seid mitgeteilt
+      - sind mitgeteilt
+    imperative: teile
+  Vorsilbe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - előtag
+    tags:
+    - grammar
+    - _speakEasy_page007
+    plural: Vorsilben
+    date_added: '2024-12-15'
+  Koch:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - szakács
+    tags:
+    - cooking
+    - food
+    - _speakEasy_page007
+    plural: Köche
+    date_added: '2024-12-15'
+  braten:
+    class: verb
+    translations:
+      hungarian:
+      - süt
+    tags:
+    - cooking
+    - kitchen
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - brate
+      - brätst
+      - brät
+      - braten
+      - bratet
+      - braten
+      Präteritum:
+      - briet
+      - brietst
+      - briet
+      - brieten
+      - brietet
+      - brieten
+      Perfekt:
+      - habe gebraten
+      - hast gebraten
+      - hat gebraten
+      - haben gebraten
+      - habt gebraten
+      - haben gebraten
+    imperative: brate
+  anbraten:
+    class: verb
+    translations:
+      hungarian:
+      - megsüt
+    tags:
+    - cooking
+    - kitchen
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - brate an
+      - brätst an
+      - brät an
+      - braten an
+      - bratet an
+      - braten an
+      Präteritum:
+      - briet an
+      - brietst an
+      - briet an
+      - brieten an
+      - brietet an
+      - brieten an
+      Perfekt:
+      - habe angebraten
+      - hast angebraten
+      - hat angebraten
+      - haben angebraten
+      - habt angebraten
+      - haben angebraten
+    imperative: brate
+  würzen:
+    class: verb
+    translations:
+      hungarian:
+      - fűszerez
+    tags:
+    - ''
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - würze
+      - würzt
+      - würzt
+      - würzen
+      - würzt
+      - würzen
+      Präteritum:
+      - würzte
+      - würztest
+      - würzte
+      - würzten
+      - würztet
+      - würzten
+      Perfekt:
+      - habe gewürzt
+      - hast gewürzt
+      - hat gewürzt
+      - haben gewürzt
+      - habt gewürzt
+      - haben gewürzt
+    imperative: würze
+  schneiden:
+    class: verb
+    translations:
+      hungarian:
+      - szeletel
+    tags:
+    - cooking
+    - kitchen
+    - _speakEasy_page007
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - schneide
+      - schneidest
+      - schneidet
+      - schneiden
+      - schneidet
+      - schneiden
+      Präteritum:
+      - schnitt
+      - schnittest
+      - schnitt
+      - schnitten
+      - schnittet
+      - schnitten
+      Perfekt:
+      - habe geschnitten
+      - hast geschnitten
+      - hat geschnitten
+      - haben geschnitten
+      - habt geschnitten
+      - haben geschnitten
+    imperative: schneide
+  herrvorragend:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page007
+    translations:
+      hungarian:
+      - kiváló
+    date_added: '2024-12-15'
+  zufrieden:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page007
+    translations:
+      hungarian:
+      - elégedett
+    date_added: '2024-12-15'
+  gewinnen:
+    class: verb
+    translations:
+      hungarian:
+      - nyer
+    tags:
+    - game
+    - contest
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - gewinne
+      - gewinnst
+      - gewinnt
+      - gewinnen
+      - gewinnt
+      - gewinnen
+      Präteritum:
+      - gewann
+      - gewannst
+      - gewann
+      - gewannen
+      - gewannt
+      - gewannen
+      Perfekt:
+      - habe gewonnen
+      - hast gewonnen
+      - hat gewonnen
+      - haben gewonnen
+      - habt gewonnen
+      - haben gewonnen
+    imperative: gewinn
+  eröffnen:
+    class: verb
+    translations:
+      hungarian:
+      - megnyit
+    tags:
+    - business
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - eröffne
+      - eröffnest
+      - eröffnet
+      - eröffnen
+      - eröffnet
+      - eröffnen
+      Präteritum:
+      - eröffnete
+      - eröffnetest
+      - eröffnete
+      - eröffneten
+      - eröffnetet
+      - eröffneten
+      Perfekt:
+      - habe eröffnet
+      - hast eröffnet
+      - hat eröffnet
+      - haben eröffnet
+      - habt eröffnet
+      - haben eröffnet
+    imperative: eröffne
+  bekommen:
+    class: verb
+    translations:
+      hungarian:
+      - kap
+    tags:
+    - shopping
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - bekomme
+      - bekommst
+      - bekommt
+      - bekommen
+      - bekommt
+      - bekommen
+      Präteritum:
+      - bekam
+      - bekamst
+      - bekam
+      - bekamen
+      - bekamt
+      - bekamen
+      Perfekt:
+      - habe bekommen
+      - hast bekommen
+      - hat bekommen
+      - haben bekommen
+      - habt bekommen
+      - haben bekommen
+    imperative: bekomm
+  lassen:
+    class: verb
+    translations:
+      hungarian:
+      - hagy
+    tags:
+    - core
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - lasse
+      - lässt
+      - lässt
+      - lassen
+      - lasst
+      - lassen
+      - lasse
+      - läßt
+      - läßt
+      - lassen
+      - laßt
+      - lassen
+      Präteritum:
+      - ließ
+      - ließest
+      - ließ
+      - ließen
+      - ließt
+      - ließen
+      - ließ
+      - ließt
+      - ließ
+      - ließen
+      - ließt
+      - ließen
+      Perfekt:
+      - habe gelassen
+      - hast gelassen
+      - hat gelassen
+      - haben gelassen
+      - habt gelassen
+      - haben gelassen
+    imperative: lass
+  fasten:
+    class: verb
+    translations:
+      hungarian:
+      - böjtöl
+    tags:
+    - ''
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - faste
+      - fastest
+      - fastet
+      - fasten
+      - fastet
+      - fasten
+      Präteritum:
+      - fastete
+      - fastetest
+      - fastete
+      - fasteten
+      - fastetet
+      - fasteten
+      Perfekt:
+      - habe gefastet
+      - hast gefastet
+      - hat gefastet
+      - haben gefastet
+      - habt gefastet
+      - haben gefastet
+    imperative: faste
+  befehlen:
+    class: verb
+    translations:
+      hungarian:
+      - parancsol
+    tags:
+    - ''
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - befehle
+      - befiehlst
+      - befiehlt
+      - befehlen
+      - befehlt
+      - befehlen
+      Präteritum:
+      - befahl
+      - befahlst
+      - befahl
+      - befahlen
+      - befahlt
+      - befahlen
+      Perfekt:
+      - habe befohlen
+      - hast befohlen
+      - hat befohlen
+      - haben befohlen
+      - habt befohlen
+      - haben befohlen
+    imperative: befiehl
+  Diener:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - szolga
+    tags:
+    - ''
+    - _speakEasy_page008
+    plural: Diener
+    date_added: '2024-12-15'
+  beschweren:
+    class: verb
+    translations:
+      hungarian:
+      - panaszkodik
+    tags:
+    - sich
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - beschwere
+      - beschwerst
+      - beschwert
+      - beschweren
+      - beschwert
+      - beschweren
+      Präteritum:
+      - beschwerte
+      - beschwertest
+      - beschwerte
+      - beschwerten
+      - beschwertet
+      - beschwerten
+      Perfekt:
+      - habe beschwert
+      - hast beschwert
+      - hat beschwert
+      - haben beschwert
+      - habt beschwert
+      - haben beschwert
+    imperative: beschwere
+  genießen:
+    class: verb
+    translations:
+      hungarian:
+      - élvez
+    tags:
+    - ''
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - genieße
+      - genießt
+      - genießt
+      - genießen
+      - genießt
+      - genießen
+      Präteritum:
+      - genoss
+      - genossest
+      - genoss
+      - genossen
+      - genosst
+      - genossen
+      - genoß
+      - genosst
+      - genoß
+      - genossen
+      - genoßt
+      - genossen
+      Perfekt:
+      - habe genossen
+      - hast genossen
+      - hat genossen
+      - haben genossen
+      - habt genossen
+      - haben genossen
+    imperative: genieße
+  erschwinglich:
+    class: adjective
+    tags:
+    - business
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - megfizethető
+    date_added: '2024-12-15'
+  faszinierenden:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - elbűvölő
+    date_added: '2024-12-15'
+  trächtig:
+    class: adjective
+    tags:
+    - animal
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - vemhes
+    date_added: '2024-12-15'
+  geschichtsträchtig:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - történelemmel átitatott
+    date_added: '2024-12-15'
+  schwanger:
+    class: adjective
+    tags:
+    - family
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - állapotos
+      - terhes
+    date_added: '2024-12-15'
+  stammen:
+    class: verb
+    translations:
+      hungarian:
+      - származik
+    tags:
+    - ''
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - stamme
+      - stammst
+      - stammt
+      - stammen
+      - stammt
+      - stammen
+      Präteritum:
+      - stammte
+      - stammtest
+      - stammte
+      - stammten
+      - stammtet
+      - stammten
+      Perfekt:
+      - habe gestammt
+      - hast gestammt
+      - hat gestammt
+      - haben gestammt
+      - habt gestammt
+      - haben gestammt
+    imperative: stamme
+  einführen:
+    class: verb
+    translations:
+      hungarian:
+      - bevezet
+    tags:
+    - ''
+    - _speakEasy_page008
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - führe ein
+      - führst ein
+      - führt ein
+      - führen ein
+      - führt ein
+      - führen ein
+      Präteritum:
+      - führte ein
+      - führtest ein
+      - führte ein
+      - führten ein
+      - führtet ein
+      - führten ein
+      Perfekt:
+      - habe eingeführt
+      - hast eingeführt
+      - hat eingeführt
+      - haben eingeführt
+      - habt eingeführt
+      - haben eingeführt
+    imperative: führe
+  ursprünglich:
+    class: adverb
+    tags:
+    - ''
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - eredetileg
+    date_added: '2024-12-15'
+  reichen:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page008
+    translations:
+      hungarian:
+      - elegendő
+    date_added: '2024-12-15'
+  fast verankert:
+    class: adjective
+    tags:
+    - ''
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - szilárdan lehorgonyzott
+    date_added: '2024-12-15'
+  Bestandteil:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - hozzávaló
+    tags:
+    - cooking
+    - _speakEasy_page009
+    plural: Bestandteile
+    date_added: '2024-12-15'
+  Anker:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - horgony
+    tags:
+    - ships
+    - _speakEasy_page009
+    plural: Anker
+    date_added: '2024-12-15'
+  Das Schiff hat geankert.:
+    class: phrase
+    tags:
+    - ship
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - A hajó lehorgonyzott.
+    date_added: '2024-12-15'
+  ankern:
+    class: verb
+    translations:
+      hungarian:
+      - lehorgonyoz
+    tags:
+    - ship
+    - _speakEasy_page009
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - ankere
+      - ankerst
+      - ankert
+      - ankern
+      - ankert
+      - ankern
+      Präteritum:
+      - ankerte
+      - ankertest
+      - ankerte
+      - ankerten
+      - ankertet
+      - ankerten
+      Perfekt:
+      - habe geankert
+      - hast geankert
+      - hat geankert
+      - haben geankert
+      - habt geankert
+      - haben geankert
+    imperative: ankere
+  Erfahrung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - tapasztalat
+    tags:
+    - professional
+    - _speakEasy_page009
+    plural: Erfahrungen
+    date_added: '2024-12-15'
+  vereinbaren:
+    class: verb
+    translations:
+      hungarian:
+      - egyetért
+    tags:
+    - conversation
+    - _speakEasy_page009
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - vereinbare
+      - vereinbarst
+      - vereinbart
+      - vereinbaren
+      - vereinbart
+      - vereinbaren
+      Präteritum:
+      - vereinbarte
+      - vereinbartest
+      - vereinbarte
+      - vereinbarten
+      - vereinbartet
+      - vereinbarten
+      Perfekt:
+      - habe vereinbart
+      - hast vereinbart
+      - hat vereinbart
+      - haben vereinbart
+      - habt vereinbart
+      - haben vereinbart
+    imperative: vereinbare
+  erstellen:
+    class: verb
+    translations:
+      hungarian:
+      - készít
+      - létrehoz
+      - teremt
+    tags:
+    - ''
+    - _speakEasy_page009
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - erstelle
+      - erstellst
+      - erstellt
+      - erstellen
+      - erstellt
+      - erstellen
+      Präteritum:
+      - erstellte
+      - erstelltest
+      - erstellte
+      - erstellten
+      - erstelltet
+      - erstellten
+      Perfekt:
+      - habe erstellt
+      - hast erstellt
+      - hat erstellt
+      - haben erstellt
+      - habt erstellt
+      - haben erstellt
+    imperative: erstelle
+  Dienstreise:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - üzleti út
+    tags:
+    - professional
+    - _speakEasy_page009
+    plural: Dienstreisen
+    date_added: '2024-12-15'
+  Geschäft:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - vállalkozás
+      - üzlet
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: Geschäfte
+    date_added: '2024-12-15'
+  tratschen:
+    class: verb
+    translations:
+      hungarian:
+      - pletykál
+    tags:
+    - ''
+    - _speakEasy_page009
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - tratsche
+      - tratschst
+      - tratscht
+      - tratschen
+      - tratscht
+      - tratschen
+      Präteritum:
+      - tratschte
+      - tratschtest
+      - tratschte
+      - tratschten
+      - tratschtet
+      - tratschten
+      Perfekt:
+      - habe getratscht
+      - hast getratscht
+      - hat getratscht
+      - haben getratscht
+      - habt getratscht
+      - haben getratscht
+    imperative: tratsche
+  Neuigkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - hír
+    tags:
+    - ''
+    - _speakEasy_page009
+    plural: Neuigkeiten
+    date_added: '2024-12-15'
+  während:
+    class: adverb
+    tags:
+    - Genitive
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - alatt
+    date_added: '2024-12-15'
+  beim:
+    class: adverb
+    tags:
+    - ''
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - alatt
+    date_added: '2024-12-15'
+  dauern:
+    class: verb
+    translations:
+      hungarian:
+      - tart
+    tags:
+    - time
+    - _speakEasy_page009
+    prepositions:
+    - Es dauert eine Stunde mit dem Bus.
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - dauere
+      - dauerst
+      - dauert
+      - dauern
+      - dauert
+      - dauern
+      Präteritum:
+      - dauerte
+      - dauertest
+      - dauerte
+      - dauerten
+      - dauertet
+      - dauerten
+      Perfekt:
+      - habe gedauert
+      - hast gedauert
+      - hat gedauert
+      - haben gedauert
+      - habt gedauert
+      - haben gedauert
+    imperative: dauere
+  Zeitstrahl:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - idővonal
+    tags:
+    - time
+    - _speakEasy_page009
+    plural: Zeitstrahlen
+    date_added: '2024-12-15'
+  Betriebsferien:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - céges ünnepek
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: ''
+    date_added: '2024-12-15'
+  Betrieb:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - művelet
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: Betriebe
+    date_added: '2024-12-15'
+  Abteilung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - osztály
+    tags:
+    - business
+    - corporation
+    - organisation
+    - _speakEasy_page009
+    plural: Abteilungen
+    date_added: '2024-12-15'

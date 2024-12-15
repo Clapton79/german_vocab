@@ -1,13 +1,157 @@
 tags: {}
 words:
-  Leitung:
+  Geschäft:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - vállalkozás
+      - üzlet
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: Geschäfte
+    date_added: '2024-12-15'
+  tratschen:
+    class: verb
+    translations:
+      hungarian:
+      - pletykál
+    tags:
+    - ''
+    - _speakEasy_page009
+    prepositions:
+    - ''
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - tratsche
+      - tratschst
+      - tratscht
+      - tratschen
+      - tratscht
+      - tratschen
+      Präteritum:
+      - tratschte
+      - tratschtest
+      - tratschte
+      - tratschten
+      - tratschtet
+      - tratschten
+      Perfekt:
+      - habe getratscht
+      - hast getratscht
+      - hat getratscht
+      - haben getratscht
+      - habt getratscht
+      - haben getratscht
+    imperative: tratsche
+  Neuigkeit:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - vonal
+      - hír
     tags:
-    - drawing
-    - _speakEasy_page006
-    plural: Leitungen
-    date_added: '2024-12-12'
+    - ''
+    - _speakEasy_page009
+    plural: Neuigkeiten
+    date_added: '2024-12-15'
+  während:
+    class: adverb
+    tags:
+    - Genitive
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - alatt
+    date_added: '2024-12-15'
+  beim:
+    class: adverb
+    tags:
+    - ''
+    - _speakEasy_page009
+    translations:
+      hungarian:
+      - alatt
+    date_added: '2024-12-15'
+  dauern:
+    class: verb
+    translations:
+      hungarian:
+      - tart
+    tags:
+    - time
+    - _speakEasy_page009
+    prepositions:
+    - Es dauert eine Stunde mit dem Bus.
+    date_added: '2024-12-15'
+    conjugations:
+      Präsens:
+      - dauere
+      - dauerst
+      - dauert
+      - dauern
+      - dauert
+      - dauern
+      Präteritum:
+      - dauerte
+      - dauertest
+      - dauerte
+      - dauerten
+      - dauertet
+      - dauerten
+      Perfekt:
+      - habe gedauert
+      - hast gedauert
+      - hat gedauert
+      - haben gedauert
+      - habt gedauert
+      - haben gedauert
+    imperative: dauere
+  Zeitstrahl:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - idővonal
+    tags:
+    - time
+    - _speakEasy_page009
+    plural: Zeitstrahlen
+    date_added: '2024-12-15'
+  Betriebsferien:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - céges ünnepek
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: ''
+    date_added: '2024-12-15'
+  Betrieb:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - művelet
+    tags:
+    - business
+    - _speakEasy_page009
+    plural: Betriebe
+    date_added: '2024-12-15'
+  Abteilung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - osztály
+    tags:
+    - business
+    - corporation
+    - organisation
+    - _speakEasy_page009
+    plural: Abteilungen
+    date_added: '2024-12-15'
