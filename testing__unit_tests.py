@@ -126,8 +126,6 @@ os.environ['VOCAB_LOGLEVEL']= 'ERROR'
 os.environ['VOCAB_LOG_TO_SCREEN'] = "False"
 logger=setup_logger()
 
-
-
 current_module = sys.modules[__name__]
 all_attributes = dir(current_module)
 callable_methods = [attr for attr in all_attributes if callable(getattr(current_module, attr)) and attr.startswith('test')]
@@ -150,5 +148,3 @@ for method_name in callable_methods:
         
     bcolor,message = (bcolors.OKGREEN,'Pass') if test_result else (bcolors.FAIL,'Failed')
     print(f"{method_name.replace('_',' ').capitalize().ljust(46, ' ')} Result: {bcolor}{message}{bcolors.ENDC}")
-    
-
