@@ -1,157 +1,114 @@
 tags: {}
 words:
-  Geschäft:
+  Kombinationstaste:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - billentyűkombináció
+    tags:
+    - keyboard
+    - IT
+    plural: Kombinationstasten
+    date_added: '2024-12-24'
+  Benutzerhandbuch:
     class: noun
     definite_article: das
     translations:
       hungarian:
-      - vállalkozás
-      - üzlet
+      - felhasználói útmutató
     tags:
-    - business
-    - _speakEasy_page009
-    plural: Geschäfte
-    date_added: '2024-12-15'
-  tratschen:
+    - ''
+    - IT
+    plural: Benutzerhandbücher
+    date_added: '2024-12-24'
+  Tastatur:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - billentyűzet
+    tags:
+    - keyboard
+    - IT
+    plural: Tastaturen
+    date_added: '2024-12-24'
+  verbinden:
     class: verb
     translations:
       hungarian:
-      - pletykál
+      - összeköt
+      - összekapcsol
     tags:
     - ''
-    - _speakEasy_page009
+    - IT
     prepositions:
+    - miteinander verbinden
+    - sich verbinden
+    - dem Internet verbinden
     - ''
-    date_added: '2024-12-15'
+    date_added: '2024-12-24'
     conjugations:
       Präsens:
-      - tratsche
-      - tratschst
-      - tratscht
-      - tratschen
-      - tratscht
-      - tratschen
+      - verbinde
+      - verbindest
+      - verbindet
+      - verbinden
+      - verbindet
+      - verbinden
       Präteritum:
-      - tratschte
-      - tratschtest
-      - tratschte
-      - tratschten
-      - tratschtet
-      - tratschten
+      - verband
+      - verbandst
+      - verband
+      - verbanden
+      - verbandet
+      - verbanden
+      - verband
+      - verbandest
+      - verband
+      - verbanden
+      - verbandet
+      - verbanden
       Perfekt:
-      - habe getratscht
-      - hast getratscht
-      - hat getratscht
-      - haben getratscht
-      - habt getratscht
-      - haben getratscht
-    imperative: tratsche
-  Neuigkeit:
+      - habe verbunden
+      - hast verbunden
+      - hat verbunden
+      - haben verbunden
+      - habt verbunden
+      - haben verbunden
+    imperative: verbinde
+  Beleuchtung:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - hír
+      - világítás
     tags:
     - ''
-    - _speakEasy_page009
-    plural: Neuigkeiten
-    date_added: '2024-12-15'
-  während:
-    class: adverb
-    tags:
-    - Genitive
-    - _speakEasy_page009
-    translations:
-      hungarian:
-      - alatt
-    date_added: '2024-12-15'
-  beim:
-    class: adverb
-    tags:
-    - ''
-    - _speakEasy_page009
-    translations:
-      hungarian:
-      - alatt
-    date_added: '2024-12-15'
-  dauern:
-    class: verb
-    translations:
-      hungarian:
-      - tart
-    tags:
-    - time
-    - _speakEasy_page009
-    prepositions:
-    - Es dauert eine Stunde mit dem Bus.
-    date_added: '2024-12-15'
-    conjugations:
-      Präsens:
-      - dauere
-      - dauerst
-      - dauert
-      - dauern
-      - dauert
-      - dauern
-      Präteritum:
-      - dauerte
-      - dauertest
-      - dauerte
-      - dauerten
-      - dauertet
-      - dauerten
-      Perfekt:
-      - habe gedauert
-      - hast gedauert
-      - hat gedauert
-      - haben gedauert
-      - habt gedauert
-      - haben gedauert
-    imperative: dauere
-  Zeitstrahl:
-    class: noun
-    definite_article: der
-    translations:
-      hungarian:
-      - idővonal
-    tags:
-    - time
-    - _speakEasy_page009
-    plural: Zeitstrahlen
-    date_added: '2024-12-15'
-  Betriebsferien:
+    - IT
+    plural: Beleuchtungen
+    date_added: '2024-12-24'
+  Welle:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - céges ünnepek
+      - hullám
     tags:
-    - business
-    - _speakEasy_page009
-    plural: ''
-    date_added: '2024-12-15'
-  Betrieb:
-    class: noun
-    definite_article: der
-    translations:
-      hungarian:
-      - művelet
-    tags:
-    - business
-    - _speakEasy_page009
-    plural: Betriebe
-    date_added: '2024-12-15'
-  Abteilung:
+    - water
+    - physics
+    - IT
+    plural: Wellen
+    date_added: '2024-12-24'
+  Richtung:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - osztály
+      - irány
     tags:
-    - business
-    - corporation
-    - organisation
-    - _speakEasy_page009
-    plural: Abteilungen
-    date_added: '2024-12-15'
+    - physics
+    - directions
+    - IT
+    plural: Richtungen
+    date_added: '2024-12-24'
