@@ -1,84 +1,11 @@
-definite article: 
-    https://der-artikel.de/der/Fall.html
-    
-load existing words to yaml
+test engine:
+- selection weights
+- weight increase/decrease
+- last seen/word/test
 
-core
-    zip - unzip DONE
-    
-teaching method
-    screen display of words with colouring
-    vocabulary builder based on topics
-    
-write tests
-    definite article of nouns
-    plural of nouns
-    translation
-    conjugation of verbs
-    imperative of verbs
-    
-application layers: 
-    helper functions
-        formatting
-            colouring           DONE
-            decoration          DONE
-        charting
-        compare lists           DONE
-        compare dicts
-    core - file
-        write                   DONE
-        read                    DONE
-        create backup           DONE
-        compress                DONE
-    logical 1 - vocab data
-        select 
-            words of a class    DONE
-            words of a topic    DONE
-            lately added words  WILL NOT IMPLEMENT
-            random words        DONE
-        add words to vocabulary
-            yaml model for each word class
-        remove words from vocabulary DONE
-        update words in vocabulary
-            clear weights
-            update weights
-        get external data
-            https://conjugator.reverso.net/conjugation-german.html
-            https://der-artikel.de/der/See.html
-            https://www.verbformen.com/conjugation/erza3hlen.htm
-            https://translate.google.com/?sl=de&tl=hu&text=%C3%84rztin&op=translate
-    
-    logical 2 - quality test                    DONE
-    
-    logical 3 - test host                       DONE
-        encapsulate test activity                   
-        load vocabulary                         DONE               
-        run tests                               DONE                          
-        save results                            DONE                          
-        
-        class design
-            class Vocabulary()                  DONE
-                load file
-                
-            class Test                          DONE
-                configuration
-                    creation time 
-                    results file
-                    type
-                run test 
-                
-                    
-        
-    logical 4 - tests and teaching
-        
-        definite article
-        word translation
-        phrase translation
-        conjugation
-        word multiple choice
-        phrase multiple choice
-        imperative
-        
-        vocab clone tag_filter property
-        
-   
+architecture: 
+- weights.yaml
+  word:
+    testname: 
+    - weight
+    - last seen
