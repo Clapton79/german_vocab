@@ -2728,3 +2728,284 @@ words:
     - IT
     plural: Richtungen
     date_added: '2024-12-24'
+  Tisch:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - asztal
+    tags:
+    - ''
+    - restaurant
+    plural: Tische
+    date_added: '2024-12-26'
+  Wirklichkeit:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Wirklichkeiten
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - valóság
+  Mädchen:
+    class: noun
+    definite_article: das
+    date_added: '2024-12-26'
+    plural: Mädchen
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - leány
+  Junge:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Jungen
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - fiú
+  Nachbar:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Nachbarn
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - szomszéd
+  Inhalt:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Inhalte
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - tartalom
+  Gemeinsamkeit:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Gemeinsamkeiten
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - hasonlóság
+  Möglichkeit:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Möglichkeiten
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - lehetőség
+  Gesellschaft:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Gesellschaften
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - vállalkozás
+  Unterschied:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Unterschiede
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - különbség
+  Fußball:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Fußbälle
+    tags:
+    - sports
+    - football
+    - _Adecco
+    translations:
+      hungarian:
+      - focilabda
+  Essen:
+    class: noun
+    definite_article: das
+    date_added: '2024-12-26'
+    plural: Essen
+    tags:
+    - food
+    - _Adecco
+    translations:
+      hungarian:
+      - étel
+  Lösung:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Lösungen
+    tags:
+    - ''
+    - _Adecco
+    translations:
+      hungarian:
+      - megoldás
+  zeichnen:
+    class: verb
+    conjugations:
+      Perfekt:
+      - habe gezeichnet
+      - hast gezeichnet
+      - hat gezeichnet
+      - haben gezeichnet
+      - habt gezeichnet
+      - haben gezeichnet
+      Präsens:
+      - zeichne
+      - zeichnest
+      - zeichnet
+      - zeichnen
+      - zeichnet
+      - zeichnen
+      Präteritum:
+      - zeichnete
+      - zeichnetest
+      - zeichnete
+      - zeichneten
+      - zeichnetet
+      - zeichneten
+    date_added: '2024-12-26'
+    imperative: zeichne
+    prepositions:
+    - zeichnen sich aus - különbözik
+    tags:
+    - drawing
+    - _Adecco
+    translations:
+      hungarian:
+      - jellemez
+      - leír
+      - lerazjol
+  Zeichnung:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Zeichnungen
+    tags:
+    - drawing
+    - _Adecco
+    translations:
+      hungarian:
+      - rajz
+  Verdacht:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: ''
+    tags:
+    - news
+    - _Adecco
+    translations:
+      hungarian:
+      - gyanú
+  Seite:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Seiten
+    tags:
+    - book
+    - reading
+    - _Adecco
+    translations:
+      hungarian:
+      - oldal
+  Tochter:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Töchter
+    tags:
+    - family
+    - _Adecco
+    translations:
+      hungarian:
+      - lánya valakinek
+  Bruder:
+    class: noun
+    definite_article: der
+    date_added: '2024-12-26'
+    plural: Brüder
+    tags:
+    - family
+    - _Adecco
+    translations:
+      hungarian:
+      - báty
+  Mutter:
+    class: noun
+    definite_article: die
+    date_added: '2024-12-26'
+    plural: Mütter
+    tags:
+    - family
+    - _Adecco
+    translations:
+      hungarian:
+      - anya
+  freuen:
+    class: verb
+    conjugations:
+      Perfekt:
+      - habe gefreut
+      - hast gefreut
+      - hat gefreut
+      - haben gefreut
+      - habt gefreut
+      - haben gefreut
+      Präsens:
+      - freue
+      - freust
+      - freut
+      - freuen
+      - freut
+      - freuen
+      Präteritum:
+      - freute
+      - freutest
+      - freute
+      - freuten
+      - freutet
+      - freuten
+    date_added: '2024-12-26'
+    imperative: freue
+    prepositions:
+    - ''
+    tags:
+    - sich
+    - _Adecco
+    translations:
+      hungarian:
+      - örül

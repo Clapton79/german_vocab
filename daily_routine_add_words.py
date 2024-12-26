@@ -73,7 +73,7 @@ merge_vocabulary(v,vv,overwrite=True)
 
 # back up the vocabulary file before saving
 vv.backup()
-vv.save()
+vv.save(overwrite=True)
 
 
 print(f"{words_added_to_vocabulary} new words have been added to the cache vocabulary and merged to the main one.")
