@@ -87,9 +87,11 @@ def load_file(filename,file_type:str=None):
         print(f"Error loading file {filename}: {str(e)}")
         return None
 
-def save_to_file(filename, contents: dict, format:str='yaml',safe:bool=False):
+def save_to_file(filename, contents: dict, format:str='yaml',safe:bool=False,overwrite:bool=False):
     try:
         logger.info(f"Saving to file {filename}, format: {format}, safe: {safe}")
+        if not overwrite and path.exists(filename):
+            raise ValueError(f"File {filename} already exists. Use overwrite=True to overwrite.")
         with open(filename, 'w', encoding='utf-8') as f:
             if format == 'json':
                 json.dump(contents, f, indent=4, ensure_ascii=False)

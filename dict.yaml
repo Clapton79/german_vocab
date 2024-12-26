@@ -734,6 +734,7 @@ words:
     - kitchen
     - food
     - cooking
+    - trennbares_verben
     prepositions:
     - ''
     date_added: '2024-12-08'
@@ -792,6 +793,7 @@ words:
     - _speakEasy_page004
     - sport
     - football
+    - sein
     prepositions:
     - ''
     date_added: '2024-12-08'
@@ -935,6 +937,7 @@ words:
       - jelez
     tags:
     - _speakEasy_page005
+    - trennbares_verben
     prepositions:
     - ''
     date_added: '2024-12-11'
@@ -1031,6 +1034,7 @@ words:
       - megszüntet
     tags:
     - _speakEasy_page005
+    - trennbares_verben
     prepositions:
     - ''
     date_added: '2024-12-11'
@@ -1064,6 +1068,7 @@ words:
       - hozzáad
     tags:
     - _speakEasy_page005
+    - trennbares_verben
     prepositions:
     - ''
     date_added: '2024-12-11'
@@ -1303,7 +1308,7 @@ words:
       hungarian:
       - elnököl
     tags:
-    - ''
+    - trennbares_verben
     - _speakEasy_page006
     prepositions:
     - ''

@@ -3,6 +3,7 @@ from vocab_utilities import *
 from vocab import *
 import itertools
 from pprint import pprint
+from datetime import datetime
 
 
 filename = 'weights.yaml'
@@ -27,12 +28,16 @@ class Weight():
             if word not in weights.keys():
                 weights[word] = {}
                 
-            weights[word][test]={'last_seen': '2024-12-24','weight': 100}
-        pprint(weights)               
+            weights[word][test]={'last_seen': format(datetime.now(),'%Y-%m-%d'),'weight': 100}
+        
+        self_weights = self.weights.copy()
+        weights.update(self_weights)           
         self.weights.update(weights)
-                
-v = Vocabulary('dict.yaml')
-    
-wt = Weight()
-wt.create_schema_for_words(v.words())
-#pprint(wt.weights)
+     
+    def save(self,filename:str=""):
+        if filename == "":
+            filename = self.filename
+            
+        save_to_file(filename, self.weights, 'ruamel')
+        
+     

@@ -200,7 +200,7 @@ class Vocabulary():
             logger.error(f"Error initializing vocabulary: {str(e)}")
 
     # file operations
-    def save(self, filename:str = None,fileformat:str = None):
+    def save(self, filename:str = None,fileformat:str = None,overwrite:bool=False):
         if filename is None:
             filename = self.filename
         try:
@@ -210,7 +210,7 @@ class Vocabulary():
 
             
             data = {"tags": self.custom_data, "words": self.vocab}
-            save_to_file(filename, data, fileformat,safe=safe)
+            save_to_file(filename, data, fileformat,safe=safe,overwrite=overwrite)
             
         except Exception as e:
             logger.error(f"Could not save vocabulary to file: {str(e)}")
@@ -434,10 +434,6 @@ class LanguageTest():
             print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer: {bcolors.OKGREEN}{correct_answer}{bcolors.ENDC}")
         elif isinstance(correct_answer, list):
             print(f"{' '.ljust(5, ' ')}{bcolors.FAIL}Correct answer:")
-            # padding = max([len (x) for x in correct_answer])
-            # for sol in correct_answer:
-            #     print(
-            #         f"{' - {sol}'.ljust(padding + 2, ' ')}{bcolors.OKGREEN}{sol}{bcolors.ENDC}")
             compare_two_lists(correct_answer,self.answers[index])
 
     def __calculate_results(self):

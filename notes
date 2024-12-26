@@ -1,11 +1,5 @@
 test engine:
-- selection weights
+
 - weight increase/decrease
 - last seen/word/test
-
-architecture: 
-- weights.yaml
-  word:
-    testname: 
-    - weight
-    - last seen
+- selection - no duplicates - weight and last seen

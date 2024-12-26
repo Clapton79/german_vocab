@@ -3,6 +3,7 @@ import vocab as v
 from vocab_utilities import bcolors, get_conjugation, get_definite_article
 import os
 from applogger import setup_logger
+from weights import *
 
 #################################################################
 # Variables needed to run the unit tests
@@ -122,6 +123,17 @@ def test_14_webquery_returns_conjugations():
     except Exception as e:
         return False
 
+def test_15_create_weights():
+    try:
+        v = Vocabulary('dict.yaml')
+        wt = Weight()
+        wt.create_schema_for_words(v.words())
+        wt.save('test_weights.yaml')
+        return True
+    except:
+        return False
+    
+    
 os.environ['VOCAB_LOGLEVEL']= 'ERROR'
 os.environ['VOCAB_LOG_TO_SCREEN'] = "False"
 logger=setup_logger()
