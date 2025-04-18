@@ -262,13 +262,13 @@ words:
     class: verb
     translations:
       hungarian:
-      - elkészít
+      - veszít
+      - elveszít
+      - eltűnik
+      - eltéved
     tags:
-    - _speakEasy_page002
-    - core
-    prepositions:
-    - ''
-    date_added: '2024-12-07'
+    - sich
+    - _Adecco_Sabine
     conjugations:
       Präsens:
       - verliere
@@ -292,6 +292,17 @@ words:
       - habt verloren
       - haben verloren
     imperative: verliere
+    prepositions:
+    - sich verlieren - megfeledkezik magáról
+    - den Halt verlieren - kicsúszik a talaj a lába alól
+    - den Kopf verlieren - elveszíti a fejét
+    - die Fassung verlieren - elveszíti az önuralmát
+    - etwas aus dem Gedächtnis verlieren - teljesen elfelejt valamit
+    - etwas aus den Augen verlieren - szem elől téveszt
+    - In der Hektik des Alltags kann man leicht wichtige Dinge aus den Augen verloren
+    - kein Wort über etwas verlieren - egy szót sem veszteget rá
+    - wir dürfen unser Ziel nicht aus den Augen verlieren - nem szabad szem elől tévesztenünk a célunkat
+    date_added: '2025-04-18'
   schnurren:
     class: verb
     translations:
@@ -3009,3 +3020,358 @@ words:
     translations:
       hungarian:
       - örül
+  schüchtern:
+    class: adjective
+    tags:
+    - personality
+    - _Adecco_Sabine
+    translations:
+      hungarian:
+      - félénk
+    date_added: '2025-04-18'
+  Rahmen:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - keret
+    tags:
+    - furniture
+    - _Adecco_Sabine
+    plural: Rahmen
+    date_added: '2025-04-18'
+  Spitze:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - csúcs
+      - hegy
+    tags:
+    - ''
+    - _Adecco_Sabine
+    plural: Spitzen
+    date_added: '2025-04-18'
+  vollkommen:
+    class: adjective
+    tags:
+    - ''
+    - _Adecco_Sabine
+    translations:
+      hungarian:
+      - teljes
+      - hibátlan
+      - tökéletes
+    date_added: '2025-04-18'
+  engagiert:
+    class: adjective
+    tags:
+    - personality
+    - _Adecco_Sabine
+    translations:
+      hungarian:
+      - elkötelezett
+    date_added: '2025-04-18'
+  Fähigkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - képesség
+    tags:
+    - personality
+    - skills
+    - _Adecco_Sabine
+    plural: Fähigkeiten
+    date_added: '2025-04-18'
+  erfüllen:
+    class: verb
+    translations:
+      hungarian:
+      - teljesít
+    tags:
+    - ''
+    - _Adecco_Sabine
+    prepositions:
+    - ''
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - erfülle
+      - erfüllst
+      - erfüllt
+      - erfüllen
+      - erfüllt
+      - erfüllen
+      Präteritum:
+      - erfüllte
+      - erfülltest
+      - erfüllte
+      - erfüllten
+      - erfülltet
+      - erfüllten
+      Perfekt:
+      - habe erfüllt
+      - hast erfüllt
+      - hat erfüllt
+      - haben erfüllt
+      - habt erfüllt
+      - haben erfüllt
+    imperative: erfülle
+  hüten:
+    class: verb
+    translations:
+      hungarian:
+      - őriz
+      - vigyáz
+      - megóv
+    tags:
+    - ''
+    - _Adecco_Sabine
+    prepositions:
+    - er muss das Bett hüten
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - hüte
+      - hütest
+      - hütet
+      - hüten
+      - hütet
+      - hüten
+      Präteritum:
+      - hütete
+      - hütetest
+      - hütete
+      - hüteten
+      - hütetet
+      - hüteten
+      Perfekt:
+      - habe gehütet
+      - hast gehütet
+      - hat gehütet
+      - haben gehütet
+      - habt gehütet
+      - haben gehütet
+    imperative: hüte
+  nachgehen:
+    class: verb
+    translations:
+      hungarian:
+      - űz
+      - utánajár
+    tags:
+    - hobby
+    - hunting
+    - _Adecco_Sabine
+    prepositions:
+    - einem Hobby nachgehen
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - gehe nach
+      - gehst nach
+      - geht nach
+      - gehen nach
+      - geht nach
+      - gehen nach
+      Präteritum:
+      - ging nach
+      - gingst nach
+      - ging nach
+      - gingen nach
+      - gingt nach
+      - gingen nach
+      Perfekt:
+      - bin nachgegangen
+      - bist nachgegangen
+      - ist nachgegangen
+      - sind nachgegangen
+      - seid nachgegangen
+      - sind nachgegangen
+    imperative: gehe
+  Selbstverständlichkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - nyilvánvaló dolog
+      - egyértelmű dolog
+    tags:
+    - explanation
+    - _Adecco_Sabine
+    plural: Sebstverständlichkeiten
+    date_added: '2025-04-18'
+  erhalten:
+    class: verb
+    translations:
+      hungarian:
+      - fenntart
+      - megőriz
+      - kap
+    tags:
+    - sich
+    - _Adecco_Sabine
+    prepositions:
+    - Ich erhielt Briefe. Kaptam levelet.
+    - Er erhielt den Auftrag. Megkapta a megbízást.
+    - aufrecht erhalten - fenntart
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - erhalte
+      - erhältst
+      - erhält
+      - erhalten
+      - erhaltet
+      - erhalten
+      Präteritum:
+      - erhielt
+      - erhieltst
+      - erhielt
+      - erhielten
+      - erhieltet
+      - erhielten
+      Perfekt:
+      - habe erhalten
+      - hast erhalten
+      - hat erhalten
+      - haben erhalten
+      - habt erhalten
+      - haben erhalten
+    imperative: erhalt
+  Schranke:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - akadály
+      - korlát
+      - sorompó
+    tags:
+    - ''
+    - _Adecco_Sabine
+    plural: Schranken
+    date_added: '2025-04-18'
+  abschließen:
+    class: verb
+    translations:
+      hungarian:
+      - befejez
+      - lezár
+      - elzár
+    tags:
+    - ''
+    - _Adecco_Sabine
+    prepositions:
+    - Ich habe letztes Jahr mit dem Gymnasium abgeschlossen. Tavaly befejeztem a gimnáziumot.
+    - Könntest du die Türe abschließen? Bezárnád az ajtót?
+    - einen Pakt mit jemandem abschließen - valakivel egyezséget köt
+    - eine Wette abschließen - fogadást köt
+    - den Vertrag abschließen - szerződést köt
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - schließe ab
+      - schließt ab
+      - schließt ab
+      - schließen ab
+      - schließt ab
+      - schließen ab
+      Präteritum:
+      - schloss ab
+      - schlossest ab
+      - schloss ab
+      - schlossen ab
+      - schlosst ab
+      - schlossen ab
+      - schloß ab
+      - schlosst ab
+      - schloß ab
+      - schlossen ab
+      - schloßt ab
+      - schlossen ab
+      Perfekt:
+      - habe abgeschlossen
+      - hast abgeschlossen
+      - hat abgeschlossen
+      - haben abgeschlossen
+      - habt abgeschlossen
+      - haben abgeschlossen
+    imperative: schließe
+  gewöhnen:
+    class: verb
+    translations:
+      hungarian:
+      - hozzászoktat
+    tags:
+    - sich
+    - _Adecco_Sabine
+    prepositions:
+    - gewöhnen an + Akk - hozzászoktat
+    - gewöhnen sich - hozzászokik/rászokik
+    - abgewöhnen sich - leszokik
+    - ainander gewöhnen sich - összeszokik
+    - eingewöhnen sich - beleszokik
+    - von etwas abgewöhnen - elidegenedik valamitől
+    - dem Kink Ordnung angewöhnen - a gyermeket rendre szoktatja
+    - sich etwas angewöhnen - rászokik valamire
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - gewöhne
+      - gewöhnst
+      - gewöhnt
+      - gewöhnen
+      - gewöhnt
+      - gewöhnen
+      Präteritum:
+      - gewöhnte
+      - gewöhntest
+      - gewöhnte
+      - gewöhnten
+      - gewöhntet
+      - gewöhnten
+      Perfekt:
+      - habe gewöhnt
+      - hast gewöhnt
+      - hat gewöhnt
+      - haben gewöhnt
+      - habt gewöhnt
+      - haben gewöhnt
+    imperative: gewöhne
+  abbauen:
+    class: verb
+    translations:
+      hungarian:
+      - lebont
+      - leépít
+    tags:
+    - construction
+    - _Adecco_Sabine
+    prepositions:
+    - Die alte Műhle wurde abgebaut. Lebontották a régi malmot.
+    date_added: '2025-04-18'
+    conjugations:
+      Präsens:
+      - baue ab
+      - baust ab
+      - baut ab
+      - bauen ab
+      - baut ab
+      - bauen ab
+      Präteritum:
+      - baute ab
+      - bautest ab
+      - baute ab
+      - bauten ab
+      - bautet ab
+      - bauten ab
+      Perfekt:
+      - habe abgebaut
+      - hast abgebaut
+      - hat abgebaut
+      - haben abgebaut
+      - habt abgebaut
+      - haben abgebaut
+    imperative: baue
