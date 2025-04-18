@@ -233,7 +233,7 @@ class Vocabulary():
         
     def __str__ (self):
         return (str(self.vocab))
-        
+    
     def filter_by_class_and_tag(self, word_class:str, tag:str=None):
             for item, detail in self.vocab.items():
                 if detail.get('class') == word_class:
