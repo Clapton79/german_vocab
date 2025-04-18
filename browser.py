@@ -5,10 +5,22 @@ from vocab_utilities import bcolors
 import os
 from pprint import pprint
 
+def vocab_summary(vc:Vocabulary):
+    summary = {}
+    types=[x['class'] for x in vc.vocab]
+    for item in list(set(types)):
+        summary[f'{item}s']=len([x for x in types if x==item])
+    
+    summary['words in total']=len(types)
+    pprint(summary)
+    
 def word_finder(vc:Vocabulary):
     word = input("Type a word: ")
     result = vc.__getitem__(word)
-    pprint(result)
+    if result is not None:
+        pprint(result['translations']['hungarian'])
+    else:
+        print(f'{bcolors.FAIL}Word {word} was not found.{bcolors.ENDC}')
     
 def conjugator (vc:Vocabulary):
     word = input("Type a word: ")
@@ -32,7 +44,8 @@ def browser_menu(vc:Vocabulary):
     
     browser_functions = {
         "Word finder": word_finder,
-        "Conjugator": conjugator
+        "Conjugator": conjugator,
+        "Vocabulary summary": vocab_summary
         }
     keys = list(browser_functions.keys())
     for k,dtl in enumerate(browser_functions):
@@ -43,6 +56,7 @@ def browser_menu(vc:Vocabulary):
     response = int(input("Choose option: "))-1
     if response == len(keys): #last item, exit selected
         os.system('clear')
+        
     else:
         browser_functions[keys[response]](vc)
         input("Press enter to continue...")
