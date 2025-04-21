@@ -3,3 +3,7 @@ test engine:
 - weight increase/decrease
 - last seen/word/test
 - selection - no duplicates - weight and last seen
+
+browser:
+- word finder
+- conjugator

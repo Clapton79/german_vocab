@@ -239,7 +239,16 @@ class Vocabulary():
                 if detail.get('class') == word_class:
                     if tag is None or tag in detail['tags']:
                         yield item
-          
+    
+    def filter_by_tag (self,tag:str=None):
+        result=[]
+        for item,detail in self.vocab.items():
+            tags = detail.get('tags')
+            if tags is not None:
+                if tag in tags:
+                    result.append(item)
+        return result
+             
     def clone(self, word_class_filter:str=None, tag_filter:str=None,words_filter:list=None):
         """Creates a new instance of the vocabulary based on the given word_class and tag_filter"""
         new_vocab = Vocabulary()

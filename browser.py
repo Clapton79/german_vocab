@@ -4,31 +4,45 @@ from vocab import Vocabulary
 from vocab_utilities import bcolors
 import os
 from pprint import pprint
+import re
 
 def vocab_summary(vc:Vocabulary):
-    summary = {}
-    types=[x['class'] for x in vc.vocab]
-    for item in list(set(types)):
-        summary[f'{item}s']=len([x for x in types if x==item])
     
-    summary['words in total']=len(types)
-    pprint(summary)
+    types=[y['class'] for x,y in vc.vocab.items()]
+    
+    for item in list(set(types)):
+       print(f'{item.ljust(15," ")}: {len([x for x in types if x==item])}')
+    
+    print(f'{"TOTAL".ljust(15," ")}: {len(types)}')
     
 def word_finder(vc:Vocabulary):
-    word = input("Type a word: ")
-    result = vc.__getitem__(word)
-    if result is not None:
-        pprint(result['translations']['hungarian'])
+    rx = input("Type a regex: ")
+    pattern = re.compile(rx)
+    result=[x for x in vc.vocab.keys() if pattern.match(x)]
+    if len(result)>0:
+        report=([f'({vc[x]["class"][0]}){x.ljust(25," ")} {vc[x]["translations"]["hungarian"]}' for x in result])
+        for item in report: 
+            print(item)
     else:
-        print(f'{bcolors.FAIL}Word {word} was not found.{bcolors.ENDC}')
-    
+        print(f'{bcolors.FAIL}No word matched pattern {rx}{bcolors.ENDC}')
+
+def list_words_for_tag (vc:Vocabulary):
+    tag = input("Type a tag: ")
+    result = list(vc.filter_by_tag())
+    if len(result)>0:
+        print(f'Words with tag {tag}:')
+        print(result)
+    else:
+        print(f'No words with tag {tag}')
+        
 def conjugator (vc:Vocabulary):
     word = input("Type a word: ")
     result = vc.__getitem__(word)
-    if result is not None:
+    if result is not None or result['class']!='verb':
+        report={}
         pprint(result['conjugations'])
     else:
-        print (f'{bcolors.FAIL}Word {word} was not found.{bcolors.ENDC}')
+        print (f'{bcolors.FAIL}Word {word} was not found or is not a verb.{bcolors.ENDC}')
     
 def browser_menu(vc:Vocabulary):
 
@@ -45,6 +59,7 @@ def browser_menu(vc:Vocabulary):
     browser_functions = {
         "Word finder": word_finder,
         "Conjugator": conjugator,
+        "Words with tag": list_words_for_tag,
         "Vocabulary summary": vocab_summary
         }
     keys = list(browser_functions.keys())
