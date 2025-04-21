@@ -1,11 +1,57 @@
 # browse dictionary and get info on dictionary data
 
-from vocab import Vocabulary
+from vocab import *
 from vocab_utilities import bcolors
 import os
 from pprint import pprint
 import re
 
+def daily_test(vc:Vocabulary):
+
+    print(get_available_tests())
+
+    number_of_questions = input('How many questions do you want? (10)')
+
+    if number_of_questions == '':
+        number_of_questions = 10
+    else:
+        number_of_questions = int(number_of_questions)
+
+    base_v = vc
+
+    print(base_v.tags())
+    tag_filter = input('Tag filter: ')
+    if len(tag_filter) > 0:
+        test_v = base_v.clone(tag_filter=tag_filter)
+        adj_v = base_v.clone(word_class_filter='adjective', tag_filter=tag_filter)
+        verbs_v = base_v.clone(word_class_filter='verb', tag_filter=tag_filter)
+    else:
+        test_v = base_v.clone()
+        adj_v = base_v.clone(word_class_filter='adjective')
+        verbs_v = base_v.clone(word_class_filter='verb')
+
+    print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
+
+    if number_of_questions > 0:
+        # verb conjugation using new vocabulary
+        my_test = LanguageTest(number_of_questions,
+                            "translation", test_v, True)
+
+        my_test.run()
+        # verb conjugation using new vocabulary
+        my_test = LanguageTest(number_of_questions,
+                            'definite article', test_v, True)
+
+        my_test.run()
+        my_test = LanguageTest(number_of_questions,
+                            "translation", adj_v, True)
+
+        my_test.run()
+        # verb conjugation using new vocabulary
+        my_test = LanguageTest(number_of_questions,
+                            'verb conjugation', test_v, True)
+        my_test.run()
+    
 def vocab_summary(vc:Vocabulary):
     
     types=[y['class'] for x,y in vc.vocab.items()]
@@ -60,6 +106,7 @@ def browser_menu(vc:Vocabulary):
         "Word finder": word_finder,
         "Conjugator": conjugator,
         "Words with tag": list_words_for_tag,
+        "Daily test": daily_test,
         "Vocabulary summary": vocab_summary
         }
     keys = list(browser_functions.keys())
