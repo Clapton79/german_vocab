@@ -299,8 +299,7 @@ words:
     - etwas aus den Augen verlieren - szem elől téveszt
     - In der Hektik des Alltags kann man leicht wichtige Dinge aus den Augen verloren
     - kein Wort über etwas verlieren - egy szót sem veszteget rá
-    - wir dürfen unser Ziel nicht aus den Augen verlieren - nem szabad szem elől tévesztenünk
-      a célunkat
+    - wir dürfen unser Ziel nicht aus den Augen verlieren - nem szabad szem elől tévesztenünk a célunkat
     date_added: '2025-04-18'
   schnurren:
     class: verb
@@ -3319,3 +3318,36 @@ words:
       - habt vorbereitet
       - haben vorbereitet
     imperative: bereite
+üben:
+  class: verb
+  translations:
+    hungarian:
+    - gyakorol
+  tags:
+  - ''
+  prepositions:
+  - ''
+  date_added: '2025-04-18'
+  conjugations:
+    Präsens:
+    - übe
+    - übst
+    - übt
+    - üben
+    - übt
+    - üben
+    Präteritum:
+    - übte
+    - übtest
+    - übte
+    - übten
+    - übtet
+    - übten
+    Perfekt:
+    - habe geübt
+    - hast geübt
+    - hat geübt
+    - haben geübt
+    - habt geübt
+    - haben geübt
+  imperative: übe

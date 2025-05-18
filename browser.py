@@ -62,16 +62,23 @@ def vocab_summary(vc:Vocabulary):
     print(f'{"TOTAL".ljust(15," ")}: {len(types)}')
     
 def word_finder(vc:Vocabulary):
-    rx = input("Type a regex: ")
-    pattern = re.compile(rx)
-    result=[x for x in vc.vocab.keys() if pattern.match(x)]
-    if len(result)>0:
-        report=([f'({vc[x]["class"][0]}){x.ljust(25," ")} {vc[x]["translations"]["hungarian"]}' for x in result])
-        for item in report: 
-            print(item)
-    else:
-        print(f'{bcolors.FAIL}No word matched pattern {rx}{bcolors.ENDC}')
+    try:
+        rx = input("Type a regex: ")
+        pattern = re.compile(rx)
+        result=[x for x in vc.vocab.keys() if pattern.match(x)] # search in words
+        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]))]
+        result +=result2
+        #result_c = [x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))] # search in conjugation
+        if len(result)>0:
+            report=([f'({vc[x]["class"][0]}){x.ljust(25," ")} {", ".join(vc[x]["translations"]["hungarian"])}' for x in result])
+            for item in report: 
+                print(item)
+        else:
+            print(f'{bcolors.FAIL}No word matched pattern {rx}{bcolors.ENDC}')
 
+    except Exception as e: 
+        print(f'Search error({str(e)}')
+        
 def list_words_for_tag (vc:Vocabulary):
     tag = input("Type a tag: ")
     result = list(vc.filter_by_tag())
