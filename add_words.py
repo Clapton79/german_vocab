@@ -10,18 +10,30 @@ print('#' * 86)
 
 environ['VOCAB_LOGLEVEL'] = 'ERROR'
 environ['VOCAB_LOG_TO_SCREEN']='True'
+
+
+def is_numeric(variable):
+    try:
+        var=int(variable)
+        return True
+    except:
+        return False
+    
+
+
 vv = Vocabulary('dict.yaml')    # open the main vocabulary file
 print(f"Used main tags: {[x for x in vv.tags() if x.startswith('_')]}")
 
-cnt = input('How many words would you like to register? (1): ')
+cnt = input('How many words would you like to register? (1):')
+if not is_numeric(cnt):
+    print("Invalid input. Please enter a number.")
+    exit(1)
+
 cnt = 1 if cnt == '' else cnt 
 if cnt == 0:
     exit(0)
 words_added_to_vocabulary = 0
-default_tags = input('Default tags to add to the words: ')
 
-if default_tags:
-    default_tags = default_tags.split(',')
 
 try:
     cnt = int(cnt)
@@ -29,8 +41,11 @@ except:
     print("Invalid input. Please enter a number.")
     exit(1)
 
-
-
+default_tags = input('Default tags to add to the words: (comma separated list)')
+if default_tags and isinstance(default_tags, list):
+    default_tags = default_tags.split(',')
+if default_tags and isinstance(default_tags, str):
+    default_tags = [default_tags]
 
 v = Vocabulary()  # create a new vocabulary
 word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']
@@ -38,10 +53,17 @@ word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','prepo
 for i in range(cnt):
     
     word_class_selection = input("Select word class: " + str([': '.join ([str(i+1),x]) for i,x in enumerate(word_classes)]))
+    if word_class_selection is None or word_class_selection == '':
+        word_class_selection = 1
+
     if word_class_selection == 0:
         print("Skipping word.")
         continue
     
+    if word_class_selection not in [str(i+1) for i in range(len(word_classes))]:
+        print("Invalid selection. Please select a valid word class.")
+        continue
+
     word_class = word_classes[int(word_class_selection)-1]
     
     w = Word(word_class)
@@ -65,7 +87,7 @@ for i in range(cnt):
         words_added_to_vocabulary += 1
     
     # always save the vocabulary before moving to the next word
-    v.save('new_dict.yaml')
+    v.save('new_dict.yaml', overwrite=True)
     
 # open the main vocabulary file
 # merge the vocabulary into the main vocabulary file

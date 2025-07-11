@@ -3319,3 +3319,108 @@ words:
       - habt vorbereitet
       - haben vorbereitet
     imperative: bereite
+  eindringen:
+    class: verb
+    translations:
+      hungarian:
+      - behatol
+    tags:
+    - sein
+    - _Csilla
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-11'
+    conjugations:
+      Präsens:
+      - dringe ein
+      - dringst ein
+      - dringt ein
+      - dringen ein
+      - dringt ein
+      - dringen ein
+      Präteritum:
+      - drang ein
+      - drangst ein
+      - drang ein
+      - drangen ein
+      - drangt ein
+      - drangen ein
+      Perfekt:
+      - bin eingedrungen
+      - bist eingedrungen
+      - ist eingedrungen
+      - sind eingedrungen
+      - seid eingedrungen
+      - sind eingedrungen
+    imperative: dring
+  verbergen:
+    class: verb
+    translations:
+      hungarian:
+      - elrejt
+    tags:
+    - ''
+    - _Csilla
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-11'
+    conjugations:
+      Präsens:
+      - verberge
+      - verbirgst
+      - verbirgt
+      - verbergen
+      - verbergt
+      - verbergen
+      Präteritum:
+      - verbarg
+      - verbargst
+      - verbarg
+      - verbargen
+      - verbargt
+      - verbargen
+      Perfekt:
+      - habe verborgen
+      - hast verborgen
+      - hat verborgen
+      - haben verborgen
+      - habt verborgen
+      - haben verborgen
+    imperative: verbirg
+  anbieten:
+    class: verb
+    translations:
+      hungarian:
+      - felkínál
+    tags:
+    - ''
+    - _Csilla
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-11'
+    conjugations:
+      Präsens:
+      - biete an
+      - bietest an
+      - bietet an
+      - bieten an
+      - bietet an
+      - bieten an
+      Präteritum:
+      - bot an
+      - botst an
+      - bot an
+      - boten an
+      - botet an
+      - boten an
+      Perfekt:
+      - habe angeboten
+      - hast angeboten
+      - hat angeboten
+      - haben angeboten
+      - habt angeboten
+      - haben angeboten
+    imperative: biete
