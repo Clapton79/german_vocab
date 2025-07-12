@@ -42,10 +42,8 @@ except:
     exit(1)
 
 default_tags = input('Default tags to add to the words: (comma separated list)')
-if default_tags and isinstance(default_tags, list):
-    default_tags = default_tags.split(',')
-if default_tags and isinstance(default_tags, str):
-    default_tags = [default_tags]
+default_tags = default_tags.split(',')
+
 
 v = Vocabulary()  # create a new vocabulary
 word_classes = ['verb','noun','adjective','adverb','conjunction','phrase','preposition']

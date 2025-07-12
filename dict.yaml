@@ -1905,10 +1905,11 @@ words:
       hungarian:
       - kap
     tags:
-    - shopping
-    - _speakEasy_page008
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
     prepositions:
-    date_added: '2024-12-15'
+    - ''
+    date_added: '2025-07-12'
     conjugations:
       Präsens:
       - bekomme
@@ -2015,9 +2016,11 @@ words:
       hungarian:
       - parancsol
     tags:
-    - _speakEasy_page008
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
     prepositions:
-    date_added: '2024-12-15'
+    - ''
+    date_added: '2025-07-12'
     conjugations:
       Präsens:
       - befehle
@@ -3396,11 +3399,10 @@ words:
       - felkínál
     tags:
     - ''
-    - _Csilla
-    - Unregelmäßige_verben_1
+    - _Csilla,Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-11'
+    date_added: '2025-07-12'
     conjugations:
       Präsens:
       - biete an
@@ -3423,4 +3425,307 @@ words:
       - haben angeboten
       - habt angeboten
       - haben angeboten
+    imperative: biete
+  aussteigen:
+    class: verb
+    translations:
+      hungarian:
+      - kiszáll
+    tags:
+    - sein
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - steige aus
+      - steigst aus
+      - steigt aus
+      - steigen aus
+      - steigt aus
+      - steigen aus
+      Präteritum:
+      - stieg aus
+      - stiegst aus
+      - stieg aus
+      - stiegen aus
+      - stiegt aus
+      - stiegen aus
+      Perfekt:
+      - bin ausgestiegen
+      - bist ausgestiegen
+      - ist ausgestiegen
+      - sind ausgestiegen
+      - seid ausgestiegen
+      - sind ausgestiegen
+    imperative: steige
+  backen:
+    class: verb
+    translations:
+      hungarian:
+      - süt
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - backe
+      - bäckst
+      - bäckt
+      - backen
+      - backt
+      - backen
+      - backe
+      - backst
+      - backt
+      - backen
+      - backt
+      - backen
+      Präteritum:
+      - buk
+      - bukst
+      - buk
+      - buken
+      - bukt
+      - buken
+      - backte
+      - backtest
+      - backte
+      - backten
+      - backtet
+      - backten
+      Perfekt:
+      - habe gebacken
+      - hast gebacken
+      - hat gebacken
+      - haben gebacken
+      - habt gebacken
+      - haben gebacken
+    imperative: backe
+  beginnen:
+    class: verb
+    translations:
+      hungarian:
+      - elkezdődik
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - beginne
+      - beginnst
+      - beginnt
+      - beginnen
+      - beginnt
+      - beginnen
+      Präteritum:
+      - begann
+      - begannst
+      - begann
+      - begannen
+      - begannt
+      - begannen
+      Perfekt:
+      - habe begonnen
+      - hast begonnen
+      - hat begonnen
+      - haben begonnen
+      - habt begonnen
+      - haben begonnen
+    imperative: beginn
+  beißen:
+    class: verb
+    translations:
+      hungarian:
+      - harap
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - beiße
+      - beißt
+      - beißt
+      - beißen
+      - beißt
+      - beißen
+      Präteritum:
+      - biss
+      - bissest
+      - biss
+      - bissen
+      - bisst
+      - bissen
+      - biss
+      - bisst
+      - biss
+      - bissen
+      - bisst
+      - bissen
+      Perfekt:
+      - habe gebissen
+      - hast gebissen
+      - hat gebissen
+      - haben gebissen
+      - habt gebissen
+      - haben gebissen
+    imperative: beiße
+  betrügen:
+    class: verb
+    translations:
+      hungarian:
+      - becsap
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - betrüge
+      - betrügst
+      - betrügt
+      - betrügen
+      - betrügt
+      - betrügen
+      Präteritum:
+      - betrog
+      - betrogst
+      - betrog
+      - betrogen
+      - betrogt
+      - betrogen
+      Perfekt:
+      - habe betrogen
+      - hast betrogen
+      - hat betrogen
+      - haben betrogen
+      - habt betrogen
+      - haben betrogen
+    imperative: betrüge
+  bewegen:
+    class: verb
+    translations:
+      hungarian:
+      - motivál
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - bewege
+      - bewegst
+      - bewegt
+      - bewegen
+      - bewegt
+      - bewegen
+      Präteritum:
+      - bewegte
+      - bewegtest
+      - bewegte
+      - bewegten
+      - bewegte
+      - bewegten
+      - bewog
+      - bewogst
+      - bewog
+      - bewogen
+      - bewogt
+      - bewogen
+      Perfekt:
+      - habe bewogen
+      - hast bewogen
+      - hat bewogen
+      - haben bewogen
+      - habt bewogen
+      - haben bewogen
+      - habe bewegt
+      - hast bewegt
+      - hat bewegt
+      - haben bewegt
+      - habt bewegt
+      - haben bewegt
+    imperative: bewege
+  biegen:
+    class: verb
+    translations:
+      hungarian:
+      - hajlít
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - biege
+      - biegst
+      - biegt
+      - biegen
+      - biegt
+      - biegen
+      Präteritum:
+      - bog
+      - bogst
+      - bog
+      - bogen
+      - bogt
+      - bogen
+      Perfekt:
+      - habe gebogen
+      - hast gebogen
+      - hat gebogen
+      - haben gebogen
+      - habt gebogen
+      - haben gebogen
+    imperative: biege
+  bieten:
+    class: verb
+    translations:
+      hungarian:
+      - nyújt
+      - kínál
+    tags:
+    - ''
+    - _Csilla,Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-12'
+    conjugations:
+      Präsens:
+      - biete
+      - bietest
+      - bietet
+      - bieten
+      - bietet
+      - bieten
+      Präteritum:
+      - bot
+      - botst
+      - bot
+      - boten
+      - botet
+      - boten
+      Perfekt:
+      - habe geboten
+      - hast geboten
+      - hat geboten
+      - haben geboten
+      - habt geboten
+      - haben geboten
     imperative: biete
