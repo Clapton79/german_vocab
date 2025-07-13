@@ -1,2 +1,192 @@
 tags: {}
-words: {}
+words:
+  begleiten:
+    class: verb
+    translations:
+      hungarian:
+      - elkísér
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - begleite
+      - begleitest
+      - begleitet
+      - begleiten
+      - begleitet
+      - begleiten
+      Präteritum:
+      - begleitete
+      - begleitetest
+      - begleitete
+      - begleiteten
+      - begleitetet
+      - begleiteten
+      Perfekt:
+      - habe begleitet
+      - hast begleitet
+      - hat begleitet
+      - haben begleitet
+      - habt begleitet
+      - haben begleitet
+    imperative: begleite
+  zählen:
+    class: verb
+    translations:
+      hungarian:
+      - számol
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - zähle
+      - zählst
+      - zählt
+      - zählen
+      - zählt
+      - zählen
+      Präteritum:
+      - zählte
+      - zähltest
+      - zählte
+      - zählten
+      - zähltet
+      - zählten
+      Perfekt:
+      - habe gezählt
+      - hast gezählt
+      - hat gezählt
+      - haben gezählt
+      - habt gezählt
+      - haben gezählt
+    imperative: zähle
+  streiten:
+    class: verb
+    translations:
+      hungarian:
+      - veszekszik
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_03
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - streite
+      - streitest
+      - streitet
+      - streiten
+      - streitet
+      - streiten
+      Präteritum:
+      - stritt
+      - strittest
+      - stritt
+      - stritten
+      - strittet
+      - stritten
+      Perfekt:
+      - habe gestritten
+      - hast gestritten
+      - hat gestritten
+      - haben gestritten
+      - habt gestritten
+      - haben gestritten
+    imperative: streite
+  Vertrauen:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - bizalom
+    tags:
+    - relationship
+    - business
+    - _Csilla
+    - _Csilla_03
+    plural: ''
+    date_added: '2025-07-13'
+  Mitmensch:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - embertárs
+      - felebarát
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    plural: Mitmenschen
+    date_added: '2025-07-13'
+  ehrenhaft:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    translations:
+      hungarian:
+      - őszinte
+      - nemes
+    date_added: '2025-07-13'
+  ehrenamtlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    translations:
+      hungarian:
+      - önkéntes
+      - címzetes
+      - tiszteletbeli
+    date_added: '2025-07-13'
+  Vergangenheit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - múlt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    plural: Vergangenheiten
+    date_added: '2025-07-13'
+  Gegenwart:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - jövő
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    plural: ''
+    date_added: '2025-07-13'
+  Legende:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - legenda
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_03
+    plural: Legenden
+    date_added: '2025-07-13'

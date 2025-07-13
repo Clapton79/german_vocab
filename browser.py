@@ -134,9 +134,8 @@ def list_words_for_tag (vc:Vocabulary):
         tag = input("Type a tag: ")
         result = list(vc.filter_by_tag(tag))
         if len(result)>0:
-            print(f'Words with tag {tag}:')
-            print(result)
             print(f'Number of words with tag {tag}: {len(result)}')
+            print(result)
         else:
             print(f'No words with tag {tag}')
     except Exception as e:
@@ -145,11 +144,13 @@ def list_words_for_tag_and_class(vc:Vocabulary):
     try:
         tag = input("Type a tag: ")
         word_class = input("Type a word class: ")
-        result =  list(vc.filter_by_class_and_tag(tag, word_class))
+        result =  list(vc.filter_by_class_and_tag(word_class, tag))
         if len(result)==0:
-            print(f'No words with tag {tag} and class {word_class}')
+            print(f'No {word_class}s with tag {tag}')
+            
         else:
-            print(f'Number of words with tag {tag} and class {word_class}: {len(result)}')
+            print(f'Number of {word_class}s with tag {tag}: {len(result)}')
+            print(result)
     except Exception as e:
         print(f'Error during tag and class search: {str(e)}')
 
@@ -178,6 +179,28 @@ def tags_in_vocabulary(vc:Vocabulary):
     except Exception as e:
         print(f'Error retrieving tags: {str(e)}')
 
+def test_verb_translation(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            raise ValueError("Tag filter cannot be empty.")
+       
+        va = vc.clone(word_class_filter='verb')
+        if va is not None and len(va.vocab.keys()) > 0:
+            my_test = LanguageTest(number_of_questions,
+                                'verb conjugation', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in verb translation test: {str(e)}')
+        return
 
 def browser_menu(vc:Vocabulary):
     try:
@@ -199,20 +222,22 @@ def browser_menu(vc:Vocabulary):
             "Add words": add_new_words,
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,
-            "Tags in vocabulary": tags_in_vocabulary
+            "Tags in vocabulary": tags_in_vocabulary,
+            "Test verb translation": test_verb_translation
             }
         keys = list(browser_functions.keys())
+        
+        # print menu
+        print(f'0 - Exit')
         for k,dtl in enumerate(browser_functions):
             print(k+1,'-',dtl)
         
-        print(f'{len(browser_functions)+1} - Exit')
-        
-        response = int(input("Choose option: "))-1
-        if response == len(keys): #last item, exit selected
+        response = int(input("Choose option: "))
+        if response == 0: #last item, exit selected
             os.system('clear')
             
         else:
-            browser_functions[keys[response]](vc)
+            browser_functions[(keys[response-1])](vc)
             input("Press enter to continue...")
             
             os.system('clear')

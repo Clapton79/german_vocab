@@ -241,7 +241,7 @@ class Vocabulary():
             result=[]
             for item, detail in self.vocab.items():
                 if detail.get('class') == word_class:
-                    if tag is None or tag in detail['tags']:
+                    if tag is None or tag in detail.get('tags', []):
                         result.append(item)
         except Exception as e:
             logger.error(f"Error filtering by class and tag: {str(e)}")
