@@ -26,7 +26,8 @@ def add_words(vv: Vocabulary):
         if not is_numeric(cnt):
             raise ValueError("Invalid input. Please enter a number.")
 
-        cnt = 1 if cnt == '' else cnt 
+        cnt = int(cnt)
+       
         if cnt == 0:
             exit(0)
         words_added_to_vocabulary = 0

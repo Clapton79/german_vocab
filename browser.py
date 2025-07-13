@@ -6,7 +6,13 @@ from add_words import add_words
 import os
 from pprint import pprint
 import re
-
+def test(vc:Vocabulary):
+    try:
+        my_test = LanguageTest(number_of_questions,
+                                    'definite article', test_v, True)
+        my_test.run()
+    except Exception as e:
+        print(f'Error in test function: {str(e)}')
 def daily_test(vc:Vocabulary):
     try:
         print(get_available_tests())
@@ -26,33 +32,63 @@ def daily_test(vc:Vocabulary):
             test_v = base_v.clone(tag_filter=tag_filter)
             adj_v = base_v.clone(word_class_filter='adjective', tag_filter=tag_filter)
             verbs_v = base_v.clone(word_class_filter='verb', tag_filter=tag_filter)
+            nouns_v = base_v.clone(word_class_filter='noun', tag_filter=tag_filter)
         else:
             test_v = base_v.clone()
             adj_v = base_v.clone(word_class_filter='adjective')
             verbs_v = base_v.clone(word_class_filter='verb')
+            nouns_v = base_v.clone(word_class_filter='noun')
 
-        print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
 
         if number_of_questions > 0:
             # verb conjugation using new vocabulary
-            my_test = LanguageTest(number_of_questions,
-                                "translation", test_v, True)
+            try:
+                if test_v is not None and len(test_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
+                    my_test = LanguageTest(number_of_questions,
+                                        "translation", test_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No words found in vocabulary for translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+                return
 
-            my_test.run()
-            # verb conjugation using new vocabulary
-            my_test = LanguageTest(number_of_questions,
-                                'definite article', test_v, True)
+            try:
+                if nouns_v is not None and len(nouns_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(nouns_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'definite article', nouns_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No nouns found in vocabulary for definite article test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating definite article test: {str(e)}')
+                return
 
-            my_test.run()
-            my_test = LanguageTest(number_of_questions,
-                                "translation", adj_v, True)
+            try:
+                if adj_v is not None and len(adj_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(adj_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                    "translation", adj_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No adjectives found in vocabulary for translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+            
+            try:
+                if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'verb conjugation', verbs_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating verb conjugation test: {str(e)}')
+                return
 
-            my_test.run()
-            # verb conjugation using new vocabulary
-            my_test = LanguageTest(number_of_questions,
-                                'verb conjugation', test_v, True)
-            my_test.run()
-    
     except Exception as e:
         print(f'Error during daily test: {str(e)}')
         return
@@ -100,6 +136,7 @@ def list_words_for_tag (vc:Vocabulary):
         if len(result)>0:
             print(f'Words with tag {tag}:')
             print(result)
+            print(f'Number of words with tag {tag}: {len(result)}')
         else:
             print(f'No words with tag {tag}')
     except Exception as e:
@@ -112,7 +149,7 @@ def list_words_for_tag_and_class(vc:Vocabulary):
         if len(result)==0:
             print(f'No words with tag {tag} and class {word_class}')
         else:
-            return result
+            print(f'Number of words with tag {tag} and class {word_class}: {len(result)}')
     except Exception as e:
         print(f'Error during tag and class search: {str(e)}')
 

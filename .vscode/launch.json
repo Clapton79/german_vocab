@@ -2,11 +2,11 @@
     "configurations": [
         {
             "name": "Python: File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "justMyCode": true,
-            "python": "/Users/lpal/Documents/Deutsch/german_vocab/vocabenv/bin/python3.10"
+            "python": "/Users/lpal/Documents/Private/German/german_vocab/venv/bin/python3.9"
         }
     ]
 }

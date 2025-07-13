@@ -235,23 +235,23 @@ class Vocabulary():
     def __str__ (self):
         return (str(self.vocab))
     
-    def filter_by_class_and_tag(self, word_class:str, tag:str):
+    def filter_by_class_and_tag(self, word_class:str, tag:str=None):
         """Returns a list of words that have the specified class and tag."""
         try:
             result=[]
             for item, detail in self.vocab.items():
                 if detail.get('class') == word_class:
-                    if tag in detail['tags']:
+                    if tag is None or tag in detail['tags']:
                         result.append(item)
         except Exception as e:
             logger.error(f"Error filtering by class and tag: {str(e)}")
             return []
-        return result
+        return sorted(result)
     
     def filter_by_tag(self,tag:str):
         """Returns a list of words that have the specified tag."""
         try:
-            return [word for word, detail in self.vocab.items() if tag in detail.get('tags', [])]
+            return sorted([word for word, detail in self.vocab.items() if tag in detail.get('tags', [])])
         except Exception as e:
             logger.error(f"Error filtering by tag: {str(e)}")
             return []
@@ -424,10 +424,11 @@ class LanguageTest():
         
         if self.function is None:
             logger.error(f"Unknown language test type: {test_type}")
-            
-        self.test_load_success, self.questions, self.solutions = self.function(self.num_questions, self.vocabulary)
+            print(f"Unknown language test type: {test_type}")
+
+        self.test_load_success, self.questions, self.solutions = self.function(num_questions, vocabulary)
         logger.debug(f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
-        
+        print (f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
         if not self.test_load_success:
             logger.error(f"Failed to load test {self.test_type} data due to an internal error.")
     
@@ -503,11 +504,11 @@ class LanguageTest():
             print(str(e))
                       
     def run(self):
-        logger.debug("Running test")
+        logger.debug(f"Running test {self.test_type} with {self.num_questions} questions.")
         
         try:
             if not self.__is_ready_to_run():
-                raise RuntimeError("Unable to execute non-existent, not implemented or erroneous test")
+                raise RuntimeError(f"Unable to execute non-existent, not implemented or erroneous test ({self.test_type})")
             divider_length = 40
             print("=" * divider_length)
             print(f"  * Test: {self.test_type.title()}")

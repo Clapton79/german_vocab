@@ -1906,10 +1906,10 @@ words:
       - kap
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - bekomme
@@ -2017,10 +2017,10 @@ words:
       - parancsol
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - befehle
@@ -3433,10 +3433,10 @@ words:
       - kiszáll
     tags:
     - sein
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - steige aus
@@ -3467,10 +3467,10 @@ words:
       - süt
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - backe
@@ -3513,10 +3513,10 @@ words:
       - elkezdődik
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - beginne
@@ -3547,10 +3547,10 @@ words:
       - harap
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - beiße
@@ -3587,10 +3587,10 @@ words:
       - becsap
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - betrüge
@@ -3618,13 +3618,14 @@ words:
     class: verb
     translations:
       hungarian:
+      - indít valamire
       - motivál
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - bewege
@@ -3667,10 +3668,10 @@ words:
       - hajlít
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - biege
@@ -3702,10 +3703,10 @@ words:
       - kínál
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
-    date_added: '2025-07-12'
+    date_added: '2025-07-13'
     conjugations:
       Präsens:
       - biete
@@ -3764,3 +3765,157 @@ words:
       - habt angefangen
       - haben angefangen
     imperative: fang
+  anziehen:
+    class: verb
+    translations:
+      hungarian:
+      - felöltöztet
+    tags:
+    - ''
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - ziehe an
+      - ziehst an
+      - zieht an
+      - ziehen an
+      - zieht an
+      - ziehen an
+      Präteritum:
+      - zog an
+      - zogst an
+      - zog an
+      - zogen an
+      - zogt an
+      - zogen an
+      Perfekt:
+      - bin angezogen
+      - bist angezogen
+      - ist angezogen
+      - sind angezogen
+      - seid angezogen
+      - sind angezogen
+      - habe angezogen
+      - hast angezogen
+      - hat angezogen
+      - haben angezogen
+      - habt angezogen
+      - haben angezogen
+    imperative: ziehe
+  ankommen:
+    class: verb
+    translations:
+      hungarian:
+      - megérkezik
+    tags:
+    - sein
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - komme an
+      - kommst an
+      - kommt an
+      - kommen an
+      - kommt an
+      - kommen an
+      Präteritum:
+      - kam an
+      - kamst an
+      - kam an
+      - kamen an
+      - kamt an
+      - kamen an
+      Perfekt:
+      - bin angekommen
+      - bist angekommen
+      - ist angekommen
+      - sind angekommen
+      - seid angekommen
+      - sind angekommen
+    imperative: komm
+  aufstehen:
+    class: verb
+    translations:
+      hungarian:
+      - felkel
+    tags:
+    - sein
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - stehe auf
+      - stehst auf
+      - steht auf
+      - stehen auf
+      - steht auf
+      - stehen auf
+      Präteritum:
+      - stand auf
+      - standst auf
+      - stand auf
+      - standen auf
+      - standet auf
+      - standen auf
+      - stand auf
+      - standest auf
+      - stand auf
+      - standen auf
+      - standet auf
+      - standen auf
+      Perfekt:
+      - bin aufgestanden
+      - bist aufgestanden
+      - ist aufgestanden
+      - sind aufgestanden
+      - seid aufgestanden
+      - sind aufgestanden
+      - habe aufgestanden
+      - hast aufgestanden
+      - hat aufgestanden
+      - haben aufgestanden
+      - habt aufgestanden
+      - haben aufgestanden
+    imperative: stehe
+  ausgehen:
+    class: verb
+    translations:
+      hungarian:
+      - szórakozni megy
+    tags:
+    - sein
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - gehe aus
+      - gehst aus
+      - geht aus
+      - gehen aus
+      - geht aus
+      - gehen aus
+      Präteritum:
+      - ging aus
+      - gingst aus
+      - ging aus
+      - gingen aus
+      - gingt aus
+      - gingen aus
+      Perfekt:
+      - bin ausgegangen
+      - bist ausgegangen
+      - ist ausgegangen
+      - sind ausgegangen
+      - seid ausgegangen
+      - sind ausgegangen
+    imperative: gehe
