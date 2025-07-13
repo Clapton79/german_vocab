@@ -3418,7 +3418,8 @@ words:
       - felkínál
     tags:
     - ''
-    - _Csilla,Unregelmäßige_verben_1
+    - _Csilla,
+    - Unregelmäßige_verben_1
     prepositions:
     - ''
     date_added: '2025-07-12'
@@ -6168,8 +6169,9 @@ words:
     - _Csilla_03
     translations:
       hungarian:
-      - őszinte
-      - nemes
+      - becsületes
+      - tiszletetre méltó
+      - tisztességes
     date_added: '2025-07-13'
   ehrenamtlich:
     class: adjective
