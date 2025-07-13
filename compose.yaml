@@ -1,0 +1,15 @@
+services:
+  python-app:
+    build:
+      context: .
+    container_name: python-app
+    restart: always
+    init: true
+    # env_file: ./.env  # Uncomment if .env file exists
+    # Default command runs add_words.py, override with `docker compose run python-app <your-script.py>`
+    command: ["python", "browser.py"]
+    volumes:
+      - .:/app
+    networks: [default]  # Uncomment if you add more services/networks
+
+

@@ -1,6 +1,6 @@
 tags:
-  level: a1
   topic: general
+  language: German
 words:
   Ergebnis:
     date_added: '2024-11-17'
@@ -3729,3 +3729,38 @@ words:
       - habt geboten
       - haben geboten
     imperative: biete
+  anfangen:
+    class: verb
+    translations:
+      hungarian:
+      - elkezdődik
+    tags:
+    - ''
+    - _Csilla
+    - Unregelmäßige_verben_1
+    prepositions:
+    - ''
+    date_added: '2025-07-13'
+    conjugations:
+      Präsens:
+      - fange an
+      - fängst an
+      - fängt an
+      - fangen an
+      - fangt an
+      - fangen an
+      Präteritum:
+      - fing an
+      - fingst an
+      - fing an
+      - fingen an
+      - fingt an
+      - fingen an
+      Perfekt:
+      - habe angefangen
+      - hast angefangen
+      - hat angefangen
+      - haben angefangen
+      - habt angefangen
+      - haben angefangen
+    imperative: fang

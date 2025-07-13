@@ -191,6 +191,7 @@ class Vocabulary():
                 if vocab is None or len(vocab) == 0:
                     logger.error("No vocabulary data found in file.")
                     self.load_success = False
+                    self.filename = None
                     
                 else:
                     self.vocab, self.custom_data = vocab.get('words'),vocab.get('tags')
@@ -234,21 +235,27 @@ class Vocabulary():
     def __str__ (self):
         return (str(self.vocab))
     
-    def filter_by_class_and_tag(self, word_class:str, tag:str=None):
+    def filter_by_class_and_tag(self, word_class:str, tag:str):
+        """Returns a list of words that have the specified class and tag."""
+        try:
+            result=[]
             for item, detail in self.vocab.items():
                 if detail.get('class') == word_class:
-                    if tag is None or tag in detail['tags']:
-                        yield item
-    
-    def filter_by_tag (self,tag:str=None):
-        result=[]
-        for item,detail in self.vocab.items():
-            tags = detail.get('tags')
-            if tags is not None:
-                if tag in tags:
-                    result.append(item)
+                    if tag in detail['tags']:
+                        result.append(item)
+        except Exception as e:
+            logger.error(f"Error filtering by class and tag: {str(e)}")
+            return []
         return result
-             
+    
+    def filter_by_tag(self,tag:str):
+        """Returns a list of words that have the specified tag."""
+        try:
+            return [word for word, detail in self.vocab.items() if tag in detail.get('tags', [])]
+        except Exception as e:
+            logger.error(f"Error filtering by tag: {str(e)}")
+            return []
+
     def clone(self, word_class_filter:str=None, tag_filter:str=None,words_filter:list=None):
         """Creates a new instance of the vocabulary based on the given word_class and tag_filter"""
         new_vocab = Vocabulary()
@@ -326,11 +333,9 @@ def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,
         for word, detail in source_vocabulary.vocab.items():
             if word not in target_vocabulary.vocab.keys() or overwrite:
                 target_vocabulary.vocab[word] = detail 
-        
-        for key, item in target_vocabulary.custom_data.items():     
-            target_vocabulary.custom_data[key] = item  
+         
     except Exception as e:
-            logger.error(f"Error in merging vocabularies: {str(e)}")
+            logger.error(f"Error merging vocabularies: {str(e)}")
 ##################################################################
 #  Data selector functions
 ##################################################################
