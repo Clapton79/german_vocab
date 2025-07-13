@@ -500,7 +500,7 @@ class LanguageTest():
                     for solution in self.solutions[i]:
                         print (f"{''.ljust(max_length_s, ' ')}{bcolors.FAIL}{solution}{bcolors.ENDC}")
         except Exception as e:
-            logger.error(f"Failed to show results due to an internal error: {str(e)}")
+            logger.error(f"Failed to show results due to an internal error: {str(e)}, {e.__traceback__}")
             print(str(e))
                       
     def run(self):
