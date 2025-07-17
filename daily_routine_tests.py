@@ -18,11 +18,12 @@ if len(tag_filter)>0:
     test_v = base_v.clone(tag_filter=tag_filter)
     adj_v = base_v.clone(word_class_filter='adjective', tag_filter=tag_filter)
     verbs_v = base_v.clone(word_class_filter='verb', tag_filter=tag_filter)
+    nouns_v = base_v.clone(word_class_filter='noun', tag_filter=tag_filter)
 else:
     test_v = base_v.clone()
     adj_v = base_v.clone(word_class_filter='adjective')
     verbs_v = base_v.clone(word_class_filter='verb')
-
+    nouns_v = base_v.clone(word_class_filter='noun')
 
     
 print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
@@ -45,4 +46,14 @@ if number_of_questions > 0:
     # verb conjugation using new vocabulary
     my_test = LanguageTest(number_of_questions,
                            'verb conjugation', test_v, True)
+    my_test.run()
+
+    my_test = LanguageTest(number_of_questions,
+                           'definite article', nouns_v, True)
+
+    my_test.run()
+
+    my_test = LanguageTest(number_of_questions,
+                           'noun translation', nouns_v, True)
+
     my_test.run()

@@ -179,7 +179,7 @@ def tags_in_vocabulary(vc:Vocabulary):
     except Exception as e:
         print(f'Error retrieving tags: {str(e)}')
 
-def test_verb_translation(vc:Vocabulary):
+def test_verb_conjugation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
         if not number_of_questions.isdigit():
@@ -192,6 +192,7 @@ def test_verb_translation(vc:Vocabulary):
        
         va = vc.clone(word_class_filter='verb')
         if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
             my_test = LanguageTest(number_of_questions,
                                 'verb conjugation', va, True)
             my_test.run()
@@ -200,6 +201,58 @@ def test_verb_translation(vc:Vocabulary):
 
     except Exception as e:
         print(f'Error in verb translation test: {str(e)}')
+        return
+
+def test_definite_article(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            raise ValueError("Tag filter cannot be empty.")
+       
+        va = vc.clone(word_class_filter='noun')
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
+
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'definite article', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for definite article test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in definite article test: {str(e)}')
+        return
+def test_noun_translation(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            raise ValueError("Tag filter cannot be empty.")
+       
+        va = vc.clone(word_class_filter='noun')
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'noun translation', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in noun translation test: {str(e)}')
         return
 
 def browser_menu(vc:Vocabulary):
@@ -223,7 +276,9 @@ def browser_menu(vc:Vocabulary):
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,
             "Tags in vocabulary": tags_in_vocabulary,
-            "Test verb translation": test_verb_translation
+            "Test: verb conjugation": test_verb_conjugation,
+            "Test: definite article": test_definite_article,
+            "Test: noun translation": test_noun_translation
             }
         keys = list(browser_functions.keys())
         

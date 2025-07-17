@@ -5313,7 +5313,7 @@ words:
     imperative: erwarte
   Heldenhaft:
     class: noun
-    definite_article:
+    definite_article: die
     translations:
       hungarian:
       - hősiesség

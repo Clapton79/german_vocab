@@ -4,6 +4,7 @@ test engine:
 - last seen/word/test
 - selection - no duplicates - weight and last seen
 
-browser:
-- word finder
-- conjugator
+- dictionary feature: Gegenteil (opposite)
+- test: adjective opposites
+- test;: adjective translation
+- test: verb translation

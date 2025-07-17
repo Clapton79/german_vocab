@@ -471,13 +471,13 @@ class LanguageTest():
             max_length_q = max([len(x) for x in questions_display])+1
             max_length_a = max([len(x) for x in self.answers])+1
             max_length_s = max([len(x) for x in self.solutions])+1
-            print("==========================================")
+            print("====================================================================================")
             print(f"{'Test type: '.ljust(15,' ')}{self.test_type.title()}")
             print(f"{'Questions: '.ljust(15,' ')}{self.num_questions}")
             print(f"{'Accuracy: '.ljust(15,' ')}{self.accuracy}%")
-            print("==========================================")
+            print("====================================================================================")
             print(f"{'Question'.ljust(max_length_q,' ')}{'Solution'.ljust(max_length_s,' ')}{'Answer'.ljust(max_length_a,' ')}")
-            print("==========================================")
+            print("====================================================================================")
             
             formats = [bcolors.OKGREEN if x else bcolors.FAIL for x in self.results]
             
