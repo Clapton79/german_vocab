@@ -108,8 +108,8 @@ def word_finder(vc:Vocabulary):
     try:
         rx = input("Type a regex: ")
         pattern = re.compile(rx)
-        result=[x for x in vc.vocab.keys() if pattern.match(x)] # search in words
-        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]))]
+        result=[x for x in vc.vocab.keys() if pattern.match(x, re.IGNORECASE)] # search in words
+        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]), re.IGNORECASE)]
         result +=result2
         #result_c = [x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))] # search in conjugation
         if len(result)>0:

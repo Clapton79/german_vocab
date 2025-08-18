@@ -1,192 +1,81 @@
 tags: {}
 words:
-  begleiten:
-    class: verb
+  Leistung:
+    class: noun
+    definite_article: die
     translations:
       hungarian:
-      - elkísér
+      - teljesítmény
     tags:
     - ''
     - _Csilla
-    - _Csilla_03
-    prepositions:
-    - ''
-    date_added: '2025-07-13'
-    conjugations:
-      Präsens:
-      - begleite
-      - begleitest
-      - begleitet
-      - begleiten
-      - begleitet
-      - begleiten
-      Präteritum:
-      - begleitete
-      - begleitetest
-      - begleitete
-      - begleiteten
-      - begleitetet
-      - begleiteten
-      Perfekt:
-      - habe begleitet
-      - hast begleitet
-      - hat begleitet
-      - haben begleitet
-      - habt begleitet
-      - haben begleitet
-    imperative: begleite
-  zählen:
-    class: verb
-    translations:
-      hungarian:
-      - számol
+    - _Csilla_04
+    plural: Leistungen
+    date_added: '2025-07-27'
+  ehemalig:
+    class: adjective
     tags:
     - ''
     - _Csilla
-    - _Csilla_03
-    prepositions:
+    - _Csilla_04
+    translations:
+      hungarian:
+      - egykori
+    date_added: '2025-07-27'
+  ehe:
+    class: adverb
+    tags:
     - ''
-    date_added: '2025-07-13'
-    conjugations:
-      Präsens:
-      - zähle
-      - zählst
-      - zählt
-      - zählen
-      - zählt
-      - zählen
-      Präteritum:
-      - zählte
-      - zähltest
-      - zählte
-      - zählten
-      - zähltet
-      - zählten
-      Perfekt:
-      - habe gezählt
-      - hast gezählt
-      - hat gezählt
-      - haben gezählt
-      - habt gezählt
-      - haben gezählt
-    imperative: zähle
-  streiten:
+    - _Csilla
+    - _Csilla_04
+    translations:
+      hungarian:
+      - előtt
+    date_added: '2025-07-27'
+  Ehe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - házasságkötés
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_04
+    plural: Ehen
+    date_added: '2025-07-27'
+  verirren:
     class: verb
     translations:
       hungarian:
-      - veszekszik
+      - eltéved
     tags:
     - sich
     - _Csilla
-    - _Csilla_03
+    - _Csilla_04
     prepositions:
     - ''
-    date_added: '2025-07-13'
+    date_added: '2025-07-27'
     conjugations:
       Präsens:
-      - streite
-      - streitest
-      - streitet
-      - streiten
-      - streitet
-      - streiten
+      - verirre
+      - verirrst
+      - verirrt
+      - verirren
+      - verirrt
+      - verirren
       Präteritum:
-      - stritt
-      - strittest
-      - stritt
-      - stritten
-      - strittet
-      - stritten
+      - verirrte
+      - verirrtest
+      - verirrte
+      - verirrten
+      - verirrtet
+      - verirrten
       Perfekt:
-      - habe gestritten
-      - hast gestritten
-      - hat gestritten
-      - haben gestritten
-      - habt gestritten
-      - haben gestritten
-    imperative: streite
-  Vertrauen:
-    class: noun
-    definite_article: das
-    translations:
-      hungarian:
-      - bizalom
-    tags:
-    - relationship
-    - business
-    - _Csilla
-    - _Csilla_03
-    plural: ''
-    date_added: '2025-07-13'
-  Mitmensch:
-    class: noun
-    definite_article: der
-    translations:
-      hungarian:
-      - embertárs
-      - felebarát
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    plural: Mitmenschen
-    date_added: '2025-07-13'
-  ehrenhaft:
-    class: adjective
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    translations:
-      hungarian:
-      - őszinte
-      - nemes
-    date_added: '2025-07-13'
-  ehrenamtlich:
-    class: adjective
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    translations:
-      hungarian:
-      - önkéntes
-      - címzetes
-      - tiszteletbeli
-    date_added: '2025-07-13'
-  Vergangenheit:
-    class: noun
-    definite_article: die
-    translations:
-      hungarian:
-      - múlt
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    plural: Vergangenheiten
-    date_added: '2025-07-13'
-  Gegenwart:
-    class: noun
-    definite_article: die
-    translations:
-      hungarian:
-      - jövő
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    plural: ''
-    date_added: '2025-07-13'
-  Legende:
-    class: noun
-    definite_article: die
-    translations:
-      hungarian:
-      - legenda
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_03
-    plural: Legenden
-    date_added: '2025-07-13'
+      - bin verirrt
+      - bist verirrt
+      - ist verirrt
+      - sind verirrt
+      - seid verirrt
+      - sind verirrt
+    imperative: verirre
