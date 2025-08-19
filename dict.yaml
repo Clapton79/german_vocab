@@ -6199,21 +6199,21 @@ words:
       hungarian:
       - igazolvány
     tags:
-    - official
+    - ''
     - _Csilla
-    - _Csilla_04
-    plural: Ausweisen
-    date_added: '2025-07-27'
+    - _Csilla_05
+    plural: Ausweise
+    date_added: '2025-08-19'
   sich verlassen auf:
     class: phrase
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
-      - számít valakire
       - támaszkodik valakire
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   sich bedanken bei:
     class: phrase
     tags:
@@ -6244,34 +6244,40 @@ words:
       - segíteni valakinek valamiben
     date_added: '2025-07-27'
   heutig:
-    class: adverb
+    class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - mai
-    date_added: '2025-07-27'
+      - jelenlegi
+      - mostani
+    date_added: '2025-08-19'
   abergläubisch:
     class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - babonás
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Aberglaube:
     class: noun
     definite_article: der
     translations:
       hungarian:
       - babona
+      - tévhit
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: ''
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Knall:
     class: noun
     definite_article: der
@@ -6280,21 +6286,23 @@ words:
       - zaj
       - csattanás
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Knalle
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Müllabfuhr:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - szemétszállító
+      - szemétszállítás
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Müllabfuhren
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Sprung:
     class: noun
     definite_article: der
@@ -6302,20 +6310,24 @@ words:
       hungarian:
       - ugrás
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Sprünge
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   stoßen:
     class: verb
     translations:
       hungarian:
-      - lök
+      - ellök
+      - eltaszít
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - stoße
@@ -6348,22 +6360,27 @@ words:
   naß:
     class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - nedves
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   schimpfen:
     class: verb
     translations:
       hungarian:
       - szid
+      - káromkodik
+      - szapul
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - schimpfe
@@ -6388,15 +6405,16 @@ words:
       - haben geschimpft
     imperative: schimpfe
   bloß:
-    class: phrase
+    class: adverb
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - csupán
       - csak
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Strumpf:
     class: noun
     definite_article: der
@@ -6406,20 +6424,21 @@ words:
     tags:
     - clothing
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Strümpfe
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   greifen:
     class: verb
     translations:
       hungarian:
       - megragad
-      - megfog
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - greifen nach einem Stein - követ megragad
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - greife
@@ -6446,23 +6465,27 @@ words:
   offensichtlich:
     class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
+      - nyilvánvaló
       - nyilvánvalóan
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Schicksal:
     class: noun
     definite_article: das
     translations:
       hungarian:
+      - végzet
       - sors
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Schicksale
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   einschenken:
     class: verb
     translations:
@@ -6470,10 +6493,12 @@ words:
       - önt
       - tölt
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - schenke ein
@@ -6503,10 +6528,12 @@ words:
       hungarian:
       - köp
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - spucke
@@ -6537,10 +6564,11 @@ words:
       hungarian:
       - megkönnyebbülés
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Erleichterungen
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Unterlage:
     class: noun
     definite_article: die
@@ -6588,22 +6616,25 @@ words:
   durch den Wind sein:
     class: phrase
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - izgatott
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   verursachen:
     class: verb
     translations:
       hungarian:
       - okoz
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - verursache
@@ -6634,10 +6665,11 @@ words:
       hungarian:
       - regény
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Romane
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   leisten:
     class: verb
     translations:
@@ -6645,10 +6677,12 @@ words:
       - teljesít
       - módjában áll
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - leiste
@@ -6677,11 +6711,15 @@ words:
     translations:
       hungarian:
       - alapít
+      - alapoz
+      - létrehoz
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - gründe
@@ -6708,21 +6746,23 @@ words:
   aufregend:
     class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - izgalmas
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   spannend:
     class: adjective
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     translations:
       hungarian:
       - izgalmas
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   Entspannung:
     class: noun
     definite_article: die
@@ -6731,10 +6771,11 @@ words:
       - kikapcsolódás
       - szórakozás
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
-    plural: Enstpannungen
-    date_added: '2025-07-27'
+    - _Csilla_05
+    plural: ''
+    date_added: '2025-08-19'
   Reichtum:
     class: noun
     definite_article: der
@@ -6742,23 +6783,26 @@ words:
       hungarian:
       - gazdagság
       - vagyon
-      - jólét
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     plural: Reichtümer
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
   untersuchen:
     class: verb
     translations:
       hungarian:
       - megvizsgál
       - vizsgál
+      - kivizsgál
     tags:
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - untersuche
@@ -6787,11 +6831,14 @@ words:
     translations:
       hungarian:
       - kutat
+      - tanulmányoz
     tags:
+    - science
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
-    date_added: '2025-07-27'
+    - ''
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
       - erforsche
@@ -6946,3 +6993,656 @@ words:
       - seid verirrt
       - sind verirrt
     imperative: verirre
+  erkundigen:
+    class: verb
+    translations:
+      hungarian:
+      - érdeklődik
+      - tudakozódik
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - erkundige
+      - erkundigst
+      - erkundigt
+      - erkundigen
+      - erkundigt
+      - erkundigen
+      Präteritum:
+      - erkundigte
+      - erkundigtest
+      - erkundigte
+      - erkundigten
+      - erkundigtet
+      - erkundigten
+      Perfekt:
+      - habe erkundigt
+      - hast erkundigt
+      - hat erkundigt
+      - haben erkundigt
+      - habt erkundigt
+      - haben erkundigt
+    imperative: erkundige
+  froh:
+    class: adjective
+    tags:
+    - emotion
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - vidám
+      - boldog
+    date_added: '2025-08-19'
+  Wohnwelt:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - lakóvilág
+    tags:
+    - house
+    - _Csilla
+    - _Csilla_05
+    plural: Wohnwelten
+    date_added: '2025-08-19'
+  Freude:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - öröm
+    tags:
+    - emotion
+    - _Csilla
+    - _Csilla_05
+    plural: Freuden
+    date_added: '2025-08-19'
+  übermüdet:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - túl fáradt
+    date_added: '2025-08-19'
+  wiegen:
+    class: verb
+    translations:
+      hungarian:
+      - nyom
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - in den Schlaf wiegen - álomba ringat
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - wiege
+      - wiegst
+      - wiegt
+      - wiegen
+      - wiegt
+      - wiegen
+      Präteritum:
+      - wog
+      - wogst
+      - wog
+      - wogen
+      - wogt
+      - wogen
+      Perfekt:
+      - habe gewogen
+      - hast gewogen
+      - hat gewogen
+      - haben gewogen
+      - habt gewogen
+      - haben gewogen
+    imperative: wiege
+  üblich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - megszokott
+    date_added: '2025-08-19'
+  weitgehend:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - messzemenően
+    date_added: '2025-08-19'
+  verlaufen:
+    class: verb
+    translations:
+      hungarian:
+      - fut
+      - zajlik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - verlaufe
+      - verläufst
+      - verläuft
+      - verlaufen
+      - verlauft
+      - verlaufen
+      Präteritum:
+      - verlief
+      - verliefst
+      - verlief
+      - verliefen
+      - verlieft
+      - verliefen
+      Perfekt:
+      - bin verlaufen
+      - bist verlaufen
+      - ist verlaufen
+      - sind verlaufen
+      - seid verlaufen
+      - sind verlaufen
+      - habe verlaufen
+      - hast verlaufen
+      - hat verlaufen
+      - haben verlaufen
+      - habt verlaufen
+      - haben verlaufen
+    imperative: verlauf
+  Kreißsaal:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - szülőszoba
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Kreißsäle
+    date_added: '2025-08-19'
+  Worte:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - mondás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Worten
+    date_added: '2025-08-19'
+  kaum:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - alig
+    date_added: '2025-08-19'
+  Diktion:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - előadásmód
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: ''
+    date_added: '2025-08-19'
+  Buchhalter:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - könyvelő
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Buchhalter
+    date_added: '2025-08-19'
+  sogar:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - még
+      - sőt
+      - akár
+    date_added: '2025-08-19'
+  übersichtlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - átlátható
+      - áttekinthető
+    date_added: '2025-08-19'
+  Auswertung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - kiértékelés
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Auswertungen
+    date_added: '2025-08-19'
+  verzichten:
+    class: verb
+    translations:
+      hungarian:
+      - lemond
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - verzichten auf + AKK - lemond vmiről
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - verzichte
+      - verzichtest
+      - verzichtet
+      - verzichten
+      - verzichtet
+      - verzichten
+      Präteritum:
+      - verzichtete
+      - verzichtetest
+      - verzichtete
+      - verzichteten
+      - verzichtetet
+      - verzichteten
+      Perfekt:
+      - habe verzichtet
+      - hast verzichtet
+      - hat verzichtet
+      - haben verzichtet
+      - habt verzichtet
+      - haben verzichtet
+    imperative: verzichte
+  Gehalt:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - bér
+      - kereset
+      - fizetség
+      - díj
+    tags:
+    - work
+    - _Csilla
+    - _Csilla_05
+    plural: Gehälter
+    date_added: '2025-08-19'
+  bewirtschaften:
+    class: verb
+    translations:
+      hungarian:
+      - megművel
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - bewirtschafte
+      - bewirtschaftest
+      - bewirtschaftet
+      - bewirtschaften
+      - bewirtschaftet
+      - bewirtschaften
+      Präteritum:
+      - bewirtschaftete
+      - bewirtschaftetest
+      - bewirtschaftete
+      - bewirtschafteten
+      - bewirtschaftetet
+      - bewirtschafteten
+      Perfekt:
+      - habe bewirtschaftet
+      - hast bewirtschaftet
+      - hat bewirtschaftet
+      - haben bewirtschaftet
+      - habt bewirtschaftet
+      - haben bewirtschaftet
+    imperative: bewirtschafte
+  Landwirt:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - gazda
+    tags:
+    - work
+    - _Csilla
+    - _Csilla_05
+    plural: Landwirte
+    date_added: '2025-08-19'
+  Bauernhaus:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - parasztház
+    tags:
+    - work
+    - agriculture
+    - _Csilla
+    - _Csilla_05
+    plural: Bauernhäuser
+    date_added: '2025-08-19'
+  Entwurf:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - terv
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Entwürfe
+    date_added: '2025-08-19'
+  Plan:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - terv
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Pläne
+    date_added: '2025-08-19'
+  Wolkenkratzer:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - felhőkarcoló
+    tags:
+    - construction
+    - _Csilla
+    - _Csilla_05
+    plural: Wolkenkratzer
+    date_added: '2025-08-19'
+  Plattenbau:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - panelház
+    tags:
+    - house
+    - _Csilla
+    - _Csilla_05
+    plural: Plattenbauten
+    date_added: '2025-08-19'
+  Wohnsiedlung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - lakótelep
+    tags:
+    - home
+    - _Csilla
+    - _Csilla_05
+    plural: Wohnsiedlungen
+    date_added: '2025-08-19'
+  Wohnungstyp:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - lakástípus
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Wohnungstypen
+    date_added: '2025-08-19'
+  herunterladen:
+    class: verb
+    translations:
+      hungarian:
+      - letölt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - lade herunter
+      - lädst herunter
+      - lädt herunter
+      - laden herunter
+      - ladet herunter
+      - laden herunter
+      Präteritum:
+      - lud herunter
+      - ludst herunter
+      - lud herunter
+      - luden herunter
+      - ludet herunter
+      - luden herunter
+      Perfekt:
+      - habe heruntergeladen
+      - hast heruntergeladen
+      - hat heruntergeladen
+      - haben heruntergeladen
+      - habt heruntergeladen
+      - haben heruntergeladen
+    imperative: lade
+  hochladen:
+    class: verb
+    translations:
+      hungarian:
+      - feltölt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - lade hoch
+      - lädst hoch
+      - lädt hoch
+      - laden hoch
+      - ladet hoch
+      - laden hoch
+      Präteritum:
+      - lud hoch
+      - ludst hoch
+      - lud hoch
+      - luden hoch
+      - ludet hoch
+      - luden hoch
+      Perfekt:
+      - habe hochgeladen
+      - hast hochgeladen
+      - hat hochgeladen
+      - haben hochgeladen
+      - habt hochgeladen
+      - haben hochgeladen
+    imperative: lade
+  Küste:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - tengerpart
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    plural: Küsten
+    date_added: '2025-08-19'
+  jemandem eines Besseren belehren:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - bebizonyosodik hogy tévedett
+    date_added: '2025-08-19'
+  helfen:
+    class: verb
+    translations:
+      hungarian:
+      - segít
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - helfen bei + D
+    - helfen + D
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - helfe
+      - hilfst
+      - hilft
+      - helfen
+      - helft
+      - helfen
+      Präteritum:
+      - half
+      - halfst
+      - half
+      - halfen
+      - halft
+      - halfen
+      Perfekt:
+      - habe geholfen
+      - hast geholfen
+      - hat geholfen
+      - haben geholfen
+      - habt geholfen
+      - haben geholfen
+    imperative: hilf
+  bedanken:
+    class: verb
+    translations:
+      hungarian:
+      - megköszön
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - sich bedanken bei + D
+    - sich bedanken für + A
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - bedanke
+      - bedankst
+      - bedankt
+      - bedanken
+      - bedankt
+      - bedanken
+      Präteritum:
+      - bedankte
+      - bedanktest
+      - bedankte
+      - bedankten
+      - bedanktet
+      - bedankten
+      Perfekt:
+      - habe bedankt
+      - hast bedankt
+      - hat bedankt
+      - haben bedankt
+      - habt bedankt
+      - haben bedankt
+    imperative: bedanke
+  verschwiegen:
+    class: verb
+    translations:
+      hungarian:
+      - elhallgat
+      - eltitkol
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    prepositions:
+    - ''
+    date_added: '2025-08-19'
+    conjugations:
+      Präsens:
+      - verschweige
+      - verschweigst
+      - verschweigt
+      - verschweigen
+      - verschweigt
+      - verschweigen
+      Präteritum:
+      - verschwieg
+      - verschwiegst
+      - verschwieg
+      - verschwiegen
+      - verschwiegt
+      - verschwiegen
+      Perfekt:
+      - habe verschwiegen
+      - hast verschwiegen
+      - hat verschwiegen
+      - haben verschwiegen
+      - habt verschwiegen
+      - haben verschwiegen
+    imperative: verschweige

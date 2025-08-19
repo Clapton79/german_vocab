@@ -248,6 +248,18 @@ class Vocabulary():
             return []
         return sorted(result)
     
+    def filter_by_class(self,word_class:str):
+        """Returns a list of words that have the specified word class."""
+        try: 
+            result=[]
+            for item, detail in self.vocab.items():
+                if detail.get('class') == word_class:
+                    result.append(item)
+        except Exception as e:
+            logger.error(f"Error filtering by class: {str(e)}")
+            return []
+        return sorted(result)
+
     def filter_by_tag(self,tag:str):
         """Returns a list of words that have the specified tag."""
         try:

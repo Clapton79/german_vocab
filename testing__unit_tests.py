@@ -36,18 +36,18 @@ def test_03_a_word_can_be_added_to_vocabulary() -> bool:
 
 def test_04_vocabulary_returns_nouns() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
-    w = vocabulary.filter_by_class_and_tag('noun')
-    return len(next(w)) > 0
+    w = vocabulary.filter_by_class('noun')
+    return len(w) > 0
    
 def test_05_vocabulary_returns_verbs() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
-    w = vocabulary.filter_by_class_and_tag('verb')
-    return len(next(w)) > 0
-    
+    w = vocabulary.filter_by_class('verb')
+    return len(w) > 0
+
 def test_06_vocabulary_saves() -> bool:
     try:
         vocabulary = v.Vocabulary(vocabulary_file)
-        vocabulary.save()
+        vocabulary.save(overwrite=True)
         return True
     except: 
         return False
@@ -128,7 +128,7 @@ def test_15_create_weights():
         v = Vocabulary('dict.yaml')
         wt = Weight()
         wt.create_schema_for_words(v.words())
-        wt.save('test_weights.yaml')
+        wt.save('test_weights.yaml', overwrite=True)
         return True
     except:
         return False

@@ -108,19 +108,32 @@ def word_finder(vc:Vocabulary):
     try:
         rx = input("Type a regex: ")
         pattern = re.compile(rx)
-        result=[x for x in vc.vocab.keys() if pattern.match(x, re.IGNORECASE)] # search in words
-        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]), re.IGNORECASE)]
-        result +=result2
+        result=[x for x in vc.vocab.keys() if pattern.match(x)] # search in words
+        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]))]
+        # result +=result2
+        # rx=input("Type a pattern:")
+        # result1=[x for x in vc.vocab.keys() if rx.lower() in x.lower()] # search in words
+        # pattern = re.compile(rx)
+        # result2=[x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))]
+        #result2 = [x.key() for x in vc.vocab.items() if any([rx.lower() in translation.lower() for translation in x['translations']['hungarian']])]
+        result=list(set(result+result2))
+
         #result_c = [x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))] # search in conjugation
         if len(result)>0:
-            report=([f'({vc[x]["class"][0]}){x.ljust(25," ")} {", ".join(vc[x]["translations"]["hungarian"])}' for x in result])
-            for item in report: 
-                print(item)
+            
+            if len(result)!=len(vc.vocab):
+                report=([f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])}' for x in result])
+                for item in report: 
+                    print(item)
+
+                print(f'Number of words matching pattern {rx}: {len(result)} (of {len(vc.vocab)})')
+            else:
+                print(f'All words in dictionary matched pattern {rx}.')
         else:
             print(f'{bcolors.FAIL}No word matched pattern {rx}{bcolors.ENDC}')
 
     except Exception as e: 
-        print(f'Search error({str(e)}')
+        print(f'Search error: {str(e)}')
   
 def add_new_words(vc:Vocabulary):
     try:
@@ -286,13 +299,15 @@ def browser_menu(vc:Vocabulary):
         print(f'0 - Exit')
         for k,dtl in enumerate(browser_functions):
             print(k+1,'-',dtl)
-        
-        response = int(input("Choose option: "))
-        if response == 0: #last item, exit selected
+
+        response = input("Choose option: ")
+        if not response.isdigit() or int(response) < 0 or int(response) > len(browser_functions):
+            browser_menu(vc)
+        if int(response) == 0: #last item, exit selected
             os.system('clear')
             
         else:
-            browser_functions[(keys[response-1])](vc)
+            browser_functions[(keys[int(response)-1])](vc)
             input("Press enter to continue...")
             
             os.system('clear')

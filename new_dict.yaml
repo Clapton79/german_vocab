@@ -1,81 +1,60 @@
 tags: {}
 words:
-  Leistung:
+  sich verlassen auf:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_05
+    translations:
+      hungarian:
+      - támaszkodik valakire
+    date_added: '2025-08-19'
+  Ausweis:
     class: noun
-    definite_article: die
+    definite_article: der
     translations:
       hungarian:
-      - teljesítmény
+      - igazolvány
     tags:
     - ''
     - _Csilla
-    - _Csilla_04
-    plural: Leistungen
-    date_added: '2025-07-27'
-  ehemalig:
-    class: adjective
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_04
-    translations:
-      hungarian:
-      - egykori
-    date_added: '2025-07-27'
-  ehe:
-    class: adverb
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_04
-    translations:
-      hungarian:
-      - előtt
-    date_added: '2025-07-27'
-  Ehe:
-    class: noun
-    definite_article: die
-    translations:
-      hungarian:
-      - házasságkötés
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_04
-    plural: Ehen
-    date_added: '2025-07-27'
-  verirren:
+    - _Csilla_05
+    plural: Ausweise
+    date_added: '2025-08-19'
+  verschwiegen:
     class: verb
     translations:
       hungarian:
-      - eltéved
+      - elhallgat
+      - eltitkol
     tags:
-    - sich
+    - ''
     - _Csilla
-    - _Csilla_04
+    - _Csilla_05
     prepositions:
     - ''
-    date_added: '2025-07-27'
+    date_added: '2025-08-19'
     conjugations:
       Präsens:
-      - verirre
-      - verirrst
-      - verirrt
-      - verirren
-      - verirrt
-      - verirren
+      - verschweige
+      - verschweigst
+      - verschweigt
+      - verschweigen
+      - verschweigt
+      - verschweigen
       Präteritum:
-      - verirrte
-      - verirrtest
-      - verirrte
-      - verirrten
-      - verirrtet
-      - verirrten
+      - verschwieg
+      - verschwiegst
+      - verschwieg
+      - verschwiegen
+      - verschwiegt
+      - verschwiegen
       Perfekt:
-      - bin verirrt
-      - bist verirrt
-      - ist verirrt
-      - sind verirrt
-      - seid verirrt
-      - sind verirrt
-    imperative: verirre
+      - habe verschwiegen
+      - hast verschwiegen
+      - hat verschwiegen
+      - haben verschwiegen
+      - habt verschwiegen
+      - haben verschwiegen
+    imperative: verschweige
