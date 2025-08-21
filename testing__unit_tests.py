@@ -36,12 +36,12 @@ def test_03_a_word_can_be_added_to_vocabulary() -> bool:
 
 def test_04_vocabulary_returns_nouns() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
-    w = vocabulary.filter_by_class('noun')
+    w = vocabulary.filter(word_class='noun')
     return len(w) > 0
    
 def test_05_vocabulary_returns_verbs() -> bool:
     vocabulary = v.Vocabulary(vocabulary_file)
-    w = vocabulary.filter_by_class('verb')
+    w = vocabulary.filter(word_class='verb')
     return len(w) > 0
 
 def test_06_vocabulary_saves() -> bool:
@@ -90,7 +90,7 @@ def test_12_vocabulary_word_can_be_updated():
     try:
         vc = v.Vocabulary(vocabulary_file)
         #get a verb
-        verbs = list(vc.filter_by_class_and_tag('verb'))
+        verbs = list(vc.filter(word_class='verb'))
         verb = verbs[0]
         w = vc.vocab[verb]
         ww = v.Word('verb')
@@ -132,8 +132,49 @@ def test_15_create_weights():
         return True
     except:
         return False
-    
-    
+
+def test_16_data_selector_verb_conjugation():
+    try: 
+        i = len(v.data_selector_verb_conjugation(5,voc))
+        return i > 0
+    except: 
+        return False
+
+def test_17_data_selector_translation():
+    try: 
+        i = len(v.data_selector_translation(5,voc))
+        return i > 0
+    except: 
+        return False
+
+def test_18_data_selector_definite_article():
+    try: 
+        i = len(v.data_selector_definite_article(5,voc))
+        return i > 0
+    except: 
+        return False
+
+def test_19_data_selector_noun_plural():
+    try: 
+        i = len(v.data_selector_noun_plural(5,voc))
+        return i > 0
+    except: 
+        return False
+
+def test_20_data_selector_noun_translation():
+    try: 
+        i = len(v.data_selector_noun_translation(5,voc))
+        return i > 0
+    except: 
+        return False
+
+def test_21_data_selector_imperative_verb_form():
+    try: 
+        i = len(v.data_selector_imperative_verb_form(5,voc))
+        return i > 0
+    except: 
+        return False   
+
 os.environ['VOCAB_LOGLEVEL']= 'ERROR'
 os.environ['VOCAB_LOG_TO_SCREEN'] = "False"
 logger=setup_logger()
@@ -149,6 +190,9 @@ print ("")
 print (f"Vocabulary file: {vocabulary_file}")
 print ("")
 print ("")
+# load vocabulary
+voc = v.Vocabulary(vocabulary_file)
+
 # Dynamically call each method
 for method_name in callable_methods:
     logger.info(f"Running unit test: {method_name.replace('_',' ').capitalize()}")  # Log the test name to the logger

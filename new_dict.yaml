@@ -1,60 +1,185 @@
 tags: {}
 words:
-  sich verlassen auf:
-    class: phrase
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_05
-    translations:
-      hungarian:
-      - támaszkodik valakire
-    date_added: '2025-08-19'
-  Ausweis:
-    class: noun
-    definite_article: der
-    translations:
-      hungarian:
-      - igazolvány
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_05
-    plural: Ausweise
-    date_added: '2025-08-19'
-  verschwiegen:
+  schieben:
     class: verb
     translations:
       hungarian:
-      - elhallgat
-      - eltitkol
+      - tol
     tags:
     - ''
-    - _Csilla
-    - _Csilla_05
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
     - ''
-    date_added: '2025-08-19'
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
-      - verschweige
-      - verschweigst
-      - verschweigt
-      - verschweigen
-      - verschweigt
-      - verschweigen
+      - schiebe
+      - schiebst
+      - schiebt
+      - schieben
+      - schiebt
+      - schieben
       Präteritum:
-      - verschwieg
-      - verschwiegst
-      - verschwieg
-      - verschwiegen
-      - verschwiegt
-      - verschwiegen
+      - schob
+      - schobst
+      - schob
+      - schoben
+      - schobt
+      - schoben
       Perfekt:
-      - habe verschwiegen
-      - hast verschwiegen
-      - hat verschwiegen
-      - haben verschwiegen
-      - habt verschwiegen
-      - haben verschwiegen
-    imperative: verschweige
+      - habe geschoben
+      - hast geschoben
+      - hat geschoben
+      - haben geschoben
+      - habt geschoben
+      - haben geschoben
+    imperative: schiebe
+  schießen:
+    class: verb
+    translations:
+      hungarian:
+      - lő
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schieße
+      - schießt
+      - schießt
+      - schießen
+      - schießt
+      - schießen
+      Präteritum:
+      - schoss
+      - schossest
+      - schoss
+      - schossen
+      - schosst
+      - schossen
+      - schoß
+      - schosst
+      - schoß
+      - schossen
+      - schoßt
+      - schossen
+      Perfekt:
+      - bin geschossen
+      - bist geschossen
+      - ist geschossen
+      - sind geschossen
+      - seid geschossen
+      - sind geschossen
+    imperative: schieße
+  schlafen:
+    class: verb
+    translations:
+      hungarian:
+      - alszik
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schlafe
+      - schläfst
+      - schläft
+      - schlafen
+      - schlaft
+      - schlafen
+      Präteritum:
+      - schlief
+      - schliefst
+      - schlief
+      - schliefen
+      - schlieft
+      - schliefen
+      Perfekt:
+      - habe geschlafen
+      - hast geschlafen
+      - hat geschlafen
+      - haben geschlafen
+      - habt geschlafen
+      - haben geschlafen
+    imperative: schlaf
+  schlagen:
+    class: verb
+    translations:
+      hungarian:
+      - üt
+      - ver
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schlage
+      - schlägst
+      - schlägt
+      - schlagen
+      - schlagt
+      - schlagen
+      Präteritum:
+      - schlug
+      - schlugst
+      - schlug
+      - schlugen
+      - schlugt
+      - schlugen
+      Perfekt:
+      - habe geschlagen
+      - hast geschlagen
+      - hat geschlagen
+      - haben geschlagen
+      - habt geschlagen
+      - haben geschlagen
+    imperative: schlage
+  schließen:
+    class: verb
+    translations:
+      hungarian:
+      - bezár
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schließe
+      - schließt
+      - schließt
+      - schließen
+      - schließt
+      - schließen
+      Präteritum:
+      - schloss
+      - schlossest
+      - schloss
+      - schlossen
+      - schlosst
+      - schlossen
+      - schloß
+      - schlosst
+      - schloß
+      - schlossen
+      - schloßt
+      - schlossen
+      Perfekt:
+      - habe geschlossen
+      - hast geschlossen
+      - hat geschlossen
+      - haben geschlossen
+      - habt geschlossen
+      - haben geschlossen
+    imperative: schließe

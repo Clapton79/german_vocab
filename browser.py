@@ -29,9 +29,14 @@ def daily_test(vc:Vocabulary):
         print(base_v.tags())
         tag_filter = input('Tag filter: ')
         if len(tag_filter) > 0:
+            print(f'Using tag filter: {tag_filter}')
+            print("Creating test vocabulary...")
             test_v = base_v.clone(tag_filter=tag_filter)
+            print ("Creating test vocabulary for adjectives...")
             adj_v = base_v.clone(word_class_filter='adjective', tag_filter=tag_filter)
+            print("Creating test vocabulary for verbs...")
             verbs_v = base_v.clone(word_class_filter='verb', tag_filter=tag_filter)
+            print("Creating test vocabulary for nouns...")
             nouns_v = base_v.clone(word_class_filter='noun', tag_filter=tag_filter)
         else:
             test_v = base_v.clone()
@@ -122,7 +127,7 @@ def word_finder(vc:Vocabulary):
         if len(result)>0:
             
             if len(result)!=len(vc.vocab):
-                report=([f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])}' for x in result])
+                report=([f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])} {x.ljust(20," ")}({", ".join(vc[x].get("tags",[]))})' for x in result])
                 for item in report: 
                     print(item)
 
@@ -267,6 +272,44 @@ def test_noun_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+def test_verb_translation(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            raise ValueError("Tag filter cannot be empty.")
+       
+        va = vc.clone(word_class_filter='verb')
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'verb translation', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in noun translation test: {str(e)}')
+        return
+
+def reload_vocabulary(vc:Vocabulary):
+    try:
+        tag_filter = input('Tag filter: ')
+        word_class_filter = input('Word class filter: ')
+        ve=vc.clone(word_class_filter=word_class_filter, tag_filter=tag_filter)
+        if ve is None:
+            raise IndexError(f'{bcolors.FAIL}No words found for the specified filters.{bcolors.ENDC}')
+        else:
+            browser_menu(ve)
+    except Exception as e:
+        print(f'Error in reload menu: {str(e)}')
+        return
 
 def browser_menu(vc:Vocabulary):
     try:
@@ -282,6 +325,7 @@ def browser_menu(vc:Vocabulary):
         
         browser_functions = {
             "Word finder": word_finder,
+            "Reload vocabulary with filter": reload_vocabulary,
             "Conjugator": conjugator,
             "Words with tag": list_words_for_tag,
             "Words with tag of class": list_words_for_tag_and_class,
@@ -291,7 +335,8 @@ def browser_menu(vc:Vocabulary):
             "Tags in vocabulary": tags_in_vocabulary,
             "Test: verb conjugation": test_verb_conjugation,
             "Test: definite article": test_definite_article,
-            "Test: noun translation": test_noun_translation
+            "Test: noun translation": test_noun_translation,
+            "Test: verb translation": test_verb_translation
             }
         keys = list(browser_functions.keys())
         

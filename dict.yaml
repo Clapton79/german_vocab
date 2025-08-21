@@ -797,12 +797,11 @@ words:
       hungarian:
       - lő
     tags:
-    - _speakEasy_page004
-    - sport
-    - football
-    - sein
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2024-12-08'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - schieße
@@ -1396,10 +1395,11 @@ words:
       - üt
       - ver
     tags:
-    - _Csilla
-    - _Csilla_01
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - schlage
@@ -1429,9 +1429,11 @@ words:
       hungarian:
       - fekszik
     tags:
-    - _speakEasy_page006
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2024-12-12'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - liege
@@ -1459,15 +1461,13 @@ words:
     class: verb
     translations:
       hungarian:
-      - ér
-      - vonatkozik
       - érvényes
     tags:
-    - _Csilla
-    - _Csilla_01
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    - gelten für mich - vonatkozik rám
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - gelte
@@ -1845,11 +1845,11 @@ words:
       hungarian:
       - nyer
     tags:
-    - game
-    - contest
-    - _speakEasy_page008
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    date_added: '2024-12-15'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - gewinne
@@ -1912,7 +1912,7 @@ words:
       hungarian:
       - kap
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -1944,10 +1944,11 @@ words:
       hungarian:
       - hagy
     tags:
-    - core
-    - _speakEasy_page008
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2024-12-15'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - lasse
@@ -2021,7 +2022,7 @@ words:
       hungarian:
       - parancsol
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -2096,9 +2097,11 @@ words:
       hungarian:
       - élvez
     tags:
-    - _speakEasy_page008
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    date_added: '2024-12-15'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - genieße
@@ -3302,6 +3305,7 @@ words:
       - készül
       - előkészít
     tags:
+    - _Adecco_Sabine
     prepositions:
     - Wir haben alles vorbereitet. Mindent előkészítettünk.
     - Die Schüler bereiten sich auf die Prüfung vor. A tanulók a vizsgára készülnek.
@@ -3337,7 +3341,7 @@ words:
     tags:
     - sein
     - _Csilla
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-11'
     conjugations:
@@ -3370,7 +3374,7 @@ words:
       - elrejt
     tags:
     - _Csilla
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-11'
     conjugations:
@@ -3403,7 +3407,7 @@ words:
       - felkínál
     tags:
     - _Csilla
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-12'
     conjugations:
@@ -3436,7 +3440,7 @@ words:
       - kiszáll
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3468,7 +3472,7 @@ words:
       hungarian:
       - süt
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3512,7 +3516,7 @@ words:
       hungarian:
       - elkezdődik
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3544,7 +3548,7 @@ words:
       hungarian:
       - harap
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3582,7 +3586,7 @@ words:
       hungarian:
       - becsap
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3615,7 +3619,7 @@ words:
       - indít valamire
       - motivál
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3659,7 +3663,7 @@ words:
       hungarian:
       - hajlít
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3692,7 +3696,7 @@ words:
       - nyújt
       - kínál
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3725,7 +3729,7 @@ words:
       - elkezdődik
     tags:
     - _Csilla
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3757,7 +3761,7 @@ words:
       hungarian:
       - felöltöztet
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3796,7 +3800,7 @@ words:
       - megérkezik
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3829,7 +3833,7 @@ words:
       - felkel
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3874,7 +3878,7 @@ words:
       - szórakozni megy
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3906,7 +3910,7 @@ words:
       hungarian:
       - megköt
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3944,7 +3948,7 @@ words:
       hungarian:
       - kér
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -3982,7 +3986,7 @@ words:
       hungarian:
       - fúj
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4021,7 +4025,7 @@ words:
       - marad
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4054,7 +4058,7 @@ words:
       - eltörik
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4086,7 +4090,7 @@ words:
       hungarian:
       - ég
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4118,7 +4122,7 @@ words:
       hungarian:
       - hoz
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4150,7 +4154,7 @@ words:
       hungarian:
       - gondol
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4182,7 +4186,7 @@ words:
       hungarian:
       - szabad
     tags:
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4215,7 +4219,7 @@ words:
       - bekanyarodik
     tags:
     - sein
-    - Unregelmäßige_verben_1
+    - _Csilla_Unregelmäßige_verben_1
     prepositions:
     date_added: '2025-07-13'
     conjugations:
@@ -4485,12 +4489,14 @@ words:
     class: verb
     translations:
       hungarian:
+      - fénylik
       - tűnik
     tags:
-    - _Csilla
-    - _Csilla_01
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - scheine
@@ -5494,9 +5500,10 @@ words:
     tags:
     - sein
     - _Csilla
-    - _Csilla_02
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - falle
@@ -5526,12 +5533,11 @@ words:
       hungarian:
       - sikerül
     tags:
-    - _Csilla
-    - _Csilla_02
+    - sein
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    - Wem das Glück hold ist dem gelingt alles - Akit kedvel a szerencse a siker is
-      megtalálja
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - gelinge
@@ -5573,10 +5579,11 @@ words:
       hungarian:
       - hív
     tags:
-    - _Csilla
-    - _Csilla_02
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    date_added: '2025-07-13'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - rufe
@@ -6199,7 +6206,6 @@ words:
       hungarian:
       - igazolvány
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Ausweise
@@ -6207,7 +6213,6 @@ words:
   sich verlassen auf:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6246,7 +6251,6 @@ words:
   heutig:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6258,7 +6262,6 @@ words:
   abergläubisch:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6273,7 +6276,6 @@ words:
       - babona
       - tévhit
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: ''
@@ -6286,7 +6288,6 @@ words:
       - zaj
       - csattanás
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Knalle
@@ -6298,7 +6299,6 @@ words:
       hungarian:
       - szemétszállítás
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Müllabfuhren
@@ -6310,7 +6310,6 @@ words:
       hungarian:
       - ugrás
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Sprünge
@@ -6322,11 +6321,9 @@ words:
       - ellök
       - eltaszít
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6360,7 +6357,6 @@ words:
   naß:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6375,11 +6371,9 @@ words:
       - káromkodik
       - szapul
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6407,7 +6401,6 @@ words:
   bloß:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6432,13 +6425,13 @@ words:
     translations:
       hungarian:
       - megragad
+      - megfog
     tags:
     - ''
-    - _Csilla
-    - _Csilla_05
+    - _Csilla_Unregelmäßige_verben_2
     prepositions:
-    - greifen nach einem Stein - követ megragad
-    date_added: '2025-08-19'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - greife
@@ -6465,7 +6458,6 @@ words:
   offensichtlich:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6481,7 +6473,6 @@ words:
       - végzet
       - sors
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Schicksale
@@ -6493,11 +6484,9 @@ words:
       - önt
       - tölt
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6528,11 +6517,9 @@ words:
       hungarian:
       - köp
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6564,7 +6551,6 @@ words:
       hungarian:
       - megkönnyebbülés
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Erleichterungen
@@ -6616,7 +6602,6 @@ words:
   durch den Wind sein:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6629,11 +6614,9 @@ words:
       hungarian:
       - okoz
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6665,7 +6648,6 @@ words:
       hungarian:
       - regény
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Romane
@@ -6677,11 +6659,9 @@ words:
       - teljesít
       - módjában áll
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6714,11 +6694,9 @@ words:
       - alapoz
       - létrehoz
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6746,7 +6724,6 @@ words:
   aufregend:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6756,7 +6733,6 @@ words:
   spannend:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -6771,7 +6747,6 @@ words:
       - kikapcsolódás
       - szórakozás
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: ''
@@ -6784,7 +6759,6 @@ words:
       - gazdagság
       - vagyon
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Reichtümer
@@ -6797,11 +6771,9 @@ words:
       - vizsgál
       - kivizsgál
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -6837,7 +6809,6 @@ words:
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7004,7 +6975,6 @@ words:
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7067,7 +7037,6 @@ words:
   übermüdet:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7080,7 +7049,6 @@ words:
       hungarian:
       - nyom
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
@@ -7112,7 +7080,6 @@ words:
   üblich:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7122,7 +7089,6 @@ words:
   weitgehend:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7136,11 +7102,9 @@ words:
       - fut
       - zajlik
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7178,7 +7142,6 @@ words:
       hungarian:
       - szülőszoba
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Kreißsäle
@@ -7190,7 +7153,6 @@ words:
       hungarian:
       - mondás
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Worten
@@ -7198,7 +7160,6 @@ words:
   kaum:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7212,7 +7173,6 @@ words:
       hungarian:
       - előadásmód
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: ''
@@ -7224,7 +7184,6 @@ words:
       hungarian:
       - könyvelő
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Buchhalter
@@ -7232,7 +7191,6 @@ words:
   sogar:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7244,7 +7202,6 @@ words:
   übersichtlich:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7259,7 +7216,6 @@ words:
       hungarian:
       - kiértékelés
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Auswertungen
@@ -7270,7 +7226,6 @@ words:
       hungarian:
       - lemond
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
@@ -7320,11 +7275,9 @@ words:
       hungarian:
       - megművel
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7381,7 +7334,6 @@ words:
       hungarian:
       - terv
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Entwürfe
@@ -7393,7 +7345,6 @@ words:
       hungarian:
       - terv
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Pläne
@@ -7441,7 +7392,6 @@ words:
       hungarian:
       - lakástípus
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Wohnungstypen
@@ -7452,11 +7402,9 @@ words:
       hungarian:
       - letölt
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7487,11 +7435,9 @@ words:
       hungarian:
       - feltölt
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7523,7 +7469,6 @@ words:
       hungarian:
       - tengerpart
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     plural: Küsten
@@ -7531,7 +7476,6 @@ words:
   jemandem eines Besseren belehren:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     translations:
@@ -7545,12 +7489,10 @@ words:
       - segít
     tags:
     - ''
-    - _Csilla
-    - _Csilla_05
+    - _Csilla_Unregelmäßige_verben_3
     prepositions:
-    - helfen bei + D
-    - helfen + D
-    date_added: '2025-08-19'
+    - ''
+    date_added: '2025-08-22'
     conjugations:
       Präsens:
       - helfe
@@ -7617,11 +7559,9 @@ words:
       - elhallgat
       - eltitkol
     tags:
-    - ''
     - _Csilla
     - _Csilla_05
     prepositions:
-    - ''
     date_added: '2025-08-19'
     conjugations:
       Präsens:
@@ -7646,3 +7586,1946 @@ words:
       - habt verschwiegen
       - haben verschwiegen
     imperative: verschweige
+  einladen:
+    class: verb
+    translations:
+      hungarian:
+      - meghív
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-21'
+    conjugations:
+      Präsens:
+      - lade ein
+      - lädst ein
+      - lädt ein
+      - laden ein
+      - ladet ein
+      - laden ein
+      Präteritum:
+      - lud ein
+      - ludst ein
+      - lud ein
+      - luden ein
+      - ludet ein
+      - luden ein
+      Perfekt:
+      - habe eingeladen
+      - hast eingeladen
+      - hat eingeladen
+      - haben eingeladen
+      - habt eingeladen
+      - haben eingeladen
+    imperative: lade
+  einschlafen:
+    class: verb
+    translations:
+      hungarian:
+      - elalszik
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-21'
+    conjugations:
+      Präsens:
+      - schlafe ein
+      - schläfst ein
+      - schläft ein
+      - schlafen ein
+      - schlaft ein
+      - schlafen ein
+      Präteritum:
+      - schlief ein
+      - schliefst ein
+      - schlief ein
+      - schliefen ein
+      - schlieft ein
+      - schliefen ein
+      Perfekt:
+      - bin eingeschlafen
+      - bist eingeschlafen
+      - ist eingeschlafen
+      - sind eingeschlafen
+      - seid eingeschlafen
+      - sind eingeschlafen
+    imperative: schlaf
+  einsteigen:
+    class: verb
+    translations:
+      hungarian:
+      - beszáll
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-21'
+    conjugations:
+      Präsens:
+      - steige ein
+      - steigst ein
+      - steigt ein
+      - steigen ein
+      - steigt ein
+      - steigen ein
+      Präteritum:
+      - stieg ein
+      - stiegst ein
+      - stieg ein
+      - stiegen ein
+      - stiegt ein
+      - stiegen ein
+      Perfekt:
+      - bin eingestiegen
+      - bist eingestiegen
+      - ist eingestiegen
+      - sind eingestiegen
+      - seid eingestiegen
+      - sind eingestiegen
+    imperative: steige
+  empfangen:
+    class: verb
+    translations:
+      hungarian:
+      - fogad
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-21'
+    conjugations:
+      Präsens:
+      - empfange
+      - empfängst
+      - empfängt
+      - empfangen
+      - empfangt
+      - empfangen
+      Präteritum:
+      - empfing
+      - empfingst
+      - empfing
+      - empfingen
+      - empfingt
+      - empfingen
+      Perfekt:
+      - habe empfangen
+      - hast empfangen
+      - hat empfangen
+      - haben empfangen
+      - habt empfangen
+      - haben empfangen
+    imperative: empfang
+  empfehlen:
+    class: verb
+    translations:
+      hungarian:
+      - ajánl
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - empfehle
+      - empfiehlst
+      - empfiehlt
+      - empfehlen
+      - empfehlt
+      - empfehlen
+      Präteritum:
+      - empfahl
+      - empfahlst
+      - empfahl
+      - empfahlen
+      - empfahlt
+      - empfahlen
+      Perfekt:
+      - habe empfohlen
+      - hast empfohlen
+      - hat empfohlen
+      - haben empfohlen
+      - habt empfohlen
+      - haben empfohlen
+    imperative: empfiehl
+  empfinden:
+    class: verb
+    translations:
+      hungarian:
+      - érez
+      - észlel
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - empfinde
+      - empfindest
+      - empfindet
+      - empfinden
+      - empfindet
+      - empfinden
+      Präteritum:
+      - empfand
+      - empfandst
+      - empfand
+      - empfanden
+      - empfandet
+      - empfanden
+      - empfand
+      - empfandest
+      - empfand
+      - empfanden
+      - empfandet
+      - empfanden
+      Perfekt:
+      - habe empfunden
+      - hast empfunden
+      - hat empfunden
+      - haben empfunden
+      - habt empfunden
+      - haben empfunden
+    imperative: empfinde
+  erlöschen:
+    class: verb
+    translations:
+      hungarian:
+      - elalszik (a tűz)
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - erlösche
+      - erlischst
+      - erlischt
+      - erlöschen
+      - erlöscht
+      - erlöschen
+      Präteritum:
+      - erlosch
+      - erloschst
+      - erlosch
+      - erloschen
+      - erloscht
+      - erloschen
+      - erlosch
+      - erloschest
+      - erlosch
+      - erloschen
+      - erloscht
+      - erloschen
+      Perfekt:
+      - bin erloschen
+      - bist erloschen
+      - ist erloschen
+      - sind erloschen
+      - seid erloschen
+      - sind erloschen
+    imperative: erlisch
+  erschrecken:
+    class: verb
+    translations:
+      hungarian:
+      - megijed
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - erschrecke
+      - erschreckst
+      - erschreckt
+      - erschrecken
+      - erschreckt
+      - erschrecken
+      - erschrecke
+      - erschrickst
+      - erschrickt
+      - erschrecken
+      - erschreckt
+      - erschrecken
+      Präteritum:
+      - erschreckte
+      - erschrecktest
+      - erschreckte
+      - erschreckten
+      - erschrecktet
+      - erschreckten
+      - erschrak
+      - erschrakst
+      - erschrak
+      - erschraken
+      - erschrakt
+      - erschraken
+      Perfekt:
+      - bin erschreckt
+      - bist erschreckt
+      - ist erschreckt
+      - sind erschreckt
+      - seid erschreckt
+      - sind erschreckt
+      - bin erschrocken
+      - bist erschrocken
+      - ist erschrocken
+      - sind erschrocken
+      - seid erschrocken
+      - sind erschrocken
+    imperative: erschreck
+  essen:
+    class: verb
+    translations:
+      hungarian:
+      - eszik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - esse
+      - isst
+      - isst
+      - essen
+      - esst
+      - essen
+      - esse
+      - ißt
+      - ißt
+      - essen
+      - eßt
+      - essen
+      Präteritum:
+      - aß
+      - aßest
+      - aß
+      - aßen
+      - aßt
+      - aßen
+      - aß
+      - aßt
+      - aß
+      - aßen
+      - aßt
+      - aßen
+      Perfekt:
+      - habe gegessen
+      - hast gegessen
+      - hat gegessen
+      - haben gegessen
+      - habt gegessen
+      - haben gegessen
+    imperative: iß
+  fahren:
+    class: verb
+    translations:
+      hungarian:
+      - utazik
+      - vezet
+    tags:
+    - sein
+    - haben
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - sein - utazik
+    - haben - vezet
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fahre
+      - fährst
+      - fährt
+      - fahren
+      - fahrt
+      - fahren
+      Präteritum:
+      - fuhr
+      - fuhrst
+      - fuhr
+      - fuhren
+      - fuhrt
+      - fuhren
+      Perfekt:
+      - bin gefahren
+      - bist gefahren
+      - ist gefahren
+      - sind gefahren
+      - seid gefahren
+      - sind gefahren
+      - habe gefahren
+      - hast gefahren
+      - hat gefahren
+      - haben gefahren
+      - habt gefahren
+      - haben gefahren
+    imperative: fahre
+  fangen:
+    class: verb
+    translations:
+      hungarian:
+      - megfog
+      - elkap
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fange
+      - fängst
+      - fängt
+      - fangen
+      - fangt
+      - fangen
+      Präteritum:
+      - fing
+      - fingst
+      - fing
+      - fingen
+      - fingt
+      - fingen
+      Perfekt:
+      - habe gefangen
+      - hast gefangen
+      - hat gefangen
+      - haben gefangen
+      - habt gefangen
+      - haben gefangen
+    imperative: fang
+  fernsehen:
+    class: verb
+    translations:
+      hungarian:
+      - tv-t néz
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - sehe fern
+      - siehst fern
+      - sieht fern
+      - sehen fern
+      - seht fern
+      - sehen fern
+      Präteritum:
+      - sah fern
+      - sahst fern
+      - sah fern
+      - sahen fern
+      - saht fern
+      - sahen fern
+      Perfekt:
+      - habe ferngesehen
+      - hast ferngesehen
+      - hat ferngesehen
+      - haben ferngesehen
+      - habt ferngesehen
+      - haben ferngesehen
+    imperative: sieh
+  finden:
+    class: verb
+    translations:
+      hungarian:
+      - talál
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - finde
+      - findest
+      - findet
+      - finden
+      - findet
+      - finden
+      Präteritum:
+      - fand
+      - fandst
+      - fand
+      - fanden
+      - fandet
+      - fanden
+      - fand
+      - fandest
+      - fand
+      - fanden
+      - fandet
+      - fanden
+      Perfekt:
+      - habe gefunden
+      - hast gefunden
+      - hat gefunden
+      - haben gefunden
+      - habt gefunden
+      - haben gefunden
+    imperative: finde
+  fliegen:
+    class: verb
+    translations:
+      hungarian:
+      - repül
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fliege
+      - fliegst
+      - fliegt
+      - fliegen
+      - fliegt
+      - fliegen
+      Präteritum:
+      - flog
+      - flogst
+      - flog
+      - flogen
+      - flogt
+      - flogen
+      Perfekt:
+      - bin geflogen
+      - bist geflogen
+      - ist geflogen
+      - sind geflogen
+      - seid geflogen
+      - sind geflogen
+      - habe geflogen
+      - hast geflogen
+      - hat geflogen
+      - haben geflogen
+      - habt geflogen
+      - haben geflogen
+    imperative: fliege
+  fliehen:
+    class: verb
+    translations:
+      hungarian:
+      - menekül
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fliehe
+      - fliehst
+      - flieht
+      - fliehen
+      - flieht
+      - fliehen
+      Präteritum:
+      - floh
+      - flohst
+      - floh
+      - flohen
+      - floht
+      - flohen
+      Perfekt:
+      - bin geflohen
+      - bist geflohen
+      - ist geflohen
+      - sind geflohen
+      - seid geflohen
+      - sind geflohen
+    imperative: fliehe
+  fließen:
+    class: verb
+    translations:
+      hungarian:
+      - folyik
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fließe
+      - fließt
+      - fließt
+      - fließen
+      - fließt
+      - fließen
+      Präteritum:
+      - floss
+      - flossest
+      - floss
+      - flossen
+      - flosst
+      - flossen
+      - floß
+      - flosst
+      - floß
+      - flossen
+      - floßt
+      - flossen
+      Perfekt:
+      - bin geflossen
+      - bist geflossen
+      - ist geflossen
+      - sind geflossen
+      - seid geflossen
+      - sind geflossen
+    imperative: fließe
+  fressen:
+    class: verb
+    translations:
+      hungarian:
+      - zabál (állat)
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - fresse
+      - frisst
+      - frisst
+      - fressen
+      - fresst
+      - fressen
+      - fresse
+      - frißt
+      - frißt
+      - fressen
+      - freßt
+      - fressen
+      Präteritum:
+      - fraß
+      - fraßest
+      - fraß
+      - fraßen
+      - fraßt
+      - fraßen
+      - fraß
+      - fraßt
+      - fraß
+      - fraßen
+      - fraßt
+      - fraßen
+      Perfekt:
+      - habe gefressen
+      - hast gefressen
+      - hat gefressen
+      - haben gefressen
+      - habt gefressen
+      - haben gefressen
+    imperative: friss
+  frieren:
+    class: verb
+    translations:
+      hungarian:
+      - fázik
+      - megfagy
+    tags:
+    - sein
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - friere
+      - frierst
+      - friert
+      - frieren
+      - friert
+      - frieren
+      Präteritum:
+      - fror
+      - frorst
+      - fror
+      - froren
+      - frort
+      - froren
+      Perfekt:
+      - bin gefroren
+      - bist gefroren
+      - ist gefroren
+      - sind gefroren
+      - seid gefroren
+      - sind gefroren
+    imperative: friere
+  geben:
+    class: verb
+    translations:
+      hungarian:
+      - ad
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - gebe
+      - gibst
+      - gibt
+      - geben
+      - gebt
+      - geben
+      Präteritum:
+      - gab
+      - gabst
+      - gab
+      - gaben
+      - gabt
+      - gaben
+      Perfekt:
+      - habe gegeben
+      - hast gegeben
+      - hat gegeben
+      - haben gegeben
+      - habt gegeben
+      - haben gegeben
+    imperative: gib
+  gehen:
+    class: verb
+    translations:
+      hungarian:
+      - megy
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - gehe
+      - gehst
+      - geht
+      - gehen
+      - geht
+      - gehen
+      Präteritum:
+      - ging
+      - gingst
+      - ging
+      - gingen
+      - gingt
+      - gingen
+      Perfekt:
+      - bin gegangen
+      - bist gegangen
+      - ist gegangen
+      - sind gegangen
+      - seid gegangen
+      - sind gegangen
+    imperative: gehe
+  genesen:
+    class: verb
+    translations:
+      hungarian:
+      - gyógyul
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - genese
+      - genest
+      - genest
+      - genesen
+      - genest
+      - genesen
+      Präteritum:
+      - genas
+      - genasest
+      - genas
+      - genasen
+      - genast
+      - genasen
+      - genas
+      - genast
+      - genas
+      - genasen
+      - genast
+      - genasen
+      Perfekt:
+      - bin genesen
+      - bist genesen
+      - ist genesen
+      - sind genesen
+      - seid genesen
+      - sind genesen
+    imperative: genese
+  geschehen:
+    class: verb
+    translations:
+      hungarian:
+      - történik
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - geschieht
+      - geschehen
+      Präteritum:
+      - geschah
+      - geschahen
+      Perfekt:
+      - bin geschehen
+      - bist geschehen
+      - ist geschehen
+      - sind geschehen
+      - seid geschehen
+      - sind geschehen
+    imperative: geschehen
+  gießen:
+    class: verb
+    translations:
+      hungarian:
+      - önt
+      - tölt
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - gieße
+      - gießt
+      - gießt
+      - gießen
+      - gießt
+      - gießen
+      Präteritum:
+      - goss
+      - gossest
+      - goss
+      - gossen
+      - gosst
+      - gossen
+      - goß
+      - gosst
+      - goß
+      - gossen
+      - goßt
+      - gossen
+      Perfekt:
+      - habe gegossen
+      - hast gegossen
+      - hat gegossen
+      - haben gegossen
+      - habt gegossen
+      - haben gegossen
+    imperative: gieße
+  graben:
+    class: verb
+    translations:
+      hungarian:
+      - ás
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - grabe
+      - gräbst
+      - gräbt
+      - graben
+      - grabt
+      - graben
+      Präteritum:
+      - grub
+      - grubst
+      - grub
+      - gruben
+      - grubt
+      - gruben
+      Perfekt:
+      - habe gegraben
+      - hast gegraben
+      - hat gegraben
+      - haben gegraben
+      - habt gegraben
+      - haben gegraben
+    imperative: grabe
+  haben:
+    class: verb
+    translations:
+      hungarian:
+      - birtokol
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - habe
+      - hast
+      - hat
+      - haben
+      - habt
+      - haben
+      Präteritum:
+      - hatte
+      - hattest
+      - hatte
+      - hatten
+      - hattet
+      - hatten
+      Perfekt:
+      - habe gehabt
+      - hast gehabt
+      - hat gehabt
+      - haben gehabt
+      - habt gehabt
+      - haben gehabt
+    imperative: habe
+  halten:
+    class: verb
+    translations:
+      hungarian:
+      - tart
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - halte
+      - hältst
+      - hält
+      - halten
+      - haltet
+      - halten
+      Präteritum:
+      - hielt
+      - hieltst
+      - hielt
+      - hielten
+      - hieltet
+      - hielten
+      Perfekt:
+      - habe gehalten
+      - hast gehalten
+      - hat gehalten
+      - haben gehalten
+      - habt gehalten
+      - haben gehalten
+    imperative: halt
+  hängen:
+    class: verb
+    translations:
+      hungarian:
+      - lóg
+      - függ
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - hänge
+      - hängst
+      - hängt
+      - hängen
+      - hängt
+      - hängen
+      Präteritum:
+      - hing
+      - hingst
+      - hing
+      - hingen
+      - hingt
+      - hingen
+      - hängte
+      - hängtest
+      - hängte
+      - hängten
+      - hängtet
+      - hängten
+      Perfekt:
+      - habe gehangen
+      - hast gehangen
+      - hat gehangen
+      - haben gehangen
+      - habt gehangen
+      - haben gehangen
+      - habe gehängt
+      - hast gehängt
+      - hat gehängt
+      - haben gehängt
+      - habt gehängt
+      - haben gehängt
+    imperative: hänge
+  heben:
+    class: verb
+    translations:
+      hungarian:
+      - emel
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - hebe
+      - hebst
+      - hebt
+      - heben
+      - hebt
+      - heben
+      Präteritum:
+      - hob
+      - hobst
+      - hob
+      - hoben
+      - hobt
+      - hoben
+      Perfekt:
+      - habe gehoben
+      - hast gehoben
+      - hat gehoben
+      - haben gehoben
+      - habt gehoben
+      - haben gehoben
+    imperative: hebe
+  heißen:
+    class: verb
+    translations:
+      hungarian:
+      - hívják
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_2
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - heiße
+      - heißt
+      - heißt
+      - heißen
+      - heißt
+      - heißen
+      Präteritum:
+      - hieß
+      - hießt
+      - hieß
+      - hießen
+      - hießt
+      - hießen
+      - heißte
+      - heißtest
+      - heißte
+      - heißten
+      - heißtet
+      - heißten
+      Perfekt:
+      - habe geheißen
+      - hast geheißen
+      - hat geheißen
+      - haben geheißen
+      - habt geheißen
+      - haben geheißen
+      - habe geheißt
+      - hast geheißt
+      - hat geheißt
+      - haben geheißt
+      - habt geheißt
+      - haben geheißt
+    imperative: heiß
+  kennen:
+    class: verb
+    translations:
+      hungarian:
+      - ismer
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - kenne
+      - kennst
+      - kennt
+      - kennen
+      - kennt
+      - kennen
+      Präteritum:
+      - kannte
+      - kanntest
+      - kannte
+      - kannten
+      - kanntet
+      - kannten
+      Perfekt:
+      - habe gekannt
+      - hast gekannt
+      - hat gekannt
+      - haben gekannt
+      - habt gekannt
+      - haben gekannt
+    imperative: kenne
+  klingen:
+    class: verb
+    translations:
+      hungarian:
+      - cseng
+      - kong
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - klinge
+      - klingst
+      - klingt
+      - klingen
+      - klingt
+      - klingen
+      Präteritum:
+      - klang
+      - klangst
+      - klang
+      - klangen
+      - klangt
+      - klangen
+      Perfekt:
+      - habe geklungen
+      - hast geklungen
+      - hat geklungen
+      - haben geklungen
+      - habt geklungen
+      - haben geklungen
+    imperative: kling
+  kommen:
+    class: verb
+    translations:
+      hungarian:
+      - jön
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - komme
+      - kommst
+      - kommt
+      - kommen
+      - kommt
+      - kommen
+      Präteritum:
+      - kam
+      - kamst
+      - kam
+      - kamen
+      - kamt
+      - kamen
+      Perfekt:
+      - bin gekommen
+      - bist gekommen
+      - ist gekommen
+      - sind gekommen
+      - seid gekommen
+      - sind gekommen
+    imperative: komm
+  können:
+    class: verb
+    translations:
+      hungarian:
+      - tud
+      - képes (rá)
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - kann
+      - kannst
+      - kann
+      - können
+      - könnt
+      - können
+      Präteritum:
+      - konnte
+      - konntest
+      - konnte
+      - konnten
+      - konntet
+      - konnten
+      Perfekt:
+      - habe gekonnt
+      - hast gekonnt
+      - hat gekonnt
+      - haben gekonnt
+      - habt gekonnt
+      - haben gekonnt
+    imperative: können
+  laden:
+    class: verb
+    translations:
+      hungarian:
+      - megrak
+      - megterhel
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - lade
+      - lädst
+      - lädt
+      - laden
+      - ladet
+      - laden
+      Präteritum:
+      - lud
+      - ludst
+      - lud
+      - luden
+      - ludet
+      - luden
+      Perfekt:
+      - habe geladen
+      - hast geladen
+      - hat geladen
+      - haben geladen
+      - habt geladen
+      - haben geladen
+    imperative: lade
+  laufen:
+    class: verb
+    translations:
+      hungarian:
+      - fut
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - laufe
+      - läufst
+      - läuft
+      - laufen
+      - lauft
+      - laufen
+      Präteritum:
+      - lief
+      - liefst
+      - lief
+      - liefen
+      - lieft
+      - liefen
+      Perfekt:
+      - bin gelaufen
+      - bist gelaufen
+      - ist gelaufen
+      - sind gelaufen
+      - seid gelaufen
+      - sind gelaufen
+      - habe gelaufen
+      - hast gelaufen
+      - hat gelaufen
+      - haben gelaufen
+      - habt gelaufen
+      - haben gelaufen
+    imperative: lauf
+  leiden:
+    class: verb
+    translations:
+      hungarian:
+      - szenved
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - leide
+      - leidest
+      - leidet
+      - leiden
+      - leidet
+      - leiden
+      Präteritum:
+      - litt
+      - littest
+      - litt
+      - litten
+      - littet
+      - litten
+      Perfekt:
+      - habe gelitten
+      - hast gelitten
+      - hat gelitten
+      - haben gelitten
+      - habt gelitten
+      - haben gelitten
+    imperative: leide
+  leihen:
+    class: verb
+    translations:
+      hungarian:
+      - kölcsönöz
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - leihe
+      - leihst
+      - leiht
+      - leihen
+      - leiht
+      - leihen
+      Präteritum:
+      - lieh
+      - liehst
+      - lieh
+      - liehen
+      - lieht
+      - liehen
+      Perfekt:
+      - habe geliehen
+      - hast geliehen
+      - hat geliehen
+      - haben geliehen
+      - habt geliehen
+      - haben geliehen
+    imperative: leih
+  lesen:
+    class: verb
+    translations:
+      hungarian:
+      - olvas
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - lese
+      - liest
+      - liest
+      - lesen
+      - lest
+      - lesen
+      Präteritum:
+      - las
+      - lasest
+      - las
+      - lasen
+      - last
+      - lasen
+      - las
+      - last
+      - las
+      - lasen
+      - last
+      - lasen
+      Perfekt:
+      - habe gelesen
+      - hast gelesen
+      - hat gelesen
+      - haben gelesen
+      - habt gelesen
+      - haben gelesen
+    imperative: lies
+  lügen:
+    class: verb
+    translations:
+      hungarian:
+      - hazudik
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - lüge
+      - lügst
+      - lügt
+      - lügen
+      - lügt
+      - lügen
+      Präteritum:
+      - log
+      - logst
+      - log
+      - logen
+      - logt
+      - logen
+      Perfekt:
+      - habe gelogen
+      - hast gelogen
+      - hat gelogen
+      - haben gelogen
+      - habt gelogen
+      - haben gelogen
+    imperative: lüge
+  meiden:
+    class: verb
+    translations:
+      hungarian:
+      - elkerül
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - meide
+      - meidest
+      - meidet
+      - meiden
+      - meidet
+      - meiden
+      Präteritum:
+      - mied
+      - miedst
+      - mied
+      - mieden
+      - miedet
+      - mieden
+      - mied
+      - miedest
+      - mied
+      - mieden
+      - miedet
+      - mieden
+      Perfekt:
+      - habe gemieden
+      - hast gemieden
+      - hat gemieden
+      - haben gemieden
+      - habt gemieden
+      - haben gemieden
+    imperative: meide
+  messen:
+    class: verb
+    translations:
+      hungarian:
+      - mér
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - messe
+      - misst
+      - misst
+      - messen
+      - messt
+      - messen
+      - messe
+      - mißt
+      - mißt
+      - messen
+      - meßt
+      - messen
+      Präteritum:
+      - maß
+      - maßest
+      - maß
+      - maßen
+      - maßt
+      - maßen
+      - maß
+      - maßt
+      - maß
+      - maßen
+      - maßt
+      - maßen
+      Perfekt:
+      - habe gemessen
+      - hast gemessen
+      - hat gemessen
+      - haben gemessen
+      - habt gemessen
+      - haben gemessen
+    imperative: miss
+  mögen:
+    class: verb
+    translations:
+      hungarian:
+      - szeret
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - mag
+      - magst
+      - mag
+      - mögen
+      - mögt
+      - mögen
+      Präteritum:
+      - mochte
+      - mochtest
+      - mochte
+      - mochten
+      - mochtet
+      - mochten
+      Perfekt:
+      - habe gemocht
+      - hast gemocht
+      - hat gemocht
+      - haben gemocht
+      - habt gemocht
+      - haben gemocht
+    imperative: mögen
+  müssen:
+    class: verb
+    translations:
+      hungarian:
+      - kell (csinálni)
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - muss
+      - musst
+      - muss
+      - müssen
+      - müsst
+      - müssen
+      - muß
+      - mußt
+      - muß
+      - müssen
+      - müßt
+      - müssen
+      Präteritum:
+      - musste
+      - musstest
+      - musste
+      - mussten
+      - musstet
+      - mussten
+      - mußte
+      - mußtest
+      - mußte
+      - mußten
+      - mußtet
+      - mußten
+      Perfekt:
+      - habe gemusst
+      - hast gemusst
+      - hat gemusst
+      - haben gemusst
+      - habt gemusst
+      - haben gemusst
+      - habe gemußt
+      - hast gemußt
+      - hat gemußt
+      - haben gemußt
+      - habt gemußt
+      - haben gemußt
+    imperative: müssen
+  nehmen:
+    class: verb
+    translations:
+      hungarian:
+      - fog
+      - elvesz
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - nehme
+      - nimmst
+      - nimmt
+      - nehmen
+      - nehmt
+      - nehmen
+      Präteritum:
+      - nahm
+      - nahmst
+      - nahm
+      - nahmen
+      - nahmt
+      - nahmen
+      Perfekt:
+      - habe genommen
+      - hast genommen
+      - hat genommen
+      - haben genommen
+      - habt genommen
+      - haben genommen
+    imperative: nimm
+  nennen:
+    class: verb
+    translations:
+      hungarian:
+      - nevez
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - nenne
+      - nennst
+      - nennt
+      - nennen
+      - nennt
+      - nennen
+      Präteritum:
+      - nannte
+      - nanntest
+      - nannte
+      - nannten
+      - nanntet
+      - nannten
+      Perfekt:
+      - habe genannt
+      - hast genannt
+      - hat genannt
+      - haben genannt
+      - habt genannt
+      - haben genannt
+    imperative: nenne
+  raten:
+    class: verb
+    translations:
+      hungarian:
+      - tanácsol
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - rate
+      - rätst
+      - rät
+      - raten
+      - ratet
+      - raten
+      Präteritum:
+      - riet
+      - rietst
+      - riet
+      - rieten
+      - rietet
+      - rieten
+      Perfekt:
+      - habe geraten
+      - hast geraten
+      - hat geraten
+      - haben geraten
+      - habt geraten
+      - haben geraten
+    imperative: rate
+  reiten:
+    class: verb
+    translations:
+      hungarian:
+      - lovagol
+    tags:
+    - sein
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - reite
+      - reitest
+      - reitet
+      - reiten
+      - reitet
+      - reiten
+      Präteritum:
+      - ritt
+      - rittest
+      - ritt
+      - ritten
+      - rittet
+      - ritten
+      Perfekt:
+      - bin geritten
+      - bist geritten
+      - ist geritten
+      - sind geritten
+      - seid geritten
+      - sind geritten
+      - habe geritten
+      - hast geritten
+      - hat geritten
+      - haben geritten
+      - habt geritten
+      - haben geritten
+    imperative: reite
+  schaffen:
+    class: verb
+    translations:
+      hungarian:
+      - teremt
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schaffe
+      - schaffst
+      - schafft
+      - schaffen
+      - schafft
+      - schaffen
+      Präteritum:
+      - schuf
+      - schufst
+      - schuf
+      - schufen
+      - schuft
+      - schufen
+      - schaffte
+      - schafftest
+      - schaffte
+      - schafften
+      - schafftet
+      - schafften
+      Perfekt:
+      - habe geschaffen
+      - hast geschaffen
+      - hat geschaffen
+      - haben geschaffen
+      - habt geschaffen
+      - haben geschaffen
+      - habe geschafft
+      - hast geschafft
+      - hat geschafft
+      - haben geschafft
+      - habt geschafft
+      - haben geschafft
+    imperative: schaff
+  schieben:
+    class: verb
+    translations:
+      hungarian:
+      - tol
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schiebe
+      - schiebst
+      - schiebt
+      - schieben
+      - schiebt
+      - schieben
+      Präteritum:
+      - schob
+      - schobst
+      - schob
+      - schoben
+      - schobt
+      - schoben
+      Perfekt:
+      - habe geschoben
+      - hast geschoben
+      - hat geschoben
+      - haben geschoben
+      - habt geschoben
+      - haben geschoben
+    imperative: schiebe
+  schlafen:
+    class: verb
+    translations:
+      hungarian:
+      - alszik
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schlafe
+      - schläfst
+      - schläft
+      - schlafen
+      - schlaft
+      - schlafen
+      Präteritum:
+      - schlief
+      - schliefst
+      - schlief
+      - schliefen
+      - schlieft
+      - schliefen
+      Perfekt:
+      - habe geschlafen
+      - hast geschlafen
+      - hat geschlafen
+      - haben geschlafen
+      - habt geschlafen
+      - haben geschlafen
+    imperative: schlaf
+  schließen:
+    class: verb
+    translations:
+      hungarian:
+      - bezár
+    tags:
+    - ''
+    - _Csilla_Unregelmäßige_verben_3
+    prepositions:
+    - ''
+    date_added: '2025-08-22'
+    conjugations:
+      Präsens:
+      - schließe
+      - schließt
+      - schließt
+      - schließen
+      - schließt
+      - schließen
+      Präteritum:
+      - schloss
+      - schlossest
+      - schloss
+      - schlossen
+      - schlosst
+      - schlossen
+      - schloß
+      - schlosst
+      - schloß
+      - schlossen
+      - schloßt
+      - schlossen
+      Perfekt:
+      - habe geschlossen
+      - hast geschlossen
+      - hat geschlossen
+      - haben geschlossen
+      - habt geschlossen
+      - haben geschlossen
+    imperative: schließe

@@ -248,37 +248,135 @@ class Vocabulary():
             return []
         return sorted(result)
     
-    def filter_by_class(self,word_class:str):
+    def filter_by_class(self, word_class: str):
         """Returns a list of words that have the specified word class."""
         try: 
-            result=[]
-            for item, detail in self.vocab.items():
-                if detail.get('class') == word_class:
-                    result.append(item)
+            if not word_class:
+                return []
+            
+            result = [word for word, detail in self.vocab.items() 
+                    if detail.get('class') == word_class]
+            return sorted(result)
         except Exception as e:
-            logger.error(f"Error filtering by class: {str(e)}")
+            logger.error(f"Error filtering by class '{word_class}': {str(e)}")
             return []
-        return sorted(result)
 
-    def filter_by_tag(self,tag:str):
+    def filter_by_tag(self, tag: str) -> list:
         """Returns a list of words that have the specified tag."""
         try:
-            return sorted([word for word, detail in self.vocab.items() if tag in detail.get('tags', [])])
+            if not tag:
+                return []
+            result = []
+            result = [word for word, detail in self.vocab.items() 
+                    if tag in detail.get('tags', [])]
+            # for word, detail in self.vocab.items():
+            #     if tag in detail.get('tags', []):
+            #         result.append(word)
+            return sorted(result)
         except Exception as e:
-            logger.error(f"Error filtering by tag: {str(e)}")
+            logger.error(f"Error filtering by tag '{tag}': {str(e)} iteration: {word}")
             return []
 
-    def clone(self, word_class_filter:str=None, tag_filter:str=None,words_filter:list=None):
-        """Creates a new instance of the vocabulary based on the given word_class and tag_filter"""
-        new_vocab = Vocabulary()
-        new_vocab.vocab = {k: v for k, v in self.vocab.items() if word_class_filter is None or v.get('class') == word_class_filter}
-        new_vocab.custom_data = self.custom_data
-        if tag_filter is not None:
-            new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if tag_filter in v.get('tags', [])}
-        if words_filter is not None:
-            new_vocab.vocab = {k: v for k, v in new_vocab.vocab.items() if k in words_filter}
-        return new_vocab
+    def filter_by_class_and_tag(self, word_class: str, tag: str) -> list:
+        """Deprecated! Returns a list of words that have the specified class and tag."""
+        try:
+            if not word_class:
+                return []
+            
+            result = []
+            result = [word for word, detail in self.vocab.items() if detail.get('class') == word_class and tag in detail.get('tags',[])]
+            
+            return sorted(result)
+        except Exception as e:
+            logger.error(f"Error filtering by class '{word_class}' and tag '{tag}': {str(e)}")
+            return []
+
+    # Alternative: More efficient version using set operations
+    def filter(self, word_class: str = None, tag: str = None, word: str = None) -> list:
+        """
+        Returns a list of words matching the specified criteria.
         
+        Args:
+            word_class: Filter by word class (optional)
+            tags: List of tags to filter by (optional)
+            word: Filters for a specific word (optional)
+        """
+        try:
+            result = []
+            
+            if word_class is not None and tag is not None and word is None:  # 110
+                result = [w for w in self.vocab if self.vocab[w].get('class') == word_class and tag in self.vocab[w].get('tags', [])]
+            elif word_class is None and tag is not None and word is None:  # 010
+                result = [w for w in self.vocab if tag in self.vocab[w].get('tags', [])]
+            elif word_class is None and tag is None and word is not None:  # 001
+                result = [w for w in self.vocab if w == word]
+            elif word_class is not None and tag is None and word is None:  # 100
+                result = [w for w in self.vocab if self.vocab[w].get('class') == word_class]
+            elif word_class is None and tag is None and word is None:  # 000
+                result = [w for w in self.vocab]
+            elif word_class is not None and tag is None and word is not None:  # 101
+                result = [w for w in self.vocab if self.vocab[w].get('class') == word_class and w == word]
+            elif word_class is None and tag is not None and word is not None:  # 011
+                result = [w for w in self.vocab if tag in self.vocab[w].get('tags', []) and w == word]
+            elif word_class is not None and tag is not None and word is not None:  # 111
+                result = [w for w in self.vocab if self.vocab[w].get('class') == word_class and tag in self.vocab[w].get('tags', []) and w == word]
+            return sorted(result)
+        except Exception as e:
+            logger.error(f"Error filtering by multiple criteria: {str(e)}")
+            return []
+
+    def clone(self, word_class_filter: str = None, tag_filter: str = None, words_filter: list = None):
+        """Creates a new instance of the vocabulary based on the given filters"""
+        try:
+            
+            #filtered_words = self.filter(word_class=word_class_filter, tags=tag_filter)
+
+            # Start with all words
+            filtered_words = set(self.vocab.keys())
+            
+            # Apply word class filter
+            if word_class_filter is not None:
+                class_filtered = set(self.filter_by_class(word_class_filter))
+                filtered_words = filtered_words.intersection(class_filtered)
+            
+            # Apply tag filter
+            if tag_filter is not None:
+                tag_filtered = set(self.filter_by_tag(tag_filter))
+                filtered_words = filtered_words.intersection(tag_filtered)
+            
+            # Apply words filter (only keep words that are in the specified list)
+            if words_filter is not None:
+                words_filtered = set(words_filter)
+                filtered_words = filtered_words.intersection(words_filtered)
+            
+            # Check if we have any words after filtering
+            if len(filtered_words) == 0:
+                raise ValueError("No words found matching the specified filters.")
+            
+            # Create the filtered vocabulary
+            new_vocab = Vocabulary()
+            new_vocab.vocab = {k: v for k, v in self.vocab.items() if k in filtered_words}
+            new_vocab.custom_data = self.custom_data.copy()  # Make a copy to avoid reference issues
+            
+            # Create descriptive filename
+            filter_parts = []
+            if word_class_filter is not None:
+                filter_parts.append(f"class:{word_class_filter}")
+            if tag_filter is not None:
+                filter_parts.append(f"tag:{tag_filter}")
+            if words_filter is not None:
+                filter_parts.append(f"words:{len(words_filter)}")
+            
+            filter_desc = ", ".join(filter_parts) if filter_parts else "no filters"
+            new_vocab.filename = f'Cloned from {self.filename} ({filter_desc})'
+            
+            return new_vocab
+            
+        except Exception as e:
+            logger.error(f"Error cloning vocabulary: {str(e)}")
+            print(f"Error cloning vocabulary: {str(e)}")
+            return None
+
     def add(self,word:Word,overwrite:bool=False):
         if word in self.vocab.keys() and overwrite == False:
             logger.error(f"The word {word.word_text} is already in this vocabulary. Remove it first and try again.")
@@ -353,14 +451,24 @@ def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(list(vocabulary.filter_by_class_and_tag('verb')),k=num_questions)]
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(list(vocabulary.filter(word_class='verb')),k=num_questions)]
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
         logger.error(str(e))
         return [False,[],[]]
     return [True, question_formatted, solutions]
-    
+
+def data_selector_perfekt_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
+    try:
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']['Perfekt']))) for x in random.choices(list(vocabulary.filter(word_class='verb')),k=num_questions)]
+        solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
+        question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
+    except Exception as e: 
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, question_formatted, solutions]
+
 def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     try:
         base = random.choices(list(vocabulary.vocab.keys()), k=num_questions)
@@ -373,7 +481,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
+        questions = random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)
         solutions = [vocabulary.vocab[x].get("definite_article") for x in questions]
     except Exception as e:  
         logger.error(str(e))
@@ -382,7 +490,7 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)]
+        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
     except Exception as e:  
         logger.error(str(e))
@@ -391,7 +499,7 @@ def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     
 def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.choices(list(vocabulary.filter_by_class_and_tag('noun')), k=num_questions)
+        base = random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]  
     except Exception as e:  
@@ -401,21 +509,40 @@ def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
         
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(list(vocabulary.filter_by_class_and_tag('verb')), k=num_questions)
+        questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
         solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('imperative')] for x in questions]
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
-    
+
+def data_selector_verb_translation(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
+        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('translations').get('hungarian')] for x in questions]
+    except Exception as e:  
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, questions, solutions]
+
+def data_selector_adjective_translation(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = random.choices(list(vocabulary.filter(word_class='adjective')), k=num_questions)
+        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('translations').get('hungarian')] for x in questions]
+    except Exception as e:  
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, questions, solutions]
+
+
 test_functions = {
     "verb conjugation": data_selector_verb_conjugation,
-    "verb translation": "",
+    "verb translation": data_selector_verb_translation,
     "imperative verb form": data_selector_imperative_verb_form,
     "noun translation":data_selector_noun_translation,
     "noun plural form":data_selector_noun_plural,
     "definite article":data_selector_definite_article,
-    "adjectives":"",
+    "adjective translation":data_selector_adjective_translation,
     "translation": data_selector_translation
 }
 
@@ -440,7 +567,6 @@ class LanguageTest():
 
         self.test_load_success, self.questions, self.solutions = self.function(num_questions, vocabulary)
         logger.debug(f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
-        print (f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
         if not self.test_load_success:
             logger.error(f"Failed to load test {self.test_type} data due to an internal error.")
     
