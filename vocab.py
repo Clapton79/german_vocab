@@ -234,64 +234,75 @@ class Vocabulary():
         
     def __str__ (self):
         return (str(self.vocab))
+
+    def show_verbs(tag: str = None, word: str = None):
+        """Displays words in the vocabulary, optionally filtered by class and tag."""
+        try:
+            words = self.filter(word_class='verb', tag=tag,word=word)
+            if len(words)==0:
+                print('No words selected')
+            else:
+                for w in words:
+                    print(f'{w.ljust(10, " ")}{self.vocab[w]["translations"]["hungarian"][0]}')
+        except Exception as e:
+            logger.error(f"Error showing words: {str(e)}")
+
+    # def filter_by_class_and_tag(self, word_class:str, tag:str=None):
+    #     """Deprecated! Returns a list of words that have the specified class and tag."""
+    #     try:
+    #         result=[]
+    #         for item, detail in self.vocab.items():
+    #             if detail.get('class') == word_class:
+    #                 if tag is None or tag in detail.get('tags', []):
+    #                     result.append(item)
+    #     except Exception as e:
+    #         logger.error(f"Error filtering by class and tag: {str(e)}")
+    #         return []
+    #     return sorted(result)
     
-    def filter_by_class_and_tag(self, word_class:str, tag:str=None):
-        """Returns a list of words that have the specified class and tag."""
-        try:
-            result=[]
-            for item, detail in self.vocab.items():
-                if detail.get('class') == word_class:
-                    if tag is None or tag in detail.get('tags', []):
-                        result.append(item)
-        except Exception as e:
-            logger.error(f"Error filtering by class and tag: {str(e)}")
-            return []
-        return sorted(result)
-    
-    def filter_by_class(self, word_class: str):
-        """Returns a list of words that have the specified word class."""
-        try: 
-            if not word_class:
-                return []
+    # def filter_by_class(self, word_class: str):
+    #     """Deprecated! Returns a list of words that have the specified word class."""
+    #     try: 
+    #         if not word_class:
+    #             return []
             
-            result = [word for word, detail in self.vocab.items() 
-                    if detail.get('class') == word_class]
-            return sorted(result)
-        except Exception as e:
-            logger.error(f"Error filtering by class '{word_class}': {str(e)}")
-            return []
+    #         result = [word for word, detail in self.vocab.items() 
+    #                 if detail.get('class') == word_class]
+    #         return sorted(result)
+    #     except Exception as e:
+    #         logger.error(f"Error filtering by class '{word_class}': {str(e)}")
+    #         return []
 
-    def filter_by_tag(self, tag: str) -> list:
-        """Returns a list of words that have the specified tag."""
-        try:
-            if not tag:
-                return []
-            result = []
-            result = [word for word, detail in self.vocab.items() 
-                    if tag in detail.get('tags', [])]
-            # for word, detail in self.vocab.items():
-            #     if tag in detail.get('tags', []):
-            #         result.append(word)
-            return sorted(result)
-        except Exception as e:
-            logger.error(f"Error filtering by tag '{tag}': {str(e)} iteration: {word}")
-            return []
+    # def filter_by_tag(self, tag: str) -> list:
+    #     """Deprecated! Returns a list of words that have the specified tag."""
+    #     try:
+    #         if not tag:
+    #             return []
+    #         result = []
+    #         result = [word for word, detail in self.vocab.items() 
+    #                 if tag in detail.get('tags', [])]
+    #         # for word, detail in self.vocab.items():
+    #         #     if tag in detail.get('tags', []):
+    #         #         result.append(word)
+    #         return sorted(result)
+    #     except Exception as e:
+    #         logger.error(f"Error filtering by tag '{tag}': {str(e)} iteration: {word}")
+    #         return []
 
-    def filter_by_class_and_tag(self, word_class: str, tag: str) -> list:
-        """Deprecated! Returns a list of words that have the specified class and tag."""
-        try:
-            if not word_class:
-                return []
+    # def filter_by_class_and_tag(self, word_class: str, tag: str) -> list:
+    #     """Deprecated! Returns a list of words that have the specified class and tag."""
+    #     try:
+    #         if not word_class:
+    #             return []
             
-            result = []
-            result = [word for word, detail in self.vocab.items() if detail.get('class') == word_class and tag in detail.get('tags',[])]
+    #         result = []
+    #         result = [word for word, detail in self.vocab.items() if detail.get('class') == word_class and tag in detail.get('tags',[])]
             
-            return sorted(result)
-        except Exception as e:
-            logger.error(f"Error filtering by class '{word_class}' and tag '{tag}': {str(e)}")
-            return []
+    #         return sorted(result)
+    #     except Exception as e:
+    #         logger.error(f"Error filtering by class '{word_class}' and tag '{tag}': {str(e)}")
+    #         return []
 
-    # Alternative: More efficient version using set operations
     def filter(self, word_class: str = None, tag: str = None, word: str = None) -> list:
         """
         Returns a list of words matching the specified criteria.
@@ -336,12 +347,12 @@ class Vocabulary():
             
             # Apply word class filter
             if word_class_filter is not None:
-                class_filtered = set(self.filter_by_class(word_class_filter))
+                class_filtered = set(self.filter(word_class=word_class_filter))
                 filtered_words = filtered_words.intersection(class_filtered)
             
             # Apply tag filter
             if tag_filter is not None:
-                tag_filtered = set(self.filter_by_tag(tag_filter))
+                tag_filtered = set(self.filter(tag=tag_filter))
                 filtered_words = filtered_words.intersection(tag_filtered)
             
             # Apply words filter (only keep words that are in the specified list)
@@ -356,7 +367,7 @@ class Vocabulary():
             # Create the filtered vocabulary
             new_vocab = Vocabulary()
             new_vocab.vocab = {k: v for k, v in self.vocab.items() if k in filtered_words}
-            new_vocab.custom_data = self.custom_data.copy()  # Make a copy to avoid reference issues
+            new_vocab.custom_data = self.custom_data.copy()  
             
             # Create descriptive filename
             filter_parts = []
@@ -519,7 +530,7 @@ def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary)
 def data_selector_verb_translation(num_questions:int, vocabulary:Vocabulary):
     try:
         questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
-        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('translations').get('hungarian')] for x in questions]
+        solutions = [y[0] for y in vocabulary.vocab[x].get('translations').get('hungarian')]
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
@@ -528,15 +539,45 @@ def data_selector_verb_translation(num_questions:int, vocabulary:Vocabulary):
 def data_selector_adjective_translation(num_questions:int, vocabulary:Vocabulary):
     try:
         questions = random.choices(list(vocabulary.filter(word_class='adjective')), k=num_questions)
-        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('translations').get('hungarian')] for x in questions]
+        solutions = [y[0] for y in vocabulary.vocab[x].get('translations').get('hungarian')]
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
     return [True, questions, solutions]
 
+def data_selector_verb_conjugation_praet(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = [x for x in random.choices(list(vocabulary.filter(word_class='verb')),k=num_questions)]
+        solutions = [vocabulary[x].get('conjugations').get('Präteritum')[:6] for x in questions]
+    except Exception as e:
+        print(str(e))
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, questions, solutions]
+
+def data_selector_verb_conjugation_perf(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
+        solutions = [y[0] for y in vocabulary.vocab[x].get('conjugation').get('Präteritum')]
+    except Exception as e:
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, questions, solutions]
+
+def data_selector_verb_conjugation_praes(num_questions:int, vocabulary:Vocabulary):
+    try:
+        questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
+        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('conjugation').get('Präsens') or []] for x in questions]
+    except Exception as e:
+        logger.error(str(e))
+        return [False,[],[]]
+    return [True, questions, solutions]
 
 test_functions = {
     "verb conjugation": data_selector_verb_conjugation,
+    "verb conjugation Präteritum": data_selector_verb_conjugation_praet,
+    "verb conjugation Perfekt": data_selector_verb_conjugation_perf,
+    "verb conjugation Präsens": data_selector_verb_conjugation_praes,
     "verb translation": data_selector_verb_translation,
     "imperative verb form": data_selector_imperative_verb_form,
     "noun translation":data_selector_noun_translation,

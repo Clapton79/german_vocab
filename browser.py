@@ -6,6 +6,7 @@ from add_words import add_words
 import os
 from pprint import pprint
 import re
+
 def test(vc:Vocabulary):
     try:
         my_test = LanguageTest(number_of_questions,
@@ -114,7 +115,9 @@ def word_finder(vc:Vocabulary):
         rx = input("Type a regex: ")
         pattern = re.compile(rx)
         result=[x for x in vc.vocab.keys() if pattern.match(x)] # search in words
-        result2=[x for x in vc.vocab.keys() if pattern.match(json.dumps(vc.vocab[x]))]
+        result2=[x for x in vc.vocab.keys() if pattern.match(vc.vocab[x]['translations']['hungarian'])]
+        # search in tags
+        #result3=[x for x in vc.vocab.keys() if pattern.match(x) for tag in vc.vocab[x]['tags'] if pattern.match(tag)]
         # result +=result2
         # rx=input("Type a pattern:")
         # result1=[x for x in vc.vocab.keys() if rx.lower() in x.lower()] # search in words
@@ -147,13 +150,45 @@ def add_new_words(vc:Vocabulary):
         print(f'Error during adding new words: {str(e)}')
         return
 
+def list_words_for_tags (vc:Vocabulary):
+    """
+    Lists all words for that have all the given tags
+    """
+    try:
+        tags = input("Type tags (separate items by comma): ")
+        tags = tags.split(',')
+        if len(tags) == 0:
+            print(f'{bcolors.FAIL}No tags entered.{bcolors.ENDC}')
+            return
+        result = []
+        for i, tag in enumerate(tags):
+            if i == 0:
+                result = vc.filter(tag=tag)
+            
+            filter = vc.filter(tag=tag)
+            result = [word for word in result if word in filter]
+       
+        if len(result)>0:
+            print(result)
+            print(f'Number of words with these tags: {len(result)}')
+        else:
+            print(f'No words with entered tags')
+    except Exception as e:
+        print(f'Error during tag search: {str(e)}')
+
 def list_words_for_tag (vc:Vocabulary):
+    """
+    Lists all words for a given tag.
+    """
     try:
         tag = input("Type a tag: ")
-        result = list(vc.filter_by_tag(tag))
+        if len(tag) == 0:
+            print(f'{bcolors.FAIL}No tag entered.{bcolors.ENDC}')
+            return
+        result = list(vc.filter(tag=tag))
         if len(result)>0:
-            print(f'Number of words with tag {tag}: {len(result)}')
             print(result)
+            print(f'Number of words with this tag: {len(result)}')
         else:
             print(f'No words with tag {tag}')
     except Exception as e:
@@ -162,7 +197,7 @@ def list_words_for_tag_and_class(vc:Vocabulary):
     try:
         tag = input("Type a tag: ")
         word_class = input("Type a word class: ")
-        result =  list(vc.filter_by_class_and_tag(word_class, tag))
+        result =  list(vc.filter(word_class=word_class, tag=tag))
         if len(result)==0:
             print(f'No {word_class}s with tag {tag}')
             
@@ -204,11 +239,13 @@ def test_verb_conjugation(vc:Vocabulary):
             raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
 
         number_of_questions = int(number_of_questions)
-        tag_filter = input('Tag filter: ')
+        tag_filter = input(f'Tag filter: ')
         if len(tag_filter) == 0:
-            raise ValueError("Tag filter cannot be empty.")
-       
-        va = vc.clone(word_class_filter='verb')
+            tag_filter = None
+            va = vc.clone(word_class_filter='verb')
+        else:
+            va = vc.clone(word_class='verb', tag=tag_filter)
+
         if va is not None and len(va.vocab.keys()) > 0:
             print(f"vocabulary rowset: {len(va.vocab.keys())} words")
             my_test = LanguageTest(number_of_questions,
@@ -297,6 +334,73 @@ def test_verb_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+def test_verb_conjugation_praet(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        # tag_filter = input('Tag filter: ')
+        # if len(tag_filter) == 0:
+        #     raise ValueError("Tag filter cannot be empty.")
+       
+        va = vc.clone(word_class_filter='verb')
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'verb conjugation Präteritum', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in verb conjugation Präteritum test: {str(e)}')
+        return
+
+
+def conjugation_table(vc:Vocabulary):
+    try:
+        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
+        print(f'#                   {bcolors.OKBLUE}Conjugation Table{bcolors.ENDC}')
+        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
+        print("")
+        word = input("Verb: ")
+        margin = 15
+        if word not in vc.vocab.keys():
+            raise IndexError(f'{bcolors.FAIL}This word is not found in vocabulary.{bcolors.ENDC}')
+        word_class = vc.vocab[word].get('class', 'No class')
+        if word_class != 'verb':
+            raise ValueError(f'{bcolors.FAIL}This word is not a verb ({word_class}){bcolors.ENDC}')
+        # Generate conjugation table
+        table = []
+        pronouns = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie']
+        conjugations_prae = vc.vocab[word].get('conjugations', {}).get('Präsens', [])
+        conjugations_prae = conjugations_prae[:6]  # Limit to 6 forms
+        conjugations_praet = vc.vocab[word].get('conjugations',{}).get('Präteritum',[])
+        conjugations_praet = conjugations_praet[:6]  # Limit to 6 forms
+        conjugations_perf = vc.vocab[word].get('conjugations',{}).get('Perfekt',[])
+        conjugations_perf = conjugations_perf[:6]  # Limit to 6 forms
+
+        # vowel journey across tenses
+        vowel_journey = f'{"Präsens -> Präteritum -> Perfekt:".ljust(35," ")} {get_first_vowel(conjugations_prae[0])} -> {get_first_vowel(conjugations_praet[0])} -> {get_first_vowel(conjugations_perf[0].replace("ge","").split(" ")[-1])}'
+        print(vowel_journey)
+        print('')
+        # vowel journey across pronouns
+        vowel_journey = f'{"ich -> du -> er/sie/es:".ljust(35," ")} {get_first_vowel(conjugations_prae[0])} -> {get_first_vowel(conjugations_prae[1])} -> {get_first_vowel(conjugations_prae[2])}'
+        print(vowel_journey)
+        print('')
+        header='     '.join(['Präsens'.ljust(margin, ' '), 'Präteritum'.ljust(margin, ' '), 'Perfekt'.ljust(margin, ' ')])
+        print(header)
+        print('-' * len(header))
+        for i in range(6):
+            print('     '.join([conjugations_prae[i].ljust(margin, ' '), conjugations_praet[i].ljust(margin, ' '), conjugations_perf[i].ljust(margin, ' ')]))
+
+    except Exception as e:
+        print(f'Error in conjugation_table: {str(e)}')
+        return
 
 def reload_vocabulary(vc:Vocabulary):
     try:
@@ -310,6 +414,7 @@ def reload_vocabulary(vc:Vocabulary):
     except Exception as e:
         print(f'Error in reload menu: {str(e)}')
         return
+
 
 def browser_menu(vc:Vocabulary):
     try:
@@ -329,14 +434,17 @@ def browser_menu(vc:Vocabulary):
             "Conjugator": conjugator,
             "Words with tag": list_words_for_tag,
             "Words with tag of class": list_words_for_tag_and_class,
+            "Words with a list of tags": list_words_for_tags,
             "Add words": add_new_words,
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,
             "Tags in vocabulary": tags_in_vocabulary,
             "Test: verb conjugation": test_verb_conjugation,
+            "Test: verb conjugation Präteritum": test_verb_conjugation_praet,
             "Test: definite article": test_definite_article,
             "Test: noun translation": test_noun_translation,
-            "Test: verb translation": test_verb_translation
+            "Test: verb translation": test_verb_translation,
+            "Conjugation table": conjugation_table
             }
         keys = list(browser_functions.keys())
         

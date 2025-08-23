@@ -229,4 +229,26 @@ def check_dict_structure(param_dict, model_dict,word,verbose:bool=False, recursi
     except Exception as e:
             logger.error(f"Error in check_dict_structure: {str(e)}")
             return False
-                
+
+def get_first_vowel(word: str) -> str:
+    """
+    Extract the first vowel from a German word.
+    """
+    sounds = ['o','i','a','u','ü','ä','ö','e']
+    for i in range(len(sounds)):
+        if sounds[i] in word:
+            # check if vowel is composite
+            if word[word.index(sounds[i])+1] in sounds:
+                return sounds[i] + word[word.index(sounds[i])+1] #return the composite vowel
+            if sounds[i] in word:
+                return sounds[i]                                 # return the single vowel
+    return ''
+    
+def tabulate(row:list):
+    try:
+        return [x.ljust(25, ' ') for x in row]
+        
+    except Exception as e:
+        print(f'Error in tabulate: {str(e)}')
+        return
+    
