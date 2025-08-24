@@ -234,16 +234,40 @@ def get_first_vowel(word: str) -> str:
     """
     Extract the first vowel from a German word.
     """
+    num_vowels=0
+    found_vowel=''
     sounds = ['o','i','a','u','ü','ä','ö','e']
-    for i in range(len(sounds)):
-        if sounds[i] in word:
-            # check if vowel is composite
-            if word[word.index(sounds[i])+1] in sounds:
-                return sounds[i] + word[word.index(sounds[i])+1] #return the composite vowel
-            if sounds[i] in word:
-                return sounds[i]                                 # return the single vowel
-    return ''
-    
+    # for i in range(len(sounds)):
+    #     if sounds[i] in word:
+    #         # check if vowel is composite
+    #         # if word[word.index(sounds[i])+1] in sounds:
+    #         #     return sounds[i] + word[word.index(sounds[i])+1] #return the composite vowel
+    #         # if sounds[i] in word:
+    #         #     return sounds[i]                                 # return the single vowel
+    #         # vowel is found but let's keep looking
+    #         if num_vowels == 0:
+    #             num_vowels += 1
+    #             found_vowel = sounds[i]
+    #         else:
+    #             found_vowel += sounds[i] # we found a composite vowel
+    #             break
+    # if the verb starts with 'ge' 
+    if word.startswith('ge'):
+        # remove 'ge' from the beginning
+        word = word[2:]
+    # return found_vowel
+    for letter in word:
+        if letter in sounds:
+            if num_vowels == 0:
+                num_vowels += 1
+                found_vowel = letter
+            else:
+                found_vowel += letter
+                break
+        if letter not in sounds and num_vowels==1:
+            break
+    return found_vowel
+
 def tabulate(row:list):
     try:
         return [x.ljust(25, ' ') for x in row]

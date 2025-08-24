@@ -112,28 +112,20 @@ def vocab_summary(vc:Vocabulary):
         return
 def word_finder(vc:Vocabulary):
     try:
-        rx = input("Type a regex: ")
-        pattern = re.compile(rx)
-        result=[x for x in vc.vocab.keys() if pattern.match(x)] # search in words
-        result2=[x for x in vc.vocab.keys() if pattern.match(vc.vocab[x]['translations']['hungarian'])]
-        # search in tags
-        #result3=[x for x in vc.vocab.keys() if pattern.match(x) for tag in vc.vocab[x]['tags'] if pattern.match(tag)]
-        # result +=result2
-        # rx=input("Type a pattern:")
-        # result1=[x for x in vc.vocab.keys() if rx.lower() in x.lower()] # search in words
-        # pattern = re.compile(rx)
-        # result2=[x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))]
-        #result2 = [x.key() for x in vc.vocab.items() if any([rx.lower() in translation.lower() for translation in x['translations']['hungarian']])]
+        rx = input("Type a filter: ")
+
+        result=[x for x in vc.vocab.keys() if rx in x]                                                  # search in words
+        result2=[x for x in vc.vocab.keys() if rx in vc.vocab[x]['translations']['hungarian'][0]]       # search in the first translations
+       #result3=[x for x in vc.vocab.keys() if rx in vc.vocab[x]['tags']]                               # search in tags
         result=list(set(result+result2))
 
-        #result_c = [x for x,detail in vc.vocab.items() if pattern.match(json.dumps(detail))] # search in conjugation
         if len(result)>0:
-            
-            if len(result)!=len(vc.vocab):
-                report=([f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])} {x.ljust(20," ")}({", ".join(vc[x].get("tags",[]))})' for x in result])
-                for item in report: 
-                    print(item)
-
+            report=[(x,f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])}') for x in result]
+            for item in report: 
+                print(f'.   {item[1]}')
+                if vc.vocab[item[0]]['class']=='verb':
+                    conjugation_table(vc,item[0])
+                print('')
                 print(f'Number of words matching pattern {rx}: {len(result)} (of {len(vc.vocab)})')
             else:
                 print(f'All words in dictionary matched pattern {rx}.')
@@ -361,13 +353,13 @@ def test_verb_conjugation_praet(vc:Vocabulary):
         return
 
 
-def conjugation_table(vc:Vocabulary):
+def conjugation_table(vc:Vocabulary,word:str):
     try:
-        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
-        print(f'#                   {bcolors.OKBLUE}Conjugation Table{bcolors.ENDC}')
-        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
+        print(f'{bcolors.OKCYAN}###############################################################{bcolors.ENDC}')
+        print(f'#                   {bcolors.OKBLUE}Conjugation{bcolors.ENDC}')
+        print(f'{bcolors.OKCYAN}###############################################################{bcolors.ENDC}')
         print("")
-        word = input("Verb: ")
+        
         margin = 15
         if word not in vc.vocab.keys():
             raise IndexError(f'{bcolors.FAIL}This word is not found in vocabulary.{bcolors.ENDC}')
@@ -443,8 +435,7 @@ def browser_menu(vc:Vocabulary):
             "Test: verb conjugation Präteritum": test_verb_conjugation_praet,
             "Test: definite article": test_definite_article,
             "Test: noun translation": test_noun_translation,
-            "Test: verb translation": test_verb_translation,
-            "Conjugation table": conjugation_table
+            "Test: verb translation": test_verb_translation
             }
         keys = list(browser_functions.keys())
         
