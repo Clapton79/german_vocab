@@ -1,10 +1,5 @@
-from ruamel.yaml import YAML as yaml2
-from vocab_utilities import *
-from vocab import *
 import itertools
-from pprint import pprint
 from datetime import datetime
-
 
 filename = 'weights.yaml'
 
@@ -21,9 +16,7 @@ class Weight():
         Creates a weights schema for the given words.
         """
         tests = [t for t, f in test_functions.items() if f !=""]
-        #print(tests)
         weights = {}
-        #print(list(itertools.product(words, tests)))
         for word,test in itertools.product(words,tests):
             if word not in weights.keys():
                 weights[word] = {}
