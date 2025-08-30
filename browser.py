@@ -55,15 +55,67 @@ def daily_test(vc:Vocabulary):
 
 
         if number_of_questions > 0:
-            # translation test
+            # noun translation test
             try:
-                if test_v is not None and len(test_v.vocab.keys()) > 0:
-                    print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
+                if nouns_v is not None and len(nouns_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(nouns_v.vocab.keys())} words")
                     my_test = LanguageTest(number_of_questions,
-                                        "translation", test_v, True)
+                                        "translation", nouns_v, True)
                     my_test.run()
                 else:
                     print(f'{bcolors.FAIL}No words found in vocabulary for translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+                return
+
+            # adjective translation test
+            try:
+                if adj_v is not None and len(adj_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(adj_v.vocab.keys())} words")
+                    my_test = LanguageTest(number_of_questions,
+                                        "translation", adj_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No words found in vocabulary for adjective translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+                return
+
+            # adverb translation test
+            try:
+                if adv_v is not None and len(adv_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(adv_v.vocab.keys())} words")
+                    my_test = LanguageTest(number_of_questions,
+                                        "translation", adv_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No words found in vocabulary for adverb translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+                return
+
+            # phrase translation test
+            try:
+                if phrase_v is not None and len(phrase_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(phrase_v.vocab.keys())} words")
+                    my_test = LanguageTest(number_of_questions,
+                                        "translation", phrase_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No words found in vocabulary for phrase translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating translation test: {str(e)}')
+                return
+
+            # verb translation test
+            try:
+                if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(verbs_v.vocab.keys())} words")
+                    my_test = LanguageTest(number_of_questions,
+                                        "translation", verbs_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No words found in vocabulary for verb translation test.{bcolors.ENDC}')
             except Exception as e:
                 print(f'Error creating translation test: {str(e)}')
                 return
@@ -81,18 +133,6 @@ def daily_test(vc:Vocabulary):
                 print(f'Error creating definite article test: {str(e)}')
                 return
 
-            # adjective translation
-            try:
-                if adj_v is not None and len(adj_v.vocab.keys()) > 0:
-                    print(f'Dictionary elements: {len(adj_v.vocab.keys())}')
-                    my_test = LanguageTest(number_of_questions,
-                                    "translation", adj_v, True)
-                    my_test.run()
-                else:
-                    print(f'{bcolors.FAIL}No adjectives found in vocabulary for translation test.{bcolors.ENDC}')
-            except Exception as e:
-                print(f'Error creating translation test: {str(e)}')
-            
             # verb conjugation
             try:
                 if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
@@ -118,31 +158,18 @@ def daily_test(vc:Vocabulary):
             except Exception as e:
                 print(f'Error creating verb imperative verb form test: {str(e)}')
                 return
-            
-            # adverb translation
+
+            # inverse translation test
             try:
-                if adv_v is not None and len(adv_v.vocab.keys()) > 0:
-                    print(f'Dictionary elements: {len(adv_v.vocab.keys())}')
+                if test_v is not None and len(test_v.vocab.keys()) > 0:
+                    print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
                     my_test = LanguageTest(number_of_questions,
-                                        'translation', adv_v, True)
+                                        "inverse translation", test_v, True)
                     my_test.run()
                 else:
-                    print(f'{bcolors.FAIL}No adverbs found in vocabulary for translation test.{bcolors.ENDC}')
+                    print(f'{bcolors.FAIL}No words found in vocabulary for inverse translation test.{bcolors.ENDC}')
             except Exception as e:
-                print(f'Error creating adverb translation test: {str(e)}')
-                return
-            
-            # phrase translation
-            try:
-                if phrase_v is not None and len(phrase_v.vocab.keys()) > 0:
-                    print(f'Dictionary elements: {len(phrase_v.vocab.keys())}')
-                    my_test = LanguageTest(number_of_questions,
-                                        'translation', phrase_v, True)
-                    my_test.run()
-                else:
-                    print(f'{bcolors.FAIL}No phrases found in vocabulary for translation test.{bcolors.ENDC}')
-            except Exception as e:
-                print(f'Error creating phrase translation test: {str(e)}')
+                print(f'Error creating inverse translation test: {str(e)}')
                 return
 
     except Exception as e:
