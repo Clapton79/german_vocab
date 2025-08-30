@@ -11956,3 +11956,333 @@ words:
       - habt vollgefüllt
       - haben vollgefüllt
     imperative: fülle
+  einen Vortrag halten:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - előadást tart
+    date_added: '2025-08-30'
+  aussöhnen:
+    class: verb
+    translations:
+      hungarian:
+      - kibékül
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_07
+    prepositions:
+    - ''
+    date_added: '2025-08-30'
+    conjugations:
+      Präsens:
+      - söhne aus
+      - söhnst aus
+      - söhnt aus
+      - söhnen aus
+      - söhnt aus
+      - söhnen aus
+      Präteritum:
+      - söhnte aus
+      - söhntest aus
+      - söhnte aus
+      - söhnten aus
+      - söhntet aus
+      - söhnten aus
+      Perfekt:
+      - habe ausgesöhnt
+      - hast ausgesöhnt
+      - hat ausgesöhnt
+      - haben ausgesöhnt
+      - habt ausgesöhnt
+      - haben ausgesöhnt
+    imperative: söhne
+  Obdachslosigkeit:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - hajléktalanság
+    tags:
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: ''
+    date_added: '2025-08-30'
+  obdachlos:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - hajléktalan
+    date_added: '2025-08-30'
+  Obdachslose:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - hajléktalan
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Obdachslosen
+    date_added: '2025-08-30'
+  Obdachlosenheim:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - hajléktalanszálló
+    tags:
+    - Obdachlosenheime
+    - _Csilla
+    - _Csilla_07
+    plural: Obdachlosenheime
+    date_added: '2025-08-30'
+  Wohnheim:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - menhely
+      - szálló
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Wohnheime
+    date_added: '2025-08-30'
+  Ursache:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - ok
+      - indok
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Ursachen
+    date_added: '2025-08-30'
+  Hilfsangebot:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - segélyszervezet
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Hilfsangebote
+    date_added: '2025-08-30'
+  Suppenküche:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - ingyenkonyha
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Suppenküchen
+    date_added: '2025-08-30'
+  Armut:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szegénység
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: ''
+    date_added: '2025-08-30'
+  Scheidung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - válás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: Scheidungen
+    date_added: '2025-08-30'
+  Einsamkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - magány
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: ''
+    date_added: '2025-08-30'
+  Schuld:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - adósság
+    tags:
+    - money
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: Schulden
+    date_added: '2025-08-30'
+  Erfolgslosigkeit:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - sikertelenség
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    plural: ''
+    date_added: '2025-08-30'
+  Randgruppe:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - kirekesztett csoport
+      - peremcsoport
+    tags:
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: Randgruppen
+    date_added: '2025-08-30'
+  Notunterkunft:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szükségszállás
+    tags:
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: Notunterkünfte
+    date_added: '2025-08-30'
+  Chancenlosigkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - esélytelenség
+    tags:
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: ''
+    date_added: '2025-08-30'
+  Sucht:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - függőség
+      - káros szenvedély
+    tags:
+    - society
+    - _Csilla
+    - _Csilla_07
+    plural: Süchte
+    date_added: '2025-08-30'
+  süchtig:
+    class: adjective
+    tags:
+    - society
+    - health
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - függő
+    date_added: '2025-08-30'
+  neugierig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - kíváncsi
+    date_added: '2025-08-30'
+  Übernachtung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - éjszakázás
+      - megszállás
+    tags:
+    - hotel
+    - society
+    - holidays
+    - _Csilla
+    - _Csilla_07
+    plural: Übernachtungen
+    date_added: '2025-08-30'
+  verrückt:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - őrült
+    date_added: '2025-08-30'
+  bunte:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - színes
+    date_added: '2025-08-30'
+  Tür an Tür:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_07
+    translations:
+      hungarian:
+      - egymás mellett
+    date_added: '2025-08-30'
+  Manege:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - porond
+    tags:
+    - circus
+    - _Csilla
+    - _Csilla_07
+    plural: Manegen
+    date_added: '2025-08-30'

@@ -1,119 +1,14 @@
 tags: {}
 words:
-  ziemlich:
-    class: adverb
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_06
-    translations:
-      hungarian:
-      - egészen
-    date_added: '2025-08-24'
-  Hört sich toll an.:
-    class: phrase
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_06
-    translations:
-      hungarian:
-      - Jól hangzik.
-    date_added: '2025-08-24'
-  anhören:
-    class: verb
-    translations:
-      hungarian:
-      - hallgat
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_06
-    prepositions:
-    - ''
-    date_added: '2025-08-24'
-    conjugations:
-      Präsens:
-      - höre an
-      - hörst an
-      - hört an
-      - hören an
-      - hört an
-      - hören an
-      Präteritum:
-      - hörte an
-      - hörtest an
-      - hörte an
-      - hörten an
-      - hörtet an
-      - hörten an
-      Perfekt:
-      - habe angehört
-      - hast angehört
-      - hat angehört
-      - haben angehört
-      - habt angehört
-      - haben angehört
-    imperative: höre
-  Lage:
+  Manege:
     class: noun
     definite_article: die
     translations:
       hungarian:
-      - fekvés
-      - helyzet
-      - pozíció
-      - elhelyezkedés
+      - porond
     tags:
-    - ''
+    - circus
     - _Csilla
-    - _Csilla_06
-    plural: Lagen
-    date_added: '2025-08-24'
-  ewig:
-    class: adjective
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_06
-    translations:
-      hungarian:
-      - örök
-      - mindig
-      - örökké
-    date_added: '2025-08-24'
-  wohlfühlen:
-    class: verb
-    translations:
-      hungarian:
-      - jól érzi magát
-    tags:
-    - sich
-    - _Csilla
-    - _Csilla_06
-    prepositions:
-    - ''
-    date_added: '2025-08-24'
-    conjugations:
-      Präsens:
-      - fülle voll
-      - füllst voll
-      - füllt voll
-      - füllen voll
-      - füllt voll
-      - füllen voll
-      Präteritum:
-      - füllte voll
-      - fülltest voll
-      - füllte voll
-      - füllten voll
-      - fülltet voll
-      - füllten voll
-      Perfekt:
-      - habe vollgefüllt
-      - hast vollgefüllt
-      - hat vollgefüllt
-      - haben vollgefüllt
-      - habt vollgefüllt
-      - haben vollgefüllt
-    imperative: fülle
+    - _Csilla_07
+    plural: Manegen
+    date_added: '2025-08-30'

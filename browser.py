@@ -39,15 +39,23 @@ def daily_test(vc:Vocabulary):
             verbs_v = base_v.clone(word_class_filter='verb', tag_filter=tag_filter)
             print("Creating test vocabulary for nouns...")
             nouns_v = base_v.clone(word_class_filter='noun', tag_filter=tag_filter)
+            print("Creating test vocabulary for adverbs...")
+            adv_v = base_v.clone(word_class_filter='adverb', tag_filter=tag_filter)
+            print("Creating test vocabulary for phrases...")
+            phrase_v = base_v.clone(word_class_filter='phrase', tag_filter=tag_filter)
+
         else:
             test_v = base_v.clone()
             adj_v = base_v.clone(word_class_filter='adjective')
             verbs_v = base_v.clone(word_class_filter='verb')
             nouns_v = base_v.clone(word_class_filter='noun')
+            adv_v = base_v.clone(word_class_filter='adverb')
+            phrase_v= base_v.clone(word_class_filter='phrase')
+
 
 
         if number_of_questions > 0:
-            # verb conjugation using new vocabulary
+            # translation test
             try:
                 if test_v is not None and len(test_v.vocab.keys()) > 0:
                     print(f"vocabulary rowset: {len(test_v.vocab.keys())} words")
@@ -60,6 +68,7 @@ def daily_test(vc:Vocabulary):
                 print(f'Error creating translation test: {str(e)}')
                 return
 
+            # noun definite article
             try:
                 if nouns_v is not None and len(nouns_v.vocab.keys()) > 0:
                     print(f'Dictionary elements: {len(nouns_v.vocab.keys())}')
@@ -72,6 +81,7 @@ def daily_test(vc:Vocabulary):
                 print(f'Error creating definite article test: {str(e)}')
                 return
 
+            # adjective translation
             try:
                 if adj_v is not None and len(adj_v.vocab.keys()) > 0:
                     print(f'Dictionary elements: {len(adj_v.vocab.keys())}')
@@ -83,6 +93,7 @@ def daily_test(vc:Vocabulary):
             except Exception as e:
                 print(f'Error creating translation test: {str(e)}')
             
+            # verb conjugation
             try:
                 if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
                     print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
@@ -93,6 +104,45 @@ def daily_test(vc:Vocabulary):
                     print(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
             except Exception as e:
                 print(f'Error creating verb conjugation test: {str(e)}')
+                return
+            
+            # verb imperative
+            try:
+                if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'imperative verb form', verbs_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No verbs found in vocabulary for imperative verb form test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating verb imperative verb form test: {str(e)}')
+                return
+            
+            # adverb translation
+            try:
+                if adv_v is not None and len(adv_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(adv_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'translation', adv_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No adverbs found in vocabulary for translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating adverb translation test: {str(e)}')
+                return
+            
+            # phrase translation
+            try:
+                if phrase_v is not None and len(phrase_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(phrase_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'translation', phrase_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No phrases found in vocabulary for translation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating phrase translation test: {str(e)}')
                 return
 
     except Exception as e:
@@ -116,21 +166,27 @@ def word_finder(vc:Vocabulary):
 
         result=[x for x in vc.vocab.keys() if rx in x]                                                  # search in words
         result2=[x for x in vc.vocab.keys() if rx in vc.vocab[x]['translations']['hungarian'][0]]       # search in the first translations
-       #result3=[x for x in vc.vocab.keys() if rx in vc.vocab[x]['tags']]                               # search in tags
         result=list(set(result+result2))
 
-        if len(result)>0:
+        if 0<len(result)<20:
+            print('='*100)
             report=[(x,f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])}') for x in result]
+            print(' ')
             for item in report: 
-                print(f'.   {item[1]}')
+                print(f'Word:   {item[1]}')
                 if vc.vocab[item[0]]['class']=='verb':
                     conjugation_table(vc,item[0])
+            
                 print('')
-                print(f'Number of words matching pattern {rx}: {len(result)} (of {len(vc.vocab)})')
-            else:
-                print(f'All words in dictionary matched pattern {rx}.')
-        else:
+                print('='*50)
+                print('')
+            print(f'Number of words matching pattern {rx}: {len(result)} (of {len(vc.vocab)})')
+        if len(result)==0:
             print(f'{bcolors.FAIL}No word matched pattern {rx}{bcolors.ENDC}')
+        if 20<=len(result)<len(vc.vocab.keys()):
+            print(f'{bcolors.WARNING}Too many words matched pattern {rx}: {len(result)} (of {len(vc.vocab)}){bcolors.ENDC}')
+        elif len(result)==len(vc.vocab.keys()):
+            print(f'{bcolors.OKGREEN}All words in dictionary matched pattern {rx}.{bcolors.ENDC}')
 
     except Exception as e: 
         print(f'Search error: {str(e)}')
@@ -199,19 +255,7 @@ def list_words_for_tag_and_class(vc:Vocabulary):
     except Exception as e:
         print(f'Error during tag and class search: {str(e)}')
 
-def conjugator (vc:Vocabulary):
-    try:
-        word = input("Type a word: ")
-        result = vc.__getitem__(word)
-        if result is not None or result['class']!='verb':
-            report={}
-            pprint(result['conjugations'])
-        else:
-            print (f'{bcolors.FAIL}Word {word} was not found or is not a verb.{bcolors.ENDC}')
 
-    except Exception as e:
-        print(f'Conjugation error: {str(e)}')
-    
 def tags_in_vocabulary(vc:Vocabulary):
     try:
         tags = vc.tags()
@@ -352,6 +396,28 @@ def test_verb_conjugation_praet(vc:Vocabulary):
         print(f'Error in verb conjugation Präteritum test: {str(e)}')
         return
 
+def filter_words(vc:Vocabulary):
+    try:
+        tag_filter = input('Tag filter: ')
+        word_class_filter = input('Word class filter: ')
+
+        if len(tag_filter)==0:
+            tag_filter = None
+        if len(word_class_filter)==0:
+            word_class_filter = None
+
+        result=vc.filter(word_class=word_class_filter, tag=tag_filter)
+        if len(result)==0:
+            print(f'{bcolors.FAIL}No words found for the specified filters.{bcolors.ENDC}')
+        elif len(result)==len(vc.vocab.keys()):
+            print(f'{bcolors.OKGREEN}All words match the specified filters.{bcolors.ENDC}')
+        else:
+            print(f'{len(result)} words found.')
+            print(result)
+
+    except Exception as e:
+        print(f'Error in filter words: {str(e)}')
+        return
 
 def conjugation_table(vc:Vocabulary,word:str):
     try:
@@ -383,6 +449,11 @@ def conjugation_table(vc:Vocabulary,word:str):
         # vowel journey across pronouns
         vowel_journey = f'{"ich -> du -> er/sie/es:".ljust(35," ")} {get_first_vowel(conjugations_prae[0])} -> {get_first_vowel(conjugations_prae[1])} -> {get_first_vowel(conjugations_prae[2])}'
         print(vowel_journey)
+        print('')
+        imperative = vc.vocab[word].get('imperative', "").capitalize()
+        if len(imperative) > 0:
+            print(f'Imperative: {imperative}!')
+
         print('')
         header='     '.join(['Präsens'.ljust(margin, ' '), 'Präteritum'.ljust(margin, ' '), 'Perfekt'.ljust(margin, ' ')])
         print(header)
@@ -423,10 +494,7 @@ def browser_menu(vc:Vocabulary):
         browser_functions = {
             "Word finder": word_finder,
             "Reload vocabulary with filter": reload_vocabulary,
-            "Conjugator": conjugator,
-            "Words with tag": list_words_for_tag,
-            "Words with tag of class": list_words_for_tag_and_class,
-            "Words with a list of tags": list_words_for_tags,
+            "Filter words": filter_words,
             "Add words": add_new_words,
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,

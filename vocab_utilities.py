@@ -237,24 +237,19 @@ def get_first_vowel(word: str) -> str:
     num_vowels=0
     found_vowel=''
     sounds = ['o','i','a','u','ü','ä','ö','e']
-    # for i in range(len(sounds)):
-    #     if sounds[i] in word:
-    #         # check if vowel is composite
-    #         # if word[word.index(sounds[i])+1] in sounds:
-    #         #     return sounds[i] + word[word.index(sounds[i])+1] #return the composite vowel
-    #         # if sounds[i] in word:
-    #         #     return sounds[i]                                 # return the single vowel
-    #         # vowel is found but let's keep looking
-    #         if num_vowels == 0:
-    #             num_vowels += 1
-    #             found_vowel = sounds[i]
-    #         else:
-    #             found_vowel += sounds[i] # we found a composite vowel
-    #             break
-    # if the verb starts with 'ge' 
-    if word.startswith('ge'):
-        # remove 'ge' from the beginning
-        word = word[2:]
+
+    verb_prefixes = ['ge', 'ver', 'zer','um','ent','zu', 'emp','be', 'er','fern','heraus','hinein','an','ab','auf','aus','ein','mit','nach','vor','weg','zurück']
+    # Get the distinct lengths of the verb prefixes
+
+    # Check if the verb starts with any of the prefixes
+    for prefix in verb_prefixes:
+        if word.startswith(prefix):
+            # Remove the prefix from the beginning
+            word = word[len(prefix):]
+            if word.startswith('ge'):
+                word = word[2:]
+            break
+
     # return found_vowel
     for letter in word:
         if letter in sounds:

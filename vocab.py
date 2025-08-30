@@ -462,7 +462,7 @@ def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.choices(list(vocabulary.filter(word_class='verb')),k=num_questions)]
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']))) for x in random.sample(list(vocabulary.filter(word_class='verb')),k=num_questions)]
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
@@ -472,7 +472,7 @@ def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
 
 def data_selector_perfekt_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary[x]['conjugations']['Perfekt']))) for x in random.choices(list(vocabulary.filter(word_class='verb')),k=num_questions)]
+        questions = [(x, random.choice(list(vocabulary[x]['conjugations']['Perfekt']))) for x in random.sample(list(vocabulary.filter(word_class='verb')),k=num_questions)]
         solutions = [vocabulary[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
@@ -482,7 +482,7 @@ def data_selector_perfekt_verb_conjugation(num_questions:int,vocabulary:Vocabula
 
 def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.choices(list(vocabulary.vocab.keys()), k=num_questions)
+        base = random.sample(list(vocabulary.vocab.keys()), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [(" ".join([(vocabulary[x].get('definite_article') or ""),x])).lstrip().rstrip() for x in base]
     except Exception as e: 
@@ -492,7 +492,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)
+        questions = random.sample(list(vocabulary.filter(word_class='noun')), k=num_questions)
         solutions = [vocabulary.vocab[x].get("definite_article") for x in questions]
     except Exception as e:  
         logger.error(str(e))
@@ -501,7 +501,7 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)]
+        questions = [" ".join([(vocabulary[x].get('definite_article',"")),x]) for x in random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
     except Exception as e:  
         logger.error(str(e))
@@ -510,7 +510,7 @@ def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     
 def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.choices(list(vocabulary.filter(word_class='noun')), k=num_questions)
+        base = random.sample(list(vocabulary.filter(word_class='noun')), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]  
     except Exception as e:  
@@ -520,8 +520,8 @@ def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
         
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
-        solutions = [[f"{y.capitalize()}!" for y in vocabulary.vocab[x].get('imperative')] for x in questions]
+        questions = random.sample(list(vocabulary.filter(word_class='verb')), k=num_questions)
+        solutions = [f"{vv.vocab[x].get('imperative','').capitalize()}!" for x in questions]
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
