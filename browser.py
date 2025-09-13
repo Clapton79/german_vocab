@@ -196,7 +196,7 @@ def word_finder(vc:Vocabulary):
         result=list(set(result+result2))
 
         if 0<len(result)<20:
-            print('='*100)
+            print('='*120)
             report=[(x,f'({vc[x]["class"][0]}){vc[x].get("definite_article", "")} {x.ljust(35," ")} {", ".join(vc[x]["translations"]["hungarian"])}') for x in result]
             print(' ')
             for item in report: 
@@ -205,7 +205,7 @@ def word_finder(vc:Vocabulary):
                     conjugation_table(vc,item[0])
             
                 print('')
-                print('='*50)
+                print('='*120)
                 print('')
             print(f'Number of words matching pattern {rx}: {len(result)} (of {len(vc.vocab)})')
         if len(result)==0:
@@ -295,7 +295,7 @@ def tags_in_vocabulary(vc:Vocabulary):
     except Exception as e:
         print(f'Error retrieving tags: {str(e)}')
 
-def test_verb_conjugation(vc:Vocabulary):
+def test_verb_conjugation_Perfekt(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
         if not number_of_questions.isdigit():
@@ -307,12 +307,12 @@ def test_verb_conjugation(vc:Vocabulary):
             tag_filter = None
             va = vc.clone(word_class_filter='verb')
         else:
-            va = vc.clone(word_class='verb', tag=tag_filter)
+            va = vc.clone(word_class_filter='verb', tag_filter=tag_filter)
 
         if va is not None and len(va.vocab.keys()) > 0:
             print(f"vocabulary rowset: {len(va.vocab.keys())} words")
             my_test = LanguageTest(number_of_questions,
-                                'verb conjugation', va, True)
+                                'verb conjugation Perfekt', va, True)
             my_test.run()
         else:
             raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
@@ -330,9 +330,9 @@ def test_definite_article(vc:Vocabulary):
         number_of_questions = int(number_of_questions)
         tag_filter = input('Tag filter: ')
         if len(tag_filter) == 0:
-            raise ValueError("Tag filter cannot be empty.")
-       
-        va = vc.clone(word_class_filter='noun')
+            va = vc.clone(word_class_filter='noun')
+        else:
+            va = vc.clone(word_class_filter='noun', tag_filter=tag_filter)
         if va is None or len(va.vocab.keys()) == 0:
             raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
 
@@ -347,6 +347,57 @@ def test_definite_article(vc:Vocabulary):
     except Exception as e:
         print(f'Error in definite article test: {str(e)}')
         return
+def test_adjective_translation(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            va = vc.clone(word_class_filter='adjective')
+        else:
+            va = vc.clone(word_class_filter='adjective', tag_filter=tag_filter)
+
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No adjectives found in vocabulary for adjective translation test.{bcolors.ENDC}')
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'translation', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No adjectives found in vocabulary for adjective translation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in noun translation test: {str(e)}')
+        return
+def test_adverb_translation(vc:Vocabulary):
+    try: 
+        number_of_questions = input('How many questions do you want?')
+        if not number_of_questions.isdigit():
+            raise ValueError(f'{bcolors.FAIL}Invalid input. Please enter a number.{bcolors.ENDC}')
+
+        number_of_questions = int(number_of_questions)
+        tag_filter = input('Tag filter: ')
+        if len(tag_filter) == 0:
+            va = vc.clone(word_class_filter='adverb')
+        else:
+            va = vc.clone(word_class_filter='adverb', tag_filter=tag_filter)
+        if va is None or len(va.vocab.keys()) == 0:
+            raise IndexError(f'{bcolors.FAIL}No adverbs found in vocabulary for adverb translation test.{bcolors.ENDC}')
+        if va is not None and len(va.vocab.keys()) > 0:
+            print(f"vocabulary rowset: {len(va.vocab.keys())} words")
+            my_test = LanguageTest(number_of_questions,
+                                'translation', va, True)
+            my_test.run()
+        else:
+            raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
+
+    except Exception as e:
+        print(f'Error in noun translation test: {str(e)}')
+        return
 def test_noun_translation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -356,15 +407,15 @@ def test_noun_translation(vc:Vocabulary):
         number_of_questions = int(number_of_questions)
         tag_filter = input('Tag filter: ')
         if len(tag_filter) == 0:
-            raise ValueError("Tag filter cannot be empty.")
-       
-        va = vc.clone(word_class_filter='noun')
+            va = vc.clone(word_class_filter='noun')
+        else:
+            va = vc.clone(word_class_filter='noun', tag_filter=tag_filter)
         if va is None or len(va.vocab.keys()) == 0:
             raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
         if va is not None and len(va.vocab.keys()) > 0:
             print(f"vocabulary rowset: {len(va.vocab.keys())} words")
             my_test = LanguageTest(number_of_questions,
-                                'noun translation', va, True)
+                                'translation', va, True)
             my_test.run()
         else:
             raise IndexError(f'{bcolors.FAIL}No nouns found in vocabulary for noun translation test.{bcolors.ENDC}')
@@ -381,15 +432,15 @@ def test_verb_translation(vc:Vocabulary):
         number_of_questions = int(number_of_questions)
         tag_filter = input('Tag filter: ')
         if len(tag_filter) == 0:
-            raise ValueError("Tag filter cannot be empty.")
-       
-        va = vc.clone(word_class_filter='verb')
+            va = vc.clone(word_class_filter='verb')
+        else:
+            va = vc.clone(word_class_filter='verb', tag_filter=tag_filter)
         if va is None or len(va.vocab.keys()) == 0:
             raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
         if va is not None and len(va.vocab.keys()) > 0:
             print(f"vocabulary rowset: {len(va.vocab.keys())} words")
             my_test = LanguageTest(number_of_questions,
-                                'verb translation', va, True)
+                                'translation', va, True)
             my_test.run()
         else:
             raise IndexError(f'{bcolors.FAIL}No verbs found in vocabulary for verb translation test.{bcolors.ENDC}')
@@ -526,11 +577,15 @@ def browser_menu(vc:Vocabulary):
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,
             "Tags in vocabulary": tags_in_vocabulary,
-            "Test: verb conjugation": test_verb_conjugation,
+            "Test: verb conjugation Perfekt": test_verb_conjugation_Perfekt,
             "Test: verb conjugation Präteritum": test_verb_conjugation_praet,
             "Test: definite article": test_definite_article,
             "Test: noun translation": test_noun_translation,
-            "Test: verb translation": test_verb_translation
+            "Test: verb translation": test_verb_translation,
+            "Test: adverb translation": test_adverb_translation,
+            "Test: adjective translation": test_adjective_translation,
+            "Conjugation table": conjugation_table,
+            "List words for a tag": list_words_for_tag,
             }
         keys = list(browser_functions.keys())
         

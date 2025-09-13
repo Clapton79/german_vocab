@@ -473,7 +473,7 @@ def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
 
 def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     try:
-        base = random.sample(list(vocabulary.vocab.keys()), k=3)
+        base = random.sample(list(vocabulary.vocab.keys()), k=num_questions)
         questions = [vocabulary[x].get('translations').get('hungarian') for x in base]
         questions = [random.choice(z) if type(z) is list else z for z in questions]
         solutions = [(" ".join([(vocabulary[x].get('definite_article') or ""),x])).lstrip().rstrip() for x in base]
@@ -485,7 +485,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
 
 def data_selector_inverse_translation(num_questions: int,vocabulary:Vocabulary):
     try:
-        base = random.sample(list(vocabulary.vocab.keys()), k=3)
+        base = random.sample(list(vocabulary.vocab.keys()), k=num_questions)
         solutions = [vocabulary[x].get('translations').get('hungarian') for x in base]
         solutions = [random.choice(z) if type(z) is list else z for z in solutions]
         questions = [(" ".join([(vocabulary[x].get('definite_article') or ""),x])).lstrip().rstrip() for x in base]
@@ -642,8 +642,12 @@ class LanguageTest():
     
     def save_results(self, filename):
         try:
+            # if filename does not exist, create and write header
+            if not path.isfile(filename):
+                with open (filename, 'w') as f:
+                    f.write("Date,Test type,Number of questions,Accuracy\n")
             with open (filename, 'a') as f:
-                f.write(f"{datetime.datetime.now().strftime},{self.test_type.title()},{self.num_questions},{self.accuracy}")
+                f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')},{self.test_type.title()},{self.num_questions},{self.accuracy}\n")
         except IOError as e:
             logger.error(f"Error saving results to file: {filename} ({str(e)})")
      
@@ -702,6 +706,7 @@ class LanguageTest():
                 self.__check_immediate_correction(i, answer)
 
             self.__calculate_results()
+            self.save_results('test_results.csv')
             self.show_results()
         except Exception as e:
             print(str(e))
