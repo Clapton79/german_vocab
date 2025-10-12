@@ -1,13 +1,310 @@
 tags: {}
 words:
-  Spitzenreiter:
-    class: noun
-    definite_article: der
+  ausruhen:
+    class: verb
     translations:
       hungarian:
-      - éllovas
+      - kipihen
+      - pihen
     tags:
+    - ''
     - _Csilla
     - _Csilla_08
-    plural: Spitzenreiter
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - ruhe aus
+      - ruhst aus
+      - ruht aus
+      - ruhen aus
+      - ruht aus
+      - ruhen aus
+      Präteritum:
+      - ruhte aus
+      - ruhtest aus
+      - ruhte aus
+      - ruhten aus
+      - ruhtet aus
+      - ruhten aus
+      Perfekt:
+      - habe ausgeruht
+      - hast ausgeruht
+      - hat ausgeruht
+      - haben ausgeruht
+      - habt ausgeruht
+      - haben ausgeruht
+    imperative: ruhe
+  eingießen:
+    class: verb
+    translations:
+      hungarian:
+      - önt
+      - tölt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - gieße ein
+      - gießt ein
+      - gießt ein
+      - gießen ein
+      - gießt ein
+      - gießen ein
+      Präteritum:
+      - goss ein
+      - gossest ein
+      - goss ein
+      - gossen ein
+      - gosst ein
+      - gossen ein
+      - goß ein
+      - gosst ein
+      - goß ein
+      - gossen ein
+      - goßt ein
+      - gossen ein
+      Perfekt:
+      - habe eingegossen
+      - hast eingegossen
+      - hat eingegossen
+      - haben eingegossen
+      - habt eingegossen
+      - haben eingegossen
+    imperative: gieße
+  einteilen:
+    class: verb
+    translations:
+      hungarian:
+      - beoszt
+      - feloszt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - teile ein
+      - teilst ein
+      - teilt ein
+      - teilen ein
+      - teilt ein
+      - teilen ein
+      Präteritum:
+      - teilte ein
+      - teiltest ein
+      - teilte ein
+      - teilten ein
+      - teiltet ein
+      - teilten ein
+      Perfekt:
+      - bin eingeteilt
+      - bist eingeteilt
+      - ist eingeteilt
+      - sind eingeteilt
+      - seid eingeteilt
+      - sind eingeteilt
+    imperative: teile
+  verreisen:
+    class: verb
+    translations:
+      hungarian:
+      - elutazik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - verreise
+      - verreist
+      - verreist
+      - verreisen
+      - verreist
+      - verreisen
+      Präteritum:
+      - verreiste
+      - verreistest
+      - verreiste
+      - verreisten
+      - verreistet
+      - verreisten
+      Perfekt:
+      - bin verreist
+      - bist verreist
+      - ist verreist
+      - sind verreist
+      - seid verreist
+      - sind verreist
+    imperative: verreise
+  glanzvoll:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - ragyogó
+    date_added: '2025-10-12'
+  erleben:
+    class: verb
+    translations:
+      hungarian:
+      - tapasztal
+      - átél
+      - megél
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - erlebe
+      - erlebst
+      - erlebt
+      - erleben
+      - erlebt
+      - erleben
+      Präteritum:
+      - erlebte
+      - erlebtest
+      - erlebte
+      - erlebten
+      - erlebtet
+      - erlebten
+      Perfekt:
+      - habe erlebt
+      - hast erlebt
+      - hat erlebt
+      - haben erlebt
+      - habt erlebt
+      - haben erlebt
+    imperative: erlebe
+  bewegend:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - mozgó
+    date_added: '2025-10-12'
+  ausstatten:
+    class: verb
+    translations:
+      hungarian:
+      - ellát
+      - berendez
+      - felszerel
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - statte aus
+      - stattest aus
+      - stattet aus
+      - statten aus
+      - stattet aus
+      - statten aus
+      Präteritum:
+      - stattete aus
+      - stattetest aus
+      - stattete aus
+      - statteten aus
+      - stattetet aus
+      - statteten aus
+      Perfekt:
+      - habe ausgestattet
+      - hast ausgestattet
+      - hat ausgestattet
+      - haben ausgestattet
+      - habt ausgestattet
+      - haben ausgestattet
+    imperative: statte
+  einst:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - egykor
+    date_added: '2025-10-12'
+  Gemütlichkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - kényelem
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  gemütlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kényelmes
+      - otthonos
+    date_added: '2025-10-12'
+  Umgebung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - környezet
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  angenehme:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kellemes
+    date_added: '2025-10-12'
+  verantvortlich sein für:
+    class: phrase
+    tags:
+    - AKKUSATIV
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - felelős valamiért
     date_added: '2025-10-12'

@@ -1327,11 +1327,13 @@ words:
     definite_article: der
     translations:
       hungarian:
-      - vég
+      - befejezés
     tags:
-    - _speakEasy_page006
+    - ''
+    - _Csilla
+    - _Csilla_08
     plural: Schlüsse
-    date_added: '2024-12-12'
+    date_added: '2025-10-12'
   stehen:
     class: verb
     translations:
@@ -2600,15 +2602,17 @@ words:
     class: verb
     translations:
       hungarian:
+      - kapcsolódik
       - összeköt
       - összekapcsol
+      - kapcsol
     tags:
-    - IT
+    - ''
+    - _Csilla
+    - _Csilla_08
     prepositions:
-    - miteinander verbinden
-    - sich verbinden
-    - dem Internet verbinden
-    date_added: '2024-12-24'
+    - ''
+    date_added: '2025-10-12'
     conjugations:
       Präsens:
       - verbinde
@@ -3125,17 +3129,16 @@ words:
     class: verb
     translations:
       hungarian:
-      - fenntart
-      - megőriz
       - kap
+      - őriz
+      - tart
     tags:
-    - sich
-    - _Adecco_Sabine
+    - ''
+    - _Csilla
+    - _Csilla_08
     prepositions:
-    - Ich erhielt Briefe. Kaptam levelet.
-    - Er erhielt den Auftrag. Megkapta a megbízást.
-    - aufrecht erhalten - fenntart
-    date_added: '2025-04-18'
+    - ''
+    date_added: '2025-10-12'
     conjugations:
       Präsens:
       - erhalte
@@ -3918,12 +3921,14 @@ words:
     class: verb
     translations:
       hungarian:
-      - megköt
+      - köt
     tags:
-    - _Csilla_Unregelmäßige_verben
-    - _Csilla_Unregelmäßige_verben_1
+    - ''
+    - _Csilla
+    - _Csilla_08
     prepositions:
-    date_added: '2025-07-13'
+    - auf die Nase binden - valakinek az orrára köt valamit
+    date_added: '2025-10-12'
     conjugations:
       Präsens:
       - binde
@@ -4499,14 +4504,15 @@ words:
       - megvalósul egy álom
     date_added: '2025-07-13'
   manche:
-    class: adverb
+    class: phrase
     tags:
+    - ''
     - _Csilla
-    - _Csilla_01
+    - _Csilla_08
     translations:
       hungarian:
-      - néhány
-    date_added: '2025-07-13'
+      - egyesek
+    date_added: '2025-10-12'
   scheinen:
     class: verb
     translations:
@@ -7213,14 +7219,15 @@ words:
   sogar:
     class: adverb
     tags:
+    - ''
     - _Csilla
-    - _Csilla_05
+    - _Csilla_08
     translations:
       hungarian:
       - még
       - sőt
       - akár
-    date_added: '2025-08-19'
+    date_added: '2025-10-12'
   übersichtlich:
     class: adjective
     tags:
@@ -9263,12 +9270,16 @@ words:
     class: verb
     translations:
       hungarian:
+      - említ
       - nevez
+      - elnevez
     tags:
-    - _Csilla_Unregelmäßige_verben
-    - _Csilla_Unregelmäßige_verben_3
+    - ''
+    - _Csilla
+    - _Csilla_08
     prepositions:
-    date_added: '2025-08-22'
+    - ''
+    date_added: '2025-10-12'
     conjugations:
       Präsens:
       - nenne
@@ -12501,4 +12512,1403 @@ words:
     - _Csilla
     - _Csilla_08
     plural: Spitzenreiter
+    date_added: '2025-10-12'
+  vorstellen:
+    class: verb
+    translations:
+      hungarian:
+      - bemutat
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - stelle vor
+      - stellst vor
+      - stellt vor
+      - stellen vor
+      - stellt vor
+      - stellen vor
+      Präteritum:
+      - stellte vor
+      - stelltest vor
+      - stellte vor
+      - stellten vor
+      - stelltet vor
+      - stellten vor
+      Perfekt:
+      - habe vorgestellt
+      - hast vorgestellt
+      - hat vorgestellt
+      - haben vorgestellt
+      - habt vorgestellt
+      - haben vorgestellt
+    imperative: stelle
+  nachdenken:
+    class: verb
+    translations:
+      hungarian:
+      - gondolkodik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - denke nach
+      - denkst nach
+      - denkt nach
+      - denken nach
+      - denkt nach
+      - denken nach
+      Präteritum:
+      - dachte nach
+      - dachtest nach
+      - dachte nach
+      - dachten nach
+      - dachtet nach
+      - dachten nach
+      Perfekt:
+      - habe nachgedacht
+      - hast nachgedacht
+      - hat nachgedacht
+      - haben nachgedacht
+      - habt nachgedacht
+      - haben nachgedacht
+    imperative: denke
+  hinfallen:
+    class: verb
+    translations:
+      hungarian:
+      - elesik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - falle hin
+      - fällst hin
+      - fällt hin
+      - fallen hin
+      - fallt hin
+      - fallen hin
+      Präteritum:
+      - fiel hin
+      - fielst hin
+      - fiel hin
+      - fielen hin
+      - fielt hin
+      - fielen hin
+      Perfekt:
+      - bin hingefallen
+      - bist hingefallen
+      - ist hingefallen
+      - sind hingefallen
+      - seid hingefallen
+      - sind hingefallen
+    imperative: falle
+  fortsetzen:
+    class: verb
+    translations:
+      hungarian:
+      - folytat
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - setze fort
+      - setzt fort
+      - setzt fort
+      - setzen fort
+      - setzt fort
+      - setzen fort
+      Präteritum:
+      - setzte fort
+      - setztest fort
+      - setzte fort
+      - setzten fort
+      - setztet fort
+      - setzten fort
+      Perfekt:
+      - habe fortgesetzt
+      - hast fortgesetzt
+      - hat fortgesetzt
+      - haben fortgesetzt
+      - habt fortgesetzt
+      - haben fortgesetzt
+    imperative: setze
+  feststellen:
+    class: verb
+    translations:
+      hungarian:
+      - kiderít
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - stelle fest
+      - stellst fest
+      - stellt fest
+      - stellen fest
+      - stellt fest
+      - stellen fest
+      Präteritum:
+      - stellte fest
+      - stelltest fest
+      - stellte fest
+      - stellten fest
+      - stelltet fest
+      - stellten fest
+      Perfekt:
+      - habe festgestellt
+      - hast festgestellt
+      - hat festgestellt
+      - haben festgestellt
+      - habt festgestellt
+      - haben festgestellt
+    imperative: stelle
+  überflüssig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - felesleges
+    date_added: '2025-10-12'
+  vermieden:
+    class: verb
+    translations:
+      hungarian:
+      - elkerül
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - vermeide
+      - vermeidest
+      - vermeidet
+      - vermeiden
+      - vermeidet
+      - vermeiden
+      Präteritum:
+      - vermied
+      - vermiedst
+      - vermied
+      - vermieden
+      - vermiedet
+      - vermieden
+      - vermied
+      - vermiedest
+      - vermied
+      - vermieden
+      - vermiedet
+      - vermieden
+      Perfekt:
+      - habe vermieden
+      - hast vermieden
+      - hat vermieden
+      - haben vermieden
+      - habt vermieden
+      - haben vermieden
+    imperative: vermeide
+  ungebetene Ratschläge:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kéretlen tanács
+    date_added: '2025-10-12'
+  Ratschlag:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tanács
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: Ratschläge
+    date_added: '2025-10-12'
+  Einleitung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - bevezetés
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: Einleitungen
+    date_added: '2025-10-12'
+  einarbeiten:
+    class: verb
+    translations:
+      hungarian:
+      - betanít
+      - beépít
+      - bekever
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - arbeite ein
+      - arbeitest ein
+      - arbeitet ein
+      - arbeiten ein
+      - arbeitet ein
+      - arbeiten ein
+      Präteritum:
+      - arbeitete ein
+      - arbeitetest ein
+      - arbeitete ein
+      - arbeiteten ein
+      - arbeitetet ein
+      - arbeiteten ein
+      Perfekt:
+      - habe eingearbeitet
+      - hast eingearbeitet
+      - hat eingearbeitet
+      - haben eingearbeitet
+      - habt eingearbeitet
+      - haben eingearbeitet
+    imperative: arbeite
+  vorbei:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - elmúlt
+      - vége
+    date_added: '2025-10-12'
+  bald:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - hamar
+    date_added: '2025-10-12'
+  anstregend:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - fárasztó
+    date_added: '2025-10-12'
+  wahrscheinlich:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - valószínűleg
+      - alighanem
+    date_added: '2025-10-12'
+  andererseits:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - másrészt
+    date_added: '2025-10-12'
+  knapp:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - szűkös
+      - tömör
+      - alig
+    date_added: '2025-10-12'
+  eng:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - szűk
+    date_added: '2025-10-12'
+  zwar:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - bár
+      - ugyan
+    date_added: '2025-10-12'
+  herrlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - nagyszerű
+    date_added: '2025-10-12'
+  daher:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - ennélfogva
+      - emiatt
+      - azért
+    date_added: '2025-10-12'
+  Trennung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - elválasztás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: Trennungen
+    date_added: '2025-10-12'
+  räumlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - térbeli
+    date_added: '2025-10-12'
+  klarzukommen:
+    class: verb
+    translations:
+      hungarian:
+      - megbírkózik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - komme klar
+      - kommst klar
+      - kommt klar
+      - kommen klar
+      - kommt klar
+      - kommen klar
+      Präteritum:
+      - kam klar
+      - kamst klar
+      - kam klar
+      - kamen klar
+      - kamt klar
+      - kamen klar
+      Perfekt:
+      - bin klargekommen
+      - bist klargekommen
+      - ist klargekommen
+      - sind klargekommen
+      - seid klargekommen
+      - sind klargekommen
+    imperative: komm
+  ausgeglichen:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kiegyensúlyozott
+    date_added: '2025-10-12'
+  anhänglich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - gyengéd
+    date_added: '2025-10-12'
+  beherbergen:
+    class: verb
+    translations:
+      hungarian:
+      - befogad
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - beherberge
+      - beherbirgst
+      - beherbirgt
+      - beherbergen
+      - beherbergt
+      - beherbergen
+      Präteritum:
+      - beherbarg
+      - beherbargst
+      - beherbarg
+      - beherbargen
+      - beherbargt
+      - beherbargen
+      Perfekt:
+      - habe beherborgen
+      - hast beherborgen
+      - hat beherborgen
+      - haben beherborgen
+      - habt beherborgen
+      - haben beherborgen
+    imperative: beherbirg
+  selbstverständlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - magától értetődő
+    date_added: '2025-10-12'
+  fleißig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - szorgalmas
+    date_added: '2025-10-12'
+  vielschichtig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - sokoldalú
+      - összetett
+    date_added: '2025-10-12'
+  gebildet:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - művelt
+      - képzett
+    date_added: '2025-10-12'
+  wissenschaftlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - tudományos
+    date_added: '2025-10-12'
+  betreten:
+    class: verb
+    translations:
+      hungarian:
+      - belép
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - betrete
+      - betrittst
+      - betritt
+      - betreten
+      - betretet
+      - betreten
+      Präteritum:
+      - betrat
+      - betratst
+      - betrat
+      - betraten
+      - betratet
+      - betraten
+      - betrat
+      - betratest
+      - betrat
+      - betraten
+      - betratet
+      - betraten
+      Perfekt:
+      - bin betreten
+      - bist betreten
+      - ist betreten
+      - sind betreten
+      - seid betreten
+      - sind betreten
+      - habe betreten
+      - hast betreten
+      - hat betreten
+      - haben betreten
+      - habt betreten
+      - haben betreten
+    imperative: betritt
+  eintreten:
+    class: verb
+    translations:
+      hungarian:
+      - belép
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - trete ein
+      - trittst ein
+      - tritt ein
+      - treten ein
+      - tretet ein
+      - treten ein
+      Präteritum:
+      - trat ein
+      - tratst ein
+      - trat ein
+      - traten ein
+      - tratet ein
+      - traten ein
+      - trat ein
+      - tratest ein
+      - trat ein
+      - traten ein
+      - tratet ein
+      - traten ein
+      Perfekt:
+      - bin eingetreten
+      - bist eingetreten
+      - ist eingetreten
+      - sind eingetreten
+      - seid eingetreten
+      - sind eingetreten
+      - habe eingetreten
+      - hast eingetreten
+      - hat eingetreten
+      - haben eingetreten
+      - habt eingetreten
+      - haben eingetreten
+    imperative: tritt
+  bereits:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - már
+    date_added: '2025-10-12'
+  ja:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - hiszen
+    date_added: '2025-10-12'
+  deutlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - egyértelmű
+      - világos
+    date_added: '2025-10-12'
+  gestiegen:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - megnövekedett
+    date_added: '2025-10-12'
+  eindeutig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - egyértelmű
+    date_added: '2025-10-12'
+  beweisen:
+    class: verb
+    translations:
+      hungarian:
+      - bebizonyít
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - beweise
+      - beweist
+      - beweist
+      - beweisen
+      - beweist
+      - beweisen
+      Präteritum:
+      - bewies
+      - bewiesest
+      - bewies
+      - bewiesen
+      - bewieset
+      - bewiesen
+      Perfekt:
+      - habe bewiesen
+      - hast bewiesen
+      - hat bewiesen
+      - haben bewiesen
+      - habt bewiesen
+      - haben bewiesen
+    imperative: beweise
+  immerhin:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - mindazonáltal
+    date_added: '2025-10-12'
+  sondern:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - hanem
+    date_added: '2025-10-12'
+  sich betten:
+    class: phrase
+    tags:
+    - home
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - beágyaz
+    date_added: '2025-10-12'
+  sich kümmern um:
+    class: phrase
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - törődik valamivel
+    date_added: '2025-10-12'
+  sich sorgenn machen:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - aggódik
+    date_added: '2025-10-12'
+  ich mache mir sorgen:
+    class: phrase
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - aggódom
+    date_added: '2025-10-12'
+  angenehme:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kellemes
+    date_added: '2025-10-12'
+  beziehen:
+    class: verb
+    translations:
+      hungarian:
+      - vonatkozik
+      - hivatkozik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - beziehe
+      - beziehst
+      - bezieht
+      - beziehen
+      - bezieht
+      - beziehen
+      Präteritum:
+      - bezog
+      - bezogst
+      - bezog
+      - bezogen
+      - bezogt
+      - bezogen
+      Perfekt:
+      - habe bezogen
+      - hast bezogen
+      - hat bezogen
+      - haben bezogen
+      - habt bezogen
+      - haben bezogen
+    imperative: beziehe
+  angestellt:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - alkalmazott
+    date_added: '2025-10-12'
+  tagsüber:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - napközben
+    date_added: '2025-10-12'
+  Auflagenhöhe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - példányszám
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  fest:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - szilárd
+      - kemény
+    date_added: '2025-10-12'
+  untersagt:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - tilott
+    date_added: '2025-10-12'
+  nachweisen:
+    class: verb
+    translations:
+      hungarian:
+      - igazol
+      - felmutat
+      - kimutat
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - weise nach
+      - weist nach
+      - weist nach
+      - weisen nach
+      - weist nach
+      - weisen nach
+      Präteritum:
+      - wies nach
+      - wiesest nach
+      - wies nach
+      - wiesen nach
+      - wieset nach
+      - wiesen nach
+      Perfekt:
+      - habe nachgewiesen
+      - hast nachgewiesen
+      - hat nachgewiesen
+      - haben nachgewiesen
+      - habt nachgewiesen
+      - haben nachgewiesen
+    imperative: weise
+  gering:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - csekély
+      - kis
+    date_added: '2025-10-12'
+  sonst:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - egyébként
+    date_added: '2025-10-12'
+  erlernen:
+    class: verb
+    translations:
+      hungarian:
+      - elsajátít
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - erlerne
+      - erlernst
+      - erlernt
+      - erlernen
+      - erlernt
+      - erlernen
+      Präteritum:
+      - erlernte
+      - erlerntest
+      - erlernte
+      - erlernten
+      - erlerntet
+      - erlernten
+      Perfekt:
+      - habe erlernt
+      - hast erlernt
+      - hat erlernt
+      - haben erlernt
+      - habt erlernt
+      - haben erlernt
+    imperative: erlerne
+  bedürftig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - rászoruló
+    date_added: '2025-10-12'
+  vielfältig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - sokféle
+    date_added: '2025-10-12'
+  aufsehen:
+    class: verb
+    translations:
+      hungarian:
+      - ''
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - sehe auf
+      - siehst auf
+      - sieht auf
+      - sehen auf
+      - seht auf
+      - sehen auf
+      Präteritum:
+      - sah auf
+      - sahst auf
+      - sah auf
+      - sahen auf
+      - saht auf
+      - sahen auf
+      Perfekt:
+      - habe aufgesehen
+      - hast aufgesehen
+      - hat aufgesehen
+      - haben aufgesehen
+      - habt aufgesehen
+      - haben aufgesehen
+    imperative: sieh
+  erscheinen:
+    class: verb
+    translations:
+      hungarian:
+      - megjelenik
+      - feltűnik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - erscheine
+      - erscheinst
+      - erscheint
+      - erscheinen
+      - erscheint
+      - erscheinen
+      Präteritum:
+      - erschien
+      - erschienst
+      - erschien
+      - erschienen
+      - erschient
+      - erschienen
+      Perfekt:
+      - bin erschienen
+      - bist erschienen
+      - ist erschienen
+      - sind erschienen
+      - seid erschienen
+      - sind erschienen
+    imperative: erscheine
+  bundesweit:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - országszerte
+    date_added: '2025-10-12'
+  ausruhen:
+    class: verb
+    translations:
+      hungarian:
+      - kipihen
+      - pihen
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - ruhe aus
+      - ruhst aus
+      - ruht aus
+      - ruhen aus
+      - ruht aus
+      - ruhen aus
+      Präteritum:
+      - ruhte aus
+      - ruhtest aus
+      - ruhte aus
+      - ruhten aus
+      - ruhtet aus
+      - ruhten aus
+      Perfekt:
+      - habe ausgeruht
+      - hast ausgeruht
+      - hat ausgeruht
+      - haben ausgeruht
+      - habt ausgeruht
+      - haben ausgeruht
+    imperative: ruhe
+  eingießen:
+    class: verb
+    translations:
+      hungarian:
+      - önt
+      - tölt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - gieße ein
+      - gießt ein
+      - gießt ein
+      - gießen ein
+      - gießt ein
+      - gießen ein
+      Präteritum:
+      - goss ein
+      - gossest ein
+      - goss ein
+      - gossen ein
+      - gosst ein
+      - gossen ein
+      - goß ein
+      - gosst ein
+      - goß ein
+      - gossen ein
+      - goßt ein
+      - gossen ein
+      Perfekt:
+      - habe eingegossen
+      - hast eingegossen
+      - hat eingegossen
+      - haben eingegossen
+      - habt eingegossen
+      - haben eingegossen
+    imperative: gieße
+  einteilen:
+    class: verb
+    translations:
+      hungarian:
+      - beoszt
+      - feloszt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - teile ein
+      - teilst ein
+      - teilt ein
+      - teilen ein
+      - teilt ein
+      - teilen ein
+      Präteritum:
+      - teilte ein
+      - teiltest ein
+      - teilte ein
+      - teilten ein
+      - teiltet ein
+      - teilten ein
+      Perfekt:
+      - bin eingeteilt
+      - bist eingeteilt
+      - ist eingeteilt
+      - sind eingeteilt
+      - seid eingeteilt
+      - sind eingeteilt
+    imperative: teile
+  verreisen:
+    class: verb
+    translations:
+      hungarian:
+      - elutazik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - verreise
+      - verreist
+      - verreist
+      - verreisen
+      - verreist
+      - verreisen
+      Präteritum:
+      - verreiste
+      - verreistest
+      - verreiste
+      - verreisten
+      - verreistet
+      - verreisten
+      Perfekt:
+      - bin verreist
+      - bist verreist
+      - ist verreist
+      - sind verreist
+      - seid verreist
+      - sind verreist
+    imperative: verreise
+  glanzvoll:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - ragyogó
+    date_added: '2025-10-12'
+  erleben:
+    class: verb
+    translations:
+      hungarian:
+      - tapasztal
+      - átél
+      - megél
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - erlebe
+      - erlebst
+      - erlebt
+      - erleben
+      - erlebt
+      - erleben
+      Präteritum:
+      - erlebte
+      - erlebtest
+      - erlebte
+      - erlebten
+      - erlebtet
+      - erlebten
+      Perfekt:
+      - habe erlebt
+      - hast erlebt
+      - hat erlebt
+      - haben erlebt
+      - habt erlebt
+      - haben erlebt
+    imperative: erlebe
+  bewegend:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - mozgó
+    date_added: '2025-10-12'
+  ausstatten:
+    class: verb
+    translations:
+      hungarian:
+      - ellát
+      - berendez
+      - felszerel
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    - ''
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - statte aus
+      - stattest aus
+      - stattet aus
+      - statten aus
+      - stattet aus
+      - statten aus
+      Präteritum:
+      - stattete aus
+      - stattetest aus
+      - stattete aus
+      - statteten aus
+      - stattetet aus
+      - statteten aus
+      Perfekt:
+      - habe ausgestattet
+      - hast ausgestattet
+      - hat ausgestattet
+      - haben ausgestattet
+      - habt ausgestattet
+      - haben ausgestattet
+    imperative: statte
+  einst:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - egykor
+    date_added: '2025-10-12'
+  Gemütlichkeit:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - kényelem
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  gemütlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - kényelmes
+      - otthonos
+    date_added: '2025-10-12'
+  Umgebung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - környezet
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  verantvortlich sein für:
+    class: phrase
+    tags:
+    - AKKUSATIV
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - felelős valamiért
     date_added: '2025-10-12'
