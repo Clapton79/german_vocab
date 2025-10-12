@@ -12321,7 +12321,7 @@ words:
     imperative: verrate
   Geschmacksverbesserer:
     class: noun
-    definite_article:
+    definite_article: der
     translations:
       hungarian:
       - ízfokozó
