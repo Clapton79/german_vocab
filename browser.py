@@ -133,12 +133,12 @@ def daily_test(vc:Vocabulary):
                 print(f'Error creating definite article test: {str(e)}')
                 return
 
-            # verb conjugation
+            # verb conjugation Perfekt
             try:
                 if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
                     print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
                     my_test = LanguageTest(number_of_questions,
-                                        'verb conjugation', verbs_v, True)
+                                        'verb conjugation Perfekt', verbs_v, True)
                     my_test.run()
                 else:
                     print(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
@@ -146,6 +146,32 @@ def daily_test(vc:Vocabulary):
                 print(f'Error creating verb conjugation test: {str(e)}')
                 return
             
+            # verb conjugation Präteritum
+            try:
+                if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'verb conjugation Präteritum', verbs_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating verb conjugation test: {str(e)}')
+                return
+
+            # verb conjugation Präsens
+            try:
+                if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
+                    print(f'Dictionary elements: {len(verbs_v.vocab.keys())}')
+                    my_test = LanguageTest(number_of_questions,
+                                        'verb conjugation Präsens', verbs_v, True)
+                    my_test.run()
+                else:
+                    print(f'{bcolors.FAIL}No verbs found in vocabulary for conjugation test.{bcolors.ENDC}')
+            except Exception as e:
+                print(f'Error creating verb conjugation test: {str(e)}')
+                return
+
             # verb imperative
             try:
                 if verbs_v is not None and len(verbs_v.vocab.keys()) > 0:
