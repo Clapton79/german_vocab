@@ -1,14 +1,13 @@
 tags: {}
 words:
-  Manege:
+  Spitzenreiter:
     class: noun
-    definite_article: die
+    definite_article: der
     translations:
       hungarian:
-      - porond
+      - éllovas
     tags:
-    - circus
     - _Csilla
-    - _Csilla_07
-    plural: Manegen
-    date_added: '2025-08-30'
+    - _Csilla_08
+    plural: Spitzenreiter
+    date_added: '2025-10-12'

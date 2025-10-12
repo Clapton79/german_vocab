@@ -263,12 +263,10 @@ words:
       - elveszít
       - veszít
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -1340,12 +1338,10 @@ words:
       hungarian:
       - áll
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -1784,36 +1780,42 @@ words:
     class: verb
     translations:
       hungarian:
-      - szeletel
+      - vág
     tags:
-    - cooking
-    - kitchen
-    - _speakEasy_page007
+    - _Csilla
+    - _Csilla_Unregelmäßige_verben_4
+    - _Csilla_Unregelmäßige_verben
     prepositions:
-    date_added: '2024-12-15'
+    date_added: '2025-08-24'
     conjugations:
       Präsens:
-      - schneide
-      - schneidest
-      - schneidet
-      - schneiden
-      - schneidet
-      - schneiden
+      - scheide
+      - scheidest
+      - scheidet
+      - scheiden
+      - scheidet
+      - scheiden
       Präteritum:
-      - schnitt
-      - schnittest
-      - schnitt
-      - schnitten
-      - schnittet
-      - schnitten
+      - schied
+      - schiedst
+      - schied
+      - schieden
+      - schiedet
+      - schieden
+      - schied
+      - schiedest
+      - schied
+      - schieden
+      - schiedet
+      - schieden
       Perfekt:
-      - habe geschnitten
-      - hast geschnitten
-      - hat geschnitten
-      - haben geschnitten
-      - habt geschnitten
-      - haben geschnitten
-    imperative: schneide
+      - bin geschieden
+      - bist geschieden
+      - ist geschieden
+      - sind geschieden
+      - seid geschieden
+      - sind geschieden
+    imperative: scheide
   herrvorragend:
     class: adjective
     tags:
@@ -2258,12 +2260,14 @@ words:
     definite_article: der
     translations:
       hungarian:
-      - hozzávaló
+      - összetevő
     tags:
     - cooking
-    - _speakEasy_page009
+    - food
+    - _Csilla
+    - _Csilla_08
     plural: Bestandteile
-    date_added: '2024-12-15'
+    date_added: '2025-10-12'
   Anker:
     class: noun
     definite_article: der
@@ -4410,12 +4414,10 @@ words:
       - kiabál
       - kiált
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -4770,11 +4772,9 @@ words:
       - abbahagy
       - elhagy
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -6002,12 +6002,10 @@ words:
       - veszekedik
       - verekedik
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -6345,12 +6343,10 @@ words:
       hungarian:
       - lök
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9532,7 +9528,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9557,60 +9552,16 @@ words:
       - seid geschmolzen
       - sind geschmolzen
     imperative: schmilz
-  scheiden:
-    class: verb
-    translations:
-      hungarian:
-      - vág
-    tags:
-    - ''
-    - _Csilla
-    - _Csilla_Unregelmäßige_verben_4
-    - _Csilla_Unregelmäßige_verben
-    prepositions:
-    - ''
-    date_added: '2025-08-24'
-    conjugations:
-      Präsens:
-      - scheide
-      - scheidest
-      - scheidet
-      - scheiden
-      - scheidet
-      - scheiden
-      Präteritum:
-      - schied
-      - schiedst
-      - schied
-      - schieden
-      - schiedet
-      - schieden
-      - schied
-      - schiedest
-      - schied
-      - schieden
-      - schiedet
-      - schieden
-      Perfekt:
-      - bin geschieden
-      - bist geschieden
-      - ist geschieden
-      - sind geschieden
-      - seid geschieden
-      - sind geschieden
-    imperative: scheide
   schreiben:
     class: verb
     translations:
       hungarian:
       - ír
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9646,7 +9597,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9677,12 +9627,10 @@ words:
       hungarian:
       - hallgat
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9714,12 +9662,10 @@ words:
       - úszik
       - úszkál
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9751,12 +9697,10 @@ words:
       - esküszik
       - megesküszik
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9788,12 +9732,10 @@ words:
       - lát
       - néz
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9830,7 +9772,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9861,12 +9802,10 @@ words:
       hungarian:
       - énekel
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9903,7 +9842,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9934,12 +9872,10 @@ words:
       hungarian:
       - ''
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -9975,7 +9911,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10007,7 +9942,6 @@ words:
       - beszél
       - beszélget
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
@@ -10048,7 +9982,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10080,12 +10013,10 @@ words:
       - szúr
       - csíp
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10116,12 +10047,10 @@ words:
       hungarian:
       - lop
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10159,7 +10088,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10190,7 +10118,6 @@ words:
       hungarian:
       - bűzlik
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
@@ -10232,7 +10159,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10266,12 +10192,10 @@ words:
       - simít
       - simogat
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10305,12 +10229,10 @@ words:
       - visel
       - cipel
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10380,12 +10302,10 @@ words:
       - űz
       - hajt
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10425,7 +10345,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10468,12 +10387,10 @@ words:
       hungarian:
       - iszik
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10509,7 +10426,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10540,12 +10456,10 @@ words:
       hungarian:
       - elfelejt
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10590,12 +10504,10 @@ words:
       - elmegy
       - otthagy
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10639,12 +10551,10 @@ words:
       - ért
       - megért
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10683,12 +10593,10 @@ words:
       - növekszik
       - terem
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10726,12 +10634,10 @@ words:
       - mos
       - megmos
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10768,12 +10674,10 @@ words:
       hungarian:
       - tud
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10827,7 +10731,6 @@ words:
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10859,12 +10762,10 @@ words:
       - húz
       - von
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10902,12 +10803,10 @@ words:
       - kényszerít
       - kötelez
     tags:
-    - ''
     - _Csilla
     - _Csilla_Unregelmäßige_verben_4
     - _Csilla_Unregelmäßige_verben
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10942,7 +10841,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -10974,11 +10872,9 @@ words:
       - széttép
       - összetép
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11025,7 +10921,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11061,7 +10956,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11096,7 +10990,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11137,7 +11030,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11171,7 +11063,6 @@ words:
   tatsätlich:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11181,7 +11072,6 @@ words:
   nun:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11201,7 +11091,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11238,11 +11127,9 @@ words:
       hungarian:
       - csenget
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11275,11 +11162,9 @@ words:
       - csörög
       - cseng
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11317,11 +11202,9 @@ words:
       - felmond
       - kirúg
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11353,11 +11236,9 @@ words:
       - berendez
       - épít
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11388,11 +11269,9 @@ words:
       hungarian:
       - aggódik
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11420,7 +11299,6 @@ words:
   senkrecht:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11431,7 +11309,6 @@ words:
   waagrecht:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11472,11 +11349,9 @@ words:
       - rendel
       - kirendel
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11509,11 +11384,9 @@ words:
       - emel
       - növel
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11545,11 +11418,9 @@ words:
       - megtart
       - betart
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11584,7 +11455,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11615,11 +11485,9 @@ words:
       hungarian:
       - szervez
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11650,11 +11518,9 @@ words:
       hungarian:
       - felújít
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11685,11 +11551,9 @@ words:
       hungarian:
       - letétbe helyez
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11747,7 +11611,6 @@ words:
       - átruházás
       - helyettesítés
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     plural: Ablösen
@@ -11791,7 +11654,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11831,7 +11693,6 @@ words:
   zusätzlich:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11842,7 +11703,6 @@ words:
   ziemlich:
     class: adverb
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11852,7 +11712,6 @@ words:
   Hört sich toll an.:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11865,11 +11724,9 @@ words:
       hungarian:
       - hallgat
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11904,7 +11761,6 @@ words:
       - pozíció
       - elhelyezkedés
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     plural: Lagen
@@ -11912,7 +11768,6 @@ words:
   ewig:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_06
     translations:
@@ -11931,7 +11786,6 @@ words:
     - _Csilla
     - _Csilla_06
     prepositions:
-    - ''
     date_added: '2025-08-24'
     conjugations:
       Präsens:
@@ -11959,7 +11813,6 @@ words:
   einen Vortrag halten:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -11976,7 +11829,6 @@ words:
     - _Csilla
     - _Csilla_07
     prepositions:
-    - ''
     date_added: '2025-08-30'
     conjugations:
       Präsens:
@@ -12013,10 +11865,9 @@ words:
     - _Csilla_07
     plural: ''
     date_added: '2025-08-30'
-  obdachlos:
+  obdachslos:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -12030,7 +11881,6 @@ words:
       hungarian:
       - hajléktalan
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Obdachslosen
@@ -12055,7 +11905,6 @@ words:
       - menhely
       - szálló
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Wohnheime
@@ -12068,7 +11917,6 @@ words:
       - ok
       - indok
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Ursachen
@@ -12080,7 +11928,6 @@ words:
       hungarian:
       - segélyszervezet
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Hilfsangebote
@@ -12092,7 +11939,6 @@ words:
       hungarian:
       - ingyenkonyha
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Suppenküchen
@@ -12104,7 +11950,6 @@ words:
       hungarian:
       - szegénység
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: ''
@@ -12116,7 +11961,6 @@ words:
       hungarian:
       - válás
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: Scheidungen
@@ -12128,7 +11972,6 @@ words:
       hungarian:
       - magány
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: ''
@@ -12153,7 +11996,6 @@ words:
       hungarian:
       - sikertelenség
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     plural: ''
@@ -12222,7 +12064,6 @@ words:
   neugierig:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -12247,7 +12088,6 @@ words:
   verrückt:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -12257,7 +12097,6 @@ words:
   bunte:
     class: adjective
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -12267,7 +12106,6 @@ words:
   Tür an Tür:
     class: phrase
     tags:
-    - ''
     - _Csilla
     - _Csilla_07
     translations:
@@ -12286,3 +12124,381 @@ words:
     - _Csilla_07
     plural: Manegen
     date_added: '2025-08-30'
+  sich bewerben für:
+    class: phrase
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - megpályáz
+    date_added: '2025-10-12'
+  spenden:
+    class: verb
+    translations:
+      hungarian:
+      - adományoz
+    tags:
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - spende
+      - spendest
+      - spendet
+      - spenden
+      - spendet
+      - spenden
+      Präteritum:
+      - spendete
+      - spendetest
+      - spendete
+      - spendeten
+      - spendetet
+      - spendeten
+      Perfekt:
+      - habe gespendet
+      - hast gespendet
+      - hat gespendet
+      - haben gespendet
+      - habt gespendet
+      - haben gespendet
+    imperative: spende
+  Geld ausgeben:
+    class: phrase
+    tags:
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - pénzt költ
+    date_added: '2025-10-12'
+  verbringen:
+    class: verb
+    translations:
+      hungarian:
+      - időt eltölt
+    tags:
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - verbringe
+      - verbringst
+      - verbringt
+      - verbringen
+      - verbringt
+      - verbringen
+      Präteritum:
+      - verbrachte
+      - verbrachtest
+      - verbrachte
+      - verbrachten
+      - verbrachtet
+      - verbrachten
+      Perfekt:
+      - habe verbracht
+      - hast verbracht
+      - hat verbracht
+      - haben verbracht
+      - habt verbracht
+      - haben verbracht
+    imperative: verbringe
+  Versuchung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - kísértés
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Versuchungen
+    date_added: '2025-10-12'
+  Naschkatze:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - édesszájú
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Naschkatzen
+    date_added: '2025-10-12'
+  Schilddrüse:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - pajzsmirigy
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Schilddrüsen
+    date_added: '2025-10-12'
+  süßlich:
+    class: adjective
+    tags:
+    - cooking
+    - food
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - édeskés
+    date_added: '2025-10-12'
+  säuerlich:
+    class: adjective
+    tags:
+    - cooking
+    - food
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - savanykás
+    date_added: '2025-10-12'
+  herb:
+    class: adjective
+    tags:
+    - cooking
+    - food
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - csípős
+    date_added: '2025-10-12'
+  köstlich:
+    class: adjective
+    tags:
+    - cooking
+    - food
+    - _Csilla
+    - _Csilla_08
+    translations:
+      hungarian:
+      - ízletes
+    date_added: '2025-10-12'
+  verraten:
+    class: verb
+    translations:
+      hungarian:
+      - elárul
+    tags:
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - verrate
+      - verrätst
+      - verrät
+      - verraten
+      - verratet
+      - verraten
+      Präteritum:
+      - verriet
+      - verrietst
+      - verriet
+      - verrieten
+      - verrietet
+      - verrieten
+      Perfekt:
+      - habe verraten
+      - hast verraten
+      - hat verraten
+      - haben verraten
+      - habt verraten
+      - haben verraten
+    imperative: verrate
+  Geschmacksverbesserer:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - ízfokozó
+    tags:
+    - cooking
+    - food
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  Vergnügen:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - élvezet
+      - szórakozás
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Vergnügen
+    date_added: '2025-10-12'
+  Bitterschokolade:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - keserűcsokoládé
+    tags:
+    - food
+    - _Csilla
+    - _Csilla_08
+    plural: Bitterschokoladen
+    date_added: '2025-10-12'
+  Nervennahrung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - vígaszkaja
+    tags:
+    - food
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  beeinflußen:
+    class: verb
+    translations:
+      hungarian:
+      - befolyásol
+    tags:
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - beeinfluße
+      - beeinflußt
+      - beeinflußt
+      - beeinflußen
+      - beeinflußt
+      - beeinflußen
+      Präteritum:
+      - beeinflußte
+      - beeinflußtest
+      - beeinflußte
+      - beeinflußten
+      - beeinflußtet
+      - beeinflußten
+      Perfekt:
+      - habe beeinflußt
+      - hast beeinflußt
+      - hat beeinflußt
+      - haben beeinflußt
+      - habt beeinflußt
+      - haben beeinflußt
+    imperative: beeinfluße
+  Psyche:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - psziché
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Psychen
+    date_added: '2025-10-12'
+  Einfluss:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - befolyás
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Einflüsse
+    date_added: '2025-10-12'
+  Gefäß:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - edény
+    tags:
+    - Gefäße
+    - _Csilla
+    - _Csilla_08
+    plural: Gefäße
+    date_added: '2025-10-12'
+  Fan:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - rajongó
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Fans
+    date_added: '2025-10-12'
+  heilen:
+    class: verb
+    translations:
+      hungarian:
+      - gyógyít
+    tags:
+    - _Csilla
+    - _Csilla_08
+    prepositions:
+    date_added: '2025-10-12'
+    conjugations:
+      Präsens:
+      - heile
+      - heilst
+      - heilt
+      - heilen
+      - heilt
+      - heilen
+      Präteritum:
+      - heilte
+      - heiltest
+      - heilte
+      - heilten
+      - heiltet
+      - heilten
+      Perfekt:
+      - bin geheilt
+      - bist geheilt
+      - ist geheilt
+      - sind geheilt
+      - seid geheilt
+      - sind geheilt
+    imperative: heile
+  Mithilfe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - segítségével
+    tags:
+    - GENITIV
+    - _Csilla
+    - _Csilla_08
+    plural: ''
+    date_added: '2025-10-12'
+  Spitzenreiter:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - éllovas
+    tags:
+    - _Csilla
+    - _Csilla_08
+    plural: Spitzenreiter
+    date_added: '2025-10-12'
