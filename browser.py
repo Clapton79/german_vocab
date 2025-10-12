@@ -6,6 +6,16 @@ from add_words import add_words
 import os
 from pprint import pprint
 import re
+import yaml
+
+
+def load_config(config_path="config.yaml"):
+    try:
+        with open(config_path, "r") as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Error loading config: {str(e)}")
+        return {}
 
 def test(vc:Vocabulary):
     try:
@@ -14,6 +24,7 @@ def test(vc:Vocabulary):
         my_test.run()
     except Exception as e:
         print(f'Error in test function: {str(e)}')
+
 def daily_test(vc:Vocabulary):
     try:
         print(get_available_tests())
@@ -213,6 +224,7 @@ def vocab_summary(vc:Vocabulary):
     except Exception as e:
         print(f'Error during vocabulary summary: {str(e)}')
         return
+
 def word_finder(vc:Vocabulary):
     try:
         rx = input("Type a filter: ")
@@ -294,6 +306,7 @@ def list_words_for_tag (vc:Vocabulary):
             print(f'No words with tag {tag}')
     except Exception as e:
         print(f'Error during tag search: {str(e)}')
+
 def list_words_for_tag_and_class(vc:Vocabulary):
     try:
         tag = input("Type a tag: ")
@@ -307,7 +320,6 @@ def list_words_for_tag_and_class(vc:Vocabulary):
             print(result)
     except Exception as e:
         print(f'Error during tag and class search: {str(e)}')
-
 
 def tags_in_vocabulary(vc:Vocabulary):
     try:
@@ -373,6 +385,7 @@ def test_definite_article(vc:Vocabulary):
     except Exception as e:
         print(f'Error in definite article test: {str(e)}')
         return
+
 def test_adjective_translation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -399,6 +412,7 @@ def test_adjective_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+
 def test_adverb_translation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -424,6 +438,7 @@ def test_adverb_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+
 def test_noun_translation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -449,6 +464,7 @@ def test_noun_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+
 def test_verb_translation(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -474,6 +490,7 @@ def test_verb_translation(vc:Vocabulary):
     except Exception as e:
         print(f'Error in noun translation test: {str(e)}')
         return
+
 def test_verb_conjugation_praet(vc:Vocabulary):
     try: 
         number_of_questions = input('How many questions do you want?')
@@ -582,7 +599,6 @@ def reload_vocabulary(vc:Vocabulary):
         print(f'Error in reload menu: {str(e)}')
         return
 
-
 def browser_menu(vc:Vocabulary):
     try:
         print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
@@ -639,7 +655,7 @@ def browser_menu(vc:Vocabulary):
 
 def main():
     try:
-        vocabulary_file = "dict.yaml"
+        vocabulary_file = config.get('vocabulary_file', 'dict.yaml')
         v = Vocabulary(vocabulary_file)
         browser_menu(v)
     except Exception as e:

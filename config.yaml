@@ -1,0 +1,10 @@
+Profile1:
+  language: German
+  secondary_language: Hungarian
+  vocabulary_file: dict.yaml
+  temp_vocabulary_file: new_dict.yaml
+Profile2:
+  language: Spanish
+  secondary_language: Hungarian
+  vocabulary_file: dict_es_hu.yaml
+  temp_vocabulary_file: new_dict_es_hu.yaml
