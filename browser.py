@@ -655,6 +655,7 @@ def browser_menu(vc:Vocabulary):
 
 def main():
     try:
+        config = load_config()
         vocabulary_file = config.get('vocabulary_file', 'dict.yaml')
         v = Vocabulary(vocabulary_file)
         browser_menu(v)
