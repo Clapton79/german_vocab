@@ -8,6 +8,25 @@ from pprint import pprint
 import re
 import yaml
 
+def add_tag_to_every_word(vc:Vocabulary): 
+    try:
+        tag = input("Type the tag to add: ")
+        if len(tag) == 0:
+            print(f'{bcolors.FAIL}No tag entered.{bcolors.ENDC}')
+            return
+        for word in vc.vocab.keys():
+            if 'tags' not in vc.vocab[word]:
+                vc.vocab[word]['tags'] = []
+            if tag not in vc.vocab[word]['tags']:
+                vc.append_tag_to_words([word], tag)
+           
+        vc.save(vc.filename)
+        print('Vocabulary saved.')
+
+    except Exception as e:
+        print(f'Error adding tag to vocabulary words: {str(e)}')
+        return
+        
 
 def load_config(config_path="config.yaml"):
     try:
@@ -521,13 +540,16 @@ def filter_words(vc:Vocabulary):
     try:
         tag_filter = input('Tag filter: ')
         word_class_filter = input('Word class filter: ')
+        word_regex_filter = input('Word regex filter: ')
+        tag_regex_filter = input('Tag regex filter: ')
 
-        if len(tag_filter)==0:
-            tag_filter = None
-        if len(word_class_filter)==0:
-            word_class_filter = None
 
-        result=vc.filter(word_class=word_class_filter, tag=tag_filter)
+        # if len(tag_filter)==0:
+        #     tag_filter = None
+        # if len(word_class_filter)==0:
+        #     word_class_filter = None
+
+        result=vc.filter(word_class=word_class_filter, tag=tag_filter, regex=word_regex_filter, regex_tags=tag_regex_filter)
         if len(result)==0:
             print(f'{bcolors.FAIL}No words found for the specified filters.{bcolors.ENDC}')
         elif len(result)==len(vc.vocab.keys()):
@@ -590,13 +612,41 @@ def reload_vocabulary(vc:Vocabulary):
     try:
         tag_filter = input('Tag filter: ')
         word_class_filter = input('Word class filter: ')
-        ve=vc.clone(word_class_filter=word_class_filter, tag_filter=tag_filter)
+        word_regex_filter = input('Word regex filter: ')
+        tag_regex_filter = input('Tag regex filter: ')
+
+        ve=vc.clone(word_class_filter=word_class_filter, tag_filter=tag_filter, word_regex_filter=word_regex_filter, tag_regex_filter=tag_regex_filter)
         if ve is None:
             raise IndexError(f'{bcolors.FAIL}No words found for the specified filters.{bcolors.ENDC}')
         else:
             browser_menu(ve)
     except Exception as e:
         print(f'Error in reload menu: {str(e)}')
+        return
+
+def display_words(vc:Vocabulary):
+    try:
+        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
+        print (f'#                   {bcolors.OKBLUE}Display Words{bcolors.ENDC}')
+        print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
+
+        tag_filter = input('Tag filter: ')
+        word_class_filter = input('Word class filter: ')
+
+        words = vc.filter(word_class=word_class_filter, tag=tag_filter)
+        print("")
+        print("")
+
+        if len(words) == 0:
+            print(f'{bcolors.FAIL}No words found for the specified filters.{bcolors.ENDC}')
+            return
+        for i, word in enumerate(words):
+            print(f'{str(i+1).ljust(5, " ")} {vc.vocab[word].get("definite_article","") + " " + word.ljust(30, " ")} - {", ".join(vc.vocab[word]["translations"]["hungarian"])}')
+            if (i+1) % 5 == 0: 
+                print ("")
+                print ("")
+    except Exception as e:
+        print(f'Error displaying words: {str(e)}')
         return
 
 def browser_menu(vc:Vocabulary):
@@ -616,6 +666,7 @@ def browser_menu(vc:Vocabulary):
             "Reload vocabulary with filter": reload_vocabulary,
             "Filter words": filter_words,
             "Add words": add_new_words,
+            "Display words": display_words,
             "Daily test": daily_test,
             "Vocabulary summary": vocab_summary,
             "Tags in vocabulary": tags_in_vocabulary,
@@ -628,6 +679,7 @@ def browser_menu(vc:Vocabulary):
             "Test: adjective translation": test_adjective_translation,
             "Conjugation table": conjugation_table,
             "List words for a tag": list_words_for_tag,
+            "Add a tag to every word in this dic": add_tag_to_every_word
             }
         keys = list(browser_functions.keys())
         

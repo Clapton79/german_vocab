@@ -46,3 +46,40 @@ Date,Test type,Number of questions,Accuracy
 2025-10-12 17:35:00,Definite Article,10,100.0
 2025-10-12 17:38:14,Verb Conjugation Präteritum,10,50.0
 2025-10-12 17:39:06,Inverse Translation,10,80.0
+2025-10-14 16:07:23,Translation,10,60.0
+2025-10-14 16:08:06,Translation,10,0.0
+2025-10-14 16:08:45,Translation,10,20.0
+2025-10-14 16:09:31,Translation,10,10.0
+2025-10-14 16:09:51,Definite Article,10,90.0
+2025-10-14 16:13:16,Verb Conjugation Perfekt,10,30.0
+2025-10-14 16:15:04,Verb Conjugation Präteritum,10,0.0
+2025-10-14 16:15:09,Imperative Verb Form,10,0.0
+2025-10-14 16:15:49,Inverse Translation,10,10.0
+2025-10-16 08:11:56,Translation,10,50.0
+2025-10-16 08:12:43,Translation,10,0.0
+2025-10-16 08:13:09,Translation,10,0.0
+2025-10-16 08:14:13,Translation,10,10.0
+2025-10-16 08:14:51,Translation,10,20.0
+2025-10-16 08:15:13,Definite Article,10,100.0
+2025-10-16 08:15:41,Verb Conjugation Perfekt,10,0.0
+2025-10-16 08:15:42,Verb Conjugation Präteritum,10,0.0
+2025-10-16 08:15:44,Imperative Verb Form,10,0.0
+2025-10-16 08:16:31,Inverse Translation,10,60.0
+2025-10-19 14:27:39,Translation,10,50.0
+2025-10-19 14:28:16,Translation,10,30.0
+2025-10-19 14:28:59,Translation,10,10.0
+2025-10-19 14:29:17,Definite Article,10,90.0
+2025-10-19 14:33:22,Verb Conjugation Perfekt,10,30.0
+2025-10-19 14:37:10,Verb Conjugation Präteritum,10,50.0
+2025-10-19 14:38:11,Imperative Verb Form,10,60.0
+2025-10-19 14:39:05,Inverse Translation,10,30.0
+2025-10-19 14:58:06,Translation,10,20.0
+2025-10-19 14:59:25,Translation,10,40.0
+2025-10-19 15:00:05,Translation,10,20.0
+2025-10-19 15:01:15,Translation,10,20.0
+2025-10-19 15:01:55,Translation,10,30.0
+2025-10-19 15:02:16,Definite Article,10,60.0
+2025-10-19 15:02:21,Verb Conjugation Perfekt,10,0.0
+2025-10-19 15:02:24,Verb Conjugation Präteritum,10,0.0
+2025-10-19 15:02:57,Imperative Verb Form,10,50.0
+2025-10-19 15:03:02,Inverse Translation,10,0.0

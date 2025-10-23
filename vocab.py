@@ -4,6 +4,7 @@ from applogger import logger
 from vocab_utilities import *
 from datetime import datetime
 from pprint import pprint
+import re
 
 class Word():
     __slots__ = ['word_class','word_data','word_text','date_added','definite_article','dq','dq_list']
@@ -247,63 +248,7 @@ class Vocabulary():
         except Exception as e:
             logger.error(f"Error showing words: {str(e)}")
 
-    # def filter_by_class_and_tag(self, word_class:str, tag:str=None):
-    #     """Deprecated! Returns a list of words that have the specified class and tag."""
-    #     try:
-    #         result=[]
-    #         for item, detail in self.vocab.items():
-    #             if detail.get('class') == word_class:
-    #                 if tag is None or tag in detail.get('tags', []):
-    #                     result.append(item)
-    #     except Exception as e:
-    #         logger.error(f"Error filtering by class and tag: {str(e)}")
-    #         return []
-    #     return sorted(result)
-    
-    # def filter_by_class(self, word_class: str):
-    #     """Deprecated! Returns a list of words that have the specified word class."""
-    #     try: 
-    #         if not word_class:
-    #             return []
-            
-    #         result = [word for word, detail in self.vocab.items() 
-    #                 if detail.get('class') == word_class]
-    #         return sorted(result)
-    #     except Exception as e:
-    #         logger.error(f"Error filtering by class '{word_class}': {str(e)}")
-    #         return []
-
-    # def filter_by_tag(self, tag: str) -> list:
-    #     """Deprecated! Returns a list of words that have the specified tag."""
-    #     try:
-    #         if not tag:
-    #             return []
-    #         result = []
-    #         result = [word for word, detail in self.vocab.items() 
-    #                 if tag in detail.get('tags', [])]
-    #         # for word, detail in self.vocab.items():
-    #         #     if tag in detail.get('tags', []):
-    #         #         result.append(word)
-    #         return sorted(result)
-    #     except Exception as e:
-    #         logger.error(f"Error filtering by tag '{tag}': {str(e)} iteration: {word}")
-    #         return []
-
-    # def filter_by_class_and_tag(self, word_class: str, tag: str) -> list:
-    #     """Deprecated! Returns a list of words that have the specified class and tag."""
-    #     try:
-    #         if not word_class:
-    #             return []
-            
-    #         result = []
-    #         result = [word for word, detail in self.vocab.items() if detail.get('class') == word_class and tag in detail.get('tags',[])]
-            
-    #         return sorted(result)
-    #     except Exception as e:
-    #         logger.error(f"Error filtering by class '{word_class}' and tag '{tag}': {str(e)}")
-    #         return []
-
-    def filter(self, word_class: str = None, tag: str = None, word: str = None) -> list:
+    def filter(self, word_class: str = None, tag: str = None, word: str = None, regex: str = None, regex_tags: str = None) -> list:
         """
         Returns a list of words matching the specified criteria.
         
@@ -331,17 +276,28 @@ class Vocabulary():
                 result = [w for w in self.vocab if tag in self.vocab[w].get('tags', []) and w == word]
             elif word_class is not None and tag is not None and word is not None:  # 111
                 result = [w for w in self.vocab if self.vocab[w].get('class') == word_class and tag in self.vocab[w].get('tags', []) and w == word]
+            
+
+            if regex is not None:
+                
+                pattern = re.compile(regex)
+                result = [w for w in result if pattern.search(w)]
+            
+            if regex_tags is not None:
+
+                pattern = re.compile(regex_tags)
+                result = [w for w in result
+                if any(pattern.search(t) for t in self.vocab[w].get('tags', []))]
+
             return sorted(result)
         except Exception as e:
             logger.error(f"Error filtering by multiple criteria: {str(e)}")
             return []
 
-    def clone(self, word_class_filter: str = None, tag_filter: str = None, words_filter: list = None):
+    def clone(self, word_class_filter: str = None, tag_filter: str = None, words_filter: list = None, word_regex_filter: str =None, tag_regex_filter: str =None):
         """Creates a new instance of the vocabulary based on the given filters"""
         try:
             
-            #filtered_words = self.filter(word_class=word_class_filter, tags=tag_filter)
-
             # Start with all words
             filtered_words = set(self.vocab.keys())
             
@@ -360,6 +316,16 @@ class Vocabulary():
                 words_filtered = set(words_filter)
                 filtered_words = filtered_words.intersection(words_filtered)
             
+            # Apply word regex filter
+            if word_regex_filter is not None:
+                word_regex_filtered = set(self.filter(word_regex=word_regex_filter))
+                filtered_words = filtered_words.intersection(word_regex_filtered)
+
+            # Apply tag regex filter
+            if tag_regex_filter is not None:
+                tag_regex_filtered = set(self.filter(tag_regex=tag_regex_filter))
+                filtered_words = filtered_words.intersection(tag_regex_filtered)
+
             # Check if we have any words after filtering
             if len(filtered_words) == 0:
                 raise ValueError("No words found matching the specified filters.")
