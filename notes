@@ -6,13 +6,7 @@ test engine:
 
 - dictionary feature: Gegenteil (opposite)
 - test: adjective opposites
-- test: adjective translation
-- test: verb translation
-- test: acive translation (hu=>de)
 - test: passive translation (de=>hu)
-- test: Präteritum conjugation
-- test: Perfekt conjugation
-- test: Präsens conjugation
 
 - vocabulary class features:
   - word data

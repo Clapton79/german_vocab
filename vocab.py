@@ -589,7 +589,8 @@ class LanguageTest():
             word_accuracy = [self.answers[i]==self.solutions[i] for i,x in enumerate(self.base)]
             for i, word in enumerate(self.base):
                 datadic={
-                    word:{
+                    random.getrandbits(128) :{
+                    "word" : word,
                     "date" : format(datetime.now(),'%Y-%m-%d'),
                     "test_type": self.test_type,
                     "occurrence": 1,

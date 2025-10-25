@@ -1,100 +1,48 @@
-Auswirkung:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-Anwendung:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-Forschung:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-Ebene:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-Volksmund:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-Physioterapeut:
+153404715134053538332137682798364939831:
+  word: Deckel
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: false
-Ratschlag:
+251477654971673461415206356500818364282:
+  word: Mengenangabe
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: false
-Schale:
+224483498535492221022485668434011591576:
+  word: Prise
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: true
-Heldenhaft:
+305227794027942704307102146526573577964:
+  word: Korkenzieher
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: false
-Gefühl:
+332605414769704345043836583748113118943:
+  word: Sache
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: true
-schädlich:
+332605414769704345043836583748113118943:
+  word: Sache
   date: '2025-10-25'
   test_type: translation
   occurrence: 1
   success: true
-heftig:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-mühe:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-wertvoll:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-künstlich:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: true
-daher:
-  date: '2025-10-25'
+332605414769704345043832583748113118943:
+  word: Sache
+  date: '2025-10-23'
   test_type: translation
   occurrence: 1
   success: false
-bundesweit:
-  date: '2025-10-25'
+332605414759704345043836583748113118943:
+  word: Sache
+  date: '2025-10-22'
   test_type: translation
   occurrence: 1
   success: true
-sogar:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: false
-zwar:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: false
-schließlich:
-  date: '2025-10-25'
-  test_type: translation
-  occurrence: 1
-  success: false

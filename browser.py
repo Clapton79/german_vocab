@@ -26,7 +26,6 @@ def add_tag_to_every_word(vc:Vocabulary):
     except Exception as e:
         print(f'Error adding tag to vocabulary words: {str(e)}')
         return
-        
 
 def load_config(config_path="config.yaml"):
     try:
