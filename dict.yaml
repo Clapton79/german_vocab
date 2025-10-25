@@ -5301,10 +5301,12 @@ words:
       hungarian:
       - ösztönöz
     tags:
+    - ''
     - _Csilla
-    - _Csilla_02
+    - _Csilla_10
     prepositions:
-    date_added: '2025-07-13'
+    - anregen zu + D - ösztönöz valamire
+    date_added: '2025-10-25'
     conjugations:
       Präsens:
       - rege an
@@ -5414,11 +5416,11 @@ words:
       hungarian:
       - kutatás
     tags:
-    - science
+    - ''
     - _Csilla
-    - _Csilla_03
+    - _Csilla_10
     plural: Forschungen
-    date_added: '2025-07-13'
+    date_added: '2025-10-25'
   Weltall:
     class: noun
     definite_article: das
@@ -10631,14 +10633,13 @@ words:
     translations:
       hungarian:
       - elhagy
-      - elmegy
-      - otthagy
     tags:
+    - ''
     - _Csilla
-    - _Csilla_Unregelmäßige_verben_4
-    - _Csilla_Unregelmäßige_verben
+    - _Csilla_09
     prepositions:
-    date_added: '2025-08-24'
+    - ''
+    date_added: '2025-10-24'
     conjugations:
       Präsens:
       - verlasse
@@ -13581,12 +13582,12 @@ words:
     tags:
     - ''
     - _Csilla
-    - _Csilla_08
+    - _Csilla_10
     translations:
       hungarian:
       - csekély
-      - kis
-    date_added: '2025-10-12'
+      - kevés
+    date_added: '2025-10-25'
   sonst:
     class: adverb
     tags:
@@ -14345,3 +14346,1657 @@ words:
       - habt erlaubt
       - haben erlaubt
     imperative: erlaube
+  anschließen:
+    class: verb
+    translations:
+      hungarian:
+      - csatlakozik
+    tags:
+    - sich
+    - Dativ
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - sich anschließen + D - csatlakozik valamihely
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - schließe an
+      - schließt an
+      - schließt an
+      - schließen an
+      - schließt an
+      - schließen an
+      Präteritum:
+      - schloss an
+      - schlossest an
+      - schloss an
+      - schlossen an
+      - schlosst an
+      - schlossen an
+      - schloß an
+      - schlosst an
+      - schloß an
+      - schlossen an
+      - schloßt an
+      - schlossen an
+      Perfekt:
+      - habe angeschlossen
+      - hast angeschlossen
+      - hat angeschlossen
+      - haben angeschlossen
+      - habt angeschlossen
+      - haben angeschlossen
+    imperative: schließe
+  Bassgitarrist:
+    class: noun
+    definite_article:
+    translations:
+      hungarian:
+      - basszusgitáros
+    tags:
+    - music
+    - _Csilla
+    - _Csilla_09
+    plural: Bassgitarristen
+    date_added: '2025-10-24'
+  Suche:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - keresés
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    plural: Suchen
+    date_added: '2025-10-24'
+  Feinschmecker:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - ínyenc
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    plural: ''
+    date_added: '2025-10-24'
+  Konsument:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - fogyasztó
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    plural: Konsumenten
+    date_added: '2025-10-24'
+  Vermutung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - sejtés
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    plural: Vermutungen
+    date_added: '2025-10-24'
+  wegwerfen:
+    class: verb
+    translations:
+      hungarian:
+      - eldob
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - werfe weg
+      - wirfst weg
+      - wirft weg
+      - werfen weg
+      - werft weg
+      - werfen weg
+      Präteritum:
+      - warf weg
+      - warfst weg
+      - warf weg
+      - warfen weg
+      - warft weg
+      - warfen weg
+      Perfekt:
+      - habe weggeworfen
+      - hast weggeworfen
+      - hat weggeworfen
+      - haben weggeworfen
+      - habt weggeworfen
+      - haben weggeworfen
+    imperative: wirf
+  satt:
+    class: adjective
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - tele
+      - jóllakott
+    date_added: '2025-10-24'
+  Ich bin satt.:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - Jóllaktam.
+    date_added: '2025-10-24'
+  solch:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - ilyen
+    date_added: '2025-10-24'
+  Krug:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - bögre
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Krüge
+    date_added: '2025-10-24'
+  Eierbecher:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tojástartó
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    plural: Eierbecher
+    date_added: '2025-10-24'
+  Untertasse:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - csészealj
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Untertassen
+    date_added: '2025-10-24'
+  Deckel:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - tető
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Deckel
+    date_added: '2025-10-24'
+  Korkenzieher:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - dugóhúzó
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Korkenzieher
+    date_added: '2025-10-24'
+  Besen:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - söprű
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Besen
+    date_added: '2025-10-24'
+  Schale:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - héj
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    plural: Schalen
+    date_added: '2025-10-24'
+  Messer:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - kés
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Messer
+    date_added: '2025-10-24'
+  Topf:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - edény
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Töpfe
+    date_added: '2025-10-24'
+  Pfanne:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - serpenyő
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Pfannen
+    date_added: '2025-10-24'
+  Schöpfkelle:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - merőkanál
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Schöpfkellen
+    date_added: '2025-10-24'
+  Mengenangabe:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - mennyiség
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: ''
+    date_added: '2025-10-24'
+  Prise:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - csipet
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Prisen
+    date_added: '2025-10-24'
+  Gerät:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - eszköz
+      - készülék
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Geräte
+    date_added: '2025-10-24'
+  Zubereitung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - előkészítés
+    tags:
+    - kitchen
+    - _Csilla
+    - _Csilla_09
+    plural: Zubereitungen
+    date_added: '2025-10-24'
+  garnieren:
+    class: verb
+    translations:
+      hungarian:
+      - díszít
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - garniere
+      - garnierst
+      - garniert
+      - garnieren
+      - garniert
+      - garnieren
+      Präteritum:
+      - garnierte
+      - garniertest
+      - garnierte
+      - garnierten
+      - garniertet
+      - garnierten
+      Perfekt:
+      - habe garniert
+      - hast garniert
+      - hat garniert
+      - haben garniert
+      - habt garniert
+      - haben garniert
+    imperative: garniere
+  steif:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - merev
+      - kemény
+    date_added: '2025-10-24'
+  zerkleinert:
+    class: adjective
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - aprított
+    date_added: '2025-10-24'
+  hinzugeben:
+    class: verb
+    translations:
+      hungarian:
+      - hozzáad
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - gebe hinzu
+      - gibst hinzu
+      - gibt hinzu
+      - geben hinzu
+      - gebt hinzu
+      - geben hinzu
+      Präteritum:
+      - gab hinzu
+      - gabst hinzu
+      - gab hinzu
+      - gaben hinzu
+      - gabt hinzu
+      - gaben hinzu
+      Perfekt:
+      - habe hinzugegeben
+      - hast hinzugegeben
+      - hat hinzugegeben
+      - haben hinzugegeben
+      - habt hinzugegeben
+      - haben hinzugegeben
+    imperative: gib
+  hacken:
+    class: verb
+    translations:
+      hungarian:
+      - vág
+      - vagdal
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - hacke
+      - hackst
+      - hackt
+      - hacken
+      - hackt
+      - hacken
+      Präteritum:
+      - hackte
+      - hacktest
+      - hackte
+      - hackten
+      - hacktet
+      - hackten
+      Perfekt:
+      - habe gehackt
+      - hast gehackt
+      - hat gehackt
+      - haben gehackt
+      - habt gehackt
+      - haben gehackt
+    imperative: hacke
+  grob:
+    class: adjective
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - durva
+    date_added: '2025-10-24'
+  schälen:
+    class: verb
+    translations:
+      hungarian:
+      - hámoz
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - schäle
+      - schälst
+      - schält
+      - schälen
+      - schält
+      - schälen
+      Präteritum:
+      - schälte
+      - schältest
+      - schälte
+      - schälten
+      - schältet
+      - schälten
+      Perfekt:
+      - habe geschält
+      - hast geschält
+      - hat geschält
+      - haben geschält
+      - habt geschält
+      - haben geschält
+    imperative: schäle
+  übergießen:
+    class: verb
+    translations:
+      hungarian:
+      - felönt
+      - fröcsköl
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - übergieße
+      - übergießt
+      - übergießt
+      - übergießen
+      - übergießt
+      - übergießen
+      - gieße über
+      - gießt über
+      - gießt über
+      - gießen über
+      - gießt über
+      - gießen über
+      Präteritum:
+      - übergoss/oß
+      - übergossest/osst
+      - übergoss/oß
+      - übergossen
+      - übergosst/oßt
+      - übergossen
+      - goss/oß über
+      - gossest/osst über
+      - goss/oß über
+      - gossen über
+      - gosst/oßt über
+      - gossen über
+      Perfekt:
+      - habe übergossen
+      - hast übergossen
+      - hat übergossen
+      - haben übergossen
+      - habt übergossen
+      - haben übergossen
+      - habe übergegossen
+      - hast übergegossen
+      - hat übergegossen
+      - haben übergegossen
+      - habt übergegossen
+      - haben übergegossen
+    imperative: übergieße/ieß
+  wenden:
+    class: verb
+    translations:
+      hungarian:
+      - fordít
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - wende
+      - wendest
+      - wendet
+      - wenden
+      - wendet
+      - wenden
+      Präteritum:
+      - wandte
+      - wandtest
+      - wandte
+      - wandten
+      - wandtet
+      - wandten
+      - wendete
+      - wendetest
+      - wendete
+      - wendeten
+      - wendetet
+      - wendeten
+      Perfekt:
+      - habe gewandt
+      - hast gewandt
+      - hat gewandt
+      - haben gewandt
+      - habt gewandt
+      - haben gewandt
+      - habe gewendet
+      - hast gewendet
+      - hat gewendet
+      - haben gewendet
+      - habt gewendet
+      - haben gewendet
+    imperative: wende
+  zerlaufen:
+    class: verb
+    translations:
+      hungarian:
+      - eloszlik
+      - elkenődik
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - zerlaufe
+      - zerläufst
+      - zerläuft
+      - zerlaufen
+      - zerlauft
+      - zerlaufen
+      Präteritum:
+      - zerlief
+      - zerliefst
+      - zerlief
+      - zerliefen
+      - zerlieft
+      - zerliefen
+      Perfekt:
+      - bin zerlaufen
+      - bist zerlaufen
+      - ist zerlaufen
+      - sind zerlaufen
+      - seid zerlaufen
+      - sind zerlaufen
+      - habe zerlaufen
+      - hast zerlaufen
+      - hat zerlaufen
+      - haben zerlaufen
+      - habt zerlaufen
+      - haben zerlaufen
+    imperative: zerlauf
+  hineingeben:
+    class: verb
+    translations:
+      hungarian:
+      - beletesz
+      - hozzáad
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - gebe hinein
+      - gibst hinein
+      - gibt hinein
+      - geben hinein
+      - gebt hinein
+      - geben hinein
+      Präteritum:
+      - gab hinein
+      - gabst hinein
+      - gab hinein
+      - gaben hinein
+      - gabt hinein
+      - gaben hinein
+      Perfekt:
+      - habe hineingegeben
+      - hast hineingegeben
+      - hat hineingegeben
+      - haben hineingegeben
+      - habt hineingegeben
+      - haben hineingegeben
+    imperative: gib
+  erhitzen:
+    class: verb
+    translations:
+      hungarian:
+      - felhevít
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - erhitze
+      - erhitzt
+      - erhitzt
+      - erhitzen
+      - erhitzt
+      - erhitzen
+      Präteritum:
+      - erhitzte
+      - erhitztest
+      - erhitzte
+      - erhitzten
+      - erhitztet
+      - erhitzten
+      Perfekt:
+      - habe erhitzt
+      - hast erhitzt
+      - hat erhitzt
+      - haben erhitzt
+      - habt erhitzt
+      - haben erhitzt
+    imperative: erhitze
+  verrühren:
+    class: verb
+    translations:
+      hungarian:
+      - kever
+      - összekever
+    tags:
+    - kitchen
+    - cooking
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - verrühre
+      - verrührst
+      - verrührt
+      - verrühren
+      - verrührt
+      - verrühren
+      Präteritum:
+      - verrührte
+      - verrührtest
+      - verrührte
+      - verrührten
+      - verrührtet
+      - verrührten
+      Perfekt:
+      - habe verrührt
+      - hast verrührt
+      - hat verrührt
+      - haben verrührt
+      - habt verrührt
+      - haben verrührt
+    imperative: verrühre
+  statt:
+    class: adverb
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - helyett
+    date_added: '2025-10-24'
+  entsorgen möchten:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - meg akar szabadulni
+    date_added: '2025-10-24'
+  entsorgen müll:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - szemétbe dob
+    date_added: '2025-10-24'
+  entsorgen:
+    class: verb
+    translations:
+      hungarian:
+      - rendelkezik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - entsorge
+      - entsorgst
+      - entsorgt
+      - entsorgen
+      - entsorgt
+      - entsorgen
+      Präteritum:
+      - entsorgte
+      - entsorgtest
+      - entsorgte
+      - entsorgten
+      - entsorgtet
+      - entsorgten
+      Perfekt:
+      - habe entsorgt
+      - hast entsorgt
+      - hat entsorgt
+      - haben entsorgt
+      - habt entsorgt
+      - haben entsorgt
+    imperative: entsorge
+  mitmachen:
+    class: verb
+    translations:
+      hungarian:
+      - csatlakozik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - mache mit
+      - machst mit
+      - macht mit
+      - machen mit
+      - macht mit
+      - machen mit
+      Präteritum:
+      - machte mit
+      - machtest mit
+      - machte mit
+      - machten mit
+      - machtet mit
+      - machten mit
+      Perfekt:
+      - habe mitgemacht
+      - hast mitgemacht
+      - hat mitgemacht
+      - haben mitgemacht
+      - habt mitgemacht
+      - haben mitgemacht
+    imperative: mache
+  umgehen:
+    class: verb
+    translations:
+      hungarian:
+      - elkerül
+      - megkerül
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - umgehe
+      - umgehst
+      - umgeht
+      - umgehen
+      - umgeht
+      - umgehen
+      - gehe um
+      - gehst um
+      - geht um
+      - gehen um
+      - geht um
+      - gehen um
+      Präteritum:
+      - umging
+      - umgingst
+      - umging
+      - umgingen
+      - umgingt
+      - umgingen
+      - ging um
+      - gingst um
+      - ging um
+      - gingen um
+      - gingt um
+      - gingen um
+      Perfekt:
+      - habe umgangen
+      - hast umgangen
+      - hat umgangen
+      - haben umgangen
+      - habt umgangen
+      - haben umgangen
+      - habe umgegangen
+      - hast umgegangen
+      - hat umgegangen
+      - haben umgegangen
+      - habt umgegangen
+      - haben umgegangen
+    imperative: umgehe/eh
+  verantvortungsvoll:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - felelős
+    date_added: '2025-10-24'
+  ekelig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    translations:
+      hungarian:
+      - undorító
+    date_added: '2025-10-24'
+  rumstehen:
+    class: verb
+    translations:
+      hungarian:
+      - álldogál
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - stehe rum
+      - stehst rum
+      - steht rum
+      - stehen rum
+      - steht rum
+      - stehen rum
+      Präteritum:
+      - stand rum
+      - standst rum
+      - stand rum
+      - standen rum
+      - standet rum
+      - standen rum
+      - stand rum
+      - standest rum
+      - stand rum
+      - standen rum
+      - standet rum
+      - standen rum
+      Perfekt:
+      - habe rumgestanden
+      - hast rumgestanden
+      - hat rumgestanden
+      - haben rumgestanden
+      - habt rumgestanden
+      - haben rumgestanden
+    imperative: stehe
+  Sache:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - cucc
+      - tárgy
+      - dolog
+      - ügy
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    plural: Sachen
+    date_added: '2025-10-24'
+  schmeißen:
+    class: verb
+    translations:
+      hungarian:
+      - dob
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - schmeiße
+      - schmeißt
+      - schmeißt
+      - schmeißen
+      - schmeißt
+      - schmeißen
+      Präteritum:
+      - schmiss
+      - schmissest
+      - schmiss
+      - schmissen
+      - schmisst
+      - schmissen
+      - schmiss
+      - schmisst
+      - schmiss
+      - schmissen
+      - schmisst
+      - schmissen
+      Perfekt:
+      - habe geschmissen
+      - hast geschmissen
+      - hat geschmissen
+      - haben geschmissen
+      - habt geschmissen
+      - haben geschmissen
+    imperative: schmeiße
+  gestehen:
+    class: verb
+    translations:
+      hungarian:
+      - bevall
+      - elismer
+      - beismer
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_09
+    prepositions:
+    - ''
+    date_added: '2025-10-24'
+    conjugations:
+      Präsens:
+      - gestehe
+      - gestehst
+      - gesteht
+      - gestehen
+      - gesteht
+      - gestehen
+      Präteritum:
+      - gestand
+      - gestandst
+      - gestand
+      - gestanden
+      - gestandet
+      - gestanden
+      - gestand
+      - gestandest
+      - gestand
+      - gestanden
+      - gestandet
+      - gestanden
+      Perfekt:
+      - habe gestanden
+      - hast gestanden
+      - hat gestanden
+      - haben gestanden
+      - habt gestanden
+      - haben gestanden
+    imperative: gestehe
+  träne fließen:
+    class: phrase
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - a könnyem is kicsordult
+    date_added: '2025-10-25'
+  Anwendung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - felhasználás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Anwendungen
+    date_added: '2025-10-25'
+  Wissen:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - tudás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: ''
+    date_added: '2025-10-25'
+  Wissenschaft:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - tudomány
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Wissenschaften
+    date_added: '2025-10-25'
+  anwenden:
+    class: verb
+    translations:
+      hungarian:
+      - felhasznál
+      - alkalmaz
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - wende an
+      - wendest an
+      - wendet an
+      - wenden an
+      - wendet an
+      - wenden an
+      Präteritum:
+      - wandte an
+      - wandtest an
+      - wandte an
+      - wandten an
+      - wandtet an
+      - wandten an
+      - wendete an
+      - wendetest an
+      - wendete an
+      - wendeten an
+      - wendetet an
+      - wendeten an
+      Perfekt:
+      - habe angewandt
+      - hast angewandt
+      - hat angewandt
+      - haben angewandt
+      - habt angewandt
+      - haben angewandt
+      - habe angewendet
+      - hast angewendet
+      - hat angewendet
+      - haben angewendet
+      - habt angewendet
+      - haben angewendet
+    imperative: wende
+  Auswirkung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - hatás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Auswirkungen
+    date_added: '2025-10-25'
+  Sprichwort:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - szólás
+      - közmondás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Sprichwörter
+    date_added: '2025-10-25'
+  Volksmund:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - néphagyomány
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: ''
+    date_added: '2025-10-25'
+  vermuten:
+    class: verb
+    translations:
+      hungarian:
+      - sejt
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - vermute
+      - vermutest
+      - vermutet
+      - vermuten
+      - vermutet
+      - vermuten
+      Präteritum:
+      - vermutete
+      - vermutetest
+      - vermutete
+      - vermuteten
+      - vermutetet
+      - vermuteten
+      Perfekt:
+      - habe vermutet
+      - hast vermutet
+      - hat vermutet
+      - haben vermutet
+      - habt vermutet
+      - haben vermutet
+    imperative: vermute
+  Beweis:
+    class: noun
+    definite_article: der
+    translations:
+      hungarian:
+      - bizonyíték
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Beweise
+    date_added: '2025-10-25'
+  Fachgebiet:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - szakterület
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Fachgebiete
+    date_added: '2025-10-25'
+  Anzahl:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szám
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Anzahlen
+    date_added: '2025-10-25'
+  wertvoll:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - értékes
+    date_added: '2025-10-25'
+  bilden:
+    class: verb
+    translations:
+      hungarian:
+      - képződik
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - bilde
+      - bildest
+      - bildet
+      - bilden
+      - bildet
+      - bilden
+      Präteritum:
+      - bildete
+      - bildetest
+      - bildete
+      - bildeten
+      - bildetet
+      - bildeten
+      Perfekt:
+      - habe gebildet
+      - hast gebildet
+      - hat gebildet
+      - haben gebildet
+      - habt gebildet
+      - haben gebildet
+    imperative: bilde
+  wirken:
+    class: verb
+    translations:
+      hungarian:
+      - hat
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - wirke
+      - wirkst
+      - wirkt
+      - wirken
+      - wirkt
+      - wirken
+      Präteritum:
+      - wirkte
+      - wirktest
+      - wirkte
+      - wirkten
+      - wirktet
+      - wirkten
+      Perfekt:
+      - habe gewirkt
+      - hast gewirkt
+      - hat gewirkt
+      - haben gewirkt
+      - habt gewirkt
+      - haben gewirkt
+    imperative: wirke
+  Menge:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - mennyiség
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Mengen
+    date_added: '2025-10-25'
+  schädlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - káros
+    date_added: '2025-10-25'
+  Bewegung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - mozgás
+    tags:
+    - sport
+    - _Csilla
+    - _Csilla_10
+    plural: Bewegungen
+    date_added: '2025-10-25'
+  Durchblutung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - vérkeringés
+    tags:
+    - health
+    - body
+    - _Csilla
+    - _Csilla_10
+    plural: ''
+    date_added: '2025-10-25'
+  mühe:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - fáradságos
+    date_added: '2025-10-25'
+  Abnehmen:
+    class: noun
+    definite_article: das
+    translations:
+      hungarian:
+      - fogyás
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: ''
+    date_added: '2025-10-25'
+  geraten:
+    class: verb
+    translations:
+      hungarian:
+      - kerül
+      - jut
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - gerate
+      - gerätst
+      - gerät
+      - geraten
+      - geratet
+      - geraten
+      Präteritum:
+      - geriet
+      - gerietst
+      - geriet
+      - gerieten
+      - gerietet
+      - gerieten
+      Perfekt:
+      - bin geraten
+      - bist geraten
+      - ist geraten
+      - sind geraten
+      - seid geraten
+      - sind geraten
+    imperative: gerate
+  heftig:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - heves
+    date_added: '2025-10-25'
+  Ebene:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - szint
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Ebenen
+    date_added: '2025-10-25'
+  künstlich:
+    class: adjective
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    translations:
+      hungarian:
+      - művi
+    date_added: '2025-10-25'
+  klatschen:
+    class: verb
+    translations:
+      hungarian:
+      - tapsol
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - klatsche
+      - klatschst
+      - klatscht
+      - klatschen
+      - klatscht
+      - klatschen
+      Präteritum:
+      - klatschte
+      - klatschtest
+      - klatschte
+      - klatschten
+      - klatschtet
+      - klatschten
+      Perfekt:
+      - bin geklatscht
+      - bist geklatscht
+      - ist geklatscht
+      - sind geklatscht
+      - seid geklatscht
+      - sind geklatscht
+    imperative: klatsche
+  dehnen:
+    class: verb
+    translations:
+      hungarian:
+      - nyújt
+      - nyújtózkodik
+    tags:
+    - sich
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - dehne
+      - dehnst
+      - dehnt
+      - dehnen
+      - dehnt
+      - dehnen
+      Präteritum:
+      - dehnte
+      - dehntest
+      - dehnte
+      - dehnten
+      - dehntet
+      - dehnten
+      Perfekt:
+      - habe gedehnt
+      - hast gedehnt
+      - hat gedehnt
+      - haben gedehnt
+      - habt gedehnt
+      - haben gedehnt
+    imperative: dehne
+  Atemübung:
+    class: noun
+    definite_article: die
+    translations:
+      hungarian:
+      - légzőgyakorlat
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    plural: Atemübungen
+    date_added: '2025-10-25'
+  übergehen:
+    class: verb
+    translations:
+      hungarian:
+      - átmegy
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - übergehe
+      - übergehst
+      - übergeht
+      - übergehen
+      - übergeht
+      - übergehen
+      - gehe über
+      - gehst über
+      - geht über
+      - gehen über
+      - geht über
+      - gehen über
+      Präteritum:
+      - überging
+      - übergingst
+      - überging
+      - übergingen
+      - übergingt
+      - übergingen
+      - ging über
+      - gingst über
+      - ging über
+      - gingen über
+      - gingt über
+      - gingen über
+      Perfekt:
+      - bin übergangen
+      - bist übergangen
+      - ist übergangen
+      - sind übergangen
+      - seid übergangen
+      - sind übergangen
+      - bin übergegangen
+      - bist übergegangen
+      - ist übergegangen
+      - sind übergegangen
+      - seid übergegangen
+      - sind übergegangen
+    imperative: übergehe/eh

@@ -109,6 +109,15 @@ def save_to_file(filename, contents: dict, format:str='yaml',safe:bool=False,ove
             logger.error(f"Error writing to file {filename}: {str(e)}")
             print(str(e))
 
+def append_to_file(filename, contents:dict):
+    try:
+        with open (filename, 'a', encoding='utf-8') as f:
+            yaml=yaml2()
+            yaml.dump(contents,f)
+
+    except Exception as e:
+            logger.error(f"Error appending to file {filename}: {str(e)}")
+            print(str(e))
 
 def backup_file(filename):
     try:

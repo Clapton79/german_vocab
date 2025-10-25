@@ -10,3 +10,4 @@ tasks
 dict*.bak
 /audio/**
 venv/lib/python3.9/site-packages/.DS_Store
+~$test_result_analysis.xlsx

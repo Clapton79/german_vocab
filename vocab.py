@@ -428,13 +428,14 @@ def merge_vocabulary(source_vocabulary:Vocabulary, target_vocabulary:Vocabulary,
 ##################################################################
 def data_selector_verb_conjugation(num_questions:int,vocabulary:Vocabulary):
     try:
-        questions = [(x, random.choice(list(vocabulary.vocab[x]['conjugations']))) for x in random.sample(list(vocabulary.filter(word_class='verb')),k=num_questions)]
+        base      = random.sample(list(vocabulary.filter(word_class='verb')),k=num_questions)
+        questions = [(x, random.choice(list(vocabulary.vocab[x]['conjugations']))) for x in base]
         solutions = [vocabulary.vocab[x[0]].get('conjugations').get(x[1]) for x in questions]
         question_formatted = [f"{x[0]} in {x[1]}" for x in questions]
     except Exception as e: 
         logger.error(str(e))
         return [False,[],[]]
-    return [True, question_formatted, solutions]
+    return [True, question_formatted, solutions,base]
 
 
 def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
@@ -447,7 +448,7 @@ def data_selector_translation(num_questions:int, vocabulary:Vocabulary):
     except Exception as e: 
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,base]
 
 def data_selector_inverse_translation(num_questions: int,vocabulary:Vocabulary):
     try:
@@ -459,7 +460,7 @@ def data_selector_inverse_translation(num_questions: int,vocabulary:Vocabulary):
     except Exception as e:
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,base]
 
 def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     try:
@@ -468,26 +469,18 @@ def data_selector_definite_article(num_questions:int, vocabulary:Vocabulary):
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,questions]
 
 def data_selector_noun_plural(num_questions:int, vocabulary:Vocabulary):
     try:
-        questions = [" ".join([(vocabulary[x].get('definite_article',"")),x]) for x in random.sample(list(vocabulary.filter(word_class='noun')), k=num_questions)]
+        base      = random.sample(list(vocabulary.filter(word_class='noun')), k=num_questions)
+        questions = [" ".join([(vocabulary[x].get('definite_article',"")),x]) for x in base]
         solutions = [" ".join(["die",vocabulary[x].get("plural")]) for x in questions]
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,base]
     
-# def data_selector_noun_translation(num_questions:int, vocabulary:Vocabulary):
-#     try:
-#         base = random.sample(list(vocabulary.filter(word_class='noun')), k=num_questions)
-#         questions = [vocabulary[x].get('translations').get('hungarian')[0] for x in base]
-#         solutions = [" ".join([(vocabulary[x].get('definite_article') or ""),x]) for x in base]  
-#     except Exception as e:  
-#         logger.error(str(e))
-#         return [False,[],[]]
-#     return [True, questions, solutions]
         
 def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary):
     try:
@@ -496,26 +489,7 @@ def data_selector_imperative_verb_form(num_questions:int, vocabulary:Vocabulary)
     except Exception as e:  
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
-
-# def data_selector_verb_translation(num_questions:int, vocabulary:Vocabulary):
-#     try:
-#         questions = random.choices(list(vocabulary.filter(word_class='verb')), k=num_questions)
-#         solutions = [y[0] for y in vocabulary.vocab[x].get('translations').get('hungarian')]
-#     except Exception as e:  
-#         logger.error(str(e))
-#         return [False,[],[]]
-#     return [True, questions, solutions]
-
-# def data_selector_adjective_translation(num_questions:int, vocabulary:Vocabulary):
-#     try:
-#         questions = random.choices(list(vocabulary.filter(word_class='adjective')), k=num_questions)
-#         solutions = [vocabulary.vocab[x].get('translations').get('hungarian') for x in questions]
-#         solutions = [z[0] if type(z) is list else z for z in solutions]
-#     except Exception as e:  
-#         logger.error(str(e))
-#         return [False,[],[]]
-#     return [True, questions, solutions]
+    return [True, questions, solutions,questions]
 
 def data_selector_verb_conjugation_praet(num_questions:int, vocabulary:Vocabulary):
     try:
@@ -525,7 +499,7 @@ def data_selector_verb_conjugation_praet(num_questions:int, vocabulary:Vocabular
         print(str(e))
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,questions]
 
 def data_selector_verb_conjugation_perf(num_questions:int, vocabulary:Vocabulary):
     try:
@@ -534,7 +508,7 @@ def data_selector_verb_conjugation_perf(num_questions:int, vocabulary:Vocabulary
     except Exception as e:
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,questions]
 
 def data_selector_verb_conjugation_praes(num_questions:int, vocabulary:Vocabulary):
     try:
@@ -543,7 +517,7 @@ def data_selector_verb_conjugation_praes(num_questions:int, vocabulary:Vocabular
     except Exception as e:
         logger.error(str(e))
         return [False,[],[]]
-    return [True, questions, solutions]
+    return [True, questions, solutions,questions]
 
 test_functions = {
     "verb conjugation Präteritum": data_selector_verb_conjugation_praet,
@@ -560,13 +534,14 @@ def get_available_tests():
     return [key for key, item in test_functions.items() if item is not None and item != ""]
         
 class LanguageTest():
-    __slots__ = ['test_type','num_questions','answers','results','accuracy','vocabulary','immediate_correction','function','test_load_success','questions','solutions']
+    __slots__ = ['test_type','num_questions','answers','results','accuracy','base','vocabulary','immediate_correction','function','test_load_success','questions','solutions']
     def __init__(self, num_questions: int, test_type:str, vocabulary:Vocabulary,immediate_correction:bool=False):
         self.test_type = test_type
         self.num_questions = num_questions
         self.answers = []
         self.results = []
         self.accuracy = None
+        self.base = []
         self.vocabulary = vocabulary
         self.immediate_correction = immediate_correction
         self.function = test_functions.get(test_type)
@@ -575,7 +550,7 @@ class LanguageTest():
             logger.error(f"Unknown language test type: {test_type}")
             print(f"Unknown language test type: {test_type}")
 
-        self.test_load_success, self.questions, self.solutions = self.function(num_questions, vocabulary)
+        self.test_load_success, self.questions, self.solutions,self.base = self.function(num_questions, vocabulary)
         logger.debug(f"Language test {self.test_type} initialized. ({len(self.questions)} words)")
         if not self.test_load_success:
             logger.error(f"Failed to load test {self.test_type} data due to an internal error.")
@@ -603,9 +578,30 @@ class LanguageTest():
         try:
             self.results = [self.solutions[i] == self.answers[i] for i in range(len(self.questions))]
             self.accuracy = round(sum(self.results) / len(self.results) * 100, 2)   
+            self.__calculate_word_results()
         except Exception as e:
             logger.error(f"Failed to calculate results due to an internal error: {str(e)}")
     
+    def __calculate_word_results(self):
+        ### Calculates word level accuracy and saves it to the weights file
+        try:
+            # calculate word level accuracy
+            word_accuracy = [self.answers[i]==self.solutions[i] for i,x in enumerate(self.base)]
+            for i, word in enumerate(self.base):
+                datadic={
+                    word:{
+                    "date" : format(datetime.now(),'%Y-%m-%d'),
+                    "test_type": self.test_type,
+                    "occurrence": 1,
+                    "success"   : word_accuracy[i]
+                    }
+                }
+
+                append_to_file('word_stats.yaml',datadic)
+
+        except Exception as e:
+            logger.error(f"Failed to calculate word level accuracy ({str(e)})")
+
     def save_results(self, filename):
         try:
             # if filename does not exist, create and write header

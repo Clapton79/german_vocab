@@ -1,40 +1,90 @@
 tags: {}
 words:
-  erlauben:
+  anregen:
     class: verb
     translations:
       hungarian:
-      - megenged
-      - hagy
-      - enged
-      - engedélyez
+      - ösztönöz
     tags:
     - ''
     - _Csilla
-    - _Csilla_08
+    - _Csilla_10
     prepositions:
-    - ''
-    date_added: '2025-10-16'
+    - anregen zu + D - ösztönöz valamire
+    date_added: '2025-10-25'
     conjugations:
       Präsens:
-      - erlaube
-      - erlaubst
-      - erlaubt
-      - erlauben
-      - erlaubt
-      - erlauben
+      - rege an
+      - regst an
+      - regt an
+      - regen an
+      - regt an
+      - regen an
       Präteritum:
-      - erlaubte
-      - erlaubtest
-      - erlaubte
-      - erlaubten
-      - erlaubtet
-      - erlaubten
+      - regte an
+      - regtest an
+      - regte an
+      - regten an
+      - regtet an
+      - regten an
       Perfekt:
-      - habe erlaubt
-      - hast erlaubt
-      - hat erlaubt
-      - haben erlaubt
-      - habt erlaubt
-      - haben erlaubt
-    imperative: erlaube
+      - habe angeregt
+      - hast angeregt
+      - hat angeregt
+      - haben angeregt
+      - habt angeregt
+      - haben angeregt
+    imperative: rege
+  übergehen:
+    class: verb
+    translations:
+      hungarian:
+      - átmegy
+    tags:
+    - ''
+    - _Csilla
+    - _Csilla_10
+    prepositions:
+    - ''
+    date_added: '2025-10-25'
+    conjugations:
+      Präsens:
+      - übergehe
+      - übergehst
+      - übergeht
+      - übergehen
+      - übergeht
+      - übergehen
+      - gehe über
+      - gehst über
+      - geht über
+      - gehen über
+      - geht über
+      - gehen über
+      Präteritum:
+      - überging
+      - übergingst
+      - überging
+      - übergingen
+      - übergingt
+      - übergingen
+      - ging über
+      - gingst über
+      - ging über
+      - gingen über
+      - gingt über
+      - gingen über
+      Perfekt:
+      - bin übergangen
+      - bist übergangen
+      - ist übergangen
+      - sind übergangen
+      - seid übergangen
+      - sind übergangen
+      - bin übergegangen
+      - bist übergegangen
+      - ist übergegangen
+      - sind übergegangen
+      - seid übergegangen
+      - sind übergegangen
+    imperative: übergehe/eh
