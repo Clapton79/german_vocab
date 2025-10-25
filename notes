@@ -1,12 +1,16 @@
 test engine:
 
-- weight increase/decrease
-- last seen/word/test
+- weights solutioning
+    - word stat logging
+    - word stat aggregation
+      - last seen
+      - success / occurrences for last 5 days * 1 - success / occurrences for last 10 days ?
 - selection - no duplicates - weight and last seen
 
 - dictionary feature: Gegenteil (opposite)
 - test: adjective opposites
 - test: passive translation (de=>hu)
+- dictionary feature: unified order of word entry questions
 
 - vocabulary class features:
   - word data

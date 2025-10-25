@@ -5,8 +5,11 @@ from vocab_utilities import bcolors
 from add_words import add_words
 import os
 from pprint import pprint
+from appconfig import *
 import re
 import yaml
+
+config = Config()
 
 def add_tag_to_every_word(vc:Vocabulary): 
     try:
@@ -652,6 +655,7 @@ def browser_menu(vc:Vocabulary):
     try:
         print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
         print(f'#                   {bcolors.OKBLUE}Vocabulary Browser{bcolors.ENDC}')
+        print(f'#                   {bcolors.OKBLUE}{config["profilename"]}')
         print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
         print("")
         print("")
@@ -706,9 +710,7 @@ def browser_menu(vc:Vocabulary):
 
 def main():
     try:
-        config = load_config()
-        vocabulary_file = config.get('vocabulary_file', 'dict.yaml')
-        v = Vocabulary(vocabulary_file)
+        v = Vocabulary(config['vocabulary_file'])
         browser_menu(v)
     except Exception as e:
         print(f'Error in main: {str(e)}')

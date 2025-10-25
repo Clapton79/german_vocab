@@ -6,7 +6,7 @@ from pprint import pprint
 
 filename = 'word_stats.yaml'
 
-def calculate_summary(filename:str):
+def calculate_summary(filename:str) -> dict:
     try:
         stats = {}
         # load word_stats file 
@@ -32,10 +32,9 @@ def calculate_summary(filename:str):
                     'success': 1 if item['success'] else 0
                 }
 
-        pprint(stats)
+        return stats
 
     except Exception as e:
         logger.error(f"Error loading file {filename}: {str(e)}")
         print(f"Error loading file {filename}: {str(e)}")
-
-calculate_summary(filename)
+        return {}

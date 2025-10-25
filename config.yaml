@@ -1,15 +1,21 @@
-Profile_de_hu:
+de_hu:
   language: German
+  profilename: German - Hungarian
   secondary_language: Hungarian
   vocabulary_file: dict.yaml
   temp_vocabulary_file: new_dict.yaml
-Profile_es_hu:
+  word_stats_file: word_stats_dehu.yaml
+es_hu:
   language: Spanish
+  profilename: Spanish - Hungarian
   secondary_language: Hungarian
   vocabulary_file: dict_es_hu.yaml
   temp_vocabulary_file: new_dict_es_hu.yaml
-Profile_en_hu:
+  word_stats_file: word_stats_eshu.yaml
+en_hu:
   language: English
+  profilename: English - Hungarian
   secondary_language: Hungarian
   vocabulary_file: dict_en_hu.yaml
   temp_vocabulary_file: new_dict_en_hu.yaml
+  word_stats_file: word_stats_enhu.yaml
