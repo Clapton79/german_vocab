@@ -17,8 +17,8 @@ class Config:
         self.settings = config[profile]
 
     def __getitem__(self, key):
-        return self.settings.get(key)
+        return str(self.settings.get(key))
 
-    def __repr__(self):
-        return f"<Config profile={self.profile}>"
+    def get_all(self):
+        return self.settings
 

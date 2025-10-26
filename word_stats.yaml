@@ -46,3 +46,93 @@
   test_type: translation
   occurrence: 1
   success: true
+315891164752955185383676828523208544279:
+  word: Beweis
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+149145259343314894757719328934261925042:
+  word: Fachgebiet
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+101194179543260084875563369892998624527:
+  word: Anwendung
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+339719527794341052792995118800066380116:
+  word: Abnehmen
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: false
+459055803300078633867986287665628986:
+  word: Anzahl
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: false
+199957827517775117997188857655474978770:
+  word: Atemübung
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+81774791638454058660141711699710076961:
+  word: Menge
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+328933839777519106789290142940690053377:
+  word: Sprichwort
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+31898544281795378959962728526850843775:
+  word: Fachgebiet
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+289859650555317718503168439591168701871:
+  word: Volksmund
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+254835086773528206035330400646914298988:
+  word: anregen
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: false
+111051141182328155806191303524754500654:
+  word: anwenden
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+259640875533398180795406628583603611433:
+  word: vermuten
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true
+232158779114123661695823625066423332789:
+  word: bilden
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: false
+98809615520376130600410368579735292022:
+  word: klatschen
+  date: '2025-10-26'
+  test_type: translation
+  occurrence: 1
+  success: true

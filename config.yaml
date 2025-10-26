@@ -4,7 +4,8 @@ de_hu:
   secondary_language: Hungarian
   vocabulary_file: dict.yaml
   temp_vocabulary_file: new_dict.yaml
-  word_stats_file: word_stats_dehu.yaml
+  word_stats_file: word_stats.yaml
+  calculate_weights_on_load: true
 es_hu:
   language: Spanish
   profilename: Spanish - Hungarian
@@ -12,6 +13,7 @@ es_hu:
   vocabulary_file: dict_es_hu.yaml
   temp_vocabulary_file: new_dict_es_hu.yaml
   word_stats_file: word_stats_eshu.yaml
+  calculate_weights_on_load: true
 en_hu:
   language: English
   profilename: English - Hungarian
@@ -19,3 +21,4 @@ en_hu:
   vocabulary_file: dict_en_hu.yaml
   temp_vocabulary_file: new_dict_en_hu.yaml
   word_stats_file: word_stats_enhu.yaml
+  calculate_weights_on_load: true

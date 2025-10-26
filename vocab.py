@@ -4,7 +4,9 @@ from applogger import logger
 from vocab_utilities import *
 from datetime import datetime
 from pprint import pprint
+from weights import calculate_summary
 import re
+import appconfig
 
 class Word():
     __slots__ = ['word_class','word_data','word_text','date_added','definite_article','dq','dq_list']
@@ -178,14 +180,15 @@ class Word():
         self.word_data['date_added']=self.date_added
         
 class Vocabulary():
-    __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data']
-    def __init__(self, filename:str=None):
+    __slots__ = ['filename','load_success','last_backupfile','vocab','custom_data', 'weights','calculate_weights_on_load','weights_filename']
+    def __init__(self, filename:str=None, calculate_weights_on_load:bool = False,weights_filename:str = None):
         try:
             self.filename = filename
             self.load_success = None
             self.last_backupfile = None
             self.vocab = {}
             self.custom_data = {}
+            self.weights = {}
             
             if filename is not None and path.isfile(filename):
                 vocab = load_file(filename)
@@ -197,6 +200,8 @@ class Vocabulary():
                 else:
                     self.vocab, self.custom_data = vocab.get('words'),vocab.get('tags')
                     self.load_success = True
+                    if calculate_weights_on_load and weights_filename is not None:
+                        self.calculate_weights(weights_filename, 'overwrite')
         
         except Exception as e:
             logger.error(f"Error initializing vocabulary: {str(e)}")
@@ -210,7 +215,6 @@ class Vocabulary():
             if fileformat is None:
                 fileformat = 'json' if filename.endswith('.json') else 'ruamel'
 
-            
             data = {"tags": self.custom_data, "words": self.vocab}
             save_to_file(filename, data, fileformat,safe=safe,overwrite=overwrite)
             
@@ -234,7 +238,49 @@ class Vocabulary():
         return len(self.vocab)
         
     def __str__ (self):
+        """
+        Return string representation of the vocabulary.
+
+        This method converts the vocabulary object into its string representation by
+        converting the underlying vocab attribute to a string.
+
+        Returns:
+            str: String representation of the vocabulary.
+        """
         return (str(self.vocab))
+
+    def calculate_weights(self,filename, operation:str='merge'):
+        try:
+            stats = calculate_summary(filename)
+
+            print(f'Loaded statistics: {len(stats.keys())} words.')
+
+            stats = {k:x for k,x in stats.items() if k in self.vocab.keys()}
+
+            print(f'Weight statistics: {len(stats.keys())} words.')
+
+            if operation == 'merge':
+                self.weights = {**self.weights, **stats}
+            if operation == 'overwrite':
+                self.weights = stats
+            if operation == 'update':
+                for _, item in stats.items():
+                    word = item['word']
+                    test_type = item.get('test_type', 'unknown')
+                    if word not in self.weights.keys():
+                        self.weights[word] = {}
+                    if test_type not in self.weights[word]:
+                        self.weights[word][test_type] = item[test_type]
+
+                    self.weights[word][test_type]['occurrence'] = item[test_type]['occurrence']
+                    self.weights[word][test_type]['success'] = item['success']
+                    # Update date if newer
+                    if item['date'] > self.weights[word][test_type]['date']:
+                        self.weights[word][test_type]['date'] = item['date']
+
+        except Exception as e:
+            print(f'Vocabulary weights update error: {str(e)}')
+            logger.error(f'Vocabulary weights update error: {str(e)}')
 
     def show_verbs(tag: str = None, word: str = None):
         """Displays words in the vocabulary, optionally filtered by class and tag."""

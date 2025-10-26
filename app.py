@@ -9,7 +9,7 @@ from appconfig import *
 import re
 import yaml
 
-config = Config()
+
 
 def add_tag_to_every_word(vc:Vocabulary): 
     try:
@@ -35,9 +35,32 @@ def load_config(config_path="config.yaml"):
         with open(config_path, "r") as f:
             return yaml.safe_load(f)
     except Exception as e:
-        print(f"Error loading config: {str(e)}")
+        logger.error(f"Error loading config: {str(e)}")
         return {}
+def print_config(vc:Vocabulary):
+    global config
+    pprint(config.get_all())
+    if vc.load_success:
+        pprint ({"Loaded vocabulary" : {
+                        "filename" : vc.filename,
+                        "count of words" : len(list(vc.vocab.keys())),
+                        "last backup file": vc.last_backupfile,
+                        "custom data": vc.custom_data
+                        }
+                })
 
+def refresh_weights(vc:Vocabulary):
+    global config
+    try:
+        update_type=input("Update type: 1 - merge (default) 2 - overwrite 3 - update: ") or "merge"
+        filename = config['word_stats_file']
+        print(f"Calculating weights (operation: {update_type}, filename: {filename})")
+        vc.calculate_weights(filename,update_type)
+        print("Done.")
+    except Exception as e:
+        print(str(e))
+        logger.error(f'Error refreshing weights ({str(e)})')
+    
 def test(vc:Vocabulary):
     try:
         my_test = LanguageTest(number_of_questions,
@@ -311,6 +334,7 @@ def list_words_for_tags (vc:Vocabulary):
         print(f'Error during tag search: {str(e)}')
 
 def list_words_for_tag (vc:Vocabulary):
+
     """
     Lists all words for a given tag.
     """
@@ -654,13 +678,13 @@ def display_words(vc:Vocabulary):
 def browser_menu(vc:Vocabulary):
     try:
         print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
-        print(f'#                   {bcolors.OKBLUE}Vocabulary Browser{bcolors.ENDC}')
-        print(f'#                   {bcolors.OKBLUE}{config["profilename"]}')
+        print(f'                   {bcolors.OKBLUE}Vocabulary Browser{bcolors.ENDC}')
         print(f'{bcolors.OKCYAN}####################################################################{bcolors.ENDC}')
         print("")
         print("")
 
-        print(f"Loaded vocabulary: {vc.filename} ({vc.custom_data['language']})")
+        print(f'Profile: {config["profilename"]}')
+        print(f'Loaded vocabulary: {vc.filename} ({vc.custom_data.get("language")})')
         print("")
         no_return = False
         
@@ -682,8 +706,11 @@ def browser_menu(vc:Vocabulary):
             "Test: adjective translation": test_adjective_translation,
             "Conjugation table": conjugation_table,
             "List words for a tag": list_words_for_tag,
-            "Add a tag to every word in this dic": add_tag_to_every_word
+            "Add a tag to every word in this dic": add_tag_to_every_word,
+            "Refresh vocabulary weights": refresh_weights,
+            "Display system config": print_config
             }
+  
         keys = list(browser_functions.keys())
         
         # print menu
@@ -696,7 +723,6 @@ def browser_menu(vc:Vocabulary):
             browser_menu(vc)
         if int(response) == 0: #last item, exit selected
             os.system('clear')
-            
         else:
             browser_functions[(keys[int(response)-1])](vc)
             input("Press enter to continue...")
@@ -709,11 +735,15 @@ def browser_menu(vc:Vocabulary):
         return
 
 def main():
+    global config
     try:
         v = Vocabulary(config['vocabulary_file'])
+        
         browser_menu(v)
     except Exception as e:
         print(f'Error in main: {str(e)}')
         return  
+
+config = Config()
 
 main()
